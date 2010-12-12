@@ -92,6 +92,11 @@ alias top='top -o cpu'
 alias m='more'
 alias df='df -h'
 
+# Git
+alias gs='git status -s'
+alias ga='git add'
+alias gc='git commit'
+
 if [ "$OS" = "linux" ] ; then
   alias systail='tail -f /var/log/syslog'
 else
