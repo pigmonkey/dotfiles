@@ -62,7 +62,7 @@ map <F5> :setlocal spell! spelllang=en_us<cr>
 map <F6> :%s//\r/g
 
 " Auto completes
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete| highlight OverLength ctermbg=red ctermfg=white guibg=#592929 | match OverLength /\%80v.\+/
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
