@@ -91,6 +91,7 @@ alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in 
 alias top='top -o cpu'
 alias m='more'
 alias df='df -h'
+alias mu='memusage.py'
 
 # Git
 alias gs='git status -s'
