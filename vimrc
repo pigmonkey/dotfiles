@@ -1,7 +1,7 @@
 " Make Vim more useful, but less Vi compatible
 set nocompatible
 
-" Show line numbers"
+" Show line numbers
 set number
 
 " Syntax highlighting
@@ -35,8 +35,12 @@ set incsearch
 " Turn on search highlighting
 " set hlsearch
 
-" Ignore case in searches
-set ic
+" Ignore case in searches -- but be smart!
+set ignorecase
+set smartcase
+
+" Automatically save before commands like :next and :make
+set autowrite
 
 " Show the editor mode
 set showmode
@@ -44,16 +48,19 @@ set showmode
 " Show state of keyboard input
 set showcmd
 
+" Allow mouse (is this sacrilege?)
+set mouse=a
+
 " Show special characters
 "  Show > for tab
 set list
 set listchars=tab:>-
 
 " Background is dark
-set background=dark
+"set background=dark
 
 " Set colorscheme
-colorscheme ir_black
+" colorscheme ir_black
 
 " Spell check
 map <F5> :setlocal spell! spelllang=en_us<cr>

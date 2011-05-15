@@ -1,5 +1,5 @@
 # fix macbook backspace http://wiki.nerdylorrin.net/wiki/Wiki.jsp?page=GNUScreen
-#bindkey -k kD stuff \177
+# bindkey -k kD stuff \177
 # actually, just fix it by doing 'stty erase [ctrl-v] [delete]
 #   that key combo should output 'stty erase ' aka '^H'
 #   http://bit.ly/c4DxUR (3rd post down)
