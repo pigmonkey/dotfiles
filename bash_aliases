@@ -9,6 +9,12 @@ alias gc='git commit -v'
 alias gp='git push'
 alias gl='git pull'
 
+# Apt
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
+alias install='sudo apt-get install'
+alias remove='sudo apt-get remove'
+
 # Memory usage script
 # https://github.com/pigmonkey/systools
 alias mu='memusage.py'
