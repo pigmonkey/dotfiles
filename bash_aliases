@@ -27,3 +27,8 @@ if [ "$OS" = "linux" ] ; then
 else
   alias systail='tail -f /var/log/system.log'
 fi
+
+# Set the default Python version on WebFaction
+if [[ `hostname` =~ webfaction  ]] ; then
+    alias python='python2.7'
+fi
