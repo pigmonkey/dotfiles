@@ -8,6 +8,7 @@ alias ga='git add'
 alias gc='git commit -v'
 alias gp='git push'
 alias gl='git pull'
+alias gd='git diff'
 
 # Apt
 alias update='sudo apt-get update'
