@@ -9,6 +9,7 @@ alias gc='git commit -v'
 alias gp='git push'
 alias gl='git pull'
 alias gd='git diff'
+alias gx='git rm $(git ls-files --deleted)'
 
 # Apt
 alias update='sudo apt-get update'
