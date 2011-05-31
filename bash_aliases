@@ -10,6 +10,7 @@ alias gp='git push'
 alias gl='git pull'
 alias gd='git diff'
 alias gx='git rm $(git ls-files --deleted)'
+alias gr='git reset --hard HEAD'
 
 # Apt
 alias update='sudo apt-get update'
