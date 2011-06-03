@@ -33,7 +33,11 @@ set autoindent
 set incsearch
 
 " Turn on search highlighting
-" set hlsearch
+set showmatch
+set hlsearch
+
+" Clear the search by hitting /<space>
+nnoremap <leader><space> :noh<cr>
 
 " Ignore case in searches -- but be smart!
 set ignorecase
@@ -61,6 +65,30 @@ set listchars=tab:>-
 
 " Set colorscheme
 " colorscheme ir_black
+
+" Use wildmenu for command line tab completion
+set wildmenu
+set wildmode=list:longest,full
+
+" Underline the current line
+set cursorline
+
+" The TTY is fast
+:set ttyfast
+
+" Disable arrow keys. Force use of <hjkl>. (Oh noes!)
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Move by screen line rather than file line (for wrapping).
+nnoremap j gj
+nnoremap k gk
 
 " Spell check
 map <F5> :setlocal spell! spelllang=en_us<cr>
