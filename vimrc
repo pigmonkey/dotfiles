@@ -61,10 +61,13 @@ set list
 set listchars=tab:>-
 
 " Background is dark
-"set background=dark
+" set background=dark
 
 " Set colorscheme
-" colorscheme ir_black
+colorscheme molokai
+
+" Use 256 colors
+se t_Co=256
 
 " Use wildmenu for command line tab completion
 set wildmenu
@@ -97,7 +100,7 @@ map <F5> :setlocal spell! spelllang=en_us<cr>
 map <F6> :%s//\r/g
 
 " Auto completes
-autocmd FileType python set omnifunc=pythoncomplete#Complete| highlight OverLength ctermbg=red ctermfg=white guibg=#592929 | match OverLength /\%80v.\+/
+autocmd FileType python set omnifunc=pythoncomplete#Complete| highlight OverLength ctermbg=darkgrey ctermfg=white guibg=#592929 | match OverLength /\%80v.\+/
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
