@@ -34,3 +34,26 @@ alias remove='sudo apt-get remove'
 # Git Aliases (in addition to those provided by the git plugin)
 alias ga='git add'
 alias gs='git status -s'
+
+# Set vim as the default editor
+export EDITOR='vim'
+
+# Install virtualenvwrapper
+if [[ `hostname` =~ webfaction  ]] ; then
+    if [ -f $HOME/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+        source $HOME/bin/virtualenvwrapper.sh
+    fi
+else
+    if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source /usr/local/bin/virtualenvwrapper.sh
+    fi
+fi
+
+# Set the default Python and easy_install version on WebFaction
+if [[ `hostname` =~ webfaction  ]] ; then
+    alias python='python2.7'
+    alias easy_install='easy_install-2.7'
+fi
