@@ -30,3 +30,8 @@ altscreen on
 
 # Default screens
 screen -t shell 0 
+
+# Enable 256 colors
+attrcolor b ".I"    # allow bold colors - necessary for some reason
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'    # tell screen how to set colors. AB = background, AF=foreground
+defbce on   # erase background with current bg color
