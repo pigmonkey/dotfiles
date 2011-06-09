@@ -34,6 +34,9 @@ alias remove='sudo apt-get remove'
 # Git Aliases (in addition to those provided by the git plugin)
 alias ga='git add'
 alias gs='git status -s'
+alias gd='git diff'
+alias gx='git rm $(git ls-files --deleted)'
+alias gr='git reset --hard HEAD'
 
 # Set vim as the default editor
 export EDITOR='vim'
