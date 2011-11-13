@@ -134,3 +134,6 @@ else
         source /usr/local/bin/virtualenvwrapper.sh
     fi
 fi
+
+# Set GPG_TTY for vim's GnuPG plugin
+export GPG_TTY=`tty`

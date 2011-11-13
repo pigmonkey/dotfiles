@@ -60,3 +60,6 @@ if [[ `hostname` =~ webfaction  ]] ; then
     alias python='python2.7'
     alias easy_install='easy_install-2.7'
 fi
+
+# Set GPG_TTY for vim's GnuPG plugin
+export GPG_TTY=`tty`
