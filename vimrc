@@ -109,3 +109,9 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " GUI (gVim) only
 autocmd GUIEnter * colorscheme ir_black
+
+" Tell the GnuPG plugin to armor new files.
+let g:GPGPreferArmor=1
+
+" Tell the GnuPG plugin to sign new files.
+let g:GPGPreferSign=1
