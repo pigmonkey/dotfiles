@@ -11,9 +11,8 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)
 # Nobody likes startup messages
 startup_message off
 
-# Turn visual bell on and set the message to display for only a fraction of a second
-vbell on
-vbellwait .3
+# Turn visual bell off
+vbell off
 
 # Set default shell title to blank
 shelltitle ''
