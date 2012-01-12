@@ -5,8 +5,3 @@ export PLATFORM="$MACHINE-$OS-$OSVERSION"
 
 # Load in .bashrc -------------------------------------------------
 source ~/.bashrc
-
-# Hello Messsage --------------------------------------------------
-echo -e "${IBlack}Kernel Information: " `uname -smr`
-echo -ne "Uptime: "; uptime
-echo -ne "Server time is: "; date
