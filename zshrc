@@ -1,6 +1,11 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
+# Put ~/bin in the beginning of the path.
+if [ -d ~/bin ]; then
+    export PATH=:~/bin:$PATH # add your bin directory to your path
+fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
