@@ -4,6 +4,9 @@ set nocompatible
 " Show line numbers
 set number
 
+" Enable filetype detection
+filetype indent plugin on
+
 " Syntax highlighting
 syntax on
 
