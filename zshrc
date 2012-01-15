@@ -46,25 +46,24 @@ alias gr='git reset --hard HEAD'
 # Set vim as the default editor
 export EDITOR='vim'
 
-# Install virtualenvwrapper, wherever it may be!
+# Set the Python version for virtualenvwrapper to use on WebFaction.
 if [[ `hostname` =~ webfaction  ]] ; then
-    if [ -f $HOME/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-        source $HOME/bin/virtualenvwrapper.sh
-    fi
-else
-    if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source /usr/local/bin/virtualenvwrapper.sh
-    fi
-    if [ -f /usr/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source /usr/bin/virtualenvwrapper.sh
-    fi
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 fi
 
-# Set the default Python and easy_install version on WebFaction
+# Install virtualenvwrapper, wherever it may be!
+if [ -f $HOME/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source $HOME/bin/virtualenvwrapper.sh
+elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source /usr/local/bin/virtualenvwrapper.sh
+elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source /usr/bin/virtualenvwrapper.sh
+fi
+
+# Set the default Python and easy_install version.
 alias python='python2.7'
 alias easy_install='easy_install-2.7'
 

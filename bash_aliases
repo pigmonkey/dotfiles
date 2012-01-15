@@ -11,6 +11,7 @@ alias gl='git pull'
 alias gd='git diff'
 alias gx='git rm $(git ls-files --deleted)'
 alias gr='git reset --hard HEAD'
+alias gb='git branch'
 
 # Apt
 alias update='sudo apt-get update'
@@ -31,5 +32,6 @@ else
   alias systail='tail -f /var/log/system.log'
 fi
 
+# Set the default Python and easy_install version.
 alias python='python2.7'
 alias easy_install='easy_install-2.7'
