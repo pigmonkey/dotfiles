@@ -42,6 +42,9 @@ set hlsearch
 " Clear the search by hitting /<space>
 nnoremap <leader><space> :noh<cr>
 
+" Shortcut to open a new tab
+nnoremap <C-t> :tabnew 
+
 " Ignore case in searches -- but be smart!
 set ignorecase
 set smartcase
