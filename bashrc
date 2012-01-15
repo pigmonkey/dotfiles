@@ -121,7 +121,7 @@ fi
 # Set vim as the default editor
 export EDITOR='vim'
 
-# Install virtualenvwrapper
+# Install virtualenvwrapper, wherever it may be!
 if [[ `hostname` =~ webfaction  ]] ; then
     if [ -f $HOME/bin/virtualenvwrapper.sh ]; then
         export WORKON_HOME=$HOME/.virtualenvs
@@ -132,6 +132,10 @@ else
     if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
         export WORKON_HOME=$HOME/.virtualenvs
         source /usr/local/bin/virtualenvwrapper.sh
+    fi
+    if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source /usr/bin/virtualenvwrapper.sh
     fi
 fi
 
