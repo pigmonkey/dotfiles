@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:   Jani Nurminen <slinky@iki.fi>
-" Last Change:  $Id: zenburn.vim,v 2.16 2010/10/24 10:55:30 slinky Exp slinky $
+" Last Change:  $Id: zenburn.vim,v 2.21 2011/04/26 12:13:41 slinky Exp slinky $
 " URL:          http://slinky.imukuppi.org/zenburnpage/
 " License:      GNU GPL <http://www.gnu.org/licenses/gpl.html>
 "
@@ -34,12 +34,17 @@
 "  - Tim Smith - force dark background
 "  - John Gabriele - spotted bad Ignore-group handling
 "  - Zac Thompson - spotted invisible NonText in low contrast mode
-"  - Christophe-Marie Duquesne - suggested making a Vimball
+"  - Christophe-Marie Duquesne - suggested making a Vimball,
+"    suggested support for ctags_highlighting.vim
 "  - Andrew Wagner - noted the CursorColumn bug (guifg was unintentionally set),
 "                    unify CursorColumn colour
 "  - Martin Langasek - clarify the license, whitespace fixes
 "  - Marcin Szamotulski - support autocomplete for Zenburn configuration
-"    parameters
+"                         parameters
+"  - Clayton Parker (claytron) - Convinced by Kurt Maier to use Zenburn. Point
+"    out issues with LineNr, fix directory styles, and their usage in MacVim.
+"  - Paweł Piekarski - Spotted bad FoldColumn and TabLine. Made better 
+"                      FoldColumn colors, fixed TabLine colors.
 "
 " CONFIGURABLE PARAMETERS:
 "
@@ -71,6 +76,9 @@
 "
 "      let g:zenburn_alternate_Visual = 1
 "
+"   Note: this is enabled only if the old-style Visual
+"   if used, see g:zenburn_old_Visual
+"
 " * To use alternate colouring for Error message, use
 "
 "      let g:zenburn_alternate_Error = 1
@@ -95,6 +103,24 @@
 "   Note: you can ignore this unless you use
 "   ":set cursorline cursorcolumn", since otherwise the effect won't be
 "   seen.
+"
+" * New (dark) Visual coloring has been introduced.
+"   The dark Visual is more aligned with the rest of the colour scheme,
+"   especially if you use line numbers. If you wish to use the 
+"   old Visual coloring, use
+"
+"      let g:zenburn_old_Visual = 1
+"
+"   Default is to use the new Visual.
+"
+"  * EXPERIMENTAL FEATURE: Zenburn will automatically detect if you 
+"    have ctags_highlighting.vim (by Al Budden, 
+"    http://www.vim.org/scripts/script.php?script_id=2646) enabled, and
+"    will set sensible highlight links. Nothing will happen if you do
+"    not have ctags_highlighting.vim. If you do not want this feature, you can
+"    override the check with:
+"
+"    let g:zenburn_disable_ctags_highlighting_support = 1
 "
 " NOTE:
 "
@@ -139,6 +165,16 @@ endif
 if ! exists("g:zenburn_unified_CursorColumn")
     let g:zenburn_unified_CursorColumn = 0
 endif
+
+if ! exists("g:zenburn_old_Visual")
+    let g:zenburn_old_Visual = 0
+endif
+
+if ! exists("g:zenburn_disable_ctags_highlighting_support")
+    " enabled by default
+    let g:zenburn_disable_ctags_highlighting_support = 0
+endif
+
 " -----------------------------------------------
 
 set background=dark
@@ -147,6 +183,12 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name="zenburn"
+
+" check for ctags-highlighting
+if exists("g:loaded_ctags_highlighting") && g:loaded_ctags_highlighting && ! g:zenburn_disable_ctags_highlighting_support
+    " internal
+    let _zenburn_ctags = 1
+endif
 
 hi Boolean         guifg=#dca3a3
 hi Character       guifg=#dca3a3 gui=bold
@@ -161,7 +203,7 @@ hi DiffAdd         guifg=#709080 guibg=#313c36 gui=bold
 hi DiffChange      guibg=#333333
 hi DiffDelete      guifg=#333333 guibg=#464646
 hi DiffText        guifg=#ecbcbc guibg=#41363c gui=bold
-hi Directory       guifg=#dcdccc gui=bold
+hi Directory       guifg=#9fafaf gui=bold
 hi ErrorMsg        guifg=#80d4aa guibg=#2f2f2f gui=bold
 hi Exception       guifg=#c3bf9f gui=bold
 hi Float           guifg=#c0bed1
@@ -172,7 +214,6 @@ hi Identifier      guifg=#efdcbc
 hi IncSearch       guibg=#f8f893 guifg=#385f38
 hi Keyword         guifg=#f0dfaf gui=bold
 hi Label           guifg=#dfcfaf gui=underline
-hi LineNr          guifg=#9fafaf guibg=#262626
 hi Macro           guifg=#ffcfaf gui=bold
 hi ModeMsg         guifg=#ffcfaf gui=none
 hi MoreMsg         guifg=#ffffff gui=bold
@@ -224,18 +265,16 @@ if &t_Co > 255
     hi DiffChange      ctermbg=236
     hi DiffDelete      ctermfg=236   ctermbg=238
     hi DiffText        ctermfg=217   ctermbg=237     cterm=bold
-    hi Directory       ctermfg=188   cterm=bold
+    hi Directory       ctermfg=109   cterm=bold
     hi ErrorMsg        ctermfg=115   ctermbg=236     cterm=bold
     hi Exception       ctermfg=249   cterm=bold
     hi Float           ctermfg=251
-    hi FoldColumn      ctermfg=109   ctermbg=238
-    hi Folded          ctermfg=109   ctermbg=238
     hi Function        ctermfg=228
     hi Identifier      ctermfg=223
     hi IncSearch       ctermbg=228   ctermfg=238
     hi Keyword         ctermfg=223   cterm=bold
     hi Label           ctermfg=187   cterm=underline
-    hi LineNr          ctermfg=248   ctermbg=235
+    hi LineNr          ctermfg=248   ctermbg=233
     hi Macro           ctermfg=223   cterm=bold
     hi ModeMsg         ctermfg=223   cterm=none
     hi MoreMsg         ctermfg=15    cterm=bold
@@ -300,10 +339,8 @@ if &t_Co > 255
         hi diffdelete      ctermbg=238
         hi difftext        ctermbg=237
         hi errormsg        ctermbg=237
-        hi foldcolumn      ctermbg=238
-        hi folded          ctermbg=238
         hi incsearch       ctermbg=228
-        hi linenr          ctermbg=238
+        hi linenr          ctermbg=235
         hi search          ctermbg=238
         hi statement       ctermbg=237
         hi statusline      ctermbg=144
@@ -367,6 +404,8 @@ if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
     hi TabLineSel      guifg=#efefef guibg=#1c1c1b gui=bold
     hi TabLine         guifg=#b6bf98 guibg=#181818 gui=bold
     hi NonText         guifg=#404040 gui=bold
+    
+    hi LineNr          guifg=#9fafaf guibg=#161616
 else
     " Original, lighter background
     hi Normal          guifg=#dcdccc guibg=#3f3f3f
@@ -386,18 +425,44 @@ else
     hi TabLineSel      guifg=#efefef guibg=#3a3a39 gui=bold
     hi TabLine         guifg=#b6bf98 guibg=#353535 gui=bold
     hi NonText         guifg=#5b605e gui=bold
+    
+    hi LineNr          guifg=#9fafaf guibg=#262626
 endif
 
-
-if exists("g:zenburn_alternate_Visual") && g:zenburn_alternate_Visual
-    " Visual with more contrast, thanks to Steve Hall & Cream posse
-    " gui=none fixes weird highlight problem in at least GVim 7.0.66, thanks to Kurt Maier
-    hi Visual          guifg=#000000 guibg=#71d3b4 gui=none
-    hi VisualNOS       guifg=#000000 guibg=#71d3b4 gui=none
+if exists("g:zenburn_old_Visual") && g:zenburn_old_Visual
+    if exists("g:zenburn_alternate_Visual") && g:zenburn_alternate_Visual
+        " Visual with more contrast, thanks to Steve Hall & Cream posse
+        " gui=none fixes weird highlight problem in at least GVim 7.0.66, thanks to Kurt Maier
+        hi Visual          guifg=#000000 guibg=#71d3b4 gui=none
+        hi VisualNOS       guifg=#000000 guibg=#71d3b4 gui=none
+    else
+        " use default visual
+        hi Visual          guifg=#233323 guibg=#71d3b4 gui=none
+        hi VisualNOS       guifg=#233323 guibg=#71d3b4 gui=none
+    endif
 else
-    " use default visual
-    hi Visual          guifg=#233323 guibg=#71d3b4 gui=none
-    hi VisualNOS       guifg=#233323 guibg=#71d3b4 gui=none
+    " new Visual style
+    if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
+        " high contrast
+        "hi Visual        guibg=#304a3d
+        "hi VisualNos     guibg=#304a3d
+        "TODO no nice greenish in console, 65 is closest. use full black instead,
+        "although i like the green..!
+        hi Visual        guibg=#0f0f0f
+        hi VisualNos     guibg=#0f0f0f
+        if &t_Co > 255
+            hi Visual ctermbg=0
+        endif
+    else
+        " low contrast
+        hi Visual        guibg=#2f2f2f
+        hi VisualNOS     guibg=#2f2f2f
+
+        if &t_Co > 255
+            hi Visual    ctermbg=235
+            hi VisualNOS ctermbg=235
+        endif
+    endif
 endif
 
 if exists("g:zenburn_alternate_Error") && g:zenburn_alternate_Error
@@ -422,4 +487,75 @@ if exists("g:zenburn_color_also_Ignore") && g:zenburn_color_also_Ignore
     hi Ignore guifg=#545a4f
 endif
 
+" new tabline and fold column
+if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
+    hi FoldColumn    guibg=#161616
+    hi Folded        guibg=#161616
+    hi TabLine       guifg=#88b090 guibg=#313633 gui=none
+    hi TabLineSel    guifg=#ccd990 guibg=#222222
+    hi TabLineFill   guifg=#88b090 guibg=#313633 gui=none
+    
+    hi SpecialKey    guibg=#242424
+    
+    if &t_Co > 255
+        hi FoldColumn    ctermbg=233 ctermfg=109
+        hi Folded        ctermbg=233 ctermfg=109
+        hi TabLine       ctermbg=236 ctermfg=108 cterm=none
+        hi TabLineSel    ctermbg=235 ctermfg=186 cterm=bold
+        hi TabLineFill   ctermbg=236 ctermfg=236
+    endif
+else
+    hi FoldColumn    guibg=#333333
+    hi Folded        guibg=#333333
+    hi TabLine       guifg=#d0d0b8 guibg=#222222 gui=none
+    hi TabLineSel    guifg=#f0f0b0 guibg=#333333 gui=bold
+    hi TabLineFill   guifg=#dccdcc guibg=#101010 gui=none
+    
+    hi SpecialKey    guibg=#444444
+
+    if &t_Co > 255
+        hi FoldColumn    ctermbg=236 ctermfg=109
+        hi Folded        ctermbg=236 ctermfg=109
+        hi TabLine       ctermbg=235 ctermfg=187 cterm=none
+        hi TabLineSel    ctermbg=236 ctermfg=229 cterm=bold
+        hi TabLineFill   ctermbg=233 ctermfg=233
+    endif
+endif
+
+" EXPERIMENTAL ctags_highlighting support
+" link/set sensible defaults here;
+"
+" For now I mostly link to subset of Zenburn colors, the linkage is based
+" on appearance, not semantics. In later versions I might define more new colours.
+"
+" HELP NEEDED to make this work properly.
+if exists("_zenburn_ctags") && _zenburn_ctags
+
+        " Highlighter seems to think a lot of things are global variables even
+        " though they're not. Example: python method-local variable is
+        " coloured as a global variable. They should not be global, since
+        " they're not visible outside the method.
+        " If this is some very bright colour group then things look bad.
+    	hi link CTagsGlobalVariable    Identifier
+        
+        hi CTagsClass             guifg=#acd0b3
+        if &t_Co > 255
+            hi CTagsClass         ctermfg=115
+        endif
+
+        hi link CTagsImport       Statement
+        hi link CTagsMember       Function
+
+    	hi link CTagsGlobalConstant    Constant
+  
+        " These do not yet have support, I can't get them to appear
+        hi link EnumerationValue  Float
+        hi link EnumerationName   Identifier
+        hi link DefinedName       WarningMsg
+    	hi link LocalVariable     WarningMsg
+    	hi link Structure         WarningMsg
+    	hi link Union             WarningMsg
+endif
+
 " TODO check for more obscure syntax groups that they're ok
+
