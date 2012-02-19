@@ -11,7 +11,7 @@ fi
 
 # If this is a bash shell and ~/.bashrc exists, load it.
 if [ `echo $0 | grep bash` ]; then
-    if [ -f ~/.bashrc ] ]; then
+    if [ -f ~/.bashrc ]; then
         source ~/.bashrc
     fi
 fi
