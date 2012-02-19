@@ -10,6 +10,8 @@ if [ -f ~/bin/bootstrap.sh ]; then
 fi
 
 # If this is a bash shell and ~/.bashrc exists, load it.
-if [ "$0" = *bash -a -f ~/.bashrc ]; then
-    source ~/.bashrc
+if [ `echo $0 | grep bash` ]; then
+    if [ -f ~/.bashrc ] ]; then
+        source ~/.bashrc
+    fi
 fi
