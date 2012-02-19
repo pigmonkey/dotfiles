@@ -1,7 +1,15 @@
+# Set potentially useful system variables.
 export OS=`uname -s | sed -e 's/  */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
 export OSVERSION=`uname -r`; OSVERSION=`expr "$OSVERSION" : '[^0-9]*\([0-9]*\.[0-9]*\)'`
 export MACHINE=`uname -m | sed -e 's/ */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
 export PLATFORM="$MACHINE-$OS-$OSVERSION"
 
-# Load in .bashrc -------------------------------------------------
-source ~/.bashrc
+# Execute machine-specific bootstrap script
+if [ -f ~/bin/bootstrap.sh ]; then
+    ~/bin/bootstrap.sh
+fi
+
+# If this is a bash shell and ~/.bashrc exists, load it.
+if [ "$0" = *bash -a -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
