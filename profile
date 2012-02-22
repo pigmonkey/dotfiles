@@ -15,3 +15,8 @@ if [ `echo $0 | grep bash` ]; then
         source ~/.bashrc
     fi
 fi
+
+# If Keychain has set ssh-agent environment variables, load them.
+if [ -f ~/.keychain/$HOST-sh ]; then
+    source ~/.keychain/$HOST-sh
+fi
