@@ -118,6 +118,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# Set $HOST to $HOSTNAME for compatibility with zsh scripts.
+export HOST=$HOSTNAME
+
 # Set vim as the default editor
 export EDITOR='vim'
 

@@ -43,6 +43,9 @@ alias gd='git diff'
 alias gx='git rm $(git ls-files --deleted)'
 alias gr='git reset --hard HEAD'
 
+# Set $HOSTNAME to $HOST for compatibility with bash scripts.
+export HOSTNAME=$HOST
+
 # Set vim as the default editor
 export EDITOR='vim'
 
