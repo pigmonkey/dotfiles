@@ -1,8 +1,6 @@
-# Set potentially useful system variables.
-export OS=`uname -s | sed -e 's/  */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
-export OSVERSION=`uname -r`; OSVERSION=`expr "$OSVERSION" : '[^0-9]*\([0-9]*\.[0-9]*\)'`
-export MACHINE=`uname -m | sed -e 's/ */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
-export PLATFORM="$MACHINE-$OS-$OSVERSION"
+# Set an OS variable. Useful for figuring out if this machine is running Linux,
+# or Drawin, or FreeBSD, etc.
+export OS=`uname -s | tr '[:upper:]' '[:lower:]'`
 
 # Execute machine-specific bootstrap script
 if [ -f ~/bin/bootstrap.sh ]; then
