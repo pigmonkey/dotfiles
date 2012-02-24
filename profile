@@ -2,11 +2,6 @@
 # or Drawin, or FreeBSD, etc.
 export OS=`uname -s | tr '[:upper:]' '[:lower:]'`
 
-# Execute machine-specific bootstrap script
-if [ -f ~/bin/bootstrap.sh ]; then
-    ~/bin/bootstrap.sh
-fi
-
 # If this is a bash shell and ~/.bashrc exists, load it.
 if [ `echo $0 | grep bash` ]; then
     if [ -f ~/.bashrc ]; then
@@ -14,7 +9,16 @@ if [ `echo $0 | grep bash` ]; then
     fi
 fi
 
-# If Keychain has set ssh-agent environment variables, load them.
-if [ -f ~/.keychain/$HOST-sh ]; then
-    source ~/.keychain/$HOST-sh
+# If Keychain is installed, run it.
+hash keychain 2> /dev/null 
+if [ $? -eq 0 ]; then
+    keychain ~/.ssh/id_rsa
+    if [ -f ~/.keychain/$HOST-sh ]; then
+        source ~/.keychain/$HOST-sh
+    fi
+fi
+
+# Execute machine-specific bootstrap script.
+if [ -f ~/bin/bootstrap.sh ]; then
+    ~/bin/bootstrap.sh
 fi
