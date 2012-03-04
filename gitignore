@@ -1,3 +1,8 @@
-*.py[co]    # Python compiled files
-*.egg*      # Python packages
-.*.sw[a-z]  # Temporary swap files
+# Python #
+##########
+*.py[co]
+*.egg*
+
+# Editors #
+###########
+.*.sw[a-z]
