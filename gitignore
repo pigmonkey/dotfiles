@@ -1,3 +1,3 @@
-*.pyc
-*.egg-info
-*.swp
+*.py[co]    # Python compiled files
+*.egg*      # Python packages
+.*.sw[a-z]  # Temporary swap files
