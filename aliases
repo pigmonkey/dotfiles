@@ -22,7 +22,7 @@ alias g='grep -i'
 alias f='find . -iname'
 
 # Arch package management.
-if [ $PKGTOOL = 'pacman' ] ; then
+if [ '$PKGTOOL' = 'pacman' ] ; then
     alias update='sudo reflector -c "United States" -a 2 -f 6 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
     alias upgrade='sudo packer -Syyu'
     alias install='sudo packer -S'
@@ -30,7 +30,7 @@ if [ $PKGTOOL = 'pacman' ] ; then
 fi
 
 # Debian package management.
-if [ $PKGTOOL = 'apt' ] ; then
+if [ '$PKGTOOL' = 'apt' ] ; then
     alias update='sudo apt-get update'
     alias upgrade='sudo apt-get upgrade'
     alias install='sudo apt-get install'
