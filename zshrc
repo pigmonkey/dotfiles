@@ -30,19 +30,6 @@ plugins=(git pip)
 
 source $ZSH/oh-my-zsh.sh
 
-# Apt Aliases
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade'
-alias install='sudo apt-get install'
-alias remove='sudo apt-get remove'
-
-# Git Aliases (in addition to those provided by the git plugin)
-alias ga='git add'
-alias gs='git status -s'
-alias gd='git diff'
-alias gx='git rm $(git ls-files --deleted)'
-alias gr='git reset --hard HEAD'
-
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
 
@@ -66,9 +53,10 @@ elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
         source /usr/bin/virtualenvwrapper.sh
 fi
 
-# Set the default Python and easy_install version.
-alias python='python2.7'
-alias easy_install='easy_install-2.7'
-
 # Set GPG_TTY for vim's GnuPG plugin
 export GPG_TTY=`tty`
+
+# Alias definitions.
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
