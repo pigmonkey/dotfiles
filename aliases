@@ -21,21 +21,22 @@ alias gb='git branch'
 alias g='grep -i'
 alias f='find . -iname'
 
-# Arch package management.
-if [ '$PKGTOOL' = 'pacman' ] ; then
+case $PKGTOOL in
+pacman)
+    # Arch package management.
     alias update='sudo reflector -c "United States" -a 2 -f 6 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
     alias upgrade='sudo packer -Syyu'
     alias install='sudo packer -S'
     alias remove='sudo pacman -Rs'
-fi
-
-# Debian package management.
-if [ '$PKGTOOL' = 'apt' ] ; then
+    ;;
+apt)
+    # Debian package management.
     alias update='sudo apt-get update'
     alias upgrade='sudo apt-get upgrade'
     alias install='sudo apt-get install'
     alias remove='sudo apt-get remove'
-fi
+    ;;
+esac
 
 # Set the default Python and easy_install version.
 alias python='python2.7'
