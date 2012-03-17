@@ -1,71 +1,56 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# Put ~/bin in the path
+# Add ~/bin to the beginning of the path.
 if [ -d ~/bin ]; then
-    export PATH=:~/bin:$PATH  # add your bin directory to your path
+    export PATH=:~/bin:$PATH
 fi
 
-# Import a list of color definitions
+# Import a list of color definitions.
 if [ -f ~/.bash_colors ]; then
     . ~/.bash_colors
 fi
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+# Don't put duplicate lines in the history, or lines beginning with a space.
+HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
+# Append to the history file, don't overwrite it.
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# Set the history length and history file size.
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# Check the window size after each command.
 shopt -s checkwinsize
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
+# Set a fancy prompt.
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+# Attempt to enable prompt colors.
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt='yes'
+else
+    color_prompt=
 fi
 
 # Prompt colors!
-if [ "$color_prompt" = yes ]; then
-    # Root gets a highlighted username in the prompt
+if [ $color_prompt = 'yes' ]; then
+    echo 'color'
+    # Root gets a highlighted username in the prompt.
     if [ ${UID} -eq 0 ]; then
         Red=$On_Red
     fi
-    PS1="${debian_chroot:+($debian_chroot)}\[${Red}\]\u\[${Red}\]@\[${Green}\]\h\[${Green}\]:\[${IBlue}\]\w \[${White}\]\$ "
+    PS1="\[${Red}\]\u\[${Red}\]@\[${Green}\]\h\[${Green}\]:\[${IBlue}\]\w \[${White}\]\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w \$ '
+    echo 'no color'
+    PS1='\u@\h:\w \$ '
 fi
-unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -76,37 +61,20 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+# Enable color support for commonly used programs.
+hash dircolors 2> /dev/null 
+if [ $? -eq 0 ]; then
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
-# enable color ls for OS X
+# Enable color support for ls in OS X.
 if [ "$OS" = "darwin" ] ; then
-    alias ls='ls -G' # OSX (and BSD) specific: the -G command in BSD-based systems is for colors, in Linux it's no groups
-fi
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+    alias ls='ls -G'
 fi
 
 # Set $HOST to $HOSTNAME for compatibility with zsh scripts.
@@ -132,5 +100,10 @@ elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
         source /usr/bin/virtualenvwrapper.sh
 fi
 
-# Set GPG_TTY for vim's GnuPG plugin
+# Set GPG_TTY for gpg-agent.
 export GPG_TTY=`tty`
+
+# Load shell aliases.
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
