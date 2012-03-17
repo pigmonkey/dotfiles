@@ -17,15 +17,25 @@ alias gx='git rm $(git ls-files --deleted)'
 alias gr='git reset --hard HEAD'
 alias gb='git branch'
 
-# Apt
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade'
-alias install='sudo apt-get install'
-alias remove='sudo apt-get remove'
-
 # Misc
-alias g='grep -i'  # Case insensitive grep
+alias g='grep -i'
 alias f='find . -iname'
+
+# Arch package management.
+if [ $PKGTOOL = 'pacman' ] ; then
+    alias update='sudo reflector -c "United States" -a 2 -f 6 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
+    alias upgrade='sudo packer -Syyu'
+    alias install='sudo packer -S'
+    alias remove='sudo pacman -Rs'
+fi
+
+# Debian package management.
+if [ $PKGTOOL = 'apt' ] ; then
+    alias update='sudo apt-get update'
+    alias upgrade='sudo apt-get upgrade'
+    alias install='sudo apt-get install'
+    alias remove='sudo apt-get remove'
+fi
 
 # Set the default Python and easy_install version.
 alias python='python2.7'

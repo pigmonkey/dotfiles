@@ -2,6 +2,16 @@
 # or Drawin, or FreeBSD, etc.
 export OS=`uname -s | tr '[:upper:]' '[:lower:]'`
 
+# Determine the system's package manager.
+command -v apt-get > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    export PKGTOOL='apt'
+fi
+command -v pacman > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    export PKGTOOL='pacman'
+fi
+
 # If this is a bash shell and ~/.bashrc exists, load it.
 if [ `echo $0 | grep bash` ]; then
     if [ -f ~/.bashrc ]; then
