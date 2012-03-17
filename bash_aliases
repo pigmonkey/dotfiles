@@ -1,6 +1,10 @@
 # Navigation
 alias ..='cd ..'
-alias ...='cd .. ; cd ..'
+alias ...='cd ../..'
+
+# ls
+alias l='ls -lh'
+alias ll='ls -lha'
 
 # Git
 alias gs='git status -s'
@@ -22,15 +26,6 @@ alias remove='sudo apt-get remove'
 # Misc
 alias g='grep -i'  # Case insensitive grep
 alias f='find . -iname'
-alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
-alias m='more'
-alias df='df -h'
-
-if [ "$OS" = "linux" ] ; then
-  alias systail='tail -f /var/log/syslog'
-else
-  alias systail='tail -f /var/log/system.log'
-fi
 
 # Set the default Python and easy_install version.
 alias python='python2.7'
