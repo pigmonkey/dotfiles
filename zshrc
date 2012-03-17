@@ -1,39 +1,27 @@
-# Path to your oh-my-zsh configuration.
+# Set the path to oh-my-zsh.
 export ZSH=$HOME/.oh-my-zsh
 
-# Put ~/bin in the beginning of the path.
+# Add ~/bin to the beginning of the path.
 if [ -d ~/bin ]; then
-    export PATH=:~/bin:$PATH # add your bin directory to your path
+    export PATH=:~/bin:$PATH
 fi
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set the name of the theme to load.
 export ZSH_THEME="fishy"
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
+# Disable weekly oh-my-zsh update checks.
 # export DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Set the plugins to load.
 plugins=(git pip)
 
+# Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
 
-# Set vim as the default editor
+# Set vim as the default editor.
 export EDITOR='vim'
 
 # Set the Python version for virtualenvwrapper to use on WebFaction.
@@ -53,10 +41,10 @@ elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
         source /usr/bin/virtualenvwrapper.sh
 fi
 
-# Set GPG_TTY for vim's GnuPG plugin
+# Set GPG_TTY for gpg-agent.
 export GPG_TTY=`tty`
 
-# Alias definitions.
+# Load shell aliases.
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
