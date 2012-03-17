@@ -41,14 +41,12 @@ fi
 
 # Prompt colors!
 if [ $color_prompt = 'yes' ]; then
-    echo 'color'
     # Root gets a highlighted username in the prompt.
     if [ ${UID} -eq 0 ]; then
         Red=$On_Red
     fi
     PS1="\[${Red}\]\u\[${Red}\]@\[${Green}\]\h\[${Green}\]:\[${IBlue}\]\w \[${White}\]\$ "
 else
-    echo 'no color'
     PS1='\u@\h:\w \$ '
 fi
 
