@@ -225,6 +225,11 @@
                 <command>exo-open --launch FileManager</command>
             </action>
         </keybind>
+        <keybind key="W-k">
+            <action name="Execute">
+                <command>keepassx</command>
+            </action>
+        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>1</dragThreshold>
