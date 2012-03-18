@@ -4,6 +4,14 @@ dotfiles
 User preference and configuration files that I use to build my working environment.
 
 
+config/openbox
+--------------
+
+OpenBox configuration and menu files.
+
+Installed as `~/.config/openbox`
+
+
 vim
 ---
 

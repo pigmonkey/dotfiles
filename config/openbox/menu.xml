@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+    <menu id="root-menu" label="OpenBox 3">
+        <item label="Web">
+            <action name="Execute">
+                <execute>exo-open --launch WebBrowser</execute>
+            </action>
+        </item>
+        <item label="Mail">
+            <action name="Execute">
+                <execute>exo-open --launch MailReader</execute>
+            </action>
+        </item>
+        <item label="Terminal">
+            <action name="Execute">
+                <execute>exo-open --launch TerminalEmulator</execute>
+            </action>
+        </item>
+        <item label="Files">
+            <action name="Execute">
+                <execute>exo-open --launch FileManager</execute>
+            </action>
+        </item>
+        <item label="KeePassX">
+            <action name="Execute">
+                <execute>keepassx</execute>
+            </action>
+        </item>
+        <separator/>
+        <menu execute="openbox-menu lxde-applications.menu" id="desktop-app-menu" label="Applications"/>
+        <menu id="2" label="Configuration">
+            <item label="Adobe Flash Player">
+                <action name="Execute">
+                    <execute>flash-player-properties</execute>
+                </action>
+            </item>
+            <item label="Notifications">
+                <action name="Execute">
+                    <execute>
+                        xfce4-notifyd-config
+                    </execute>
+                </action>
+            </item>
+            <item label="Preferred Applications">
+                <action name="Execute">
+                    <execute>
+                        exo-preferred-applications
+                    </execute>
+                </action>
+            </item>
+            <item label="Panel Settings">
+                <action name="Execute">
+                    <execute>
+                        tint2conf
+                    </execute>
+                </action>
+            </item>
+        </menu>
+        <separator/>
+        <item label="Exit">
+            <action name="Execute">
+                <execute>obshutdown</execute>
+            </action>
+        </item>
+    </menu>
+</openbox_menu>
