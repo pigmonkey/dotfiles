@@ -230,6 +230,11 @@
                 <command>keepassx</command>
             </action>
         </keybind>
+        <keybind key="Print">
+            <action name="Execute">
+                <command>scrot '%Y-%m-%d-%H%M%S_$wx$h.png' -e 'mv $f ~/'</command>
+            </action>
+        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>1</dragThreshold>
