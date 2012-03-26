@@ -232,7 +232,7 @@
         </keybind>
         <keybind key="Print">
             <action name="Execute">
-                <command>scrot '%Y-%m-%d-%H%M%S_$wx$h.png' -e 'mv $f ~/'</command>
+                <command>scrot '%Y-%m-%d-%H%M%S_$wx$h.png' -e 'mv $f ~/tmp'</command>
             </action>
         </keybind>
     </keyboard>
