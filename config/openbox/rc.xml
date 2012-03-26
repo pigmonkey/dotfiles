@@ -232,7 +232,7 @@
         </keybind>
         <keybind key="Print">
             <action name="Execute">
-                <command>scrot '%Y-%m-%d-%H%M%S_$wx$h.png' -e 'mv $f ~/tmp'</command>
+                <command>import -window root ~/tmp/screenshot_`date '+%Y-%m-%d-%H%M%S'`.png</command>
             </action>
         </keybind>
     </keyboard>
