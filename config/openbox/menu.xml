@@ -29,6 +29,23 @@
         <separator/>
         <menu execute="openbox-menu lxde-applications.menu" id="desktop-app-menu" label="Applications"/>
         <menu id="2" label="Configuration">
+            <menu id="3" label="OpenBox">
+                <item label="Preferences">
+                    <action name="Execute">
+                        <execute>obconf</execute>
+                    </action>
+                </item>
+                <item label="Menu">
+                    <action name="Execute">
+                        <execute>obmenu</execute>
+                    </action>
+                </item>
+                <item label="Reconfigure">
+                    <action name="Execute">
+                        <execute>openbox --reconfigure</execute>
+                    </action>
+                </item>
+            </menu>
             <item label="Adobe Flash Player">
                 <action name="Execute">
                     <execute>flash-player-properties</execute>
