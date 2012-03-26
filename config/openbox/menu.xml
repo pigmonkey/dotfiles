@@ -55,6 +55,11 @@
                     </execute>
                 </action>
             </item>
+            <item label="Desktop Background">
+                <action name="Execute">
+                    <execute>nitrogen</execute>
+                </action>
+            </item>
         </menu>
         <separator/>
         <item label="Exit">
