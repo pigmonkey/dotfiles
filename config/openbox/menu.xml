@@ -36,23 +36,17 @@
             </item>
             <item label="Notifications">
                 <action name="Execute">
-                    <execute>
-                        xfce4-notifyd-config
-                    </execute>
+                    <execute>xfce4-notifyd-config</execute>
                 </action>
             </item>
             <item label="Preferred Applications">
                 <action name="Execute">
-                    <execute>
-                        exo-preferred-applications
-                    </execute>
+                    <execute>exo-preferred-applications</execute>
                 </action>
             </item>
             <item label="Panel Settings">
                 <action name="Execute">
-                    <execute>
-                        tint2conf
-                    </execute>
+                    <execute>tint2conf</execute>
                 </action>
             </item>
             <item label="Desktop Background">
