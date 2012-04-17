@@ -70,6 +70,14 @@ Configuration for GNU Screen.
 Installed as `~/.screenrc`.
 
 
+tmux.conf
+---------
+
+Configuration for tmux.
+
+Installed as `~/.tmux.conf`.
+
+
 vimrc
 -----
 
