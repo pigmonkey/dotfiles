@@ -20,6 +20,7 @@ alias gb='git branch'
 # Misc
 alias g='grep -i'
 alias f='find . -iname'
+alias tmux='tmux -2'
 
 case $PKGTOOL in
 pacman)
