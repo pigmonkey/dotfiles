@@ -21,6 +21,7 @@ alias gb='git branch'
 alias g='grep -i'
 alias f='find . -iname'
 alias tmux='tmux -2'
+alias t='sshuttle --dns -vr pig-monkey.com 0/0'
 
 case $PKGTOOL in
 pacman)
