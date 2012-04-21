@@ -235,6 +235,16 @@
                 <command>scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'</command>
             </action>
         </keybind>
+        <keybind key="W-S-3">
+            <action name="Execute">
+                <command>scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'</command>
+            </action>
+        </keybind>
+        <keybind key="W-S-4">
+            <action name="Execute">
+                <command>scrot -s 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'</command>
+            </action>
+        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>1</dragThreshold>
