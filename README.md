@@ -94,6 +94,15 @@ A script for building the desktop environment, read by `xinit` and `startx`.
 Installed as `~/.xinitrc`.
 
 
+Xresources
+-------
+
+Configuration for X client applications, particularly `urxvt`.
+
+
+Installed as `~/.Xresources`.
+
+
 zshrc
 -----
 
