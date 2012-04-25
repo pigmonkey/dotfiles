@@ -1,8 +1,10 @@
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
 URxvt.scrollstyle: plain
 
+! put the scroll bar on the right
+URxvt.scrollBar_right:  True
+
 ! font
-!URxvt.font: xft:monaco:size=10
 URxvt.font: xft:DejaVu Sans Mono:size=11
 
 ! true transparency
