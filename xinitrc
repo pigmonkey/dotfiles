@@ -1,3 +1,6 @@
+# Read the Xresources file if it exists.
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 # Launch the xscreensaver daemon.
 /usr/bin/xscreensaver -no-splash &
 
