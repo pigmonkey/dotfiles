@@ -6,6 +6,11 @@ if [ -d ~/bin ]; then
     export PATH=:~/bin:$PATH
 fi
 
+# Add the Ruby bin to the beginning of the path.
+if [ -d ~/.gem/ruby/1.9.1/bin ]; then
+    export PATH=:~/.gem/ruby/1.9.1/bin:$PATH
+fi
+
 # Set the name of the theme to load.
 export ZSH_THEME="fishy"
 
