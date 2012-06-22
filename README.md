@@ -86,6 +86,14 @@ Configuration for Vim.
 Installed as `~/.vimrc`.
 
 
+xbindkeysrc
+-----------
+
+Configuration for Xbindkeys.
+
+Installed as `~/.xbindkeysrc`
+
+
 xinitrc
 -------
 

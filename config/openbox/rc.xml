@@ -199,67 +199,6 @@
                 </finalactions>
             </action>
         </keybind>
-        <!-- Keybindings for running applications -->
-        <keybind key="W-l">
-            <action name="Execute">
-                <command>xscreensaver-command --lock</command>
-            </action>
-        </keybind>
-        <keybind key="W-t">
-            <action name="Execute">
-                <command>exo-open --launch TerminalEmulator</command>
-            </action>
-        </keybind>
-        <keybind key="W-w">
-            <action name="Execute">
-                <command>exo-open --launch WebBrowser</command>
-            </action>
-        </keybind>
-        <keybind key="W-m">
-            <action name="Execute">
-                <command>exo-open --launch MailReader</command>
-            </action>
-        </keybind>
-        <keybind key="W-f">
-            <action name="Execute">
-                <command>exo-open --launch FileManager</command>
-            </action>
-        </keybind>
-        <keybind key="W-k">
-            <action name="Execute">
-                <command>keepassx</command>
-            </action>
-        </keybind>
-        <keybind key="Print">
-            <action name="Execute">
-                <command>scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'</command>
-            </action>
-        </keybind>
-        <keybind key="W-S-3">
-            <action name="Execute">
-                <command>scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'</command>
-            </action>
-        </keybind>
-        <keybind key="W-S-4">
-            <action name="Execute">
-                <command>scrot -s 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'</command>
-            </action>
-        </keybind>
-        <keybind key="XF86AudioRaiseVolume">
-            <action name="Execute">
-                <command>amixer set Master 5%+ unmute</command>
-            </action>
-        </keybind>
-        <keybind key="XF86AudioLowerVolume">
-            <action name="Execute">
-                <command>amixer set Master 5%- unmute</command>
-            </action>
-        </keybind>
-        <keybind key="XF86AudioMute">
-            <action name="Execute">
-                <command>amixer set Master toggle</command>
-             </action>
-        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>1</dragThreshold>
