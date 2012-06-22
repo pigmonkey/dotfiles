@@ -1,6 +1,15 @@
 # Read the Xresources file if it exists.
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
+# Battery monitoring with Batti.
+batti &
+
+# Launch the wicd GUI.
+wicd-gtk &
+
+# Bind keys with xbindkeys.
+xbindkeys &
+
 # Launch the xscreensaver daemon.
 /usr/bin/xscreensaver -no-splash &
 
