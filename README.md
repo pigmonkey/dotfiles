@@ -78,6 +78,14 @@ Configuration for tmux.
 Installed as `~/.tmux.conf`.
 
 
+todo.cfg
+--------
+
+Configuration for todo.txt-cli.
+
+Installed as `~/.todo.cfg`
+
+
 vimrc
 -----
 
