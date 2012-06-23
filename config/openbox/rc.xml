@@ -19,7 +19,7 @@
         <primaryMonitor>1</primaryMonitor>
     </placement>
     <theme>
-        <name>Fawn</name>
+        <name>Carbon</name>
         <titleLayout>NLIMC</titleLayout>
         <keepBorder>yes</keepBorder>
         <animateIconify>yes</animateIconify>
