@@ -4,9 +4,6 @@
 # Battery monitoring with Batti.
 batti &
 
-# Launch the wicd GUI.
-wicd-gtk &
-
 # Bind keys with xbindkeys.
 xbindkeys &
 
