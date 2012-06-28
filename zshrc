@@ -15,7 +15,7 @@ fi
 export ZSH_THEME="fishy"
 
 # Disable weekly oh-my-zsh update checks.
-# export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # Set the plugins to load.
 plugins=(git pip)
