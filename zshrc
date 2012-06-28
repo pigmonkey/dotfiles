@@ -23,6 +23,9 @@ plugins=(git pip)
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
+# Disable ZSH completion on sudo.
+alias sudo='nocorrect sudo'
+
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
 
