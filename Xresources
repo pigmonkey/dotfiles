@@ -11,8 +11,8 @@ URxvt.font: xft:DejaVu Sans Mono:size=11
 URxvt.depth: 32
 URxvt.background:rgba:0000/0000/0000/dddd
 
-! enabled clickable URLs, tabs, and clipboard
-URxvt.perl-ext-common:  default,matcher,tabbed,clipboard
+! enabled clickable URLs and clipboard
+URxvt.perl-ext-common:  default,matcher,clipboard
 
 ! set copy/paste shortcuts
 URxvt.keysym.M-c:   perl:clipboard:copy
@@ -25,12 +25,6 @@ URxvt.iconFile:         /usr/share/icons/oxygen/16x16/apps/utilities-terminal.pn
 ! configure clickable URLs
 URxvt.urlLauncher:      /usr/bin/firefox
 URxvt.matcher.button:   1
-
-! configure tabs
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    3
-URxvt.tabbed.tab-bg:    0
 
 
 ! terminal colors ------------------------------------------------------------
