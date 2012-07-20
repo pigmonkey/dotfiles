@@ -86,6 +86,14 @@ Configuration for todo.txt-cli.
 Installed as `~/.todo.cfg`
 
 
+vimperatorrc
+------------
+
+Configuration for Vimperator.
+
+Installed as ~/.vimperatorrc'.
+
+
 vimrc
 -----
 

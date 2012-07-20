@@ -1,0 +1,2 @@
+" Select all with Ctrl+A
+inoremap <C-a> <Ins><C-a><Ins>
