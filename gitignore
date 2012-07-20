@@ -3,6 +3,7 @@
 *.py[co]
 *.egg*
 build/
+dist/
 
 
 # Editors #
