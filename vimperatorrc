@@ -13,6 +13,3 @@ set incsearch
 
 " Use zenburn colorscheme
 colorscheme zenburn
-
-" Enable pass-through for NewsBlur
-:autocmd LocationChange .* js modes.passAllKeys = /newsblur\.com/.test(buffer.URL)
