@@ -1,2 +1,18 @@
 " Select all with Ctrl+A
 inoremap <C-a> <Ins><C-a><Ins>
+
+" Turn off all toolbars except tabs
+set gui=noaddons,nobookmarks,nomenu,nonavigation,tabs
+
+" Ignore case when searching, smartly
+set ignorecase
+set smartcase
+
+" Search while typing
+set incsearch
+
+" Use zenburn colorscheme
+colorscheme zenburn
+
+" Enable pass-through for NewsBlur
+:autocmd LocationChange .* js modes.passAllKeys = /newsblur\.com/.test(buffer.URL)
