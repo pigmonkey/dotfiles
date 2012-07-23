@@ -20,6 +20,14 @@ Vim configuration files, including colors and plugins.
 Installed as `~/.vim`.
 
 
+vimperator
+---
+
+Vimperator configuration files, including colors and plugins.
+
+Installed as `~/.vimperator`.
+
+
 aliases
 -------
 

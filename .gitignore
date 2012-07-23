@@ -1,2 +1,5 @@
 # Ignore vim's netrw history
 .netrwhist
+
+# Ignore vimperator's info directory
+vimperator/info
