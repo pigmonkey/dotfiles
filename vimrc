@@ -99,6 +99,9 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Set ctrl+v to paste from system clipboard in insert mode.
+imap <C-V> <ESC>"+gpa
+
 " Spell check
 map <F5> :setlocal spell! spelllang=en_us<cr>
 
