@@ -119,6 +119,11 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " GUI (gVim) only
 autocmd GUIEnter * colorscheme ir_black
 
+" Set default gVim window size.
+if has("gui_running")
+    set lines=50 columns=100
+endif
+
 " Tell the GnuPG plugin to armor new files.
 let g:GPGPreferArmor=1
 
