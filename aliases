@@ -5,6 +5,7 @@ alias ...='cd ../..'
 # ls
 alias l='ls -lh'
 alias ll='ls -lha'
+alias lt='ls -lhtr'
 
 # Git
 alias gs='git status -s'
