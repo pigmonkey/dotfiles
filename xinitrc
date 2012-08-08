@@ -31,8 +31,5 @@ synapse -s &
 # Dropbox for syncing.
 dropboxd &
 
-# Yet another package manager notifier.
-yapan &
-
 # OpenBox!
 exec openbox-session
