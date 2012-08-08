@@ -106,6 +106,9 @@ fi
 # Set GPG_TTY for gpg-agent.
 export GPG_TTY=`tty`
 
+# Set todo.txt to list tasks by default
+export TODOTXT_DEFAULT_ACTION=ls
+
 # Load shell aliases.
 if [ -f ~/.aliases ]; then
     source ~/.aliases

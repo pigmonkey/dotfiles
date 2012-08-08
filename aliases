@@ -22,8 +22,9 @@ alias gb='git branch'
 alias g='grep -i'
 alias f='find . -iname'
 alias tmux='tmux -2'
-alias t='sshuttle --dns -vr pig-monkey.com 0/0'
+alias ssht='sshuttle --dns -vr pig-monkey.com 0/0'
 
+# Package management
 case $PKGTOOL in
 pacman)
     # Arch package management.
@@ -40,6 +41,9 @@ apt)
     alias remove='sudo apt-get remove'
     ;;
 esac
+
+# todo.txt
+alias t='todo'
 
 # Set the default Python and easy_install version.
 alias python='python2.7'
