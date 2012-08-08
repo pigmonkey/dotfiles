@@ -51,10 +51,15 @@
     m:0x50 + c:41
     Mod2+Mod4 + f
 
-# Launc the password manager.
+# Launch the password manager.
 "keepassx"
     m:0x50 + c:45
     Mod2+Mod4 + k
+
+# Launch an application launcher.
+"dmenu_run -b -i"
+    m:0x50 + c:65
+    Mod2+Mod4 + space
 
 
 ##############

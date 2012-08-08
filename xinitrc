@@ -25,9 +25,6 @@ thunar --daemon &
 # Control volume with volwheel.
 volwheel &
 
-# Synapse for app launching.
-synapse -s &
-
 # Dropbox for syncing.
 dropboxd &
 
