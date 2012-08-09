@@ -14,7 +14,9 @@ xbindkeys &
 cairo-compmgr &
 
 # Restore the desktop background.
-nitrogen --restore &
+if [ -f ~/.fehbg ]; then
+    sh ~/.fehbg &
+fi
 
 # Launch the taskbar.
 tint2 &
