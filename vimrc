@@ -105,6 +105,16 @@ imap <C-V> <ESC>"+gpa
 " Spell check
 map <F5> :setlocal spell! spelllang=en_us<cr>
 
+" Spell check styling
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap ctermfg=44 term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare ctermfg=44 term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal ctermfg=44 term=underline cterm=underline
+
 " get rid of dos line endings
 map <F6> :%s//\r/g
 
