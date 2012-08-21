@@ -3,3 +3,6 @@
 
 # Ignore vimperator's info directory
 vimperator/info
+
+# Ignore vim's spelling word lists
+vim/spell
