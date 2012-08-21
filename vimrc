@@ -108,6 +108,9 @@ map <F5> :setlocal spell! spelllang=en_us<cr>
 " get rid of dos line endings
 map <F6> :%s//\r/g
 
+" Map 'kj' to esc
+inoremap kj <Esc>
+
 " use Ctrl+L to toggle the line number counting method
 function! g:ToggleNuMode()
   if &nu == 1
