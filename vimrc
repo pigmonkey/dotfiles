@@ -127,6 +127,9 @@ highlight SpellLocal ctermfg=44 term=underline cterm=underline
 " get rid of dos line endings
 map <F6> :%s//\r/g
 
+" Toggle paste mode with F2
+set pastetoggle=<F2>
+
 " Map 'kj' to esc
 inoremap kj <Esc>
 
