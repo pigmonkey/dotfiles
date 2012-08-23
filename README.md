@@ -70,14 +70,6 @@ For use with Bash, installed as `~/.bash_profile` or `~/.profile`.
 For use with Z shell, installed as `~/.zprofile`.
 
 
-screenrc
---------
-
-Configuration for GNU Screen.
-
-Installed as `~/.screenrc`.
-
-
 tmux.conf
 ---------
 
