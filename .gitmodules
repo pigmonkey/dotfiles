@@ -25,3 +25,6 @@
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vim-irblack"]
+	path = vim/bundle/vim-irblack
+	url = https://github.com/wgibbs/vim-irblack.git
