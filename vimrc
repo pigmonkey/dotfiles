@@ -135,7 +135,7 @@ function! g:ToggleNuMode()
      set nu
   endif
 endfunction
-nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
+nnoremap <silent><C-n> :call g:ToggleNuMode()<cr>
 
 " Auto completes
 autocmd FileType python set omnifunc=pythoncomplete#Complete| highlight OverLength ctermbg=darkgrey ctermfg=white guibg=#592929 | match OverLength /\%80v.\+/
