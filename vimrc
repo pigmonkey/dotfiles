@@ -1,7 +1,15 @@
-" Load pathogen.vim
+""""""""""""
+" Pathogen "
+""""""""""""
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
+
+
+"""""""""""
+" General "
+"""""""""""
 
 " Make Vim more useful, but less Vi compatible
 set nocompatible
@@ -12,9 +20,6 @@ set number
 " Enable filetype detection
 filetype indent plugin on
 
-" Syntax highlighting
-syntax on
-
 " Make backspace work like other apps
 set backspace=2
 
@@ -23,36 +28,6 @@ set ruler
 
 " Show the status line
 set laststatus=2
-
-" Tabs should be 4-spaces
-set tabstop=4
-set shiftwidth=4
-
-" Use spaces instead of tabs
-set expandtab
-
-" 4 spaces is a tab, so backspace will work properly
-set softtabstop=4
-
-" Follow line indentation
-set autoindent
-
-" Start searching as the characters are typed
-set incsearch
-
-" Turn on search highlighting
-set showmatch
-set hlsearch
-
-" Clear the search by hitting /<space>
-nnoremap <leader><space> :noh<cr>
-
-" Shortcut to open a new tab
-nnoremap <C-t> :tabnew 
-
-" Ignore case in searches -- but be smart!
-set ignorecase
-set smartcase
 
 " Automatically save before commands like :next and :make
 set autowrite
@@ -66,17 +41,8 @@ set showcmd
 " Allow mouse (is this sacrilege?)
 set mouse=a
 
-" Show special characters
-"  Show > for tab
+" Show whitespace characters
 set list
-set listchars=tab:>-
-
-" Set colorscheme
-let g:zenburn_high_Contrast=1
-colorscheme zenburn
-
-" Use 256 colors
-se t_Co=256
 
 " Use wildmenu for command line tab completion
 set wildmenu
@@ -86,7 +52,55 @@ set wildmode=list:longest,full
 set cursorline
 
 " The TTY is fast
-:set ttyfast
+set ttyfast
+
+" Tell the GnuPG plugin to armor new files.
+let g:GPGPreferArmor=1
+
+" Tell the GnuPG plugin to sign new files.
+let g:GPGPreferSign=1
+
+
+""""""""
+" Tabs "
+""""""""
+
+" Tabs should be 4-spaces
+set tabstop=4
+set shiftwidth=4
+
+" Use spaces instead of tabs
+set expandtab
+
+"  Show > for tab
+set listchars=tab:>-
+
+" 4 spaces is a tab, so backspace will work properly
+set softtabstop=4
+
+" Follow line indentation
+set autoindent
+
+
+""""""""""
+" Search "
+""""""""""
+
+" Turn on search highlighting
+set showmatch
+set hlsearch
+
+" Ignore case in searches -- but be smart!
+set ignorecase
+set smartcase
+
+" Start searching as the characters are typed
+set incsearch
+
+
+"""""""""""""""""""""
+" Keyboard Shorcuts "
+"""""""""""""""""""""
 
 " Disable arrow keys. Force use of <hjkl>. (Oh noes!)
 nnoremap <up> <nop>
@@ -108,35 +122,22 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-" Set ctrl+v to paste from system clipboard in insert mode.
-imap <C-V> <ESC>"+gpa
+" Disable search highlighting (<leader><space>)
+nnoremap <leader><space> :noh<cr>
 
-" Spell check
-map <F5> :setlocal spell! spelllang=en_us<cr>
+" Open a new tab (Ctrl+t)
+nnoremap <C-t> :tabnew 
 
-" Spell check styling
-highlight clear SpellBad
-highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
-highlight clear SpellCap
-highlight SpellCap ctermfg=44 term=underline cterm=underline
-highlight clear SpellRare
-highlight SpellRare ctermfg=44 term=underline cterm=underline
-highlight clear SpellLocal
-highlight SpellLocal ctermfg=44 term=underline cterm=underline
-
-" get rid of dos line endings
-map <F6> :%s//\r/g
-
-" Toggle paste mode with F2
+" Toggle paste mode (F2)
 set pastetoggle=<F2>
 
-" Write a file with sudo
+" Write a file with sudo (w!!)
 cmap w!! w !sudo tee % >/dev/null
 
-" Map 'kj' to esc
+" Escape (kj)
 inoremap kj <Esc>
 
-" use Ctrl+L to toggle the line number counting method
+" Toggle relative line numbers (Ctrl+n)
 function! g:ToggleNuMode()
   if &nu == 1
      set rnu
@@ -146,21 +147,50 @@ function! g:ToggleNuMode()
 endfunction
 nnoremap <silent><C-n> :call g:ToggleNuMode()<cr>
 
-" Auto completes
+" Paste from system clipboard in insert mode (Ctrl+v)
+imap <C-V> <ESC>"+gpa
+
+" Spell check (F5)
+map <F5> :setlocal spell! spelllang=en_us<cr>
+
+
+"""""""""""
+" Styling "
+"""""""""""
+
+" Colorscheme
+let g:zenburn_high_Contrast=1
+colorscheme zenburn
+
+" Use 256 colors
+set t_Co=256
+
+" Syntax highlighting
+syntax on
+
+" Spell check
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap ctermfg=44 term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare ctermfg=44 term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal ctermfg=44 term=underline cterm=underline
+
+" Default gVim window size.
+if has("gui_running")
+    set lines=50 columns=100
+endif
+
+
+""""""""""""""""
+" Autocomplete "
+""""""""""""""""
+
 autocmd FileType python set omnifunc=pythoncomplete#Complete| highlight OverLength ctermbg=darkgrey ctermfg=white guibg=#592929 | match OverLength /\%80v.\+/
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
-" Set default gVim window size.
-if has("gui_running")
-    set lines=50 columns=100
-endif
-
-" Tell the GnuPG plugin to armor new files.
-let g:GPGPreferArmor=1
-
-" Tell the GnuPG plugin to sign new files.
-let g:GPGPreferSign=1
