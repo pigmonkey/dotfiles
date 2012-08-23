@@ -71,11 +71,9 @@ set mouse=a
 set list
 set listchars=tab:>-
 
-" Background is dark
-" set background=dark
-
 " Set colorscheme
-colorscheme molokai
+let g:zenburn_high_Contrast=1
+colorscheme zenburn
 
 " Use 256 colors
 se t_Co=256
@@ -149,9 +147,6 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
-" GUI (gVim) only
-autocmd GUIEnter * colorscheme ir_black
 
 " Set default gVim window size.
 if has("gui_running")
