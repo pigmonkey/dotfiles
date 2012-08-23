@@ -99,6 +99,12 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Move between splits with CTRL and navigation keys.
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
 " Set ctrl+v to paste from system clipboard in insert mode.
 imap <C-V> <ESC>"+gpa
 
