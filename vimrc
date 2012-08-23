@@ -130,6 +130,9 @@ map <F6> :%s//\r/g
 " Toggle paste mode with F2
 set pastetoggle=<F2>
 
+" Write a file with sudo
+cmap w!! w !sudo tee % >/dev/null
+
 " Map 'kj' to esc
 inoremap kj <Esc>
 
