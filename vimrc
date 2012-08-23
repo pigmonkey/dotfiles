@@ -1,3 +1,8 @@
+" Load pathogen.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
 " Make Vim more useful, but less Vi compatible
 set nocompatible
 
