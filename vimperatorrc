@@ -10,6 +10,3 @@ set smartcase
 
 " Search while typing
 set incsearch
-
-" Use zenburn colorscheme
-colorscheme zenburn
