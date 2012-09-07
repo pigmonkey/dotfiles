@@ -1,8 +1,8 @@
 " Select all with Ctrl+A
 inoremap <C-a> <Ins><C-a><Ins>
 
-" Turn off all toolbars except tabs
-set gui=noaddons,nobookmarks,nomenu,nonavigation,tabs
+" Turn off all toolbars except navigation and tabs
+set gui=noaddons,nobookmarks,nomenu,navigation,tabs
 
 " Ignore case when searching, smartly
 set ignorecase
