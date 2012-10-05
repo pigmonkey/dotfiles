@@ -4,6 +4,9 @@
 # Battery monitoring with Batti.
 batti &
 
+# Map keys with xmodmap
+xmodmap ~/.Xmodmap
+
 # Bind keys with xbindkeys.
 xbindkeys &
 
