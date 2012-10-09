@@ -23,6 +23,9 @@ plugins=(vi-mode git pip)
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
+# Change to vi command mode with jj.
+bindkey -M viins 'jj' vi-cmd-mode
+
 # Disable ZSH completion on sudo.
 alias sudo='nocorrect sudo'
 
