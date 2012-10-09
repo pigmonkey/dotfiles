@@ -22,8 +22,8 @@
     m:0x10 + c:160
     Mod2 + XF86ScreenSaver
 "xscreensaver-command --lock"
-    m:0x50 + c:46
-    Mod2+Mod4 + l
+    m:0x51 + c:46
+    Shift+Mod2+Mod4 l
 
 
 ################
@@ -32,34 +32,33 @@
 
 # Launch the terminal.
 "exo-open --launch TerminalEmulator"
-    m:0x50 + c:28
-    Mod2+Mod4 + t
+    m:0x51 + c:28
+    Shift+Mod2+Mod4 t
 
 # Launch the web browser.
 "exo-open --launch WebBrowser"
-    m:0x50 + c:25
-    Mod2+Mod4 + w
+    m:0x51 + c:25
+    Shift+Mod2+Mod4 w
 
 # Launch the mail client.
 "exo-open --launch MailReader"
-    m:0x50 + c:58
-    Mod2+Mod4 + m
-
+    m:0x51 + c:58
+    Shift+Mod2+Mod4 m
 
 # Launch the file manager.
 "exo-open --launch FileManager"
-    m:0x50 + c:41
-    Mod2+Mod4 + f
+    m:0x51 + c:41
+    Shift+Mod2+Mod4 f
 
 # Launch the password manager.
 "keepassx"
-    m:0x50 + c:45
-    Mod2+Mod4 + k
+    m:0x51 + c:45
+    Shift+Mod2+Mod4 k
 
 # Launch an application launcher.
 "dmenu_run -b -i"
-    m:0x50 + c:65
-    Mod2+Mod4 + space
+    m:0x51 + c:65
+    Shift+Mod2+Mod4 space
 
 
 ##############
