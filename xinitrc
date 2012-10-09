@@ -21,9 +21,6 @@ if [ -f ~/.fehbg ]; then
     sh ~/.fehbg &
 fi
 
-# Launch the taskbar.
-tint2 &
-
 # Launch Thunar as a daemon.
 thunar --daemon &
 
@@ -33,5 +30,9 @@ volwheel &
 # Dropbox for syncing.
 dropboxd &
 
-# OpenBox!
-exec openbox-session
+# Launch the session!
+DEFAULT_SESSION=awesome
+case $1 in
+  awesome|openbox-session) exec $1 ;;
+    *) exec $DEFAULT_SESSION ;;
+    esac
