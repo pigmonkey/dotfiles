@@ -18,7 +18,7 @@ export ZSH_THEME="fishy"
 export DISABLE_AUTO_UPDATE="true"
 
 # Set the plugins to load.
-plugins=(git pip)
+plugins=(vi-mode git pip)
 
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
