@@ -207,7 +207,8 @@ myManageHook = composeAll
     , className =? "Chrome"         --> doShift "2:web"
     , className =? "Firefox"        --> doShift "2:web"
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore
+    , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
 
 ------------------------------------------------------------------------
 -- Event handling
