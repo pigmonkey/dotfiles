@@ -27,6 +27,9 @@ volwheel &
 # Dropbox for syncing.
 dropboxd &
 
+# Hide the cursor when idle
+unclutter &
+
 # Launch the session!
 DEFAULT_SESSION=xmonad
 case $1 in
