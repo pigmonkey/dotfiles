@@ -13,9 +13,6 @@ xbindkeys &
 # Launch the xscreensaver daemon.
 /usr/bin/xscreensaver -no-splash &
 
-# Pretty desktop effects with Cairo.
-cairo-compmgr &
-
 # Restore the desktop background.
 if [ -f ~/.fehbg ]; then
     sh ~/.fehbg &
@@ -31,8 +28,19 @@ volwheel &
 dropboxd &
 
 # Launch the session!
-DEFAULT_SESSION=awesome
+DEFAULT_SESSION=xmonad
 case $1 in
-  awesome|openbox-session) exec $1 ;;
-    *) exec $DEFAULT_SESSION ;;
-    esac
+openbox-session)
+    cairo-compmgr &
+    exec openbox-session
+    ;;
+awesome)
+    cairo-compmgr &
+    exec awesome
+    ;;
+*)
+    xsetroot -cursor_name left_ptr
+    trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 6 --transparent true --tint 0x000000 --alpha 50 --height 10 &
+    exec $DEFAULT_SESSION
+    ;;
+esac
