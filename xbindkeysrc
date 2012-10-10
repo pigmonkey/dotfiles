@@ -56,7 +56,7 @@
     Mod2+Mod4 k
 
 # Launch an application launcher.
-"dmenu_run -b -i"
+"eval $(yeganesh -x)"
     m:0x50 + c:65
     Mod2+Mod4 space
 
