@@ -6,3 +6,7 @@ vimperator/info
 
 # Ignore vim's spelling word lists
 vim/spell
+
+# Ignore all xmonad files, except the config
+xmonad/
+!xmonad/xmonad.hs
