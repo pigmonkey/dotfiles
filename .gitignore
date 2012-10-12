@@ -8,5 +8,5 @@ vimperator/info
 vim/spell
 
 # Ignore all xmonad files, except the config
-xmonad/
+xmonad/*
 !xmonad/xmonad.hs
