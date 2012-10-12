@@ -202,6 +202,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
 myManageHook = composeAll
     [ className =? "Keepassx"       --> doFloat
     , className =? "Speedcrunch"    --> doFloat
+    , className =? "Vlc"            --> doFloat
     , className =? "Gimp"           --> doShift "4:media"
     , className =? "Thunderbird"    --> doShift "3:mail"
     , className =? "Chrome"         --> doShift "2:web"
