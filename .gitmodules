@@ -7,6 +7,7 @@
 [submodule "vim/bundle/golden-ratio"]
 	path = vim/bundle/golden-ratio
 	url = https://github.com/roman/golden-ratio.git
+	ignore = dirty
 [submodule "vim/bundle/html5"]
 	path = vim/bundle/html5
 	url = https://github.com/othree/html5.vim.git
