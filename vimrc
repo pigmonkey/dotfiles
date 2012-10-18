@@ -119,11 +119,18 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" Move between splits with CTRL and navigation keys.
+" Move between windows with CTRL and navigation keys.
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
+" Switch between windows with <Leader><number>
+let i = 1
+while i <= 9
+    execute 'nnoremap <Leader>' . i . ' :' . i . 'wincmd w<CR>'
+    let i = i + 1
+endwhile
 
 " Disable search highlighting (<leader><space>)
 nnoremap <leader><space> :noh<cr>
