@@ -51,6 +51,9 @@ set wildmode=list:longest,full
 " Underline the current line
 set cursorline
 
+" Allow modified buffers to go to the background
+set hidden
+
 " The TTY is fast
 set ttyfast
 
