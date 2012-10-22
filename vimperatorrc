@@ -1,5 +1,8 @@
-" Select all with Ctrl+A
+" Select all with Ctrl+A in insert mode
 inoremap <C-a> <Ins><C-a><Ins>
+
+" Select all with Ctrl+A in normal mode
+noremap <C-a> <Ins><C-a><Ins>
 
 " Turn off all toolbars except navigation and tabs
 set gui=noaddons,nobookmarks,nomenu,navigation,tabs
