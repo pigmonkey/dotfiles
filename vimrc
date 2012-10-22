@@ -163,6 +163,12 @@ nnoremap <silent><C-n> :call g:ToggleNuMode()<cr>
 " Paste from system clipboard in insert mode (Ctrl+v)
 imap <C-V> <ESC>"+gpa
 
+" Yank WORD to system clipboard in normal mode
+nmap <leader>c "+yE
+
+" Yank selection to system clipboard in visual mode
+vmap <leader>c "+y
+
 " Spell check (F5)
 map <F5> :setlocal spell! spelllang=en_us<cr>
 
