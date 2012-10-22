@@ -150,7 +150,7 @@ Configuration file for [xmobar](http://projects.haskell.org/xmobar/).
 Installed as `~/.xmobarrc`.
 
 
-Xmoadmap
+Xmodmap
 --------
 
 [Xmodmap](https://wiki.archlinux.org/index.php/Xmodmap) configuration file for remapping caps lock to left control.
