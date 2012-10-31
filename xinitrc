@@ -27,8 +27,11 @@ volwheel &
 # Dropbox for syncing.
 dropboxd &
 
-# Hide the cursor when idle
+# Hide the cursor when idle.
 unclutter &
+
+# Adjust color temperature with Redshift.
+gtk-redshift &
 
 # Launch the session!
 DEFAULT_SESSION=xmonad
