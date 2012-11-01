@@ -214,10 +214,25 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
+
 """"""""""""""""""""
 " GnuPG Extensions "
 """"""""""""""""""""
 
-" Close files after 1 minute of inactivity.
-autocmd BufReadCmd,FileReadCmd *.\(gpg\|asc\|pgp\) set updatetime=60000
-autocmd CursorHold *.\(gpg\|asc\|pgp\) quit
+augroup GnuPGExtra
+    " Set extra file options.
+    autocmd BufReadCmd,FileReadCmd *.\(gpg\|asc\|pgp\) call SetGPGOptions()
+    " Automatically close unmodified files after inactivity.
+    autocmd CursorHold *.\(gpg\|asc\|pgp\) quit
+augroup END
+
+function SetGPGOptions()
+    " Set updatetime to 1 minute.
+    set updatetime=60000
+    " Fold at markers.
+    set foldmethod=marker
+    " Automatically close all folds.
+    set foldclose=all
+    " Only open folds with insert commands.
+    set foldopen=insert
+endfunction
