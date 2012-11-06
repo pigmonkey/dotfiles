@@ -10,6 +10,7 @@ set folder=$HOME/Mail
 set spoolfile=+/INBOX
 set header_cache=~/.hcache
 set postponed = "+/Drafts"
+set record = "+/Sent"
 source ~/.mutt/mailboxes
 
 # Personal
