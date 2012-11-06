@@ -1,0 +1,84 @@
+source "gpg --quiet --batch -d ~/.smtp-havenaut.gpg |"
+
+####################
+# Account Settings #
+####################
+
+# Mailbox
+set mbox_type=Maildir
+set folder=$HOME/Mail
+set spoolfile=+/INBOX
+set header_cache=~/.hcache
+set postponed = "+/Drafts"
+source ~/.mutt/mailboxes
+
+# Personal
+set realname='Peter Hogg'
+set from='peter@havenaut.net'
+set reverse_name=yes
+set reverse_realname=yes
+alternates pm@pig-monkey.com
+
+# SMTP
+set my_user=pigmonkey
+set my_pass=$my_pw_personal
+set smtp_url=smtps://$my_user:$my_pass@smtp.webfaction.com
+set ssl_force_tls=yes
+
+
+####################
+# General Settings #
+####################
+
+# Basic
+set timeout=3
+set mail_check=0
+set delete
+set pipe_decode
+
+# PGP Support
+source /etc/Muttrc.gpg.dist
+
+# Status Bar
+set status_chars=" *%A"
+set status_format="───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Index View
+set date_format="%m/%d"
+set index_format="[%Z]  %D  %-20.20F  %s"
+set sort=threads
+set sort_aux=reverse-last-date-received
+set uncollapse_jump
+
+# Sidebar Plugin
+set sidebar_delim='  │'
+set sidebar_visible=yes
+set sidebar_width=24
+
+
+################
+# Key Bindings #
+################
+
+# Index
+bind index gg       first-entry
+bind index G        last-entry
+bind index R        group-reply
+bind index <tab>    sync-mailbox
+bind index <space>  collapse-thread
+
+# Sidebar
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+
+
+##########
+# Colors #
+##########
+
+source ~/.mutt/colors.zenburn
+color sidebar_new color174 color234

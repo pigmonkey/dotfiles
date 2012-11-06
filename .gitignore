@@ -10,3 +10,6 @@ vim/spell
 # Ignore all xmonad files, except the config
 xmonad/*
 !xmonad/xmonad.hs
+
+# Ignore mutt mailboxes
+mutt/mailboxes
