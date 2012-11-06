@@ -28,6 +28,9 @@ if [ $? -eq 0 ]; then
     fi
 fi
 
+# If we're in tmux, set the terminal to 256 colors.
+[ -n "$TMUX" ] && export TERM=screen-256color
+
 # Execute machine-specific bootstrap script.
 if [ -f ~/bin/bootstrap.sh ]; then
     ~/bin/bootstrap.sh
