@@ -18,7 +18,9 @@ set realname='Peter Hogg'
 set from='peter@havenaut.net'
 set reverse_name=yes
 set reverse_realname=yes
+set signature=~/.mutt/sigs/hogg
 alternates pm@pig-monkey.com
+send-hook "~f pig-monkey.com" "set signature=~/.mutt/sigs/pigmonkey"
 
 # SMTP
 set my_user=pigmonkey
