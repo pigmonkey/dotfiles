@@ -37,8 +37,11 @@ set mail_check=0
 set delete
 set pipe_decode
 
-# PGP Support
+# PGP
 source /etc/Muttrc.gpg.dist
+set pgp_replyencrypt=yes
+set pgp_replysign=yes
+set pgp_replysignencrypted=yes
 
 # Status Bar
 set status_chars=" *%A"
