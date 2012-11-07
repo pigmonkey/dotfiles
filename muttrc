@@ -69,12 +69,9 @@ bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 
 # Sidebar
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CO sidebar-open
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right>  sidebar-open
 
 
 ##########
