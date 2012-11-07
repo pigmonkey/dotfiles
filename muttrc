@@ -40,7 +40,10 @@ set mail_check=0
 set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
+
+# HTML Messages
 auto_view text/html
+alternative_order text/plain text/html
 
 # PGP
 source /etc/Muttrc.gpg.dist
