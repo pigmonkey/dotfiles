@@ -39,6 +39,8 @@ set timeout=3
 set mail_check=0
 set delete
 set pipe_decode
+set mailcap_path=~/.mutt/mailcap
+auto_view text/html
 
 # PGP
 source /etc/Muttrc.gpg.dist
