@@ -1,5 +1,4 @@
 [general]
-pythonfile = ~/.offlineimap.py
 ui = ttyui
 accounts = Havenaut
 
@@ -17,7 +16,6 @@ remotehost = mail.webfaction.com
 ssl = yes
 cert_fingerprint = e0424bf75630900ece8ae26ee61274036fa93a1e
 remoteuser = pigmonkey
-remotepasseval = imappasswd('havenaut')
 
 [mbnames]
 enabled = yes
