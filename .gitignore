@@ -13,3 +13,6 @@ xmonad/*
 
 # Ignore mutt mailboxes
 mutt/mailboxes
+
+# Ignore mutt work-specific settings
+mutt/workrc

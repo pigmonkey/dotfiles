@@ -26,6 +26,9 @@ set my_pass=$my_pw_personal
 set smtp_url=smtps://$my_user:$my_pass@smtp.webfaction.com
 set ssl_force_tls=yes
 
+# Include extra work-specific settings
+source ~/.mutt/workrc
+
 
 ####################
 # General Settings #
