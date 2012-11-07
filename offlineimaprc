@@ -1,10 +1,13 @@
 [general]
+pythonfile = ~/.offlineimap.py
 ui = ttyui
 accounts = Havenaut
 
 [Account Havenaut]
 localrepository = Local
 remoterepository = Remote
+autorefresh = 5
+quick = 10
 
 [Repository Local]
 type = Maildir
@@ -16,6 +19,7 @@ remotehost = mail.webfaction.com
 ssl = yes
 cert_fingerprint = e0424bf75630900ece8ae26ee61274036fa93a1e
 remoteuser = pigmonkey
+remotepasseval = imappasswd('havenaut')
 
 [mbnames]
 enabled = yes
