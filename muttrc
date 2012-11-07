@@ -84,6 +84,9 @@ bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
+# Sync mail
+macro index o "<enter-command>unset wait_key<enter><shell-escape>mailcheck.sh<enter><enter-command>set wait_key<enter>"
+
 
 ##########
 # Colors #
