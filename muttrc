@@ -42,6 +42,8 @@ set mail_check=0
 set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
+set edit_headers=yes
+set fast_reply
 
 # HTML Messages
 auto_view text/html
