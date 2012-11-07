@@ -83,6 +83,10 @@ bind index R        group-reply
 bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 
+# Pager
+bind pager j next-line
+bind pager k previous-line
+
 # Sidebar
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
