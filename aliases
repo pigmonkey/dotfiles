@@ -30,7 +30,7 @@ alias ssht='sshuttle --dns -vr pig-monkey.com 0/0'
 case $PKGTOOL in
 pacman)
     # Arch package management.
-    alias update='sudo reflector -a 2 -f 6 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
+    alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
     alias upgrade='sudo packer -Syyu'
     alias install='sudo packer -S'
     alias remove='sudo pacman -Rs'
