@@ -40,6 +40,7 @@ source ~/.mutt/workrc
 # Basic
 set timeout=3
 set mail_check=0
+set wait_key=no
 set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
@@ -95,8 +96,8 @@ bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
 # Sync mail
-macro index o "<enter-command>unset wait_key<enter><shell-escape>mailcheck.sh -q<enter><enter-command>set wait_key<enter>"
-macro index O "<enter-command>unset wait_key<enter><shell-escape>mailcheck.sh<enter><enter-command>set wait_key<enter>"
+macro index o "<shell-escape>mailcheck.sh -q<enter>"
+macro index O "<shell-escape>mailcheck.sh<enter>"
 
 
 ##########
