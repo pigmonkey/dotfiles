@@ -7,7 +7,6 @@ accounts = Havenaut
 localrepository = Local
 remoterepository = Remote
 autorefresh = 5
-quick = 10
 
 [Repository Local]
 type = Maildir
