@@ -25,8 +25,9 @@ send-hook "~f pig-monkey.com" "set signature=~/.mutt/sigs/pigmonkey"
 # SMTP
 set my_user=pigmonkey
 set my_pass=$my_pw_personal
-set smtp_url=smtps://$my_user:$my_pass@smtp.webfaction.com
+set smtp_url=smtp://$my_user:$my_pass@localhost:1090
 set ssl_force_tls=yes
+account-hook smtp://$my_user@localhost 'unset ssl_verify_host'
 
 # Include extra work-specific settings
 source ~/.mutt/workrc
