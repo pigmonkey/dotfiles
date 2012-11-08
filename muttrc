@@ -95,7 +95,8 @@ bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
 # Sync mail
-macro index o "<enter-command>unset wait_key<enter><shell-escape>mailcheck.sh<enter><enter-command>set wait_key<enter>"
+macro index o "<enter-command>unset wait_key<enter><shell-escape>mailcheck.sh -q<enter><enter-command>set wait_key<enter>"
+macro index O "<enter-command>unset wait_key<enter><shell-escape>mailcheck.sh<enter><enter-command>set wait_key<enter>"
 
 
 ##########
