@@ -99,6 +99,9 @@ bind index,pager <right>  sidebar-open
 macro index o "<shell-escape>mailcheck.sh -q<enter>"
 macro index O "<shell-escape>mailcheck.sh<enter>"
 
+# Archive mail
+macro index,pager A "s+archive<enter>"
+
 
 ##########
 # Colors #
