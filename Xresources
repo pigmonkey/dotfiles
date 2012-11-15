@@ -2,7 +2,7 @@
 URxvt.scrollBar: none
 
 ! font
-URxvt.font: xft:DejaVu Sans Mono:size=11
+URxvt.font: xft:Terminus:size=12
 
 ! true transparency
 URxvt.depth: 32
