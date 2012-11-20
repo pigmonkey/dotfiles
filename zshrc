@@ -17,6 +17,10 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 setopt correct
 
+# Limit history size
+HISTSIZE=1000
+SAVEHIST=1000
+
 # Change to vi command mode with jj.
 bindkey -M viins 'jj' vi-cmd-mode
 
