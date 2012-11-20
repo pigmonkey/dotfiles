@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set the name of the theme to load.
-export ZSH_THEME="fishy"
+export ZSH_THEME="flazz"
 
 # Disable weekly oh-my-zsh update checks.
 export DISABLE_AUTO_UPDATE="true"
@@ -13,11 +13,12 @@ plugins=(vi-mode git pip)
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
+# Do not correct everything.
+unsetopt correct_all
+setopt correct
+
 # Change to vi command mode with jj.
 bindkey -M viins 'jj' vi-cmd-mode
-
-# Disable ZSH completion on sudo.
-alias sudo='nocorrect sudo'
 
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
