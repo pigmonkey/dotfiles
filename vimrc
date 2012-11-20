@@ -116,6 +116,9 @@ set incsearch
 " Keyboard Shorcuts "
 """""""""""""""""""""
 
+" Remap colon to semicolon.
+nnoremap ; :
+
 " Disable arrow keys. Force use of <hjkl>. (Oh noes!)
 nnoremap <up> <nop>
 nnoremap <down> <nop>
