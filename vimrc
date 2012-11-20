@@ -14,9 +14,6 @@ call pathogen#helptags()
 " Make Vim more useful, but less Vi compatible
 set nocompatible
 
-" Show line numbers
-set number
-
 " Enable filetype detection
 filetype indent plugin on
 
@@ -62,6 +59,20 @@ let g:GPGPreferArmor=1
 
 " Tell the GnuPG plugin to sign new files.
 let g:GPGPreferSign=1
+
+
+""""""""""""""""
+" Line Numbers "
+""""""""""""""""
+
+" Default to relative line numbers.
+set rnu
+
+" Use absolute numbers in insert mode.
+autocmd InsertEnter * :set nu
+
+" Switch back to relative line numbers when leaving insert mode.
+autocmd InsertLeave * :set rnu
 
 
 """"""""
