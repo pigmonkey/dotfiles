@@ -54,22 +54,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Enable color support for commonly used programs.
-hash dircolors 2> /dev/null 
-if [ $? -eq 0 ]; then
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# Enable color support for ls in OS X.
-if [ "$OS" = "darwin" ] ; then
-    alias ls='ls -G'
-fi
-
 # Set $HOST to $HOSTNAME for compatibility with zsh scripts.
 export HOST=$HOSTNAME
 

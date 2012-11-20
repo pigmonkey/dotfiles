@@ -5,6 +5,7 @@ alias pu='pushd'
 alias po='popd'
 
 # ls
+alias ls='ls --color=auto'
 alias l='ls -lh'
 alias ll='ls -lha'
 alias lt='ls -lhtr'
@@ -23,8 +24,13 @@ alias grm='git rm $(git ls-files --deleted)'
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 
-# Misc
+# Grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias g='grep -i'
+
+# Misc
 alias f='find . -iname'
 alias ssht='sshuttle --dns -vr pig-monkey.com 0/0'
 
