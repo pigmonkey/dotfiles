@@ -1,6 +1,8 @@
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
+alias pu='pushd'
+alias po='popd'
 
 # ls
 alias l='ls -lh'
