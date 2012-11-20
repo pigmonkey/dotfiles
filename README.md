@@ -94,6 +94,14 @@ For use with Bash, installed as `~/.bash_profile` or `~/.profile`.
 For use with Zsh, installed as `~/.zprofile`.
 
 
+shellrc
+-------
+
+Configuration for interactive shells. This is source by both [Zsh](http://www.zsh.org/) and [Bash](http://www.gnu.org/software/bash/bash.html).
+
+Installed as `~/.shellrc`.
+
+
 tmux.conf
 ---------
 

@@ -1,16 +1,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# Add ~/bin to the beginning of the path.
-if [ -d ~/bin ]; then
-    export PATH=:~/bin:$PATH
-fi
-
-# Add the Ruby bin to the beginning of the path.
-if [ -d ~/.gem/ruby/1.9.1/bin ]; then
-    export PATH=:~/.gem/ruby/1.9.1/bin:$PATH
-fi
-
 # Import a list of color definitions.
 if [ -f ~/.bash_colors ]; then
     . ~/.bash_colors
@@ -83,31 +73,10 @@ fi
 # Set $HOST to $HOSTNAME for compatibility with zsh scripts.
 export HOST=$HOSTNAME
 
-# Set vim as the default editor
-export EDITOR='vim'
-
-# Set the Python version for virtualenvwrapper to use on WebFaction.
-if [[ `hostname` =~ webfaction  ]] ; then
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+# Load agnostic interactive shell configuration.
+if [ -f ~/.shellrc ]; then
+    source ~/.shellrc
 fi
-
-# Install virtualenvwrapper, wherever it may be!
-if [ -f $HOME/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source $HOME/bin/virtualenvwrapper.sh
-elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source /usr/local/bin/virtualenvwrapper.sh
-elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source /usr/bin/virtualenvwrapper.sh
-fi
-
-# Set GPG_TTY for gpg-agent.
-export GPG_TTY=`tty`
-
-# Set todo.txt to list tasks by default
-export TODOTXT_DEFAULT_ACTION=ls
 
 # Load shell aliases.
 if [ -f ~/.aliases ]; then
