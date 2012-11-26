@@ -52,12 +52,20 @@ xmonad
 Installed as `~/.xmonad`.
 
 
+abcde.conf
+----------
+
+Configuration for [A Better CD Encoder](http://lly.org/~rcw/abcde/page/).
+
+Installed as `~/abcde.conf`.
+
+
 abookrc
 -------
 
 Configuration for [abook](http://abook.sourceforge.net/).
 
-Installed as `~/.abook/abookrc`
+Installed as `~/.abook/abookrc`.
 
 
 aliases
