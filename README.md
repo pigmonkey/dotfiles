@@ -52,6 +52,14 @@ xmonad
 Installed as `~/.xmonad`.
 
 
+abookrc
+-------
+
+Configuration for [abook](http://abook.sourceforge.net/).
+
+Installed as `~/.abook/abookrc`
+
+
 aliases
 -------
 
