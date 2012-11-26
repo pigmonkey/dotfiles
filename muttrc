@@ -45,6 +45,7 @@ set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
 set edit_headers=yes
+set query_command="abook --mutt-query '%s'"
 set fast_reply
 
 # HTML Messages
@@ -101,6 +102,15 @@ macro index O "<shell-escape>mailcheck.sh<enter>"
 
 # Archive mail
 macro index,pager A "s+archive<enter>"
+
+# Launch abook
+macro generic,index,pager B "<shell-escape>abook<return>"
+
+# Add sender to address book
+macro index,pager a "<pipe-message>abook --add-email<return>"
+
+# Bind ; to ctrl-t in editor mode
+macro editor ";" \Ct
 
 
 ##########
