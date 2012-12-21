@@ -27,10 +27,6 @@ bindkey -M viins 'jj' vi-cmd-mode
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
 
-# Set autocompletion for password files.
-pw() { cd ~/pw; vim $1; cd "$OLDPWD" }
-compctl -W ~/pw -f pw
-
 # Load agnostic interactive shell configuration.
 if [ -f ~/.shellrc ]; then
     source ~/.shellrc
@@ -38,3 +34,6 @@ fi
 
 # Set autocompletion for notes.
 compctl -W $NOTEDIR -f n
+
+# Set autocompletion for password databases.
+compctl -W $PASSDIR -f pw

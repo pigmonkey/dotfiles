@@ -39,6 +39,16 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+#############
+# Passwords #
+#############
+
+# Set the password database directory.
+PASSDIR=~/pw
+
+# Create or edit password databases.
+pw() { cd "$PASSDIR"; vim $1; cd "$OLDPWD" }
+
 #########
 # Notes #
 #########
