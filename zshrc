@@ -27,6 +27,10 @@ bindkey -M viins 'jj' vi-cmd-mode
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
 
+# Set autocompletion for password files.
+pw() { vim ~/pw/$1; }
+compctl -W ~/pw -f pw
+
 # Load agnostic interactive shell configuration.
 if [ -f ~/.shellrc ]; then
     source ~/.shellrc
