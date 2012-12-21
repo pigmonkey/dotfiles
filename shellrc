@@ -38,3 +38,50 @@ export TODOTXT_DEFAULT_ACTION=ls
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
+
+#########
+# Notes #
+#########
+
+# Set the note directory.
+NOTEDIR=~/documents/notes
+
+# Create or edit notes.
+n() {
+    if [ -z "$1" ]; then
+        lt "$NOTEDIR"
+    else
+        # Build the full path of the note.
+        note="$NOTEDIR"/"$1"
+
+        # If an extension was given, use it.
+        if [[ "$1" == *.* ]]; then
+            vim "$note"
+
+        # If no extension was given...
+        else
+            # ... try the file without any extension.
+            if [ -e "$note" ]; then
+                vim "$note"
+            # ... try the file with a gpg extension.
+            elif [ -e "$note".gpg ]; then
+                vim "$note".gpg
+            # ... use a txt extension.
+            else
+                vim "$note".txt
+            fi
+        fi
+    fi
+}
+
+# Find a note by title.
+nf() {
+    if [ -z "$1" ]; then
+        lt "$NOTEDIR"
+    else
+        lt "$NOTEDIR" | grep -i $1
+    fi
+}
+
+# Search within notes.
+ns() { cd $NOTEDIR; grep -rin $1; cd "$OLDPWD"; }

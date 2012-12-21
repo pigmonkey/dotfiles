@@ -35,3 +35,6 @@ compctl -W ~/pw -f pw
 if [ -f ~/.shellrc ]; then
     source ~/.shellrc
 fi
+
+# Set autocompletion for notes.
+compctl -W $NOTEDIR -f n
