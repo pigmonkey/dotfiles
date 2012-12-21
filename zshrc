@@ -28,7 +28,7 @@ bindkey -M viins 'jj' vi-cmd-mode
 export HOSTNAME=$HOST
 
 # Set autocompletion for password files.
-pw() { vim ~/pw/$1; }
+pw() { cd ~/pw; vim $1; cd "$OLDPWD" }
 compctl -W ~/pw -f pw
 
 # Load agnostic interactive shell configuration.
