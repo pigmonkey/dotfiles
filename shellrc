@@ -39,6 +39,28 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Take a text file and build it with an extension, if needed.
+# Prefer gpg extension over txt.
+buildfile() {
+    # If an extension was given, use it.
+    if [[ "$1" == *.* ]]; then
+        echo "$1"
+
+    # If no extension was given...
+    else
+        # ... try the file without any extension.
+        if [ -e "$1" ]; then
+            echo "$1"
+        # ... try the file with a gpg extension.
+        elif [ -e "$1".gpg ]; then
+            echo "$1".gpg
+        # ... use a txt extension.
+        else
+            echo "$1".txt
+        fi
+    fi
+}
+
 #############
 # Passwords #
 #############
@@ -47,7 +69,13 @@ fi
 PASSDIR=~/pw
 
 # Create or edit password databases.
-pw() { cd "$PASSDIR"; vim $1; cd "$OLDPWD" }
+pw() {
+    cd "$PASSDIR"
+    if [ ! -z "$1" ]; then
+        $EDITOR $(buildfile "$1")
+        cd "$OLDPWD"
+    fi
+}
 
 #########
 # Notes #
@@ -58,29 +86,12 @@ NOTEDIR=~/documents/notes
 
 # Create or edit notes.
 n() {
+    # If no note was given, list the notes.
     if [ -z "$1" ]; then
         lt "$NOTEDIR"
+    # If a note was given, open it.
     else
-        # Build the full path of the note.
-        note="$NOTEDIR"/"$1"
-
-        # If an extension was given, use it.
-        if [[ "$1" == *.* ]]; then
-            vim "$note"
-
-        # If no extension was given...
-        else
-            # ... try the file without any extension.
-            if [ -e "$note" ]; then
-                vim "$note"
-            # ... try the file with a gpg extension.
-            elif [ -e "$note".gpg ]; then
-                vim "$note".gpg
-            # ... use a txt extension.
-            else
-                vim "$note".txt
-            fi
-        fi
+        $EDITOR $(buildfile "$NOTEDIR"/"$1")
     fi
 }
 
