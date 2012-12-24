@@ -161,9 +161,6 @@ cmap w!! w !sudo tee % >/dev/null
 " Escape (kj)
 inoremap kj <Esc>
 
-" Escape (jj)
-inoremap jj <Esc>
-
 " Toggle relative line numbers (Ctrl+n)
 function! g:ToggleNuMode()
   if &nu == 1

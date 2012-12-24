@@ -21,8 +21,8 @@ setopt correct
 HISTSIZE=1000
 SAVEHIST=1000
 
-# Change to vi command mode with jj.
-bindkey -M viins 'jj' vi-cmd-mode
+# Change to vi command mode with kj.
+bindkey -M viins 'kj' vi-cmd-mode
 
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
