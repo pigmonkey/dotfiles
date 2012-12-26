@@ -24,6 +24,10 @@ SAVEHIST=1000
 # Change to vi command mode with kj.
 bindkey -M viins 'kj' vi-cmd-mode
 
+# Bind incremental search keys.
+bindkey -M vicmd '/' history-incremental-search-backward
+bindkey -M vicmd '?' history-incremental-search-forward
+
 # Set $HOSTNAME to $HOST for compatibility with bash scripts.
 export HOSTNAME=$HOST
 
