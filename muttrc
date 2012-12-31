@@ -48,6 +48,7 @@ set edit_headers=yes
 set query_command="abook --datafile ~/documents/addressbook --mutt-query '%s'"
 set fast_reply
 set forward_format="Fwd: %s"
+set use_domain=no
 
 # HTML Messages
 auto_view text/html
