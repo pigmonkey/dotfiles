@@ -100,6 +100,14 @@ Rules for globally ignoring files in [git](http://git-scm.com/) repositories.
 Installed as `~/.gitignore`.
 
 
+ledgerrc
+--------
+
+Configuration for [Ledger](http://ledger-cli.org/) accounting.
+
+Installed as `~/.ledgerrc`.
+
+
 profile
 -------
 
