@@ -1,10 +1,10 @@
 Config {
-    font = "xft:Fixed-8",
+    font = "xft:Terminus:size=8"
     borderColor = "black",
     border = TopB,
     bgColor = "black",
     fgColor = "grey",
-    position = TopW L 94,
+    position = TopW L 95,
     lowerOnStart = True,
     hideOnStart = False,
     persistent = False,
@@ -18,5 +18,5 @@ Config {
     ],
     sepChar = "%",
     alignSep = "}{",
-   template = "%StdinReader% }{ %cpu%   %memory%   %swap%   %wlan0%   <fc=#FFFFCC>%date%</fc>"
+   template = "%StdinReader% }{ %cpu%   %memory%   %swap%   %wlan0%   <fc=#FFFFCC>%date%</fc> "
        }
