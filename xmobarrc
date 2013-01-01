@@ -1,9 +1,7 @@
 Config {
     font = "xft:Terminus:size=8"
-    borderColor = "black",
-    border = TopB,
-    bgColor = "black",
-    fgColor = "grey",
+    bgColor = "#1f1f1f",
+    fgColor = "#7f9f7f",
     position = TopW L 95,
     lowerOnStart = True,
     hideOnStart = False,
