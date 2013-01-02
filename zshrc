@@ -43,3 +43,42 @@ compctl -W $NOTEDIR -f n
 
 # Set autocompletion for password databases.
 compctl -W $PASSDIR -f pw
+
+# Build the battery charge prompt.
+function battery_charge {
+    # Make sure acpi is installed.
+    hash acpi 2> /dev/null
+
+    if [ $? -eq 0 ]; then
+
+        # Get the battery state.
+        BATTSTATE="$(acpi -b)"
+        BATTPERCENT="$(echo ${BATTSTATE[(w)4]} | sed -r 's/(^[0-9]+).*/\1/')"
+        BATTSTATUS="$(echo ${BATTSTATE[(w)3]})"
+
+        # Set the battery prompt.
+        if [[ "${BATTSTATUS}" = "Discharging," ]]; then
+            BATTPROMPT="${BATTPERCENT}%% ↺"
+        fi
+        if [[ "${BATTSTATUS}" = "Charging," ]]; then
+            BATTPROMPT="${BATTPERCENT}%% ↻"
+        fi
+
+        # Colorize the battery prompt based on percentage.
+        if [[ "${BATTPERCENT}" -lt 15 ]]; then
+            BATTPROMPT="%{$fg[red]%}$BATTPROMPT"
+        elif [[ "${BATTPERCENT}" -lt 60 ]]; then
+            BATTPROMPT="%{$fg[yellow]%}$BATTPROMPT"
+        else
+            BATTPROMPT="%{$fg[green]%}$BATTPROMPT"
+        fi
+
+        # Reset the color after the battery prompt.
+        BATTPROMPT="$BATTPROMPT%{$reset_color%}"
+    fi
+
+    echo $BATTPROMPT
+}
+
+# Add the battery charge prompt to the right prompt.
+RPS1='$(vi_mode_prompt_info) ${return_code} $(battery_charge) '
