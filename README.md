@@ -20,6 +20,14 @@ config/openbox
 Installed as `~/.config/openbox`
 
 
+config/redshift.conf
+--------------------
+
+Configuration for [Redshift](http://jonls.dk/redshift/)
+
+Installed as `~/.config/redshift.conf`
+
+
 vim
 ---
 
