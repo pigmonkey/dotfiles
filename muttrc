@@ -50,6 +50,7 @@ set fast_reply
 set forward_format="Fwd: %s"
 set use_domain=no
 set user_agent=no
+set hostname="mail.havenaut.net"
 
 # HTML Messages
 auto_view text/html
