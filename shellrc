@@ -39,6 +39,11 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
+# Inspect the beginning and end of a file.
+i() {
+    (head -n 5; tail -n 5) < "$1"
+}
+
 # Take a text file and build it with an extension, if needed.
 # Prefer gpg extension over txt.
 buildfile() {
