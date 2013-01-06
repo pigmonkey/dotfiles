@@ -32,3 +32,4 @@
 [submodule "vim/bundle/vim-ledger"]
 	path = vim/bundle/vim-ledger
 	url = https://github.com/ledger/vim-ledger.git
+	ignore = dirty
