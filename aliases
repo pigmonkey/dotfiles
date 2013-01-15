@@ -34,6 +34,7 @@ alias g='grep -i'
 alias f='find . -iname'
 alias ssht='sshuttle --dns -vr pig-monkey.com 0/0'
 alias abook='abook --datafile ~/documents/addressbook'
+alias bc='bc -ql'
 
 # Package management
 case $PKGTOOL in
