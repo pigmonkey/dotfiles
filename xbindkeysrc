@@ -18,10 +18,10 @@
     Mod2 + XF86AudioRaiseVolume
 
 # Lock the screen
-"xscreensaver-command --lock"
+"/usr/sbin/physlock"
     m:0x10 + c:160
     Mod2 + XF86ScreenSaver
-"xscreensaver-command --lock"
+"/usr/sbin/physlock"
     m:0x50 + c:46
     Mod2+Mod4 l
 

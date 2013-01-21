@@ -10,8 +10,8 @@ xmodmap ~/.Xmodmap
 # Bind keys with xbindkeys.
 xbindkeys &
 
-# Launch the xscreensaver daemon.
-/usr/bin/xscreensaver -no-splash &
+# Launch the screen locker.
+xautolock -time 10 -locker ~/bin/physlock -nowlocker ~/bin/physlock -detectsleep -secure &
 
 # Restore the desktop background.
 if [ -f ~/.fehbg ]; then
