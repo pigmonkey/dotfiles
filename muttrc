@@ -56,6 +56,9 @@ set hostname="mail.havenaut.net"
 auto_view text/html
 alternative_order text/plain text/html
 
+# Printing
+set print_command="$HOME/.mutt/print.sh"
+
 # PGP
 source /etc/Muttrc.gpg.dist
 set pgp_replyencrypt=yes
