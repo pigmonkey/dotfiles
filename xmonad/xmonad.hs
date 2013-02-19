@@ -3,6 +3,7 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
 import XMonad.Actions.CycleWS
+import XMonad.Actions.CycleWindows
 import Data.Monoid
 import System.Exit
 
@@ -75,7 +76,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_n     ), refresh)
 
     -- Move focus to the next window
-    , ((modm,               xK_Tab   ), windows W.focusDown)
+    , ((modm,               xK_Tab   ), cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab)
 
     -- Move focus to the next window
     , ((modm,               xK_j     ), windows W.focusDown)
