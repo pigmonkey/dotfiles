@@ -119,6 +119,10 @@ set incsearch
 " Remap colon to semicolon.
 nnoremap ; :
 
+" Toggle folds with space.
+nnoremap <Space> za   
+vnoremap <Space> za
+
 " Disable arrow keys. Force use of <hjkl>. (Oh noes!)
 nnoremap <up> <nop>
 nnoremap <down> <nop>
