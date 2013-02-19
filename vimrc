@@ -184,8 +184,8 @@ nmap <leader>c "+yE
 " Yank selection to system clipboard in visual mode
 vmap <leader>c "+y
 
-" Spell check (F5)
-map <F5> :setlocal spell! spelllang=en_us<cr>
+" Spell check
+map <leader>s :setlocal spell! spelllang=en_us<cr>
 
 
 """""""""""
