@@ -262,3 +262,11 @@ let g:ledger_maxwidth = 80
 
 " Use a · to connect the account name to the amount in fold text.
 let g:ledger_fillstring = '·'
+
+
+""""""""
+" Mutt "
+""""""""
+
+" Delete quoted signatures.
+au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d/^$
