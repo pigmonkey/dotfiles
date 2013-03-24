@@ -179,10 +179,10 @@ nnoremap <silent><C-n> :call g:ToggleNuMode()<cr>
 imap <C-V> <ESC>"+gpa
 
 " Yank WORD to system clipboard in normal mode
-nmap <leader>c "+yE
+nmap <leader>y "+yE
 
 " Yank selection to system clipboard in visual mode
-vmap <leader>c "+y
+vmap <leader>y "+y
 
 " Spell check
 map <leader>s :setlocal spell! spelllang=en_us<cr>
