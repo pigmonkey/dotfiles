@@ -6,3 +6,6 @@ let g:ledger_fillstring = '·'
 
 " Mark a transaction as cleared
 nnoremap <leader>c :call LedgerSetTransactionState(line('.'), '*')<CR>
+
+" Set a transaction's primary date to today
+nnoremap <leader>t :call LedgerSetDate(line('.'), 'unshift')<CR>
