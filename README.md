@@ -4,14 +4,6 @@ dotfiles
 User preference and configuration files that I use to build my working environment.
 
 
-config/openbox
---------------
-
-[OpenBox](http://openbox.org/) configuration and menu files.
-
-Installed as `~/.config/openbox`
-
-
 config/redshift.conf
 --------------------
 

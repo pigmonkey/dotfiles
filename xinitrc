@@ -34,15 +34,6 @@ unclutter &
 gtk-redshift &
 
 # Launch the session!
-DEFAULT_SESSION=xmonad
-case $1 in
-openbox-session)
-    cairo-compmgr &
-    exec openbox-session
-    ;;
-*)
-    xsetroot -cursor_name left_ptr
-    trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x1f1f1f --alpha 0 --height 10 &
-    exec $DEFAULT_SESSION
-    ;;
-esac
+xsetroot -cursor_name left_ptr
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x1f1f1f --alpha 0 --height 10 &
+exec xmonad
