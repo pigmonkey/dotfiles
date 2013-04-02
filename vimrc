@@ -54,12 +54,6 @@ set hidden
 " The TTY is fast
 set ttyfast
 
-" Tell the GnuPG plugin to armor new files.
-let g:GPGPreferArmor=1
-
-" Tell the GnuPG plugin to sign new files.
-let g:GPGPreferSign=1
-
 
 """"""""""""""""
 " Line Numbers "
@@ -233,6 +227,12 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 """"""""""""""""""""
 " GnuPG Extensions "
 """"""""""""""""""""
+
+" Tell the GnuPG plugin to armor new files.
+let g:GPGPreferArmor=1
+
+" Tell the GnuPG plugin to sign new files.
+let g:GPGPreferSign=1
 
 augroup GnuPGExtra
     " Set extra file options.
