@@ -4,14 +4,6 @@ dotfiles
 User preference and configuration files that I use to build my working environment.
 
 
-config/awesome
---------------
-
-[Awesome](http://awesome.naquadah.org/) configuration files.
-
-Installed as `~/.config/awesome`
-
-
 config/openbox
 --------------
 
