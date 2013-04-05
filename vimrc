@@ -54,6 +54,9 @@ set hidden
 " The TTY is fast
 set ttyfast
 
+" Set the minimum number of lines to keep above and below cursor
+set scrolloff=5
+
 
 """"""""""""""""
 " Line Numbers "
