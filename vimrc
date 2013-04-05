@@ -134,6 +134,10 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Set smooth scrolling
+:map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+:map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
 " Move between windows with CTRL and navigation keys.
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
