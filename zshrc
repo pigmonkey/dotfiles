@@ -85,3 +85,8 @@ RPS1='$(vi_mode_prompt_info) ${return_code} $(battery_charge) '
 
 # Set the Vi mode indicator.
 MODE_INDICATOR="%{$fg_bold[magenta]%}--NORMAL--%{$reset_color%}"
+
+# Enable command line editing.
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
