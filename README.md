@@ -118,6 +118,14 @@ Configuration for interactive shells. This is source by both [Zsh](http://www.zs
 Installed as `~/.shellrc`.
 
 
+pplconfig
+---------
+
+Configuration for [ppl](http://ppladdressbook.org/)
+
+Installed as `~/.pplconfig`.
+
+
 tmux.conf
 ---------
 
