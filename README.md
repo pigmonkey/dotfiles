@@ -68,22 +68,6 @@ Aliases for common programs, to be used in shells like [Zsh](http://www.zsh.org/
 Installed as `~/.aliases`.
 
 
-bash_colors
------------
-
-System colors intended to be used in [Bash](http://www.gnu.org/software/bash/bash.html) prompts.
-
-Installed as `~/.bash_colors`.
-
-
-bashrc
-------
-
-Configuration for interactive [Bash](http://www.gnu.org/software/bash/bash.html).
-
-Installed as `~/.bashrc`.
-
-
 gitignore
 ---------
 
