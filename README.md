@@ -60,14 +60,6 @@ Configuration for [abook](http://abook.sourceforge.net/).
 Installed as `~/.abook/abookrc`.
 
 
-aliases
--------
-
-Aliases for common programs, to be used in shells like [Zsh](http://www.zsh.org/) and [Bash](http://www.gnu.org/software/bash/bash.html).
-
-Installed as `~/.aliases`.
-
-
 gitignore
 ---------
 
@@ -82,24 +74,6 @@ ledgerrc
 Configuration for [Ledger](http://ledger-cli.org/) accounting.
 
 Installed as `~/.ledgerrc`.
-
-
-profile
--------
-
-Configuration for login shells, to be used in shells like [Zsh](http://www.zsh.org/) and [Bash](http://www.gnu.org/software/bash/bash.html).
-
-For use with Bash, installed as `~/.bash_profile` or `~/.profile`.
-
-For use with Zsh, installed as `~/.zprofile`.
-
-
-shellrc
--------
-
-Configuration for interactive shells. This is source by both [Zsh](http://www.zsh.org/) and [Bash](http://www.gnu.org/software/bash/bash.html).
-
-Installed as `~/.shellrc`.
 
 
 pplconfig
@@ -182,10 +156,11 @@ Configuration for X client applications, particularly [rxvt-unicode](http://soft
 
 Installed as `~/.Xresources`.
 
+zprezto
+-------
 
-zshrc
------
+Fork of [the configuration framework for Zsh](https://github.com/pigmonkey/prezto).
 
-Configuration for interactive and login [Zsh](http://www.zsh.org/).
+Installed as `~/.zprezto`.
 
-Installed as `~/.zshrc`.
+All files within `zprezto/runcoms/` should be linked into `~/`.

@@ -33,3 +33,6 @@
 	path = vim/bundle/vim-ledger
 	url = https://github.com/ledger/vim-ledger.git
 	ignore = dirty
+[submodule "zprezto"]
+	path = zprezto
+	url = git@github.com:pigmonkey/prezto.git
