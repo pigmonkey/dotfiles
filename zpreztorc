@@ -56,7 +56,7 @@ zstyle ':prezto:module:editor' keymap 'vi'
 #
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:status:ignore' submodules 'untracked'
 
 #
 # GNU Utility
