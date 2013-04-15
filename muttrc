@@ -45,7 +45,7 @@ set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
 set edit_headers=yes
-set query_command="abook --datafile ~/documents/addressbook --mutt-query '%s'"
+set query_command="ppl mutt -i '%s'"
 set fast_reply
 set forward_format="Fwd: %s"
 set use_domain=no
@@ -110,11 +110,8 @@ macro index O "<shell-escape>mailcheck.sh<enter>"
 # Archive mail
 macro index,pager A "s+archive<enter>"
 
-# Launch abook
-macro generic,index,pager B "<shell-escape>abook --datafile ~/documents/addressbook<return>"
-
-# Add sender to address book
-macro index,pager a "<pipe-message>abook --datafile ~/documents/addressbook --add-email<return>"
+# Launch address book
+macro generic,index,pager B "<shell-escape>ppl shell<return>"
 
 # Bind ; to ctrl-t in editor mode
 macro editor ";" \Ct
