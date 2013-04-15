@@ -10,7 +10,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-path=($HOME/bin $path)
+
+#Add $HOME/bin to the beginning of the path.
+if [ -d ~/bin ]; then
+    path=($HOME/bin $path)
+fi
 
 # Add ruby gems to the path.
 if which ruby >/dev/null && which gem >/dev/null; then
