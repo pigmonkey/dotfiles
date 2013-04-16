@@ -1,8 +1,0 @@
-# Show the cursor.
-set show_cursor=true
-
-# Export addresses in the US style.
-set address_style="us"
-
-# Define how entries are displayed in the main list.
-set index_format=" {name:22} {email:40} {mobile:12|phone|workphone}"
