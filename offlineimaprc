@@ -14,10 +14,10 @@ localfolders = ~/mail
 
 [Repository Remote]
 type = IMAP
-remotehost = mail.webfaction.com
+remotehost = mail.messagingengine.com
 ssl = yes
-cert_fingerprint = e0424bf75630900ece8ae26ee61274036fa93a1e
-remoteuser = pigmonkey
+cert_fingerprint = fa86c1ca2d4f805e8fe7b8e7076a3ad2ccc52bb4
+remoteuser = peterhogg@fastmail.fm
 remotepasseval = imappasswd('havenaut')
 
 [mbnames]

@@ -23,7 +23,7 @@ send-hook . "set signature=~/.mutt/sigs/hogg"
 send-hook "~f pig-monkey.com" "set signature=~/.mutt/sigs/pigmonkey"
 
 # SMTP
-set my_user=pigmonkey
+set my_user='peterhogg@fastmail.fm'
 set my_pass=$my_pw_personal
 set smtp_url=smtp://$my_user:$my_pass@localhost:1090
 set ssl_force_tls=yes
