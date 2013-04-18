@@ -9,7 +9,7 @@ set mbox_type=Maildir
 set folder=$HOME/mail
 set spoolfile=+/INBOX
 set header_cache=~/.hcache
-set postponed = "+/INBOX.Drafts"
+set postponed = "+/Drafts"
 source ~/.mutt/mailboxes
 
 # Personal
@@ -107,7 +107,7 @@ macro index o "<shell-escape>mailcheck.sh -q<enter>"
 macro index O "<shell-escape>mailcheck.sh<enter>"
 
 # Archive mail
-macro index,pager A "s+archive<enter>"
+macro index,pager A "s+Archive<enter>"
 
 # Launch address book
 macro generic,index,pager B "<shell-escape>ppl shell<return>"

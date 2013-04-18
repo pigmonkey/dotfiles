@@ -12,6 +12,7 @@ status_backend = sqlite
 [Repository Local]
 type = Maildir
 localfolders = ~/mail
+nametrans = lambda f: ["INBOX."+f, f][f == "INBOX"]
 
 [Repository Remote]
 type = IMAP
@@ -20,6 +21,7 @@ ssl = yes
 cert_fingerprint = fa86c1ca2d4f805e8fe7b8e7076a3ad2ccc52bb4
 remoteuser = peterhogg@fastmail.fm
 remotepasseval = imappasswd('havenaut')
+nametrans = lambda foldername: re.sub('^INBOX.', '', foldername)
 
 [mbnames]
 enabled = yes
