@@ -7,6 +7,7 @@ accounts = Havenaut
 localrepository = Local
 remoterepository = Remote
 autorefresh = 5
+status_backend = sqlite
 
 [Repository Local]
 type = Maildir
