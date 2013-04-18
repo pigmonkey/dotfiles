@@ -9,8 +9,7 @@ set mbox_type=Maildir
 set folder=$HOME/mail
 set spoolfile=+/INBOX
 set header_cache=~/.hcache
-set postponed = "+/Drafts"
-set record = "+/Sent"
+set postponed = "+/INBOX.Drafts"
 source ~/.mutt/mailboxes
 
 # Personal
