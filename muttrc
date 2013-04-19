@@ -108,6 +108,10 @@ macro index,pager A "s+Archive<enter>"
 # Launch address book
 macro generic,index,pager B "<shell-escape>ppl shell<return>"
 
+
+# Add sender to address book
+macro index,pager a "<pipe-message>ppl scrape --sender<return>" 
+
 # Bind ; to ctrl-t in editor mode
 macro editor ";" \Ct
 
