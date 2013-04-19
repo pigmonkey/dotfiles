@@ -1,5 +1,3 @@
-source "gpg --quiet --batch -d ~/.smtp-havenaut.gpg |"
-
 ####################
 # Account Settings #
 ####################
@@ -22,12 +20,9 @@ alternates pm@pig-monkey.com peter@itstactical.com
 send-hook . "set signature=~/.mutt/sigs/hogg"
 send-hook "~f pig-monkey.com" "set signature=~/.mutt/sigs/pigmonkey"
 
-# SMTP
-set my_user='peterhogg@fastmail.fm'
-set my_pass=$my_pw_personal
-set smtp_url=smtp://$my_user:$my_pass@localhost:1090
-set ssl_force_tls=yes
-account-hook smtp://$my_user@localhost 'unset ssl_verify_host'
+# Sending
+set envelope_from=yes
+set sendmail='/usr/bin/msmtp -a default'
 
 # Include extra work-specific settings
 source ~/.mutt/workrc
