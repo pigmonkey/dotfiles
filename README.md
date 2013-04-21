@@ -60,6 +60,14 @@ Configuration for [A Better CD Encoder](http://lly.org/~rcw/abcde/page/).
 Installed as `~/abcde.conf`.
 
 
+dircolors-solarized
+-------------------
+
+[Solarized](http://ethanschoonover.com/solarized) colors for [GNU ls](https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html).
+
+`dircolors-solarized/dircolors.ansi-dark` installed as `~/.dir_colors`.
+
+
 gitignore
 ---------
 
