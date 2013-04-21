@@ -13,3 +13,6 @@ set smartcase
 
 " Search while typing
 set incsearch
+
+" Set the colorscheme
+colorscheme solarized
