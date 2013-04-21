@@ -3,6 +3,14 @@ dotfiles
 
 User preference and configuration files that I use to build my working environment.
 
+This repository includes [git](http://git-scm.com/) submodules. When cloning to a new machine, the submodules need to be initialized.
+
+    $ git submodule update --init
+
+Every submodule can be updated to the latest available version at once:
+
+    $ git submodule foreach git pull origin master
+
 
 config/redshift.conf
 --------------------
@@ -12,18 +20,18 @@ Configuration for [Redshift](http://jonls.dk/redshift/)
 Installed as `~/.config/redshift.conf`
 
 
+mutt
+----
+
+Additional configuration for [mutt](http://www.mutt.org/).
+
+Installed as `~/.mutt/`
+
+
 vim
 ---
 
-[Vim](http://www.vim.org/) plugins. These should be loaded with [Pathogen](https://github.com/tpope/vim-pathogen).
-
-Each plugin is a [git](http://git-scm.com/) submodule. When cloning this repository to a new machine, the submodules need to be initialized.
-
-    $ git submodule update --init
-
-Every submodule can be updated to the latest available version at once:
-
-    $ git submodule foreach git pull origin master
+Additional configuration and plugins for [Vim](http://www.vim.org/) . These should be loaded with [Pathogen](https://github.com/tpope/vim-pathogen).
 
 Installed as `~/.vim`.
 
@@ -76,6 +84,38 @@ Configuration for [Ledger](http://ledger-cli.org/) accounting.
 Installed as `~/.ledgerrc`.
 
 
+msmtprc
+-------
+
+Configuration for the [msmtp](http://msmtp.sourceforge.net/) SMTP client.
+
+Installed as `~/.msmtprc`.
+
+
+muttrc
+------
+
+Configuration for [mutt](http://www.mutt.org/).
+
+Installed as `~/.muttrc`.
+
+
+offlineimap.py
+--------------
+
+Password loader for [OfflineIMAP](http://offlineimap.org/). The IMAP password is securely stored with [GnuPG](http://www.gnupg.org/)
+
+Installed as `~/.offlineimap.py`.
+
+
+offlineimaprc
+-------------
+
+Configuration for [OfflineIMAP](http://offlineimap.org/).
+
+Installed as `~/.offlineimap.py`.
+
+
 pplconfig
 ---------
 
@@ -97,7 +137,15 @@ todo.cfg
 
 Configuration for [todo.txt-cli](https://github.com/ginatrapani/todo.txt-cli).
 
-Installed as `~/.todo.cfg`
+Installed as `~/.todo.cfg`.
+
+
+urlview
+-------
+
+Configuration for [urlview](http://linuxcommand.org/man_pages/urlview1.html), a URL extractor/launcher.
+
+Installed as `~/.urlview`.
 
 
 vimperatorrc
@@ -121,7 +169,7 @@ xbindkeysrc
 
 [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html) configuration file for desktop-agnostic key bindings.
 
-Installed as `~/.xbindkeysrc`
+Installed as `~/.xbindkeysrc`.
 
 
 xinitrc
@@ -156,11 +204,58 @@ Configuration for X client applications, particularly [rxvt-unicode](http://soft
 
 Installed as `~/.Xresources`.
 
+
+zlogin
+------
+
+Login shell configuration for [Zsh](http://www.zsh.org/).
+
+Installed as `~/.zlogin`.
+
+
+zlogout
+-------
+
+[Zsh](http://www.zsh.org/) configuration for logging out of login shells.
+
+Installed as `~/.zlogout`.
+
+
 zprezto
 -------
 
 Fork of [the configuration framework for Zsh](https://github.com/pigmonkey/prezto).
 
-Installed as `~/.zprezto`.
+Installed as `~/.zprezto/`.
 
-All files within `zprezto/runcoms/` should be linked into `~/`.
+
+zpreztorc
+---------
+
+Configuration for [prezto](https://github.com/pigmonkey/prezto).
+
+Installed as `~/.zpreztorc`.
+
+
+zprofile
+--------
+
+Login shell configuration for [Zsh](http://www.zsh.org/).
+
+Installed as `~/.zprofile`.
+
+
+zshenv
+------
+
+Environment configuration for [Zsh](http://www.zsh.org/).
+
+Installed as `~/.zshenv`.
+
+
+zshrc
+-----
+
+Interactive shell configuration for [Zsh](http://www.zsh.org/).
+
+Installed as `~/.zshrc`.
