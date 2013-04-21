@@ -36,3 +36,6 @@
 [submodule "zprezto"]
 	path = zprezto
 	url = git@github.com:pigmonkey/prezto.git
+[submodule "mutt/solarized"]
+	path = mutt/solarized
+	url = https://github.com/altercation/mutt-colors-solarized.git

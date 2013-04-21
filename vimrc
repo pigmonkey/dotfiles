@@ -194,14 +194,11 @@ map <leader>s :setlocal spell! spelllang=en_us<cr>
 """""""""""
 
 " Colorscheme
-let g:zenburn_high_Contrast=1
-colorscheme zenburn
-
-" Use 256 colors
-set t_Co=256
+set background=dark
+colorscheme solarized
 
 " Syntax highlighting
-syntax on
+syntax enable
 
 " Spell check
 highlight clear SpellBad

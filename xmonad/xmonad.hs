@@ -43,11 +43,11 @@ myWorkspaces    = ["1:term","2:web","3:mail","4:media","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#7C7C7C"
-myFocusedBorderColor = "#FFB6B0"
+myNormalBorderColor = "#002b36"
+myFocusedBorderColor = "#657b83"
 
 -- Color of current window title in xmobar.
-xmobarTitleColor = "#FFB6B0"
+xmobarTitleColor = "yellow"
 
 -- Color of current workspace in xmobar.
 xmobarCurrentWorkspaceColor = "#CEFFAC"
