@@ -28,7 +28,7 @@ zstyle ':prezto:load' pmodule \
   'python' \
   'buildfile' \
   'ssh-agent' \
-  'gpg-agent' \
+  'gpg' \
   'pacman' \
   'environment' \
   'terminal' \
@@ -67,6 +67,19 @@ zstyle ':prezto:module:git:status:ignore' submodules 'untracked'
 # zstyle ':prezto:module:gnu-utility' prefix 'g'
 
 #
+# History Substring Search
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:history-substring-search:color' found ''
+
+# Set the query not found color.
+# zstyle ':prezto:module:history-substring-search:color' not-found ''
+
+# Set the search globbing flags.
+# zstyle ':prezto:module:history-substring-search' globbing-flags ''
+
+#
 # Pacman
 #
 
@@ -90,13 +103,6 @@ zstyle ':prezto:module:prompt' theme 'pigmonkey'
 # zstyle ':prezto:module:screen' auto-start 'yes'
 
 #
-# GPG-Agent
-#
-
-# Enable SSH-Agent protocol emulation.
-# zstyle ':prezto:module:gpg-agent' ssh-support 'yes'
-
-#
 # SSH-Agent
 #
 
@@ -111,13 +117,20 @@ zstyle ':prezto:module:ssh-agent' forwarding 'yes'
 #
 
 # Set syntax highlighters.
-# By default main, brackets, and cursor are enabled.
+# By default, only the main highlighter is enabled.
 # zstyle ':prezto:module:syntax-highlighting' highlighters \
 #   'main' \
 #   'brackets' \
 #   'pattern' \
 #   'cursor' \
 #   'root'
+#
+# Set syntax highlighting styles.
+# zstyle ':prezto:module:syntax-highlighting' styles \
+#   'builtin' 'bg=blue' \
+#   'command' 'bg=blue' \
+#   'function' 'bg=blue'
+#
 
 #
 # Terminal
