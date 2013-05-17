@@ -50,11 +50,6 @@
     m:0x50 + c:41
     Mod2+Mod4 f
 
-# Launch the password manager.
-"keepassx"
-    m:0x50 + c:45
-    Mod2+Mod4 k
-
 # Launch an application launcher.
 "eval $(yeganesh -x)"
     m:0x50 + c:65
