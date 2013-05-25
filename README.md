@@ -12,6 +12,14 @@ Every submodule can be updated to the latest available version at once:
     $ git submodule foreach git pull origin master
 
 
+config/beets
+------------
+
+Configuration for [beets](http://beets.radbox.org/).
+
+Installed as `~/.config/beets`
+
+
 config/redshift.conf
 --------------------
 

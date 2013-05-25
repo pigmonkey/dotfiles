@@ -16,3 +16,6 @@ mutt/mailboxes
 
 # Ignore mutt work-specific settings
 mutt/workrc
+
+# Ignore the beets runtime state
+config/beets/state.pickle

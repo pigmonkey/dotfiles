@@ -1,0 +1,8 @@
+directory: ~/audio/music
+library: ~/audio/.beet.blb
+import:
+    move: yes
+color: yes
+plugins: lyrics echonest_tempo lastgenre mbsync fetchart scrub
+lastgenre:
+    canonical: ''
