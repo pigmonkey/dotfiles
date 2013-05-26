@@ -94,3 +94,16 @@ export NOTEDIR=~/documents/notes
 
 # Set the default password directory.
 export PASSDIR=~/pw
+
+#
+# Ledger Encryption
+#
+
+# Set the directory of the EncFS filesystem.
+export LEDGERCRYPT=~/.ledger-crypt
+
+# Set the mount point of the EncFS filesystem.
+export LEDGERMOUNT=~/ledger
+
+# Set the file which contains the GnuPG encrypted passphrase.
+export LEDGERPASS=~/.ledger.gpg
