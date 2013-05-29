@@ -262,4 +262,4 @@ endfunction
 """"""""
 
 " Delete quoted signatures.
-au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d/^$
+au BufRead /tmp/mutt* normal :g/^\(> \)--\s*$/,/^$/-1d/^$
