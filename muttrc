@@ -16,7 +16,7 @@ set realname='Peter Hogg'
 set from='peter@havenaut.net'
 set reverse_name=yes
 set reverse_realname=yes
-alternates pm@pig-monkey.com peter@itstactical.com
+alternates pm@pig-monkey.com peter@itstactical.com peter@tripleaughtdesign.com
 send-hook . "set signature=~/.mutt/sigs/hogg"
 send-hook "~f pig-monkey.com" "set signature=~/.mutt/sigs/pigmonkey"
 
