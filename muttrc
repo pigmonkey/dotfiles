@@ -22,7 +22,7 @@ send-hook "~f pig-monkey.com" "set signature=~/.mutt/sigs/pigmonkey"
 
 # Sending
 set envelope_from=yes
-set sendmail='/usr/bin/msmtp -a default'
+set sendmail='/usr/bin/msmtp'
 
 # Include extra work-specific settings
 source ~/.mutt/workrc
