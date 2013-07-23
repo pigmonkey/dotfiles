@@ -263,13 +263,3 @@ endfunction
 
 " Delete quoted signatures.
 au BufRead /tmp/mutt* normal :g/^\(> \)--\s*$/,/^$/-1d/^$
-
-
-"""""""""""
-" Vimwiki "
-"""""""""""
-
-" Default wiki at ~/documents/wiki
-" Use Markdown syntax
-let g:vimwiki_list = [{'path': '~/documents/wiki/',
-                     \ 'syntax': 'markdown', 'ext': '.md'}]
