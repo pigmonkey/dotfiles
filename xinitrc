@@ -35,5 +35,12 @@ gtk-redshift &
 
 # Launch the session!
 xsetroot -cursor_name left_ptr
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x002b36 --alpha 0 --height 10 &
-exec xmonad
+case $1 in
+i3)
+    exec i3 
+    ;;
+xmonad|*)
+    trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x002b36 --alpha 0 --height 10 &
+    exec xmonad
+    ;;
+esac
