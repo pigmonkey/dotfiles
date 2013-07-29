@@ -139,3 +139,9 @@ bar {
 
 # Automatic workspace switching back-and-forth.
 workspace_auto_back_and_forth yes
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
