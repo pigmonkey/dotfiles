@@ -136,3 +136,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Automatic workspace switching back-and-forth.
+workspace_auto_back_and_forth yes
