@@ -48,6 +48,7 @@ set hostname="mail.havenaut.net"
 # Composing
 set edit_headers=yes
 set fast_reply
+set askcc
 
 # HTML Messages
 auto_view text/html
