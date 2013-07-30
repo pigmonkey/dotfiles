@@ -1,10 +1,14 @@
 """"""""""""
-" Pathogen "
+" Vundle "
 """"""""""""
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
 
 
 """""""""""
