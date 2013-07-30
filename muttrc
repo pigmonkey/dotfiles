@@ -55,10 +55,11 @@ alternative_order text/plain text/html
 set print_command="$HOME/.mutt/print.sh"
 
 # PGP
-source /etc/Muttrc.gpg.dist
-set pgp_replyencrypt=yes
-set pgp_replysign=yes
-set pgp_replysignencrypted=yes
+set crypt_use_gpgme = yes
+set crypt_replyencrypt = yes
+set crypt_replysign = yes
+set crypt_replysignencrypted = yes
+set crypt_verify_sig = yes
 
 # Status Bar
 set status_chars=" *%A"
