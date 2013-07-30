@@ -10,6 +10,16 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+" Bundles
+Bundle 'jamessan/vim-gnupg'
+Bundle 'roman/golden-ratio'
+Bundle 'othree/html5.vim'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tpope/vim-markdown'
+Bundle 'jnurmine/Zenburn'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ledger/vim-ledger'
+
 
 """""""""""
 " General "
