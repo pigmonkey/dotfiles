@@ -7,7 +7,7 @@ URxvt.scrollBar: none
 ! font
 URxvt.font: xft:Terminus:size=12
 
-! enabled clickable URLs, clipboard, and fullscreen
+! enabled clipboard and selectable URLs
 URxvt.perl-ext-common:  default,clipboard,url-select
 
 ! set copy/paste shortcuts
