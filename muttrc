@@ -39,13 +39,15 @@ set wait_key=no
 set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
-set edit_headers=yes
 set query_command="ppl mutt -i '%s'"
-set fast_reply
 set forward_format="Fwd: %s"
 set use_domain=no
 set user_agent=no
 set hostname="mail.havenaut.net"
+
+# Composing
+set edit_headers=yes
+set fast_reply
 
 # HTML Messages
 auto_view text/html
