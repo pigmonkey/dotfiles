@@ -22,9 +22,6 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.url-select.launcher:  /usr/bin/firefox -new-tab
 URxvt.url-select.underline: true
 
-! switch to full screen with F11
-URxvt.keysym.F11: perl:fullscreen:switch
-
 
 ! Solarized color scheme for the X Window System
 !
