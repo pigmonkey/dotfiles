@@ -8,7 +8,7 @@ URxvt.scrollBar: none
 URxvt.font: xft:Terminus:size=12
 
 ! enabled clickable URLs, clipboard, and fullscreen
-URxvt.perl-ext-common:  default,matcher,clipboard,fullscreen
+URxvt.perl-ext-common:  default,clipboard,url-select
 
 ! set copy/paste shortcuts
 URxvt.keysym.Control-Shift-C: perl:clipboard:copy
@@ -17,9 +17,10 @@ URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 ! set a taskbar icon
 URxvt.iconFile:         /usr/share/icons/oxygen/16x16/apps/utilities-terminal.png
 
-! configure clickable URLs
-URxvt.urlLauncher:      /usr/bin/firefox
-URxvt.matcher.button:   1
+! configure selectable URLs
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.url-select.launcher:  /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
 
 ! switch to full screen with F11
 URxvt.keysym.F11: perl:fullscreen:switch
