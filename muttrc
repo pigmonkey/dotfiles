@@ -49,7 +49,7 @@ set hostname="mail.havenaut.net"
 
 # HTML Messages
 auto_view text/html
-alternative_order text/plain text/html
+alternative_order text/plain text/enriched text/html
 
 # Printing
 set print_command="$HOME/.mutt/print.sh"
