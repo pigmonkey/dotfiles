@@ -72,6 +72,11 @@ set sort=threads
 set sort_aux=reverse-last-date-received
 set uncollapse_jump
 
+# Pager View
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+
 # Sidebar Plugin
 set sidebar_delim='  │'
 set sidebar_visible=yes
