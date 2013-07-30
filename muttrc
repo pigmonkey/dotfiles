@@ -91,8 +91,11 @@ bind index <space>  collapse-thread
 bind index \\       collapse-all
 
 # Pager
-bind pager j next-line
-bind pager k previous-line
+bind pager gg   top
+bind pager G    bottom
+bind pager R    group-reply
+bind pager j    next-line
+bind pager k    previous-line
 
 # Sidebar
 bind index,pager <down>   sidebar-next
