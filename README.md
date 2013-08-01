@@ -39,7 +39,7 @@ Installed as `~/.mutt/`
 vim
 ---
 
-Additional configuration and plugins for [Vim](http://www.vim.org/) . These should be loaded with [Pathogen](https://github.com/tpope/vim-pathogen).
+Additional configuration for [Vim](http://www.vim.org/).
 
 Installed as `~/.vim`.
 
@@ -170,6 +170,13 @@ vimrc
 Configuration for [Vim](http://www.vim.org/).
 
 Installed as `~/.vimrc`.
+
+Vim plugins are managed by [Vundle](https://github.com/gmarik/vundle). When
+cloning this repository to a new machine Vundle must be installed and the
+plugins loaded.
+
+    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    $ vim +BundleInstall +qall
 
 
 xbindkeysrc
