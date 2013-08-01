@@ -135,6 +135,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        colors {
+            background #002b36
+            statusline #b58900
+        }
 }
 
 # Automatic workspace switching back-and-forth.
