@@ -71,7 +71,7 @@ URxvt.url-select.underline: true
 
 *background: S_base03
 *foreground: S_base0
-*fading: 40
+*fading: 20
 *fadeColor: S_base03
 *cursorColor: S_base1
 *pointerColorBackground: S_base01
