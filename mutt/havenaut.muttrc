@@ -1,0 +1,17 @@
+#####################
+# Havenaut Settings #
+#####################
+
+# Mailbox
+set postponed = "+Havenaut/Drafts"
+set record = "+Havenaut/Sent Items"
+
+# Personal
+set from='peter@havenaut.net'
+set reverse_name=yes
+alternates pm@pig-monkey.com peter@itstactical.com
+set signature=~/.mutt/sigs/hogg
+
+# Sending
+set hostname="mail.havenaut.net"
+set sendmail='/usr/bin/msmtp -a havenaut-tunnel'
