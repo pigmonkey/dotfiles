@@ -11,7 +11,6 @@ general {
         interval = 5
 }
 
-order += "ipv6"
 order += "volume master"
 order += "disk /"
 order += "run_watch DHCP"
