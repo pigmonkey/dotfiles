@@ -46,7 +46,7 @@ tztime local {
 }
 
 load {
-        format = "%1min"
+        format = "%5min"
 }
 
 disk "/" {
