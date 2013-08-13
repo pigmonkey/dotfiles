@@ -18,9 +18,6 @@ if [ -f ~/.fehbg ]; then
     sh ~/.fehbg &
 fi
 
-# Launch Thunar as a daemon.
-thunar --daemon &
-
 # Control volume with volwheel.
 volwheel &
 
