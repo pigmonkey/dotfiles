@@ -28,6 +28,14 @@ Configuration for [Redshift](http://jonls.dk/redshift/)
 Installed as `~/.config/redshift.conf`
 
 
+gnupg/gpg.conf
+--------------
+
+Configuration for [GnuPG](http://gnupg.org/)
+
+Installed as `~/.gnupg/gpg.conf`
+
+
 mutt
 ----
 
