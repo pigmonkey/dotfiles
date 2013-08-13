@@ -21,11 +21,19 @@ Installed as `~/.config/beets`
 
 
 config/i3
-------------
+---------
 
 Configuration for [i3](http://i3wm.org/).
 
 Installed as `~/.config/i3`
+
+
+config/i3status
+---------------
+
+Configuration for [i3status](http://i3wm.org/i3status/).
+
+Installed as `~/.config/i3status`
 
 
 config/redshift.conf
