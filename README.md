@@ -20,6 +20,14 @@ Configuration for [beets](http://beets.radbox.org/).
 Installed as `~/.config/beets`
 
 
+config/i3
+------------
+
+Configuration for [i3](http://i3wm.org/).
+
+Installed as `~/.config/i3`
+
+
 config/redshift.conf
 --------------------
 
