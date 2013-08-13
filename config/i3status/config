@@ -15,7 +15,7 @@ order += "ipv6"
 order += "disk /"
 order += "run_watch DHCP"
 order += "wireless wlan0"
-order += "ethernet eth0"
+order += "ethernet enp0s25"
 order += "battery 0"
 order += "load"
 order += "tztime local"
@@ -25,7 +25,7 @@ wireless wlan0 {
         format_down = "W: down"
 }
 
-ethernet eth0 {
+ethernet enp0s25 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
