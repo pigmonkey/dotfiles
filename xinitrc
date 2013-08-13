@@ -1,9 +1,6 @@
 # Read the Xresources file if it exists.
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# Battery monitoring with Batti.
-batti &
-
 # Map keys with xmodmap
 xmodmap ~/.Xmodmap
 
