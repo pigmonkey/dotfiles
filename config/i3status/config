@@ -12,6 +12,7 @@ general {
 }
 
 order += "ipv6"
+order += "volume master"
 order += "disk /"
 order += "run_watch DHCP"
 order += "wireless wlan0"
@@ -51,4 +52,11 @@ load {
 
 disk "/" {
         format = "%free"
+}
+
+volume master {
+    format = "♪: %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
