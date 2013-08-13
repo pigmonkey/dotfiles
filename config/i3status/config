@@ -39,10 +39,6 @@ run_watch DHCP {
         pidfile = "/var/run/dhc*.pid"
 }
 
-run_watch VPN {
-        pidfile = "/var/run/vpnc/pid"
-}
-
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
