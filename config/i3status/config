@@ -12,7 +12,6 @@ general {
 }
 
 order += "volume master"
-order += "disk /"
 order += "run_watch DHCP"
 order += "wireless wlan0"
 order += "ethernet enp0s25"
@@ -47,10 +46,6 @@ tztime local {
 
 load {
         format = "%5min"
-}
-
-disk "/" {
-        format = "%free"
 }
 
 volume master {
