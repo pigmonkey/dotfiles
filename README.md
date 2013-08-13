@@ -36,6 +36,14 @@ Configuration for [GnuPG](http://gnupg.org/)
 Installed as `~/.gnupg/gpg.conf`
 
 
+gnupg/sks-keyservers.netCA.pem
+------------------------------
+
+Public certificate for the [SKS keyservers pool](https://sks-keyservers.net/).
+
+Installed as `~/.gnupg/sks-keyservers.netCA.pem`
+
+
 mutt
 ----
 
