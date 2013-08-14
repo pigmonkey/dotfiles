@@ -2,6 +2,7 @@
 pythonfile = ~/.offlineimap.py
 ui = ttyui
 accounts = Havenaut, TAD
+maxsyncaccounts = 3
 
 [Account Havenaut]
 localrepository = Havenaut-Local
