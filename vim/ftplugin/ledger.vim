@@ -5,7 +5,7 @@ let g:ledger_maxwidth = 80
 let g:ledger_fillstring = '·'
 
 " Mark a transaction as cleared
-nnoremap <leader>c :call LedgerSetTransactionState(line('.'), '*')<CR>
+nnoremap <leader>c :call ledger#transaction_state_toggle(line('.'))<CR>
 
 " Set a transaction's primary date to today
-nnoremap <leader>t :call LedgerSetDate(line('.'), 'unshift')<CR>
+nnoremap <leader>t :call ledger#transaction_date_set(line('.'), 'unshift')<CR>
