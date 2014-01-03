@@ -19,6 +19,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'jnurmine/Zenburn'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ledger/vim-ledger'
+Bundle 'dhruvasagar/vim-table-mode'
 
 
 """""""""""
