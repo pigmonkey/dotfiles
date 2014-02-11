@@ -203,8 +203,7 @@ map <leader>s :setlocal spell! spelllang=en_us<cr>
 """""""""""
 
 " Colorscheme
-set background=dark
-colorscheme solarized
+colorscheme zenburn
 
 " Syntax highlighting
 syntax enable

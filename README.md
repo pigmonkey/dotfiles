@@ -44,6 +44,14 @@ Configuration for [Redshift](http://jonls.dk/redshift/)
 Installed as `~/.config/redshift.conf`
 
 
+config/tmux
+--------------------
+
+Color schemes for [tmux](http://tmux.sourceforge.net/).
+
+Installed as `~/.config/tmux`
+
+
 gnupg/gpg.conf
 --------------
 

@@ -122,10 +122,8 @@ macro index s "<save-message>?<toggle-mailboxes>"
 # Colors #
 ##########
 
-source ~/.mutt/solarized/mutt-colors-solarized-dark-16.muttrc
-color indicator default black
-color index black default "~D"
-color sidebar_new blue default
+source ~/.mutt/colors.zenburn
+color sidebar_new color116 color234
 
 
 ############
