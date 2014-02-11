@@ -30,7 +30,7 @@ URxvt.url-select.underline: true
 *fading: 30
 *fadeColor: #3f3f3f
 *cursorColor: #aaaaaa
-*colorUL: #366060
+*colorUL: #6ca0a3
 *underlineColor: #dfaf8f
 
 *color0: #3f3f3f
