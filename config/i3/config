@@ -145,7 +145,6 @@ client.urgent #dca3a3 #dca3a3 #DCDCCC #3f3f3f
 bar {
         status_command  i3status
         position        top
-        tray_output     primary
         colors {
             background #3f3f3f
             statusline #dcdccc
