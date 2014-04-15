@@ -18,11 +18,11 @@ fi
 # Control volume with volwheel.
 volwheel &
 
-# git-annex for syncing.
-git annex assistant --autostart &
-
 # NetworkManager for managing networks.
 nm-applet &
+
+# git-annex for syncing.
+git annex assistant --autostart &
 
 # Hide the cursor when idle.
 unclutter &
