@@ -18,8 +18,8 @@ fi
 # Control volume with volwheel.
 volwheel &
 
-# Dropbox for syncing.
-dropboxd &
+# git-annex for syncing.
+git annex assistant --autostart &
 
 # Hide the cursor when idle.
 unclutter &
