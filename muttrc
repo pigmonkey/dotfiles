@@ -4,7 +4,7 @@
 
 # Mailbox
 set mbox_type=Maildir
-set folder=$HOME/mail/
+set folder=$HOME/mail
 set spoolfile=+Havenaut/INBOX
 set header_cache=~/.hcache
 source ~/.mutt/mailboxes
