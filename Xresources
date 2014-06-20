@@ -12,7 +12,7 @@ URxvt.iso14755: false
 URxvt.scrollBar: none
 
 ! font
-URxvt.font: xft:Terminus:size=8
+URxvt.font: xft:Terminus:size=10
 
 ! enabled clipboard and selectable URLs
 URxvt.perl-ext-common:  default,clipboard,url-select
