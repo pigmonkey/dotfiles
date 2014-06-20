@@ -1,3 +1,10 @@
+! font settings
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintslight
+
 ! reclaim ctrl+shift
 URxvt.iso14755: false
 
@@ -6,9 +13,6 @@ URxvt.scrollBar: none
 
 ! font
 URxvt.font: xft:Terminus:size=8
-
-! disable anti-aliasing
-Xft*antialias: false
 
 ! enabled clipboard and selectable URLs
 URxvt.perl-ext-common:  default,clipboard,url-select
