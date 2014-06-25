@@ -8,7 +8,7 @@ xmodmap ~/.Xmodmap
 xbindkeys &
 
 # Launch the screen locker.
-xautolock -time 10 -locker "if ! pidof physlock > /dev/null; then physlock; fi" -detectsleep -secure &
+xautolock -time 09 -locker "if ! pidof physlock > /dev/null; then physlock; fi" -detectsleep -secure &
 
 # Restore the desktop background.
 if [ -f ~/.fehbg ]; then
