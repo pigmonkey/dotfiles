@@ -41,6 +41,7 @@ zstyle ':prezto:load' pmodule \
   'passwords' \
   'ledgercrypt' \
   'completion' \
+  'pass' \
   'prompt'
 
 #

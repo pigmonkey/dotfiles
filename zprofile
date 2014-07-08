@@ -99,6 +99,9 @@ export NOTEDIR=~/documents/notes
 # Set the default password directory.
 export PASSDIR=~/pw
 
+# Set the alternative pass directory.
+export ALTPASSDIR=~/projects/tad/pass
+
 #
 # Ledger Encryption
 #
