@@ -1,0 +1,16 @@
+" Set colorscheme
+colorscheme solarized-dark
+
+" Reclaim standard copy/cut/paste
+map -builtin <C-c> <C-v><C-c>
+map -builtin <C-v> <C-v><C-v>
+map -builtin <C-x> <C-v><C-x>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+inoremap <C-x> <C-v><C-x>
+
+" Set default search
+set defsearch=duckduckgo
+
+" Show the toolbar
+set go+=T
