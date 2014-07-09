@@ -41,7 +41,7 @@ nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
 
 [Repository TAD-Remote]
 type = Gmail
-cert_fingerprint = 42354abeefdac33d17202a9f2d6fdeadf5928a00
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = phogg@tripleaughtdesign.com
 remotepasseval = imappasswd('tad')
 nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
