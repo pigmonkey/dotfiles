@@ -5,9 +5,12 @@ colorscheme solarized-dark
 map -builtin <C-c> <C-v><C-c>
 map -builtin <C-v> <C-v><C-v>
 map -builtin <C-x> <C-v><C-x>
-inoremap <C-c> <C-v><C-c>
-inoremap <C-v> <C-v><C-v>
-inoremap <C-x> <C-v><C-x>
+imap -builtin <C-c> <C-v><C-c>
+imap -builtin <C-v> <C-v><C-v>
+imap -builtin <C-x> <C-v><C-x>
+
+" Select all with Ctrl+A in insert mode
+imap -builtin <C-a> <C-v><C-a>
 
 " Set default search
 set defsearch=duckduckgo
