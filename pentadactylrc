@@ -17,3 +17,9 @@ set defsearch=duckduckgo
 
 " Show the toolbar
 set go+=T
+
+" Remap print shortcut
+map <Leader>p :hardcopy<cr>
+
+" Remap private window shortcut
+map <Leader>i :emenu File.New Private Window<cr>
