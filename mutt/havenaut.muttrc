@@ -10,7 +10,6 @@ set record = "+Havenaut/Sent Items"
 set from='peter@havenaut.net'
 set reverse_name=yes
 alternates pm@pig-monkey.com peter@itstactical.com
-set signature=~/.mutt/sigs/hogg
 
 # Sending
 set hostname="mail.havenaut.net"
