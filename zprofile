@@ -6,6 +6,12 @@
 #
 
 #
+# Terminal
+#
+
+export TERMINAL='termite'
+
+#
 # Browser
 #
 
