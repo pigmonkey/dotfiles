@@ -50,7 +50,7 @@ color15 = #ffffff
 
 [hints]
 font = Terminus 12
-#foreground = #dcdccc
+foreground = #93e0e3
 #background = #3f3f3f
 #padding = 2
 #border = #3f3f3f
