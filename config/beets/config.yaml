@@ -3,6 +3,6 @@ library: ~/audio/.beet.blb
 import:
     move: yes
 color: yes
-plugins: lyrics echonest_tempo lastgenre mbsync fetchart scrub
+plugins: lyrics lastgenre mbsync fetchart scrub bpd
 lastgenre:
     canonical: ''
