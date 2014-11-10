@@ -23,3 +23,7 @@ map <Leader>p :hardcopy<cr>
 
 " Remap private window shortcut
 map <Leader>i :emenu File.New Private Window<cr>
+
+" Bookmark page with Pinboard
+com -nargs=0 pb execute "open " + function(doc) { if(doc.getSelection){s=doc.getSelection();}else{s='';}; return 'https://pinboard.in/add?next=same&url='+encodeURIComponent(doc.location.href)+'&description='+encodeURIComponent(s)+'&title='+encodeURIComponent(doc.title) }(content.document)
+map <Leader>d :pb<cr>
