@@ -27,6 +27,9 @@ git annex assistant --autostart &
 # Hide the cursor when idle.
 unclutter &
 
+# Notifications with dunst
+dunst &
+
 # Adjust color temperature with Redshift.
 gtk-redshift &
 
