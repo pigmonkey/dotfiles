@@ -22,3 +22,5 @@ if which ruby >/dev/null && which gem >/dev/null; then
 fi
 
 alias mtr-report='mtr --report --report-cycles 10 --no-dns'
+
+eval `dircolors $HOME/.dir_colors/dircolors.zenburn`
