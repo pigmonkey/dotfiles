@@ -31,7 +31,7 @@ unclutter &
 dunst &
 
 # Adjust color temperature with Redshift.
-gtk-redshift &
+redshift-gtk &
 
 # Launch the session!
 case $1 in
