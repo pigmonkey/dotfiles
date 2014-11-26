@@ -23,7 +23,7 @@ fi
 # If Keychain is installed, run it.
 hash keychain 2> /dev/null
 if [ $? -eq 0 ]; then
-    keychain -q ~/.ssh/id_rsa
+    keychain -q ~/.ssh/id_rsa --agents ssh
     if [ -f ~/.keychain/$HOST-sh ]; then
         source ~/.keychain/$HOST-sh
     fi
