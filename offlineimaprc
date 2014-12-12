@@ -24,7 +24,7 @@ nametrans = lambda f: ["INBOX."+f, f][f == "INBOX"]
 [Repository Havenaut-Remote]
 type = IMAP
 ssl = yes
-cert_fingerprint = 54137524fe721f0cbb8a6a0e1e280ade50482e29
+cert_fingerprint = 958b1601563aef92607a41eb5bad22e3cace8431
 remotehost = mail.messagingengine.com
 remoteuser = peterhogg@fastmail.fm
 remotepasseval = imappasswd('havenaut')
