@@ -12,6 +12,12 @@ imap -builtin <C-x> <C-v><C-x>
 " Select all with Ctrl+A in insert mode
 imap -builtin <C-a> <C-v><C-a>
 
+" Highlight search results
+set hlf
+
+" Clear search highlighting
+map <Leader><space> :noh<cr>
+
 " Set default search
 set defsearch=duckduckgo
 
