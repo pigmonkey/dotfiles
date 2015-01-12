@@ -1,0 +1,11 @@
+hi CmdLine>* -append font-family: Terminus; font-size: 12pt;
+hi CompDesc -append font-family: Terminus; font-size: 12pt;
+hi CompTitle -append font-family: Terminus; font-size: 12pt;
+hi CompItem>* -append font-family: Terminus; font-size: 12pt;
+hi StatusLine -append font-family: Terminus; font-size: 12pt;
+hi InfoMsg -append font-family: Terminus; font-size: 12pt;
+hi ModeMsg -append font-family: Terminus; font-size: 12pt;
+hi WarningMsg -append font-family: Terminu font-size: 12pt;
+hi MoreMsg -append font-family: Terminus; font-size: 12pt;
+hi Title -append font-family: Terminus; font-size: 12pt;
+hi Help -append font-family: Terminus; font-size: 12pt;

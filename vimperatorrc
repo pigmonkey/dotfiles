@@ -1,6 +1,9 @@
 " Set the colorscheme
 colorscheme solarized
 
+" Terminus!
+source ~/.vimperator/terminus.vimp
+
 " Select all with Ctrl+A in insert mode
 inoremap <C-a> <Ins><C-a><Ins>
 
