@@ -26,6 +26,13 @@ set defsearch=duckduckgo
 " Turn off all toolbars except navigation and tabs
 set gui=noaddons,nobookmarks,nomenu,navigation,tabs
 
+" Show tab numbers
+set tabnumbers
+
+" Navigiate tabs with < and >
+nnoremap > :tabnext<CR>
+nnoremap < :tabNext<CR>
+
 " Remap print shortcut
 map <Leader>p :hardcopy<cr>
 
