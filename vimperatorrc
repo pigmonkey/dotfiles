@@ -1,11 +1,11 @@
+" Set the colorscheme
+colorscheme solarized
+
 " Select all with Ctrl+A in insert mode
 inoremap <C-a> <Ins><C-a><Ins>
 
 " Select all with Ctrl+A in normal mode
 noremap <C-a> <Ins><C-a><Ins>
-
-" Turn off all toolbars except navigation and tabs
-set gui=noaddons,nobookmarks,nomenu,navigation,tabs
 
 " Ignore case when searching, smartly
 set ignorecase
@@ -14,5 +14,21 @@ set smartcase
 " Search while typing
 set incsearch
 
-" Set the colorscheme
-colorscheme solarized
+" Clear search highlighting
+map <Leader><space> :noh<cr>
+
+" Set default search
+set defsearch=duckduckgo
+
+" Turn off all toolbars except navigation and tabs
+set gui=noaddons,nobookmarks,nomenu,navigation,tabs
+
+" Remap print shortcut
+map <Leader>p :hardcopy<cr>
+
+" Remap private window shortcut
+map <Leader>i :emenu File.New Private Window<cr>
+
+" Bookmark page with Pinboard
+com -nargs=0 pb execute "open " + function(doc) { if(doc.getSelection){s=doc.getSelection();}else{s='';}; return 'https://pinboard.in/add?next=same&url='+encodeURIComponent(doc.location.href)+'&description='+encodeURIComponent(s)+'&title='+encodeURIComponent(doc.title) }(content.document)
+map <Leader>d :pb<cr>
