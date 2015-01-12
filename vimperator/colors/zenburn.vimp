@@ -1,71 +1,85 @@
-" == Zenburn color scheme ==
-" name:    Zenburn
-" file:    zenburn.vimp
-" author:  Adrian C. <anrxc..sysphere.org>
-" license: GNU General Public License v2
-" == Zenburn color scheme settings ==
-hi Bell					border: 0 none; background-color: black;
-hi Boolean				color: #CC9393;
-hi CmdLine				color: #DCDCCD; font-family: terminus; padding: 1px;
-hi CmdLine>*                            font-family: terminus;
-hi CmdOutput				white-space: pre;
-hi CompDesc				color: #808080; width: 50%;
-" hi CompGroup
-" hi CompGroup:not(:first-of-type)	margin-top: .5em;
-hi CompIcon				width: 16px; min-width: 16px; display: inline-block; margin-right: .5ex;
-hi CompIcon>img				max-width: 16px; max-height: 16px; vertical-align: middle;
-hi CompItem				font-family: terminus; font-size: 11px;
-hi CompItem>*				padding: 0 .5ex;
-hi CompItem[selected]			color: #2E4340; background: #CCDC90;
-" hi CompLess				text-align: center; height: 0; line-height: .5ex; padding-top: 1ex;
-" hi CompLess::after			content: "\2303" /* Unicode up arrowhead */
-" hi CompMore				text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;
-" hi CompMore::after			content: "\2304" /* Unicode down arrowhead */
-hi CompMsg				font-style: italic; margin-left: 16px;
-hi CompResult				width: 45%; overfloaw: hidden;
-hi CompTitle				color: #ACBC90; background: #3F3F3F; font-weight: bold;
-hi CompTitle>*				padding: 0 .5ex;
-hi ErrorMsg				color: #3F3F3F; background: #CC9393; font-weight: bold;
-hi Filter				color: #2E4340; background: #CCDC90; font-weight: bold;
-hi FrameIndicator			background-color: #CC9393; opacity: 0.5; z-index: 999; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
-hi Function				color: navy;
-" hi Gradient				height: 1px; margin-bottom: -1px; margin-top: -1px;
-" hi GradientLeft				background-color: #ACBC90;
-" hi GradientRight			background-color: #3F3F3F;
-hi Hint					font-family: monospace; font-size: 10px; font-weight: bold; color: #385F38; background-color: #F8F893; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding 0px 1px 0px 1px;
-hi Hint::after				content: attr(number);
-hi HintActive				background: #F18C96; color: #333333;
-hi HintElem				background-color: #8FAF9F; color: #000D18;
-hi HintImage				opacity: .5;
-hi Indicator				color: #94BFF3;
-hi InfoMsg				color: #DCDCCD; background: #3F3F3F;
-hi LineNr				color: orange; background: #3F3F3F;
-hi Message				white-space: normal; min-width: 100%; padding-left: 2em; text-indent: -2em; display: block;
-hi ModeMsg				color: #DCDCCD; background: #3F3F3F;
-hi MoreMsg				color: #9ECE9E; background: #3F3F3F;
-hi NonText				color: #94BFF3; min-height: 16px; padding-left: 2px;
-hi Normal				color: #DCDCCD; background: #3F3F3F; font-family: terminus;
-hi Null					color: #94BFF3;
-hi Number				color: #94BFF3;
-hi Object				color: maroon;
-hi Preview				color: gray;
-hi Question				color: #9ECE9E; background: #3F3F3F; font-weight: bold;
-hi Search				font-size: inherit; padding: 0; color: #385F38; background-color: #F8F893; padding: 0;
-" hi StatusLine				color: #ACBC90; background: #1E2320;
-" hi StatusLineBroken			color: #CC9393; background: #1E2320;
-" hi StatusLineSecure			color: #F0DFAF; background: #1E2320;
-hi String				color: #9ECE9E;
-hi TabClose
-hi TabIcon
-" hi TabIconNumber			font-weight: normal; color: #DCDCCD; text-align: center; text-shadow: black -1px 0 1px, black 0 1px 1px, black 1px 0 1px, black 0 -1px 1px;
-hi TabNumber				font-weight: bold; margin: 0; padding-right: .3ex;
-hi TabText
-hi Tag					color: #94BFF3;
-hi Title				color: #ACBC90; background: #3F3F3F; font-weight: bold;
-hi URL					text-decoration: none; color: #9ECE9E; background: inherit;
-hi URL:hover				text-decoration: underline; cursor: pointer;
-hi WarningMsg				color: #CC9393; background: #3F3F3F;
+" ==Vimperator_Color_Scheme==
+" name: zenburn
+" url: https://github.com/livibetter/dotfiles/tree/master/vimperator/colors
+" original name: vimPgray
+"
+" Created for matching this GTK+ theme:
+"   http://www.gnome-look.org/content/show.php/Clearlooks+Zenburn?content=103035
+"
+" Last edited: 
+" Edited by Yu-Jie Lin <http://j.mp/Google-livibetter>
+"
+" Original vimp: 2010-11-01T10:04:00+0800
+"  http://github.com/VoQn/vimperator-colorscheme/blob/master/colors/default.vimp
+"
+" Reference:
+"  chrome://liberator/locale/styling.html
+" ==VimPGray_Colorscheme_Settings==
 
-style -name statusbar chrome://* <<EOM
-					#liberator-statusline { font-family: terminus ! important; }
-EOM
+" Reset all styles first
+hi clear
+
+hi CompDesc					color: #999; width: 50%;
+hi CompItem[selected]		background: #666;
+
+" Used in Command Line
+" Entire bottom line
+hi CmdLine                  color: #aaa; background: #333; font-family: Inconsolata; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
+
+" Used in the URL column of `bmarks`
+hi CompResult				color: #aaa; width: 45%; overflow: hidden;
+hi CompTitle				color: #ddc; background: #333; font-weight: bold;
+hi CompTitle>*				color: #aaa; font-weight: bold; border-top: 1px solid gray; border-bottom: 1px solid #BBB; padding: 1px 0.5ex;
+
+" Hints!
+hi Hint						color: white; background-color: #800; border-color: ButtonShadow; font-family: Inconsolata; font-size: 12px; border-width: 0px; border-style: solid; padding 0 1px;
+hi Hint::after				content: attr(number);
+hi HintActive				color: black; background: #480;
+hi HintElem					color: black; background-color: #880; 
+hi HintImage				opacity: .5;
+
+" Used also in wrapping error messages as the background, simple speaking
+hi InfoMsg					color: #ddc; background: #333;
+
+" Used when error on syntax error in vimperatorrc, etc.
+hi LineNr					color: orange; background-color: #333;
+
+hi ErrorMsg					color: #c22; background-color: #333; font-weight: bold; 
+
+" Used in CARET or COMMAND modes
+hi ModeMsg					color: #ddc; background: #333;
+
+hi MoreMsg					color: #080; background: #222; font-weight: bold; -moz-border-radius: 5px; padding-left: 5px;
+
+hi Normal					color: #ddc; background: #333;
+
+" Used in :`js tr<TAB>`
+hi Boolean					color: #f00;
+hi Function					color: #04c;
+hi Null						color: #00c;
+hi Number					color: #00c;
+hi Object					color: #c40;
+hi String					color: #0c0;
+
+" Used in "Press ENTER..." of `jumps` or `bmarks`, or "Follow Hint..." or `f`
+hi Question					color: #080; background: #222; font-weight: bold; -moz-border-radius: 5px; padding-left: 5px;
+
+" hi Search					color: #333; background-color: #cc0; font-size: inherit; padding: 0; padding: 0;
+
+hi StatusLine				color: #ddc; background: #333; font-family: Inconsolata; font-size: 14px; margin-top: 1px;
+
+" Firefox's tabs
+hi TabNumber				color: #ddc; font-weight: bold; margin: 0; padding-right: .3ex; text-shadow: #000 -1px 0 0, #000 0 1px 0, #000 1px 0 0, #000 0 -1px 0;
+
+" Used in `pageinfo` or `jumps`
+hi Title					color: #ddc; background: #333; font-weight: bold;
+
+" Used in items of Info field of `bmarks`
+hi Keyword					color: #CC0;
+hi Tag						color: #0CC;
+hi URL						color: #080; text-decoration: none; padding: 0 2px;
+hi URL:hover				color: #880; background-color: #222; -moz-border-radius: 5px; cursor: pointer;
+
+hi ContentSeparator			border:none;
+
+" vim:set filetype=vim:
