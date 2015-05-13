@@ -1,0 +1,5 @@
+# Files
+data.location=~/documents/tasks
+
+# Colors
+include /usr/share/doc/task/rc/solarized-dark-256.theme
