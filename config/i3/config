@@ -167,3 +167,8 @@ bindsym $mod+minus scratchpad show
 
 # Window focus should not follow mouse
 focus_follows_mouse no
+
+# Show taskwarrior tasks.
+for_window [title="taskwin"] floating enable
+bindsym $mod+t exec termite --title taskwin -e ~/bin/display_tasks.sh
+bindsym $mod+Shift+D exec task $(task ls | awk 'NR==4  { print $1 }') done
