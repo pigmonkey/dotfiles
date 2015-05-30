@@ -103,9 +103,6 @@ export NOTEDIR=~/documents/notes
 # Passwords
 #
 
-# Set the default password directory.
-export PASSDIR=~/pw
-
 # Set the alternative pass directory.
 export ALTPASSDIR=~/projects/tad/pass
 
@@ -121,6 +118,10 @@ export LEDGERMOUNT=~/ledger
 
 # Set the file which contains the GnuPG encrypted passphrase.
 export LEDGERPASS=~/.ledger.gpg
+
+#
+# Misc
+#
 
 # Set the dmenu font.
 export DMENU_OPTIONS="-fn -xos4-terminus-medium-r-*-*-14-*"
