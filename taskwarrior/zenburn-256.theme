@@ -1,0 +1,76 @@
+###############################################################################
+# Sample taskwarrior 1.9 (or later) dark 256-color theme
+#
+# taskwarrior - a command line task list manager.
+#
+# Copyright 2006 - 2011, Paul Beckingham, Federico Hernandez.
+# All rights reserved.
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 2 of the License, or (at your option) any later # version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the
+#
+#     Free Software Foundation, Inc.,
+#     51 Franklin Street, Fifth Floor,
+#     Boston, MA
+#     02110-1301
+#     USA
+#
+################################################################################
+
+color=on
+color.header=color3
+color.footnote=color3
+color.debug=color3
+
+color.summary.bar=color233 on color108
+color.summary.background=color236 on color237
+
+color.history.add=color0 on color8
+color.history.done=color0 on color4
+color.history.delete=color0 on color1
+
+color.burndown.pending=on color9
+color.burndown.started=on color3
+color.burndown.done=on color2
+
+color.sync.added=color12
+color.sync.changed=color11
+color.sync.rejected=color13
+
+color.undo.before=underline color3
+color.undo.after=underline color108
+
+color.calendar.today=on color233
+color.calendar.due=color174
+color.calendar.due.today=color0 on color249
+color.calendar.overdue=color0 on color9
+color.calendar.weekend=color116
+color.calendar.holiday=color223
+color.calendar.weeknumber=color248
+
+color.recurring=color223
+color.scheduled=color223
+color.overdue=color0 on color9
+color.due.today=color0 on color9
+color.due=color7
+color.active=color0 on color3
+color.pri.none=
+color.pri.H=color255
+color.pri.M=color250
+color.pri.L=color245
+color.tagged=color108
+color.blocking=on color4
+color.blocked=color236 on color8
+color.project.none=
+color.tag.none=
+color.alternate=on color237
+

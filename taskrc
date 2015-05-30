@@ -2,4 +2,4 @@
 data.location=~/documents/tasks
 
 # Colors
-include /usr/share/doc/task/rc/solarized-dark-256.theme
+include ~/.taskwarrior/zenburn-256.theme
