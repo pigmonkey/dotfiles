@@ -121,3 +121,6 @@ export LEDGERMOUNT=~/ledger
 
 # Set the file which contains the GnuPG encrypted passphrase.
 export LEDGERPASS=~/.ledger.gpg
+
+# Set the dmenu font.
+export DMENU_OPTIONS="-fn -xos4-terminus-medium-r-*-*-14-*"
