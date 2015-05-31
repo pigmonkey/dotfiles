@@ -36,7 +36,7 @@
     Mod2+Mod4 t
 
 # Launch the web browser.
-"exo-open --launch WebBrowser"
+"browser"
     m:0x50 + c:25
     Mod2+Mod4 w
 

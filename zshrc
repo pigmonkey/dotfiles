@@ -10,7 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-
 # Add $HOME/bin to the beginning of the path.
 if [ -d ~/bin ]; then
     path=($HOME/bin $path)
