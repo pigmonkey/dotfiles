@@ -175,3 +175,6 @@ bindsym $mod+Shift+D exec task $(task ls | awk 'NR==4  { print $1 }') done
 
 # Float pinentry windows
 for_window [title="pinentry"] floating enable
+
+# Float asoundconf-gtk windows
+for_window [title="Default Sound Card"] floating enable
