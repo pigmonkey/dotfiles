@@ -2,7 +2,8 @@ directory: ~/audio/music
 library: ~/audio/.beet.blb
 import:
     move: yes
-color: yes
+ui:
+    color: yes
 plugins: lyrics lastgenre mbsync fetchart scrub bpd
 lastgenre:
     canonical: ''
