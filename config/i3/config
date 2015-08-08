@@ -143,7 +143,7 @@ client.urgent #dca3a3 #dca3a3 #DCDCCC #3f3f3f
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command  i3status
+        status_command  i3status | ~/bin/wnot_cli --i3status
         position        top
         colors {
             background #3f3f3f
