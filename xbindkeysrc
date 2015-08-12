@@ -56,9 +56,14 @@
     Mod2+Mod4 f
 
 # Launch an application launcher.
-"eval $(yeganesh -x)"
+"rofi -show run"
     m:0x50 + c:65
     Mod2+Mod4 space
+
+# Launch a window switcher.
+"rofi -show window"
+    m:0x18 + c:23
+    Alt+Mod2 + Tab
 
 
 ##############
