@@ -22,3 +22,6 @@ mutt/workrc
 
 # Ignore the beets runtime state
 config/beets/state.pickle
+
+# Ignore rofi-pass last password used
+config/rofi-pass/last_used
