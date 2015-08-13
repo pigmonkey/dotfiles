@@ -1,6 +1,6 @@
-##############
-# Media Keys #
-##############
+#########
+# Media #
+#########
 
 # Toggle mute
 "amixer set Master toggle"
@@ -17,13 +17,10 @@
     m:0x10 + c:123
     Mod2 + XF86AudioRaiseVolume
 
-# Lock the screen
-"/usr/sbin/physlock"
-    m:0x10 + c:160
-    Mod2 + XF86ScreenSaver
-"/usr/sbin/physlock"
-    m:0x50 + c:46
-    Mod2+Mod4 l
+# Toggle mpd
+"mpc toggle"
+    m:0x50 + c:19
+    Mod2+Mod4 + 0
 
 
 ################
@@ -74,6 +71,14 @@
 ##############
 # Misc #
 ##############
+
+# Lock the screen
+"/usr/sbin/physlock"
+    m:0x10 + c:160
+    Mod2 + XF86ScreenSaver
+"/usr/sbin/physlock"
+    m:0x50 + c:46
+    Mod2+Mod4 l
 
 # Take a screenshot
 "scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'"
