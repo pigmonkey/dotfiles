@@ -63,7 +63,7 @@
     Alt+Mod2 + Tab
 
 # Launch the password manager.
-"rofi-pass"
+"rofi-pass --last-used"
     m:0x50 + c:33
     Mod2+Mod4 + p
 
