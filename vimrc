@@ -8,18 +8,18 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-Bundle 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
-" Bundles
-Bundle 'jamessan/vim-gnupg'
-Bundle 'roman/golden-ratio'
-Bundle 'othree/html5.vim'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'tpope/vim-markdown'
-Bundle 'jnurmine/Zenburn'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'ledger/vim-ledger'
-Bundle 'dhruvasagar/vim-table-mode'
+" Plugins
+Plugin 'jamessan/vim-gnupg'
+Plugin 'roman/golden-ratio'
+Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'tpope/vim-markdown'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ledger/vim-ledger'
+Plugin 'dhruvasagar/vim-table-mode'
 
 
 """""""""""
