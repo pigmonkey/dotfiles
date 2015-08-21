@@ -25,3 +25,6 @@ config/beets/state.pickle
 
 # Ignore rofi-pass last password used
 config/rofi-pass/last_used
+
+# Ignore ncmpcpp error log
+ncmpcpp/error.log
