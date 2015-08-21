@@ -5,4 +5,4 @@ netfilter
 noroot
 
 # Use ~/torrents as user home
-private torrents
+private ~/torrents

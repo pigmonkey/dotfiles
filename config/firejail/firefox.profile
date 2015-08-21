@@ -5,4 +5,4 @@ netfilter
 noroot
 
 # Use ~/firefox as user home
-private firefox
+private ~/firefox
