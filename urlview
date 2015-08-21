@@ -1,1 +1,1 @@
-COMMAND exo-open --launch WebBrowser %s
+COMMAND firefox %s

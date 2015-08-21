@@ -33,12 +33,12 @@
     Mod2+Mod4 t
 
 # Launch the web browser.
-"/usr/bin/firejail /usr/bin/firefox"
+"firefox"
     m:0x50 + c:25
     Mod2+Mod4 w
 
 # Launch the web browser with work profile.
-"/usr/bin/firejail /usr/bin/firefox -P work"
+"firefox -P work"
     m:0x51 + c:25
     Shift+Mod2+Mod4 + w
 
@@ -63,7 +63,7 @@
     Alt+Mod2 + Tab
 
 # Launch the password manager.
-"rofi-pass --last-used"
+"rofi-pass"
     m:0x50 + c:33
     Mod2+Mod4 + p
 
