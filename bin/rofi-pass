@@ -1,3 +1,0 @@
-#!/bin/bash
-
-menu=$(echo -e "$HOME/.password-store\n$ALTPASSDIR" | rofi -dmenu); /usr/bin/rofi-pass --root "${menu}"

@@ -4,8 +4,8 @@
 # Map keys with xmodmap
 xmodmap ~/.Xmodmap
 
-# Bind keys with xbindkeys.
-xbindkeys &
+# Bind keys with sxhkd.
+sxhkd &
 
 # Launch the screen locker.
 xautolock -time 09 -locker "if ! pidof physlock > /dev/null; then physlock; fi" -detectsleep -secure &

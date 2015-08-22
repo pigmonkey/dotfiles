@@ -1,0 +1,61 @@
+#########
+# Media #
+#########
+
+# Toggle mute
+XF86AudioMute
+    amixer set Master toggle
+
+# Change volume
+XF86Audio{Raise,Lower}Volume
+    amixer set Master 5%{+,-} unmute
+
+# Toggle mpd
+super + 0
+    mpc toggle
+
+
+################
+# Applications #
+################
+
+# Launch terminal
+super + t
+    $TERMINAL
+
+# Launch web browser
+super + w
+    firefox
+
+# Launch web browser with work profile
+super + shift + w
+    firefox -P work
+
+# Launch application launcher
+super + space
+    rofi -show run
+
+# Launch window switcher
+alt + Tab
+    rofi -show window
+
+# Launch password manager
+super + p
+    menu=$(echo -e "$HOME/.password-store\n$ALTPASSDIR" | rofi -dmenu); rofi-pass --root "${menu}"
+
+
+########
+# Misc #
+########
+
+# Lock the screen
+super + l
+    physlock
+
+# Lock the screen
+XF86ScreenSaver
+    physlock
+
+# Take a screenshot
+Print
+    scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'
