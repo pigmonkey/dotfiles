@@ -259,3 +259,46 @@ endfunction
 
 " Delete quoted signatures.
 au BufRead /tmp/mutt* normal :g/^\(> \)--\s*$/,/^$/-1d/^$
+
+
+"""""""""""""""""""
+" Temporary Files "
+"""""""""""""""""""
+" https://gist.github.com/tejr/5890634
+
+" Don't backup files in temp directories or shm
+if exists('&backupskip')
+    set backupskip+=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*
+endif
+
+" Don't keep swap files in temp directories or shm
+if has('autocmd')
+    augroup swapskip
+        autocmd!
+        silent! autocmd BufNewFile,BufReadPre
+            \ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*
+            \ setlocal noswapfile
+    augroup END
+endif
+
+" Don't keep undo files in temp directories or shm
+if has('persistent_undo') && has('autocmd')
+    augroup undoskip
+        autocmd!
+        silent! autocmd BufWritePre
+            \ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*
+            \ setlocal noundofile
+    augroup END
+endif
+
+" Don't keep viminfo for files in temp directories or shm
+if has('viminfo')
+    if has('autocmd')
+        augroup viminfoskip
+            autocmd!
+            silent! autocmd BufNewFile,BufReadPre
+                \ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*
+                \ setlocal viminfo=
+        augroup END
+    endif
+endif
