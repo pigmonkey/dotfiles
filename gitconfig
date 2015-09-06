@@ -1,0 +1,9 @@
+[user]
+	email = pm@pig-monkey.com
+	name = Pig Monkey
+[core]
+	excludesfile = /home/pigmonkey/.gitignore
+[push]
+	default = simple
+[alias]
+    lg = !tig
