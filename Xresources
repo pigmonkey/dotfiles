@@ -30,7 +30,7 @@ URxvt.url-select.launcher:  /usr/bin/firefox -new-tab
 URxvt.url-select.underline: true
 
 ! Rofi font
-rofi.font: terminus 14
+rofi.font: terminus 12
 
 
 ! Zenburn color scheme
