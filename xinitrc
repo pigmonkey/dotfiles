@@ -34,13 +34,4 @@ dunst &
 redshift-gtk &
 
 # Launch the session!
-case $1 in
-xmonad)
-    xsetroot -cursor_name left_ptr
-    trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x002b36 --alpha 0 --height 10 &
-    exec xmonad
-    ;;
-i3|*)
-    exec i3 
-    ;;
-esac
+exec i3 
