@@ -7,8 +7,9 @@ vimperator/info
 # Ignore vim's spelling word lists
 vim/spell
 
-# Ignore vim bundles
+# Ignore vim bundles, except Vundle
 vim/bundle/*
+!vim/bundle/vundle
 
 # Ignore all xmonad files, except the config
 xmonad/*
