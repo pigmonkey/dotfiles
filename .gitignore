@@ -29,3 +29,13 @@ config/rofi-pass/last_used
 
 # Ignore ncmpcpp error log
 ncmpcpp/error.log
+
+# Ignore weechat stuff
+weechat/gs/
+weechat/xfer/
+weechat/logs/
+weechat/script/*gz
+weechat/plugins/wnot.so
+weechat/*.log
+weechat/urlserver_list.txt
+weechat/sec.conf
