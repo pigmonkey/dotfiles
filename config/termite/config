@@ -49,7 +49,7 @@ color14 = #93e0e3
 color15 = #ffffff
 
 [hints]
-font = Terminus 14
+font = Terminus 12
 foreground = #93e0e3
 #background = #3f3f3f
 #padding = 2
