@@ -10,10 +10,13 @@ vim/spell
 # Ignore vim bundles, except Vundle
 vim/bundle/*
 !vim/bundle/vundle
-#
+
 # Ignore tmux plugins, except Tmux Plugin Manager
 tmux/plugins/*
 !tmux/plugins/tpm
+
+# Ignore tmux resurrection
+tmux/resurrect/*
 
 # Ignore all xmonad files, except the config
 xmonad/*
