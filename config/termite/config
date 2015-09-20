@@ -21,32 +21,39 @@ cursor_shape = block
 browser = firefox
 
 [colors]
-foreground = #dcdccc
-foreground_bold = #ffffff
-#foreground_dim = #888888
-background = #3f3f3f
-#cursor = #dcdccc
+# Base16 Tomorrow
+# Scheme: Chris Kempson (http://chriskempson.com)
 
-# if unset, will reverse foreground and background
-highlight = #2f2f2f
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+background      = #1d1f21
 
-# colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
+# 16 color space
+color0  = #1d1f21
+color1  = #cc6666
+color2  = #b5bd68
+color3  = #f0c674
+color4  = #81a2be
+color5  = #b294bb
+color6  = #8abeb7
+color7  = #c5c8c6
+color8  = #969896
+color9  = #cc6666
+color10 = #b5bd68
+color11 = #f0c674
+color12 = #81a2be
+color13 = #b294bb
+color14 = #8abeb7
 color15 = #ffffff
+
+# 256 color space
+color16 = #de935f
+color17 = #a3685a
+color18 = #282a2e
+color19 = #373b41
+color20 = #b4b7b4
+color21 = #e0e0e0
 
 [hints]
 font = Terminus 12

@@ -1,5 +1,5 @@
 " Set the colorscheme
-colorscheme solarized
+colorscheme base16-tomorrow
 
 " Terminus!
 source ~/.vimperator/terminus.vimp

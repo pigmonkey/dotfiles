@@ -20,6 +20,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ledger/vim-ledger'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'chriskempson/base16-vim'
 
 
 """""""""""
@@ -203,7 +204,9 @@ map <leader>s :setlocal spell! spelllang=en_us<cr>
 """""""""""
 
 " Colorscheme
-colorscheme zenburn
+set background=dark
+let base16colorspace=256
+colorscheme base16-tomorrow
 
 " Syntax highlighting
 syntax enable
