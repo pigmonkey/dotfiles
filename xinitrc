@@ -33,5 +33,11 @@ dunst &
 # Adjust color temperature with Redshift.
 redshift-gtk &
 
+# Load the best monitor profile available
+autorandr --change --default default
+
+# Monitor monitors for changes
+srandrd autorandr --change --default default
+
 # Launch the session!
 exec i3 
