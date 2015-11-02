@@ -46,3 +46,4 @@ weechat/plugins/wnot.so
 weechat/*.log
 weechat/urlserver_list.txt
 weechat/sec.conf
+weechat/slack.cache
