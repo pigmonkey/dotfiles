@@ -27,7 +27,7 @@ set wait_key=no
 set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
-set query_command="ppl mutt -i '%s'"
+set query_command="khard mutt --search '%s'"
 set forward_format="Fwd: %s"
 set use_domain=no
 set user_agent=no
@@ -106,11 +106,8 @@ macro index O "<shell-escape>mailcheck.sh<enter>"
 # Archive mail
 macro index,pager A "s+Archive<enter>"
 
-# Launch address book
-macro generic,index,pager B "<shell-escape>ppl shell<return>"
-
 # Add sender to address book
-macro index,pager a "<pipe-message>ppl scrape --sender<return>" 
+macro index,pager a "<pipe-message>khard add-email<return>" "add the sender email address to khard"
 
 # Bind ; to ctrl-t in editor mode
 macro editor ";" \Ct
