@@ -13,3 +13,12 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "weechat/urlview"]
+	path = weechat/urlview
+	url = https://github.com/keith/urlview-weechat
+[submodule "weechat/wee-slack"]
+	path = weechat/wee-slack
+	url = https://github.com/rawdigits/wee-slack
+[submodule "weechat/vimode"]
+	path = weechat/vimode
+	url = https://github.com/GermainZ/weechat-vimode

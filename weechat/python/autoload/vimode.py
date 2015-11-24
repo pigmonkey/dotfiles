@@ -1,1 +1,1 @@
-../vimode.py
+../../vimode/vimode.py
