@@ -47,3 +47,8 @@ weechat/*.log
 weechat/urlserver_list.txt
 weechat/sec.conf
 weechat/slack.cache
+
+# Ignore ranger stuff
+config/ranger/bookmarks
+config/ranger/history
+config/ranger/tagged
