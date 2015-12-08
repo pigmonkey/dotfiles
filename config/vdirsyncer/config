@@ -17,3 +17,20 @@ url = https://carddav.messagingengine.com/
 username = peterhogg@fastmail.fm
 password.fetch = ["prompt", "Password for CardDAV"]
 verify_fingerprint = "95:8B:16:01:56:3A:EF:92:60:7A:41:EB:5B:AD:22:E3:CA:CE:84:31"
+
+[pair calendar]
+a = calendar_local
+b = calendar_remote
+collections = ["from b"]
+
+[storage calendar_local]
+type = filesystem
+path = ~/.calendars/
+fileext = .ics
+
+[storage calendar_remote]
+type = caldav
+url = https://caldav.messagingengine.com/
+username = peterhogg@fastmail.fm
+password.fetch = ["prompt", "Password for CalDAV"]
+verify_fingerprint = "95:8B:16:01:56:3A:EF:92:60:7A:41:EB:5B:AD:22:E3:CA:CE:84:31"
