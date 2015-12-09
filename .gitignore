@@ -52,3 +52,11 @@ weechat/slack.cache
 config/ranger/bookmarks
 config/ranger/history
 config/ranger/tagged
+
+# Ignore mpd stuff
+config/mpd/playlists
+config/mpd/database
+config/mpd/log
+config/mpd/pid
+config/mpd/state
+sticker.sql
