@@ -12,11 +12,11 @@ XF86Audio{Raise,Lower}Volume
 
 # Toggle mpd
 super + 0
-    mpc toggle
+    mpc -q toggle
 
 # Navigate mpd playlist
 super + {comma, period}
-    mpc {prev, next}
+    mpc -q {prev, next}
 
 
 ################
