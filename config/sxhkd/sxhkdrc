@@ -14,6 +14,10 @@ XF86Audio{Raise,Lower}Volume
 super + 0
     mpc toggle
 
+# Navigate mpd playlist
+super + {comma, period}
+    mpc {prev, next}
+
 
 ################
 # Applications #
