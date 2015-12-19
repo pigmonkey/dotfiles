@@ -58,11 +58,11 @@ super + p
 
 # Lock the screen
 super + l
-    physlock
+    physlock -m
 
 # Lock the screen
 XF86ScreenSaver
-    physlock
+    physlock -m
 
 # Take a screenshot
 Print
