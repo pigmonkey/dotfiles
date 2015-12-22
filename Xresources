@@ -26,7 +26,7 @@ URxvt.iconFile:         /usr/share/icons/oxygen/16x16/apps/utilities-terminal.pn
 
 ! configure selectable URLs
 URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.url-select.launcher:  /usr/bin/firefox -new-tab
+URxvt.url-select.launcher:  browser
 URxvt.url-select.underline: true
 
 ! Rofi font

@@ -1,1 +1,1 @@
-COMMAND menu=$(echo -e "firefox -P default\nfirefox -P work\nfirejail --private chromium" | rofi -dmenu -p "browser " -no-custom); eval "${menu}" %s &
+COMMAND browser
