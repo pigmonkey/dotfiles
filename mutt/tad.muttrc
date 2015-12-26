@@ -14,4 +14,4 @@ set signature=~/.mutt/sigs/tad
 
 # Sending
 set hostname="mail.tripleaughtdesign.com"
-set sendmail='/usr/bin/msmtp -a tad-tunnel'
+set sendmail='msmtpq -a tad-tunnel'

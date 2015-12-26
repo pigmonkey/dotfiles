@@ -14,7 +14,6 @@ set realname='Peter Hogg'
 
 # Sending
 set envelope_from=yes
-set sendmail = msmtpq
 set sendmail_wait = -1
 
 

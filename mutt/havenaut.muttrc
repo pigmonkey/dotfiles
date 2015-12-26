@@ -14,4 +14,4 @@ set signature=~/.mutt/sigs/havenaut
 
 # Sending
 set hostname="mail.havenaut.net"
-set sendmail='/usr/bin/msmtp -a havenaut-tunnel'
+set sendmail='msmtpq -a havenaut-tunnel'
