@@ -1,0 +1,81 @@
+############
+# Havenaut #
+############
+
+IMAPAccount havenaut
+    Host mail.messagingengine.com
+    User peterhogg@fastmail.fm
+    SSLType IMAPS
+    CertificateFile /etc/ssl/certs/ca-certificates.crt
+    PassCmd "keyring get mail-havenaut imap"
+
+IMAPStore havenaut-remote
+    Account havenaut
+
+MaildirStore havenaut-local
+    Path ~/mail/Havenaut/
+    Inbox ~/mail/Havenaut/INBOX
+
+Channel havenaut
+    Master :havenaut-remote:
+    Slave :havenaut-local:
+    Create Both
+    SyncState *
+    Patterns *
+
+
+#######
+# TAD #
+#######
+
+IMAPAccount tad
+    Host imap.gmail.com
+    User phogg@tripleaughtdesign.com
+    SSLType IMAPS
+    CertificateFile /etc/ssl/certs/ca-certificates.crt
+    PassCmd "keyring get mail-tad imap"
+
+IMAPStore tad-remote
+    Account tad
+
+MaildirStore tad-local
+    Path ~/mail/TAD/
+    Inbox ~/mail/TAD/INBOX
+
+Channel tad-inbox
+    Master ":tad-remote:INBOX"
+    Slave ":tad-local:INBOX"
+    Create Both
+    SyncState *
+
+Channel tad-drafts
+    Master ":tad-remote:[Gmail]/Drafts"
+    Slave ":tad-local:drafts"
+    Create Both
+    SyncState *
+
+Channel tad-sent
+    Master ":tad-remote:[Gmail]/Sent Mail"
+    Slave ":tad-local:sent"
+    Create Both
+    SyncState *
+
+Channel tad-flagged
+    Master ":tad-remote:[Gmail]/Starred"
+    Slave ":tad-local:flagged"
+    Create Both
+    SyncState *
+
+Channel tad-trash
+    Master ":tad-remote:[Gmail]/Trash"
+    Slave ":tad-local:trash"
+    Create Both
+    SyncState *
+
+
+Group tad
+    Channel tad-trash
+    Channel tad-inbox
+    Channel tad-drafts
+    Channel tad-sent
+    Channel tad-flagged

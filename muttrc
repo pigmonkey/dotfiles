@@ -100,8 +100,7 @@ bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
 # Sync mail
-macro index o "<shell-escape>mailcheck.sh -q<enter>"
-macro index O "<shell-escape>mailcheck.sh<enter>"
+macro index o "<shell-escape>mbsync -a<enter>"
 
 # Archive mail
 macro index,pager A "s+Archive<enter>"
