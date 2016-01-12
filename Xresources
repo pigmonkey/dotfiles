@@ -29,8 +29,15 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.url-select.launcher:  browser
 URxvt.url-select.underline: true
 
-! Rofi font
+! Rofi font and colors
 rofi.font: terminus 12
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+
 
 ! Base16 Tomorrow
 ! Scheme: Chris Kempson (http://chriskempson.com)
