@@ -18,7 +18,7 @@ cursor_blink = off
 # "block", "underline" or "ibeam"
 cursor_shape = block
 
-browser = browser
+browser = xdg-open
 
 [colors]
 # Base16 Tomorrow

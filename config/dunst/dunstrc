@@ -139,7 +139,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = browser
+    browser = xdg-open
 
     # Align icons left/right/off
     icon_position = off
