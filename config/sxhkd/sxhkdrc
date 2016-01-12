@@ -6,6 +6,10 @@
 XF86AudioMute
     amixer set Master toggle
 
+# Toggle mic mute
+XF86AudioMicMute
+    amixer set Mic toggle
+
 # Change volume
 XF86Audio{Raise,Lower}Volume
     amixer set Master 5%{+,-} unmute
