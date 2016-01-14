@@ -37,7 +37,7 @@ super + t
 
 # Launch web browser
 super + w
-    firefox
+    firefox -P default
 
 # Launch web browser with work profile
 super + shift + w
