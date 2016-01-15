@@ -21,9 +21,6 @@ volwheel &
 # NetworkManager for managing networks.
 nm-applet &
 
-# git-annex for syncing.
-git annex assistant --autostart &
-
 # Hide the cursor when idle.
 unclutter &
 
