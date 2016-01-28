@@ -1,0 +1,1 @@
+../../weemoji/weemoji.py

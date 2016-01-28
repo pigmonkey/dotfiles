@@ -22,3 +22,6 @@
 [submodule "weechat/vimode"]
 	path = weechat/vimode
 	url = https://github.com/GermainZ/weechat-vimode
+[submodule "weechat/weemoji"]
+	path = weechat/weemoji
+	url = https://github.com/kattrali/weemoji
