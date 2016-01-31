@@ -3,14 +3,14 @@
 " ==/VimperatorColorSchema==
 " 
 
-hi Hint font-family: monospace; font-size: 15px; font-weight: normal; color: #cc6666; background-color: #1d1f21; border-color: #b4b7b4; border-width: 0px; border-style: solid; padding: 0px 5px 0px 5px; text-transform: uppercase;
+hi Hint font-family: monospace; font-size: 12px; font-weight: normal; color: #373b41; background-color: #1d1f21; border-color: #b4b7b4; border-width: 0px; border-style: solid; padding: 0px 5px 0px 5px; text-transform: uppercase;
 hi HintElem background-color: #81a2be; color: #1d1f21;
 hi HintActive background-color: #b294bb; color: #1d1f21;
 hi -append Hint         background-color: rgba(178, 148, 187, 0.7); border: 1px solid #fdf6e3; -moz-border-radius: 4px; -moz-box-shadow: 0px 0px 1px black;
 hi -append HintElem     text-decoration: none; -moz-border-radius: 4px; -moz-box-shadow: 0 0 2px #1d1f21;
 hi -append HintActive   text-decoration: none; -moz-border-radius: 4px; -moz-box-shadow: 0 0 2px #1d1f21;
 
-hi StatusLine     color: #1d1f21; background: #1d1f21; font-weight: normal; font-size: 8pt;
+hi StatusLine     color: #93a1a1; background: #1d1f21; font-weight: normal; font-size: 8pt;
 
 hi Normal     color:  #c5c8c6;  background: #1d1f21; font-size: 8pt; opacity: 0.9;
 hi CmdLine    color:  #c5c8c6;  background: #1d1f21; font-size: 8pt;
