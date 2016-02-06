@@ -184,6 +184,9 @@ for_window [title="pinentry"] floating enable
 # Float asoundconf-gtk windows
 for_window [title="Default Sound Card"] floating enable
 
+# float clipqr windows
+for_window [title="^qcode$"] floating enable
+
 # Window colors
 client.focused $base0D $base0D $base00 $base0D
 client.focused_inactive $base02 $base02 $base03 $base02
