@@ -32,3 +32,6 @@ set recolor                     "true"
 # setting recolor-keep true will keep any color your pdf has.
 # if it is false, it'll just be black and white
 set recolor-keephue             "true"
+
+map <C-i> zoom in
+map <C-o> zoom out
