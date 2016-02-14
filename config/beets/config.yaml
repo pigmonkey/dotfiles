@@ -4,6 +4,8 @@ import:
     move: yes
 ui:
     color: yes
-plugins: lyrics lastgenre mbsync fetchart scrub bpd
+plugins: lyrics lastgenre mbsync fetchart scrub bpd chroma
 lastgenre:
     canonical: ''
+chroma:
+    auto: yes
