@@ -36,5 +36,8 @@ autorandr --change --default default
 # Monitor monitors for changes
 srandrd autorandr --change --default default
 
+# Udiskie for mounting.
+udiskie &
+
 # Launch the session!
 exec i3 
