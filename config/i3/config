@@ -112,6 +112,42 @@ bindsym $mod+Shift+0 move container to workspace 10
 # move current workspace to different output
 bindsym $mod+x move workspace to output right
 
+# mark windows
+mode "focused" {
+    # keybindings for marking and jumping to clients
+    bindsym a exec i3-input -F 'mark %s' -P 'Mark name: '
+    bindsym g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
+
+    # Assign marks to keys 1-10
+    bindsym Shift+1 mark mark1
+    bindsym Shift+2 mark mark2
+    bindsym Shift+3 mark mark3
+    bindsym Shift+4 mark mark4
+    bindsym Shift+5 mark mark5
+    bindsym Shift+6 mark mark6
+    bindsym Shift+7 mark mark7
+    bindsym Shift+8 mark mark8
+    bindsym Shift+9 mark mark9
+    bindsym Shift+0 mark mark10
+
+    # Jump to clients marked 1-10
+    bindsym 1 [con_mark="mark1"] focus
+    bindsym 2 [con_mark="mark2"] focus
+    bindsym 3 [con_mark="mark3"] focus
+    bindsym 4 [con_mark="mark4"] focus
+    bindsym 5 [con_mark="mark5"] focus
+    bindsym 6 [con_mark="mark6"] focus
+    bindsym 7 [con_mark="mark7"] focus
+    bindsym 8 [con_mark="mark8"] focus
+    bindsym 9 [con_mark="mark9"] focus
+    bindsym 0 [con_mark="mark0"] focus
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode "focused"
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
