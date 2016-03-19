@@ -115,3 +115,8 @@ export LEDGERPASS=~/.ledger.gpg
 
 # Set the dmenu font.
 export DMENU_OPTIONS="-fn -xos4-terminus-medium-r-*-*-14-*"
+
+# Source credentials.
+if [ -f ~/.keys/creds.sh ]; then
+    source ~/.keys/creds.sh
+fi
