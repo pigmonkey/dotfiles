@@ -1,9 +1,6 @@
 " Set the colorscheme
 colorscheme base16-tomorrow
 
-" Terminus!
-source ~/.vimperator/terminus.vimp
-
 " Select all with Ctrl+A in insert mode
 inoremap <C-a> <Ins><C-a><Ins>
 
