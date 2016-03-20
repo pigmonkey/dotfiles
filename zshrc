@@ -20,3 +20,5 @@ alias mtr-report='mtr --report --report-cycles 10 --no-dns'
 eval `dircolors $HOME/.dircolors-solarized/dircolors.ansi-dark`
 
 alias e='aunpack'
+alias um='udiskie-mount -r'
+alias uu='udiskie-umount'
