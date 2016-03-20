@@ -66,11 +66,11 @@ super + p
 
 # Lock the screen
 super + l
-    physlock -m
+    /usr/local/bin/lock
 
 # Lock the screen
 XF86ScreenSaver
-    physlock -m
+    /usr/local/bin/lock
 
 # Take a screenshot
 Print
