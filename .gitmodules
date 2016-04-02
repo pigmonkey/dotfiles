@@ -22,3 +22,6 @@
 [submodule "weechat/weemoji"]
 	path = weechat/weemoji
 	url = https://github.com/kattrali/weemoji
+[submodule "zprezto"]
+	path = zprezto
+	url = git@github.com:pigmonkey/prezto.git
