@@ -72,6 +72,10 @@ super + l
 XF86ScreenSaver
     /usr/local/bin/lock
 
+# Change screen brightness
+XF86MonBrightness{Up,Down}
+    light -{A,U} 10
+
 # Take a screenshot
 Print
     scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'
