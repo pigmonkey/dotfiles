@@ -1,0 +1,3 @@
+# Enable OpenGL and VA-API hardware decoding.
+vo=opengl
+hwdec=vaapi
