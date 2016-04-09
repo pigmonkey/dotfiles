@@ -6,3 +6,4 @@ whitelist ~/audio
 whitelist ~/video
 whitelist ~/www
 whitelist ~/tmp
+whitelist ~/torrents
