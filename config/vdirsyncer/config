@@ -15,7 +15,7 @@ fileext = .vcf
 type = carddav
 url = https://carddav.messagingengine.com/
 username = peterhogg@fastmail.fm
-password.fetch = ["prompt", "Password for CardDAV"]
+password.fetch = ["command", "keyring", "get", "mail-havenaut", "dav"]
 verify_fingerprint = "95:8B:16:01:56:3A:EF:92:60:7A:41:EB:5B:AD:22:E3:CA:CE:84:31"
 
 [pair calendar]
@@ -32,5 +32,5 @@ fileext = .ics
 type = caldav
 url = https://caldav.messagingengine.com/
 username = peterhogg@fastmail.fm
-password.fetch = ["prompt", "Password for CalDAV"]
+password.fetch = ["command", "keyring", "get", "mail-havenaut", "dav"]
 verify_fingerprint = "95:8B:16:01:56:3A:EF:92:60:7A:41:EB:5B:AD:22:E3:CA:CE:84:31"
