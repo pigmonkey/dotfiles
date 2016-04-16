@@ -30,6 +30,10 @@ super + {comma, period}
 super + slash
     notify-send -u low "$(mpc -f "%artist%" current)" "$(mpc -f "%title%" current)"
 
+# Play the video URL in the clipboard
+super + m
+    play
+
 
 ################
 # Applications #
