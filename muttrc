@@ -74,6 +74,7 @@ set pager_stop
 set sidebar_visible=yes
 set sidebar_width=32
 set sidebar_divider_char=' │ '
+set sidebar_short_path
 
 
 ################
