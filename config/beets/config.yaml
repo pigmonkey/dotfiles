@@ -1,5 +1,5 @@
-directory: ~/audio/music
-library: ~/audio/.beet.blb
+directory: ~/library/audio/music
+library: ~/library/audio/.beet.blb
 import:
     move: yes
 ui:
