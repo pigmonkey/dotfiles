@@ -13,6 +13,7 @@ general {
         interval = 5
 }
 
+order += "msmtpq"
 order += "volume master"
 order += "run_watch DHCP"
 order += "wireless wlp4s0"
