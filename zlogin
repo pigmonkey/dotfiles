@@ -20,15 +20,6 @@ if (( $+commands[fortune] )); then
   print
 fi
 
-# If Keychain is installed, run it.
-hash keychain 2> /dev/null
-if [ $? -eq 0 ]; then
-    keychain -q ~/.ssh/id_rsa --agents ssh
-    if [ -f ~/.keychain/$HOST-sh ]; then
-        source ~/.keychain/$HOST-sh
-    fi
-fi
-
 # If we're in tmux, set the terminal to 256 colors.
 [ -n "$TMUX" ] && export TERM=screen-256color
 

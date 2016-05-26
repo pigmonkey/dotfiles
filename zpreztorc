@@ -27,7 +27,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'python' \
   'buildfile' \
-  'ssh' \
+  'gpg' \
   'pacman' \
   'environment' \
   'terminal' \
