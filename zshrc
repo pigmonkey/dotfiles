@@ -22,3 +22,6 @@ eval `dircolors $HOME/.dircolors-solarized/dircolors.ansi-dark`
 alias e='aunpack'
 alias um='udiskie-mount -r'
 alias uu='udiskie-umount'
+
+# Use SSH completion for Mosh.
+compdef mosh=ssh
