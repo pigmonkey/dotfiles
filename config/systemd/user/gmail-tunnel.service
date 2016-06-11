@@ -1,0 +1,11 @@
+[Unit]
+Description=SSH tunnel for FastMail SMTP
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -v -N -L 1091:smtp.gmail.com:587 mail-tunnel
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
