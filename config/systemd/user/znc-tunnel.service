@@ -1,0 +1,11 @@
+[Unit]
+Description=ZNC tunnel
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -v -N -L 11289:127.0.0.1:11289 znc-tunnel
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
