@@ -9,3 +9,5 @@ lastgenre:
     canonical: ''
 chroma:
     auto: yes
+lyrics:
+    sources: lyricwiki lyrics.com musixmatch genius
