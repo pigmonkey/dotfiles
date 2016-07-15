@@ -22,3 +22,7 @@
 [submodule "zprezto"]
 	path = zprezto
 	url = git@github.com:pigmonkey/prezto.git
+[submodule "tmux/plugins/tmux-urlview"]
+	path = tmux/plugins/tmux-urlview
+	url = https://github.com/pigmonkey/tmux-urlview.git
+	branch = reverse

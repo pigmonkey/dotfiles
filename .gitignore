@@ -14,6 +14,7 @@ vim/bundle/*
 # Ignore tmux plugins, except Tmux Plugin Manager
 tmux/plugins/*
 !tmux/plugins/tpm
+!tmux/plugins/tmux-urlview
 
 # Ignore tmux resurrection
 tmux/resurrect/*
