@@ -28,7 +28,7 @@ set wait_key=no
 set delete
 set pipe_decode
 set mailcap_path=~/.mutt/mailcap
-set query_command="khard email --search %s"
+set query_command="khard email %s"
 set forward_format="Fwd: %s"
 set use_domain=no
 set user_agent=no
