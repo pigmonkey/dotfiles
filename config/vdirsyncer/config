@@ -13,10 +13,10 @@ fileext = .vcf
 
 [storage contacts_remote]
 type = carddav
-url = https://carddav.messagingengine.com/
+url = https://carddav.fastmail.com
 username = peterhogg@fastmail.fm
-password.fetch = ["command", "keyring", "get", "mail-havenaut", "dav"]
-verify_fingerprint = "95:8B:16:01:56:3A:EF:92:60:7A:41:EB:5B:AD:22:E3:CA:CE:84:31"
+password.fetch = ["command", "keyring", "get", "mail-havenaut", "carddav"]
+verify_fingerprint = "99:5D:41:5E:2A:10:00:E0:57:4E:FB:30:FD:01:B1:67:09:D2:18:ED"
 
 [pair calendar]
 a = calendar_local
@@ -30,7 +30,7 @@ fileext = .ics
 
 [storage calendar_remote]
 type = caldav
-url = https://caldav.messagingengine.com/
+url = https://caldav.fastmail.com
 username = peterhogg@fastmail.fm
-password.fetch = ["command", "keyring", "get", "mail-havenaut", "dav"]
-verify_fingerprint = "95:8B:16:01:56:3A:EF:92:60:7A:41:EB:5B:AD:22:E3:CA:CE:84:31"
+password.fetch = ["command", "keyring", "get", "mail-havenaut", "caldav"]
+verify_fingerprint = "99:5D:41:5E:2A:10:00:E0:57:4E:FB:30:FD:01:B1:67:09:D2:18:ED"

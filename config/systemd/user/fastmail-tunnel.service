@@ -3,7 +3,7 @@ Description=SSH tunnel for FastMail SMTP
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/ssh -v -N -L 1090:mail.messagingengine.com:587 mail-tunnel
+ExecStart=/usr/bin/ssh -v -N -L 1090:smtp.fastmail.com:587 mail-tunnel
 Restart=always
 RestartSec=60
 
