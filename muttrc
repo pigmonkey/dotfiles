@@ -71,6 +71,8 @@ set pager_context = 3
 set pager_stop
 
 # Sidebar
+set mail_check_stats = yes
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_visible=yes
 set sidebar_width=32
 set sidebar_divider_char=' │ '
