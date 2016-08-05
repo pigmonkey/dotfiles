@@ -2,3 +2,4 @@ URL_field='url'
 USERNAME_field='login'
 clip=clipboard
 notify='true'
+default_do='autopass'
