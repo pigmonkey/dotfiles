@@ -83,20 +83,16 @@ set sidebar_short_path
 # Key Bindings #
 ################
 
+source ~/.mutt/vim-keybindings.rc
+
 # Index
-bind index gg       first-entry
-bind index G        last-entry
 bind index R        group-reply
 bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 bind index \\       collapse-all
 
 # Pager
-bind pager gg   top
-bind pager G    bottom
 bind pager R    group-reply
-bind pager j    next-line
-bind pager k    previous-line
 
 # Sidebar
 bind index,pager <down>   sidebar-next
