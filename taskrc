@@ -4,6 +4,9 @@ data.location=~/documents/tasks
 # Colors
 include ~/.taskwarrior/zenburn-256.theme
 
+# Weeks start on Monday
+weekstart=Monday
+
 # Taskd
 taskd.certificate=~/.taskwarrior/peter.cert.pem
 taskd.key=~/.taskwarrior/peter.key.pem
