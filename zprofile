@@ -120,3 +120,6 @@ export DMENU_OPTIONS="-fn -xos4-terminus-medium-r-*-*-14-*"
 if [ -f ~/.keys/creds.sh ]; then
     source ~/.keys/creds.sh
 fi
+
+# Disable QT5 DPI scaling
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
