@@ -1,0 +1,3 @@
+UUID="d96a0fc3-7ea1-42f7-b0d0-42e573c478bd"
+KEYFILE="/home/pigmonkey/.keys/usb-pilchuck.key"
+RSNAPSHOT="/usr/bin/rsnapshot -c /etc/rsnapshot-pilchuck.conf"
