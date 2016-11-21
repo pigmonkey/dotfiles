@@ -1,36 +1,36 @@
 [general]
-status_path = ~/.vdirsyncer/status/
+status_path = "~/.vdirsyncer/status/"
 
 [pair contacts]
-a = contacts_local
-b = contacts_remote
+a = "contacts_local"
+b = "contacts_remote"
 collections = ["from b"]
 
 [storage contacts_local]
-type = filesystem
-path = ~/.contacts/
-fileext = .vcf
+type = "filesystem"
+path = "~/.contacts/"
+fileext = ".vcf"
 
 [storage contacts_remote]
-type = carddav
-url = https://carddav.fastmail.com
-username = peterhogg@fastmail.fm
+type = "carddav"
+url = "https://carddav.fastmail.com"
+username = "peterhogg@fastmail.fm"
 password.fetch = ["command", "keyring", "get", "mail-havenaut", "carddav"]
 verify_fingerprint = "99:5D:41:5E:2A:10:00:E0:57:4E:FB:30:FD:01:B1:67:09:D2:18:ED"
 
 [pair calendar]
-a = calendar_local
-b = calendar_remote
+a = "calendar_local"
+b = "calendar_remote"
 collections = ["from b"]
 
 [storage calendar_local]
-type = filesystem
-path = ~/.calendars/
-fileext = .ics
+type = "filesystem"
+path = "~/.calendars/"
+fileext = ".ics"
 
 [storage calendar_remote]
-type = caldav
-url = https://caldav.fastmail.com
-username = peterhogg@fastmail.fm
+type = "caldav"
+url = "https://caldav.fastmail.com"
+username = "peterhogg@fastmail.fm"
 password.fetch = ["command", "keyring", "get", "mail-havenaut", "caldav"]
 verify_fingerprint = "99:5D:41:5E:2A:10:00:E0:57:4E:FB:30:FD:01:B1:67:09:D2:18:ED"
