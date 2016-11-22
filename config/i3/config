@@ -214,6 +214,9 @@ for_window [title="taskwin"] floating enable
 bindsym $mod+t exec termite --title taskwin -e ~/bin/display_tasks.sh
 bindsym $mod+Shift+D exec task $(task ls | awk 'NR==4  { print $1 }') done
 
+# Float pinit windows
+for_window [title="pinit"] floating enable
+
 # Float pinentry windows
 for_window [title="pinentry"] floating enable
 
