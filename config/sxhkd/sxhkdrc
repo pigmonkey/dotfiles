@@ -63,6 +63,10 @@ alt + Tab
 super + p
     menu=$(echo -e "$HOME/.password-store\n$ALTPASSDIR" | rofi -dmenu); rofi-pass --root "${menu}"
 
+# Bookmark via pinboard
+super + d
+    termite --title pinit -e ~/bin/pinit.sh
+
 
 ########
 # Misc #
