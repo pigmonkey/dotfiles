@@ -1,3 +1,0 @@
-UUID="5285f2d8-69fa-4516-990e-eb39caec3f01"
-KEYFILE="/home/pigmonkey/.keys/usb-alpha.key"
-RSNAPSHOT="/usr/bin/rsnapshot -c /etc/rsnapshot-alpha.conf"

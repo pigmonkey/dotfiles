@@ -1,3 +1,0 @@
-UUID="bfb09df1-1617-4112-b2d0-561bd7aca113"
-KEYFILE="/home/pigmonkey/.keys/usb-bravo.key"
-RSNAPSHOT="/usr/bin/rsnapshot -c /etc/rsnapshot-bravo.conf"
