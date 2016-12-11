@@ -25,7 +25,7 @@ paste_ul=ix
 
 # Screencast options
 # Resolution to change to when recording in fullscreen
-res=800x600
+res=1024x768
 
 # If you use a custom rate for X, set it here. 
 # rate=120
@@ -43,7 +43,7 @@ encoder=ffmpeg
 # and webm-noaudio
 # You can create your own profiles, but changes to existing profiles
 # will be overwritten on startup
-profile="mp4-pulse"
+profile="mp4-noaudio"
 
 # hotkeys
 upload="Alt+1"
