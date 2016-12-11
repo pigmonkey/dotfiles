@@ -65,7 +65,7 @@ super + p
 
 # Bookmark via pinboard
 super + d
-    termite --title pinit -e ~/bin/pinit.sh
+    termite --title pinit -e ~/bin/pinit
 
 
 ########
