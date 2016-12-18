@@ -21,6 +21,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'ledger/vim-ledger'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'chriskempson/base16-vim'
+Plugin 'vimwiki/vimwiki'
 
 
 """""""""""
@@ -305,3 +306,14 @@ if has('viminfo')
         augroup END
     endif
 endif
+
+
+""""""""
+" Wiki "
+""""""""
+
+let g:vimwiki_list = [{
+    \ 'path': '~/documents/wiki',
+    \ 'syntax': 'markdown',
+    \ 'ext': '.md',
+    \ }]
