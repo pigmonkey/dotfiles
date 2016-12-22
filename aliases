@@ -1,0 +1,12 @@
+alias mtr-report='mtr --report --report-cycles 10 --no-dns'
+alias e='aunpack'
+alias um='udiskie-mount -r'
+alias uu='udiskie-umount'
+alias t='task'
+alias to='taskopen'
+alias l='ls -lh'         # Lists human readable sizes.
+alias ll='l -A'          # Lists human readable sizes, hidden files.
+alias lr='l -R'          # Lists human readable sizes, recursively.
+alias lt='l -tr'         # Lists sorted by date, most recent last.
+alias http-serve='python -m http.server'
+alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'

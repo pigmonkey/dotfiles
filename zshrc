@@ -65,23 +65,12 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 # Misc #
 ########
 
+source ~/.aliases
+
 # Add ruby gems to the path.
 if which ruby >/dev/null && which gem >/dev/null; then
     path=($(ruby -rubygems -e 'puts Gem.user_dir')/bin $path)
 fi
-
-alias mtr-report='mtr --report --report-cycles 10 --no-dns'
-alias e='aunpack'
-alias um='udiskie-mount -r'
-alias uu='udiskie-umount'
-alias t='task'
-alias to='taskopen'
-alias l='ls -lh'         # Lists human readable sizes.
-alias ll='l -A'          # Lists human readable sizes, hidden files.
-alias lr='l -R'          # Lists human readable sizes, recursively.
-alias lk='l -Sr'         # Lists sorted by size, largest last.
-alias http-serve='python -m http.server'
-alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
 
 # Use SSH completion for Mosh.
 compdef mosh=ssh
