@@ -4,10 +4,14 @@ import:
     move: yes
 ui:
     color: yes
-plugins: lyrics lastgenre mbsync fetchart scrub bpd chroma
+plugins: lyrics lastgenre mbsync fetchart scrub bpd chroma convert
 lastgenre:
     canonical: ''
 chroma:
     auto: yes
 lyrics:
     sources: lyricwiki lyrics.com musixmatch genius
+convert:
+    copy_album_art: yes
+    dest: ~/tmp/music
+    format: mp3
