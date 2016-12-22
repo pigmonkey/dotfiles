@@ -15,7 +15,6 @@ zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "plugins/virtualenvwrapper", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "pigmonkey/prezto", use:"modules/utility/*zsh"
 zplug "pigmonkey/prezto", use:"modules/git/*zsh"
 zplug "pigmonkey/prezto", use:"modules/buildfile/*zsh"
 zplug "pigmonkey/prezto", use:"modules/notes/*zsh"
@@ -75,6 +74,14 @@ alias mtr-report='mtr --report --report-cycles 10 --no-dns'
 alias e='aunpack'
 alias um='udiskie-mount -r'
 alias uu='udiskie-umount'
+alias t='task'
+alias to='taskopen'
+alias l='ls -lh'         # Lists human readable sizes.
+alias ll='l -A'          # Lists human readable sizes, hidden files.
+alias lr='l -R'          # Lists human readable sizes, recursively.
+alias lk='l -Sr'         # Lists sorted by size, largest last.
+alias http-serve='python -m http.server'
+alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
 
 # Use SSH completion for Mosh.
 compdef mosh=ssh
