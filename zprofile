@@ -1,11 +1,4 @@
 #
-# Executes commands at login pre-zshrc.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-#
 # Terminal
 #
 
@@ -33,11 +26,6 @@ fi
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
-
-# Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
 
 # Set the list of directories that Zsh searches for programs.
 path=(
@@ -95,19 +83,6 @@ export NOTEDIR=~/documents/notes
 
 # Set the alternative pass directory.
 export ALTPASSDIR=~/projects/tad/pass
-
-#
-# Ledger Encryption
-#
-
-# Set the directory of the EncFS filesystem.
-export LEDGERCRYPT=~/.ledger-crypt
-
-# Set the mount point of the EncFS filesystem.
-export LEDGERMOUNT=~/ledger
-
-# Set the file which contains the GnuPG encrypted passphrase.
-export LEDGERPASS=~/.ledger.gpg
 
 #
 # Misc
