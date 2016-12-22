@@ -4,6 +4,8 @@ alias um='udiskie-mount -r'
 alias uu='udiskie-umount'
 alias t='task'
 alias to='taskopen'
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
 alias l='ls -lh'         # Lists human readable sizes.
 alias ll='l -A'          # Lists human readable sizes, hidden files.
 alias lr='l -R'          # Lists human readable sizes, recursively.
