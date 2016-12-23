@@ -1,14 +1,50 @@
-alias mtr-report='mtr --report --report-cycles 10 --no-dns'
-alias e='aunpack'
-alias um='udiskie-mount -r'
-alias uu='udiskie-umount'
-alias t='task'
-alias to='taskopen'
-alias grep='grep --color=auto'
-alias ls='ls --color=auto'
+########
+# Core #
+########
+
+alias mkdir='mkdir -p'
+alias grep='grep --color=always'
+alias ls='ls --color=always'
 alias l='ls -lh'         # Lists human readable sizes.
 alias ll='l -A'          # Lists human readable sizes, hidden files.
 alias lr='l -R'          # Lists human readable sizes, recursively.
 alias lt='l -tr'         # Lists sorted by date, most recent last.
+
+
+###########
+# Udiskie #
+###########
+
+alias um='udiskie-mount -r'
+alias uu='udiskie-umount'
+
+
+#############
+# Git Annex #
+#############
+
+alias gx='git annex'
+alias gxa='git annex add'
+alias gxs='git annex sync'
+alias gxg='git annex get'
+alias gxd='git annex drop'
+alias gxc='git annex copy'
+alias gxe='git annex edit'
+
+
+###############
+# Taskwarrior #
+###############
+
+alias t='task'
+alias to='taskopen'
+
+
+########
+# Misc #
+########
+
+alias mtr-report='mtr --report --report-cycles 10 --no-dns'
+alias e='aunpack'
 alias http-serve='python -m http.server'
 alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
