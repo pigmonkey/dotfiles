@@ -5,7 +5,6 @@
 source /usr/share/zsh/scripts/zplug/init.zsh
 
 zplug "subnixr/minimal"
-zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "chrissicool/zsh-256color"
