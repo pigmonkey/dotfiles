@@ -14,7 +14,7 @@ zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "plugins/virtualenvwrapper", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "pigmonkey/prezto", use:"modules/git/*zsh"
+zplug "modules/git", from:prezto
 zplug "pigmonkey/prezto", use:"modules/buildfile/*zsh"
 zplug "pigmonkey/prezto", use:"modules/notes/*zsh"
 zplug "pigmonkey/prezto", use:"modules/pass/*zsh"
@@ -74,9 +74,11 @@ fi
 # Use SSH completion for Mosh.
 compdef mosh=ssh
 
+
 ######
 # Vi #
 ######
+
 bindkey -M viins 'kj' vi-cmd-mode
 bindkey -M vicmd "?" history-incremental-search-backward
 bindkey -M vicmd "/" history-incremental-search-forward
