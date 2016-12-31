@@ -15,8 +15,8 @@ if [ -f ~/.fehbg ]; then
     sh ~/.fehbg &
 fi
 
-# Control volume with volwheel.
-volwheel &
+# Control volume with pasystray.
+pasystray &
 
 # NetworkManager for managing networks.
 nm-applet &
