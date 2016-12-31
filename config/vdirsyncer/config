@@ -34,3 +34,5 @@ url = "https://caldav.fastmail.com"
 username = "peterhogg@fastmail.fm"
 password.fetch = ["command", "keyring", "get", "mail-havenaut", "caldav"]
 verify_fingerprint = "99:5D:41:5E:2A:10:00:E0:57:4E:FB:30:FD:01:B1:67:09:D2:18:ED"
+start_date = "datetime.now() - timedelta(days=365)"
+end_date = "datetime.now() + timedelta(days=365)"
