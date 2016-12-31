@@ -40,6 +40,15 @@ alias t='task'
 alias to='taskopen'
 
 
+##########
+# Pacman #
+##########
+
+alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
+alias pacx="sudo pacman --remove"
+alias pacX="sudo pacman --remove --nosave --recursive"
+
+
 ########
 # Misc #
 ########
@@ -47,4 +56,3 @@ alias to='taskopen'
 alias mtr-report='mtr --report --report-cycles 10 --no-dns'
 alias e='aunpack'
 alias http-serve='python -m http.server'
-alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
