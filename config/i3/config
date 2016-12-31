@@ -223,6 +223,9 @@ for_window [title="pinentry"] floating enable
 # Float asoundconf-gtk windows
 for_window [title="Default Sound Card"] floating enable
 
+# Float pavucontrol windows
+for_window [title="Volume Control"] floating enable
+
 # float qcode windows
 for_window [title="^qcode$"] floating enable
 
