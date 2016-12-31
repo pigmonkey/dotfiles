@@ -56,3 +56,4 @@ alias pacX="sudo pacman --remove --nosave --recursive"
 alias mtr-report='mtr --report --report-cycles 10 --no-dns'
 alias e='aunpack'
 alias http-serve='python -m http.server'
+alias bc='bc -lq'
