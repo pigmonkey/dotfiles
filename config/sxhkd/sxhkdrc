@@ -4,19 +4,19 @@
 
 # Toggle mute
 XF86AudioMute
-    volume toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Toggle mic mute
 XF86AudioMicMute
-    volume mic
+    pactl set-source-mute 1 toggle
 
 # Change volume
 XF86Audio{Raise,Lower}Volume
-    volume {up,down}
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
 
 # Change volume
 super + {k,j}
-    volume {up,down}
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
 
 # Toggle mpd
 super + 0
