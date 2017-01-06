@@ -210,18 +210,18 @@ bindsym $mod+minus scratchpad show
 focus_follows_mouse no
 
 # Show taskwarrior tasks.
-for_window [title="taskwin"] floating enable
+for_window [title="^taskwin$"] floating enable
 bindsym $mod+t exec termite --title taskwin -e ~/bin/display_tasks.sh
 bindsym $mod+Shift+D exec task $(task ls | awk 'NR==4  { print $1 }') done
 
 # Float pinit windows
-for_window [title="pinit"] floating enable
+for_window [title="^pinit$"] floating enable
 
 # Float pinentry windows
-for_window [title="pinentry"] floating enable
+for_window [title="^pinentry$"] floating enable
 
 # Float asoundconf-gtk windows
-for_window [title="Default Sound Card"] floating enable
+for_window [title="^Default Sound Card$"] floating enable
 
 # Float pavucontrol windows
 for_window [title="^Volume Control$"] floating enable
