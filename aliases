@@ -37,7 +37,10 @@ alias gxe='git annex edit'
 ###############
 
 alias t='task'
+alias ta='task add'
+alias tm='task modify'
 alias to='taskopen'
+alias ti='task add due:tomorrow tag:inbox'
 
 
 ##########
