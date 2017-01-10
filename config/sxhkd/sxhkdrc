@@ -12,11 +12,11 @@ XF86AudioMicMute
 
 # Change volume
 XF86Audio{Raise,Lower}Volume
-    pulseaudio-ctl {up,down} 5
+    pulseaudio-ctl {up,down} 2
 
 # Change volume
 super + {k,j}
-    pulseaudio-ctl {up,down} 5
+    pulseaudio-ctl {up,down} 2
 
 # Toggle mpd
 super + 0
