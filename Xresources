@@ -30,7 +30,7 @@ URxvt.url-select.launcher:  xdg-open
 URxvt.url-select.underline: true
 
 ! Rofi font and colors
-rofi.font: terminus 12
+rofi.font:xos4 Terminus Regular 10
 rofi.color-enabled: true
 rofi.color-window: #273238, #273238, #1e2529
 rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
