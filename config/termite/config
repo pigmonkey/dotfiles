@@ -56,7 +56,7 @@ color20 = #b4b7b4
 color21 = #e0e0e0
 
 [hints]
-font = Terminus 12
+font = xos4 Terminus Regular 12
 foreground = #93e0e3
 #background = #3f3f3f
 #padding = 2
