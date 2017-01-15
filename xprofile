@@ -38,3 +38,6 @@ srandrd autorandr --change --default mobile
 
 # Udiskie for mounting.
 udiskie &
+
+# Blueman for bluetooth
+blueman-applet &
