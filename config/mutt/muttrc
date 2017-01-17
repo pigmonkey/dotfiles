@@ -7,7 +7,7 @@ set mbox_type=Maildir
 set folder=$HOME/mail
 set spoolfile=+Havenaut/INBOX
 set header_cache=~/.hcache
-source ~/.mutt/mailboxes
+source ~/.config/mutt/mailboxes
 
 # Personal
 set realname='Peter Hogg'
@@ -27,7 +27,7 @@ set mail_check=0
 set wait_key=no
 set delete
 set pipe_decode
-set mailcap_path=~/.mutt/mailcap
+set mailcap_path=~/.config/mutt/mailcap
 set query_command="khard email --parsable %s"
 set forward_format="Fwd: %s"
 set use_domain=no
@@ -44,7 +44,7 @@ auto_view text/html
 alternative_order text/plain text/enriched text/html
 
 # Printing
-set print_command="$HOME/.mutt/print.sh"
+set print_command="$HOME/.config/mutt/print.sh"
 
 # PGP
 set crypt_use_gpgme = yes
@@ -83,7 +83,7 @@ set sidebar_short_path
 # Key Bindings #
 ################
 
-source ~/.mutt/vim-keybindings.rc
+source ~/.config/mutt/vim-keybindings.rc
 
 # Index
 bind index R        group-reply
@@ -119,7 +119,7 @@ macro index s "<save-message>?<toggle-mailboxes>"
 # Colors #
 ##########
 
-source ~/.mutt/base16-tomorrow.dark.256.muttrc
+source ~/.config/mutt/base16-tomorrow.dark.256.muttrc
 color sidebar_new color116 color234
 
 
@@ -128,5 +128,5 @@ color sidebar_new color116 color234
 ############
 
 # Folder Hooks
-folder-hook Havenaut/* source ~/.mutt/havenaut.muttrc
-folder-hook TAD/*   source ~/.mutt/tad.muttrc
+folder-hook Havenaut/* source ~/.config/mutt/havenaut.muttrc
+folder-hook TAD/*   source ~/.config/mutt/tad.muttrc
