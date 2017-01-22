@@ -1,3 +1,5 @@
 #!/bin/sh
 
-zplug install
+if hash zplug 2> /dev/null; then
+    zplug install
+fi

@@ -1,3 +1,5 @@
 #!/bin/sh
 
-~/.dotfiles/tmux/plugins/tpm/bin/install_plugins
+if hash tmux 2> /dev/null; then
+    ~/.dotfiles/tmux/plugins/tpm/bin/install_plugins
+fi
