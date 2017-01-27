@@ -74,6 +74,9 @@ fi
 # Use SSH completion for Mosh.
 compdef mosh=ssh
 
+# Menu completion
+zstyle ':completion:*' menu select
+
 
 ######
 # Vi #
