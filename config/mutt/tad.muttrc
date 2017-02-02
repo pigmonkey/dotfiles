@@ -10,7 +10,7 @@ unset record
 set from='peter@tripleaughtdesign.com'
 set reverse_name=no
 alternates phogg@tripleaughtdesign.com
-set signature=~/.mutt/sigs/tad
+set signature=~/.config/mutt/sigs/tad
 
 # Sending
 set hostname="mail.tripleaughtdesign.com"
