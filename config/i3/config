@@ -187,13 +187,16 @@ bar {
     status_command  py3status | ~/bin/wnot_cli --i3status
     position        top
     colors {
-        separator $base03
-        background $base01
-        statusline $base05
-        focused_workspace $base0C $base0D $base00
-        active_workspace $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base03
-        urgent_workspace $base08 $base08 $base07
+        background $base00
+        separator  $base01
+        statusline $base04
+
+        # State             Border  BG      Text
+        focused_workspace   $base0D $base0D $base00
+        active_workspace    $base05 $base03 $base00
+        inactive_workspace  $base01 $base01 $base05
+        urgent_workspace    $base08 $base08 $base00
+        binding_mode        $base00 $base0A $base00
     }
 }
 
@@ -232,8 +235,8 @@ for_window [title="^qcode$"] floating enable
 # float showme windows
 for_window [title="^showme$"] floating enable
 
-# Window colors
-client.focused $base0D $base0D $base00 $base0D
-client.focused_inactive $base02 $base02 $base03 $base02
-client.unfocused $base01 $base01 $base03 $base01
-client.urgent $base02 $base08 $base07 $base02
+# Window colors         Border  BG      Text    Indicator Child Border
+client.focused          $base0D $base0D $base00 $base0D $base0D
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base01 $base03 $base01 $base01
+client.urgent           $base02 $base08 $base07 $base02 $base02
