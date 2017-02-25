@@ -66,12 +66,6 @@ Channel tad-flagged
     Create Both
     SyncState *
 
-Channel tad-trash
-    Master ":tad-remote:[Gmail]/Trash"
-    Slave ":tad-local:trash"
-    Create Both
-    SyncState *
-
 
 Group tad
     Channel tad-trash
