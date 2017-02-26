@@ -67,6 +67,10 @@ super + p
 super + d
     termite --title pinit -e ~/bin/pinit
 
+# Launch rofi surfraw
+super + f
+    surfraw-rofi
+
 
 ########
 # Misc #
