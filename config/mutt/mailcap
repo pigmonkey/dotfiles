@@ -1,4 +1,5 @@
 text/html; firewarden chromium %s; test=test -n "$DISPLAY";
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/plain; vim %s ; needsterminal
 image/*; firewarden imv %s
 application/pdf; firewarden zathura %s
