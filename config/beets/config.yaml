@@ -12,6 +12,7 @@ chroma:
 lyrics:
     sources: lyricwiki lyrics.com musixmatch genius
 convert:
-    copy_album_art: yes
-    dest: ~/tmp/music
+    dest: ~/zulu/com.arachnoid.sshelper/music
     format: mp3
+    copy_album_art: yes
+    embed: yes
