@@ -21,7 +21,6 @@ order += "ethernet enp0s31f6"
 order += "battery 0"
 order += "battery 1"
 order += "load"
-order += "backlight"
 order += "tztime local"
 
 wireless wlp4s0 {
