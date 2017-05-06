@@ -1,0 +1,10 @@
+[Unit]
+Description=Update library repositories timer
+
+[Timer]
+Unit=library-repos.service
+OnCalendar=hourly
+Persistent=True
+
+[Install]
+WantedBy=timers.target

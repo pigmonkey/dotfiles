@@ -1,0 +1,9 @@
+[Unit]
+Description=Update library repositories
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mr --config %h/library/src/myrepos.conf -j5 update
+
+[Install]
+WantedBy=multi-user.target
