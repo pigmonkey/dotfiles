@@ -1,0 +1,9 @@
+[Unit]
+Description=Dump Pinboard bookmarks
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backitup -l %h/.pinboard-backup -b %h/bin/pinboard-backup.sh
+
+[Install]
+WantedBy=multi-user.target
