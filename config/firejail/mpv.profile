@@ -1,6 +1,6 @@
 include /usr/local/etc/firejail/mpv.profile
 
-whitelist ~/.dotfiles
+whitelist ~/projects/dotfiles
 whitelist ~/.config/mpv
 whitelist ~/library/audio
 whitelist ~/library/video

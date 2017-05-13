@@ -1,6 +1,6 @@
 include /usr/local/etc/firejail/weechat.profile
 
-whitelist ~/.dotfiles
+whitelist ~/projects/dotfiles
 whitelist ~/.weechat
 whitelist ~/log
 whitelist ~/www

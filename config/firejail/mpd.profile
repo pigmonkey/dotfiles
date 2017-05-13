@@ -1,5 +1,5 @@
 include /usr/local/etc/firejail/mpd.profile
 
-whitelist ~/.dotfiles
+whitelist ~/projects/dotfiles
 whitelist ~/.config/mpd
 whitelist ~/library/audio
