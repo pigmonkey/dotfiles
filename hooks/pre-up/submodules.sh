@@ -1,5 +1,5 @@
 #!/bin/sh
 # Initialize git submodules
-cd ~/.dotfiles
+cd ~/projects/dotfiles
 git submodule init
 git submodule update
