@@ -69,6 +69,14 @@ alias pmr='mr --config $HOME/projects/.mrconfig --directory=$HOME/projects'
 
 
 ########
+# Pass #
+########
+
+alias cplogin='sed -n "/^login/Is/login:\s\+//p" | xsel -ib'
+alias cpurl='sed -n "/^url/Is/url:\s\+//p" | xsel -ib'
+
+
+########
 # Misc #
 ########
 

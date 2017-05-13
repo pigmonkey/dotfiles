@@ -16,7 +16,6 @@ zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "modules/git", from:prezto
 zplug "pigmonkey/notes.sh", use:"notes.sh"
-zplug "pigmonkey/prezto", use:"modules/pass/*zsh"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -75,6 +74,12 @@ compdef mosh=ssh
 
 # Menu completion
 zstyle ':completion:*' menu select
+
+# Setup alternative pass.
+wpass() {
+    PASSWORD_STORE_DIR="$ALTPASSDIR" pass "$@"
+}
+compdef -e 'PASSWORD_STORE_DIR=$ALTPASSDIR _pass' wpass
 
 
 ######
