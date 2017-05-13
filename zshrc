@@ -15,8 +15,7 @@ zplug "plugins/virtualenvwrapper", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "modules/git", from:prezto
-zplug "pigmonkey/prezto", use:"modules/buildfile/*zsh"
-zplug "pigmonkey/prezto", use:"modules/notes/*zsh"
+zplug "pigmonkey/notes.sh", use:"notes.sh"
 zplug "pigmonkey/prezto", use:"modules/pass/*zsh"
 
 # Install plugins if there are plugins that have not been installed
