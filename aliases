@@ -42,6 +42,12 @@ alias ta='task add'
 alias tm='task modify'
 alias to='taskopen'
 alias ti='task add due:tomorrow tag:inbox'
+tn() {
+    if ! taskopen $1; then
+        task annotate notes $1
+        taskopen $1
+    fi
+}
 
 
 ##########
