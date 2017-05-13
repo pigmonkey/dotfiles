@@ -17,6 +17,7 @@ alias lt='l -tr'         # Lists sorted by date, most recent last.
 
 alias um='udiskie-mount -r'
 alias uu='udiskie-umount'
+alias up='um -p "builtin:tty"'
 
 
 #############
