@@ -59,6 +59,15 @@ alias pacx="sudo pacman --remove"
 alias pacX="sudo pacman --remove --nosave --recursive"
 
 
+############
+# My Repos #
+############
+
+alias lmr='mr --config $HOME/library/src/myrepos.conf --directory=$HOME/library/src'
+alias wmr='mr --config $HOME/projects/tad/docs/config/myrepos.conf --directory=$HOME/projects/tad'
+alias pmr='mr --config $HOME/projects/.mrconfig --directory=$HOME/projects'
+
+
 ########
 # Misc #
 ########
@@ -68,5 +77,3 @@ alias e='aunpack'
 alias http-serve='python -m http.server'
 alias bc='bc -lq'
 alias utc='env TZ="UTC" date'
-alias lmr='mr --config $HOME/library/src/myrepos.conf --directory=$HOME/library/src'
-alias wmr='mr --config $HOME/projects/tad/docs/config/myrepos.conf --directory=$HOME/projects/tad'
