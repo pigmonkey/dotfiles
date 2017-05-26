@@ -68,7 +68,6 @@ Channel tad-flagged
 
 
 Group tad
-    Channel tad-trash
     Channel tad-inbox
     Channel tad-drafts
     Channel tad-sent
