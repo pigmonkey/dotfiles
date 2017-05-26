@@ -214,8 +214,7 @@ focus_follows_mouse no
 
 # Show taskwarrior tasks.
 for_window [title="^taskwin$"] floating enable
-bindsym $mod+t exec termite --title taskwin -e ~/bin/display_tasks.sh
-bindsym $mod+Shift+D exec task $(task ls | awk 'NR==4  { print $1 }') done
+bindsym $mod+t exec termite --title taskwin --geometry=800x600 -e ~/bin/display_tasks.sh
 
 # Float pinit windows
 for_window [title="^pinit$"] floating enable
