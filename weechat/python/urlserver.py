@@ -44,6 +44,10 @@
 #
 # History:
 #
+# 2016-11-01, Sébastien Helleu <flashcode@flashtux.org>:
+#     v2.1: add option "msg_filtered"
+# 2016-01-20, Yves Stadler <yves.stadler@gmail.com>:
+#     v2.0: add option "http_open_in_new_page"
 # 2015-05-16, Sébastien Helleu <flashcode@flashtux.org>:
 #     v1.9: add option "http_auth_redirect", fix flake8 warnings
 # 2015-04-14, Sébastien Helleu <flashcode@flashtux.org>:
@@ -106,7 +110,7 @@
 
 SCRIPT_NAME = 'urlserver'
 SCRIPT_AUTHOR = 'Sébastien Helleu <flashcode@flashtux.org>'
-SCRIPT_VERSION = '1.9'
+SCRIPT_VERSION = '2.1'
 SCRIPT_LICENSE = 'GPL3'
 SCRIPT_DESC = 'Shorten URLs with own HTTP server'
 
@@ -223,6 +227,9 @@ urlserver_settings_default = {
     'http_time_format': (
         '%d/%m/%y %H:%M:%S',
         'time format in the HTML page'),
+    'http_open_in_new_page': (
+        'on',
+        'open links in new pages/tabs'),
     # message filter settings
     'msg_ignore_buffers': (
         'core.weechat,python.grep',
@@ -244,6 +251,9 @@ urlserver_settings_default = {
     'msg_ignore_dup_urls': (
         'off',
         'ignore duplicated URLs (do not add an URL in list if it is already)'),
+    'msg_filtered': (
+        'off',
+        'shorten URLs in filtered messages (with /filter)'),
     # display settings
     'color': (
         'darkgray',
@@ -472,11 +482,16 @@ def urlserver_server_reply_list(conn, sort='-time'):
         strjoin = ('<span class="prefix_suffix"> %s </span>' %
                    urlserver_settings['http_prefix_suffix']
                    .replace(' ', '&nbsp;'))
+
+        target = ''
+        if urlserver_settings['http_open_in_new_page'] == 'on':
+            target = ' target=_blank'
+
         message = strjoin.join(message).replace(
             '\x01\x02\x03\x04',
-            '</span><a class="url" href="%s" title="%s">%s'
+            '</span><a class="url" href="%s" title="%s"%s>%s'
             '</a><span class="message">' % (
-                urlserver_short_url(key, False), url, url))
+                urlserver_short_url(key, False), url, target, url))
         if urlserver_settings['http_embed_image'] == 'on' and \
                 url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif',
                                       '.bmp', '.svg')):
@@ -891,6 +906,9 @@ def urlserver_print_cb(data, buffer, time, tags, displayed, highlight, prefix,
     Callback for message printed in buffer: display short URLs after message.
     """
     global urlserver, urlserver_settings
+
+    if not displayed and urlserver_settings['msg_filtered'] != 'on':
+        return weechat.WEECHAT_RC_OK
 
     if urlserver_settings['display_urls'] == 'on':
         buffer_full_name = '%s.%s' % (
