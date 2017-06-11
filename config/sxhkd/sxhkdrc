@@ -28,7 +28,7 @@ super + {comma, period}
 
 # Display current mpd track
 super + slash
-    notify-send -u low "$(mpc -f "%artist%" current)" "$(mpc -f "%title%" current)"
+    notify-send -u low "$(mpc -f "%title%" current)" "by $(mpc -f "%artist%" current)\non $(mpc -f "%album%" current) (#$(mpc -f "%track%" current))"
 
 # Play the video URL in the clipboard
 super + m
