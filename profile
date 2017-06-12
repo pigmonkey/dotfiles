@@ -94,3 +94,6 @@ fi
 
 # Disable QT5 DPI scaling
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
+
+# Set GPG TTY
+export GPG_TTY=$(tty)
