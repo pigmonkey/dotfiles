@@ -1,0 +1,10 @@
+[Unit]
+Description=Borg Backup Timer
+
+[Timer]
+Unit=borg.service
+OnCalendar=hourly
+Persistent=True
+
+[Install]
+WantedBy=timers.target

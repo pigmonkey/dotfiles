@@ -1,0 +1,9 @@
+[Unit]
+Description=Borg Backup
+
+[Service]
+Type=oneshot
+ExecStart=/home/pigmonkey/bin/borgwrapper.sh
+
+[Install]
+WantedBy=multi-user.target
