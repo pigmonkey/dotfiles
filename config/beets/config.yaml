@@ -10,7 +10,7 @@ lastgenre:
 chroma:
     auto: yes
 lyrics:
-    sources: lyricwiki lyrics.com musixmatch genius
+    sources: lyricwiki musixmatch genius
 convert:
     dest: ~/zulu/com.arachnoid.sshelper/music
     format: mp3
