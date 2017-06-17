@@ -38,6 +38,7 @@ set sleep_time=0
 set edit_headers=yes
 set fast_reply
 set askcc
+set text_flowed=yes
 
 # HTML Messages
 bind attach <return> view-mailcap
