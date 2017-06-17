@@ -22,6 +22,11 @@
     path = ~/.calendars/9b403768-1a13-4c2c-a4b9-798cddf7aba7
     color = dark red
 
+    [[Holidays]]
+    path = ~/.calendars/8a84af85-04f8-4cf6-a1f4-9c31765037ae
+    color = dark green
+    readonly = True
+
 [locale]
 longdateformat = %Y-%m-%d
 longdatetimeformat = %Y-%m-%d %H:%M
