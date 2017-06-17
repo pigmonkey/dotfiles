@@ -27,6 +27,11 @@
     color = dark green
     readonly = True
 
+    [[Birthdays]]
+    path = ~/.contacts/Default
+    type = birthdays
+    color = dark green
+
 [locale]
 longdateformat = %Y-%m-%d
 longdatetimeformat = %Y-%m-%d %H:%M
