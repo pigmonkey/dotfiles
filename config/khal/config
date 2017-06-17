@@ -1,7 +1,7 @@
 [calendars]
     [[Work]]
     path = ~/.calendars/91572a29-41df-4c94-b296-38e9c5494116
-    color = yellow
+    color = light blue
 
     [[Work: IT]]
     path = ~/.calendars/832472f1-cc4a-4b47-8810-0b8c1f04f6e6
@@ -40,3 +40,8 @@ datetimeformat = %m-%d %H:%M
 
 [default]
 default_calendar = Personal
+print_new = event
+highlight_event_days = True
+
+[highlight_days]
+color = light blue
