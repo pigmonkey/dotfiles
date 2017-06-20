@@ -42,6 +42,7 @@ datetimeformat = %m-%d %H:%M
 default_calendar = Personal
 print_new = event
 highlight_event_days = True
+timedelta = 3d
 
 [highlight_days]
 color = light blue
