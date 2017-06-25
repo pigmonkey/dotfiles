@@ -1,5 +1,5 @@
 TASKBIN='task'
-NOTES_FOLDER="$HOME/documents/tasks/notes/"
+NOTES_FOLDER="$HOME/.tasks/notes/"
 NOTES_EXT=".txt"
 PATH_EXT=/usr/share/taskopen/scripts
 NOTES_REGEX=notes

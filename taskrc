@@ -1,5 +1,5 @@
 # Files
-data.location=~/documents/tasks
+data.location=~/.tasks
 
 # Colors
 include ~/.taskwarrior/zenburn-256.theme
