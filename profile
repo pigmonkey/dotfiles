@@ -80,6 +80,9 @@ export NOTEDIR=~/documents/notes
 # Set the alternative pass directory.
 export ALTPASSDIR=~/projects/tad/pass
 
+# Set the access pass directory.
+export ACCESSPASSDIR=~/projects/tad/access
+
 #
 # Misc
 #
