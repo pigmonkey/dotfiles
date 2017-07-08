@@ -84,7 +84,7 @@ compdef -e 'PASSWORD_STORE_DIR=$ALTPASSDIR _pass' wpass
 access() {
     PASSWORD_STORE_DIR="$ACCESSPASSDIR" pass "$@"
 }
-compdef -e 'PASSWORD_STORE_DIR=$ACCESSTPASSDIR _pass' wpass
+compdef -e 'PASSWORD_STORE_DIR=$ACCESSPASSDIR _pass' access
 
 
 ######
