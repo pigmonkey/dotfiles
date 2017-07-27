@@ -132,6 +132,9 @@ nnoremap ; :
 nnoremap <Space> za   
 vnoremap <Space> za
 
+" Redraw syntax highlighting from start of file.
+nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
+
 " Disable arrow keys. Force use of <hjkl>. (Oh noes!)
 nnoremap <up> <nop>
 nnoremap <down> <nop>
