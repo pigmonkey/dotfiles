@@ -1,4 +1,4 @@
-include /usr/local/etc/firejail/mpv.profile
+include /etc/firejail/mpv.profile
 
 whitelist ~/projects/dotfiles
 whitelist ~/.config/mpv
