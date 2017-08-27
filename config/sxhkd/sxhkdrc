@@ -97,3 +97,7 @@ super + s
 # Generate a QR code from the clipboard
 super + q
     qcode
+
+# Suspend (F12)
+super + XF86Explorer
+    systemctl suspend
