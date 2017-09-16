@@ -88,7 +88,7 @@ compdef -e 'PASSWORD_STORE_DIR=$ACCESSPASSDIR _pass' access
 
 # Currency conversion
 cconv() {
-    wget -qO- "https://www.google.com/finance/converter?a=$1&from=$2&to=$3" | sed '/res/!d;s/<[^>]*>//g';
+    wget -qO- "https://finance.google.com/finance/converter?a=$1&from=$2&to=$3" | sed '/res/!d;s/<[^>]*>//g';
 }
 
 
