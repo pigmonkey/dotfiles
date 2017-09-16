@@ -3,9 +3,9 @@
 # general variables
 
 # the path where images, videos and pastes should be saved
-img_path=$HOME/tmp/
-vid_path=$HOME/tmp/
-paste_path=$HOME/tmp/
+img_path=$HOME/tmp
+vid_path=$HOME/tmp
+paste_path=$HOME/tmp
 
 # set viewer for images and videos plus editor for images
 viewer=imv
