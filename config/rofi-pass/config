@@ -3,6 +3,7 @@ USERNAME_field='login'
 clip=clipboard
 notify='true'
 default_do='autopass'
+help_header='false'
 
 _rofi () {
     rofi -i -no-auto-select -no-levenshtein-sort "$@"
