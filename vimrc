@@ -23,6 +23,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'chriskempson/base16-vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'tpope/vim-surround'
 
 
 """""""""""
