@@ -204,6 +204,11 @@ vmap <leader>y "+y
 " Spell check
 map <leader>s :setlocal spell! spelllang=en_us<cr>
 
+" Buffer navigation
+map [b :bprevious<cr>
+map ]b :bnext<cr>
+map <leader>b :buffers<cr>
+
 
 """""""""""
 " Styling "
