@@ -271,8 +271,11 @@ endfunction
 " Mutt "
 """"""""
 
+" Set the filetype on neomutt buffers
+au BufRead /tmp/*mutt* setfiletype mail
+
 " Delete quoted signatures.
-au BufRead /tmp/mutt* normal :g/^\(> \)--\s*$/,/^$/-1d/^$
+au BufRead /tmp/*mutt* normal :g/^\(> \)--\s*$/,/^$/-1d/^$
 
 
 """""""""""""""""""
