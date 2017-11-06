@@ -101,3 +101,14 @@ super + q
 # Suspend (F12)
 super + XF86Explorer
     systemctl suspend
+
+
+#########
+# Mouse #
+#########
+
+button9
+    xte 'key Page_Up'
+
+button8
+    xte 'key Page_Down'
