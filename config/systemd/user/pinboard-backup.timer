@@ -4,7 +4,6 @@ Description=Dump Pinboard bookmarks timer
 [Timer]
 Unit=pinboard-backup.service
 OnCalendar=hourly
-Persistent=True
 
 [Install]
 WantedBy=timers.target
