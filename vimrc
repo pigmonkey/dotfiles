@@ -331,3 +331,23 @@ let g:vimwiki_list = [{
     \ 'syntax': 'markdown',
     \ 'ext': '.md',
     \ }]
+
+
+""""""""
+" Pass "
+""""""""
+
+augroup passconceal
+    autocmd!
+
+    " Create the second line if it does not already exist
+    autocmd BufNewFile,BufRead */pass.*/* if line('$') == 1 | $put _ | endif
+
+    " Jump to the second line
+    autocmd BufNewFile,BufRead */pass.*/* 2
+
+    " Conceal the first line with an asterisk
+    autocmd BufNewFile,BufRead */pass.*/* syntax match Concealed '\%1l.*' conceal cchar=*
+    autocmd BufNewFile,BufRead */pass.*/* set conceallevel=1
+
+augroup END
