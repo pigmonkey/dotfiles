@@ -75,6 +75,14 @@ alias pmr='mr --config $HOME/projects/.mrconfig --directory=$HOME/projects'
 alias cplogin='sed -n "/^login/Is/login:\s\+//p" | xsel -ib'
 alias cpurl='sed -n "/^url/Is/url:\s\+//p" | xsel -ib'
 
+_pw() {
+    local characters="${1}" length="${2:-25}"
+    bash -c 'read -r -n "$0" pass < <(LC_ALL=C tr -dc "$1" < /dev/urandom) && echo $pass' $length $characters
+}
+alias pw='_pw "[:graph:]"'
+alias pwa='_pw "[:alnum:]"'
+alias pwd='_pw "[:digit:]"'
+
 
 ########
 # Misc #
