@@ -80,8 +80,8 @@ _pw() {
     bash -c 'read -r -n "$0" pass < <(LC_ALL=C tr -dc "$1" < /dev/urandom) && echo $pass' $length $characters
 }
 alias pw='_pw "[:graph:]"'
-alias pwa='_pw "[:alnum:]"'
-alias pwd='_pw "[:digit:]"'
+alias pw:a='_pw "[:alnum:]"'
+alias pw:d='_pw "[:digit:]"'
 
 
 ########
