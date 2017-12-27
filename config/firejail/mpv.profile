@@ -1,3 +1,4 @@
+noblacklist ~/library
 include /etc/firejail/mpv.profile
 
 whitelist ~/projects/dotfiles
