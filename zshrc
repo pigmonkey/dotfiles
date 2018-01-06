@@ -65,7 +65,7 @@ source ~/.aliases
 
 # Add ruby gems to the path.
 if which ruby >/dev/null && which gem >/dev/null; then
-    path=($(ruby -rubygems -e 'puts Gem.user_dir')/bin $path)
+    path=($(ruby -e 'puts Gem.user_dir')/bin $path)
 fi
 
 # Use SSH completion for Mosh.
