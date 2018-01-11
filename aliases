@@ -32,6 +32,11 @@ alias gxd='git annex drop'
 alias gxc='git annex copy'
 alias gxe='git annex edit'
 
+gxurl() {
+    REPO="${1:-$HOME/documents}"
+    echo `grep URL "$REPO"/.git/annex/webapp.html | tr -d '">' | awk -F= '{print $4 "=" $5}'`
+}
+
 
 ###############
 # Taskwarrior #
