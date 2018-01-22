@@ -88,7 +88,7 @@ export ACCESSPASSDIR=~/projects/tad/access
 #
 
 # Set the dmenu font.
-export DMENU_OPTIONS="-fn -xos4-terminus-medium-r-*-*-14-*"
+export DMENU_OPTIONS="-fn -inconsolata-medium-r-*-*-14-*"
 
 # Source credentials.
 if [ -f ~/.keys/creds.sh ]; then

@@ -24,7 +24,7 @@ set $base0F #a3685a
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:xos4 Terminus Regular 8
+font pango:Inconsolata Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

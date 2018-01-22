@@ -12,7 +12,7 @@ URxvt.iso14755: false
 URxvt.scrollBar: none
 
 ! font
-URxvt.font: xft:terminus:size=12
+URxvt.font: xft:Inconsolata:size=14
 
 ! enabled clipboard and selectable URLs
 URxvt.perl-ext-common:  default,clipboard,url-select
@@ -30,7 +30,7 @@ URxvt.url-select.launcher:  xdg-open
 URxvt.url-select.underline: true
 
 ! Rofi font and colors
-rofi.font:xos4 Terminus Regular 10
+rofi.font:Inconsolata Regular 12
 rofi.color-enabled: true
 rofi.color-window: #273238, #273238, #1e2529
 rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
