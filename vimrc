@@ -218,7 +218,7 @@ map <leader>b :buffers<cr>
 " Colorscheme
 set background=dark
 let base16colorspace=256
-colorscheme base16-tomorrow
+colorscheme base16-tomorrow-night
 
 " Syntax highlighting
 syntax enable
