@@ -12,6 +12,7 @@ alang=eng
 slang=eng
 # Show progress bar for audio files.
 term-osd-bar=yes
+screenshot-directory=~/tmp/
 # Loop all the gifs.
 [extension.gif]
 loop-file=yes
