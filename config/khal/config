@@ -9,12 +9,7 @@
     readonly = True
 
     [[Work: Staff]]
-    path = ~/.calendars/9a21f3a1-e4b5-422a-9bac-df21a53128c4
-    color = dark blue
-    readonly = True
-
-    [[Work: Events]]
-    path = ~/.calendars/deec3695-2a89-4563-a174-5c6feb46ca43
+    path = ~/.calendars/de342c24-2a78-43a2-b6d5-7dfb66f21afc
     color = dark blue
     readonly = True
 
