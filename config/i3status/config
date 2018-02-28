@@ -14,6 +14,7 @@ general {
 }
 
 order += "msmtpq"
+order += "backlight"
 order += "volume master"
 order += "run_watch DHCP"
 order += "wireless wlp4s0"
