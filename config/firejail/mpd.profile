@@ -1,4 +1,5 @@
 noblacklist ~/library
+ignore seccomp
 ignore private-tmp
 include /etc/firejail/mpd.profile
 
