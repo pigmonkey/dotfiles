@@ -212,6 +212,10 @@ bindsym $mod+minus scratchpad show
 # Window focus should not follow mouse
 focus_follows_mouse no
 
+# Cycle through workspaces with mouse.
+bindsym --whole-window button10 workspace next
+bindsym --whole-window button11 workspace prev
+
 # Show taskwarrior tasks.
 for_window [title="^taskwin$"] floating enable
 bindsym $mod+t exec termite --title taskwin --geometry=1024x768 -e ~/bin/display_tasks.sh
