@@ -1,35 +1,32 @@
+filetype off
+
 """"""""""""
 " Vundle "
 """"""""""""
 
-" Autoinstall Vundle
-if !filereadable($HOME . '/.vim/bundle/Vundle.vim/.git/config') && confirm("Clone Vundle?","Y\nn") == 1
-    exec '!git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+" Autoinstall vim-plug
+if empty(glob('~/.vim/autoload/plug.vim')) && confirm("Install vim-plug??","Y\nn") == 1
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
 " Plugins
-Plugin 'jamessan/vim-gnupg'
-Plugin 'roman/golden-ratio'
-Plugin 'othree/html5.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'tpope/vim-markdown'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'ledger/vim-ledger'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'chriskempson/base16-vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'tpope/vim-surround'
-Plugin 'junegunn/goyo.vim'
+call plug#begin('~/.vim/plugged')
+Plug 'jamessan/vim-gnupg'
+Plug 'roman/golden-ratio'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ledger/vim-ledger'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'chriskempson/base16-vim'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+call plug#end()
 
 
 """""""""""
