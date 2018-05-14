@@ -1,8 +1,6 @@
-filetype off
-
-""""""""""""
-" Vundle "
-""""""""""""
+"""""""""""
+" Plugins "
+"""""""""""
 
 " Autoinstall vim-plug
 if empty(glob('~/.vim/autoload/plug.vim')) && confirm("Install vim-plug??","Y\nn") == 1
@@ -35,9 +33,6 @@ call plug#end()
 
 " Make Vim more useful, but less Vi compatible
 set nocompatible
-
-" Enable filetype detection
-filetype indent plugin on
 
 " Make backspace work like other apps
 set backspace=2
