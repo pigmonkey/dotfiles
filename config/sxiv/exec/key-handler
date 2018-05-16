@@ -53,5 +53,6 @@ case "$KEY" in
 "C-slash")  rotate 180 ;;
 "C-t")      tag_add ;;
 "M-T")      tag_del ;;
+"C-d")      mkdir -p $XDG_RUNTIME_DIR/sxiv && while read file; do mv -vf $file $XDG_RUNTIME_DIR/sxiv/; done ;;
 esac
 
