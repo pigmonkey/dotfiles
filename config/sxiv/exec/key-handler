@@ -15,6 +15,7 @@
 readonly KEY="$1";
 readonly TAGFILE="$HOME/.config/sxiv/tags"
 readonly TMPFILE="/tmp/sxiv.$$"
+readonly ANNEX="$HOME/library/pictures"
 
 rotate() {
 	degree="$1"
@@ -43,6 +44,21 @@ tag_del() {
 	rm -f "$TMPFILE"
 }
 
+import() {
+    while read file; do
+        filename=$(basename $file)
+        # Move file into year-based directory
+        IFS=': '
+        set $(exiv2 -g Exif.Image.DateTime -Pv $file)
+        unset IFS
+        year=$1
+        mkdir -p $ANNEX/$year
+        mv -v $file $ANNEX/$year
+        # Rename file based on timestamp
+        exiv2 -Ftv rename $ANNEX/$year/$filename
+    done
+}
+
 case "$KEY" in
 "y")        tr '\n' ' ' | xclip -i ;;
 "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
@@ -54,5 +70,6 @@ case "$KEY" in
 "C-t")      tag_add ;;
 "M-T")      tag_del ;;
 "C-d")      mkdir -p $XDG_RUNTIME_DIR/sxiv && while read file; do mv -vf $file $XDG_RUNTIME_DIR/sxiv/; done ;;
+"C-i")      import ;;
 esac
 
