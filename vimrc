@@ -22,6 +22,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 call plug#end()
@@ -337,3 +338,12 @@ augroup passconceal
     autocmd BufNewFile,BufRead */pass.*/* set conceallevel=1
 
 augroup END
+
+
+""""""""
+" Goyo "
+""""""""
+
+nnoremap <silent> <leader>z :Goyo<cr>
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
