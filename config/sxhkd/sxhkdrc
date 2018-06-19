@@ -18,6 +18,10 @@ XF86Audio{Raise,Lower}Volume
 super + {k,j}
     pulseaudio-ctl {up,down} 2
 
+# Change volume, chunky
+super + shift + {k,j}
+    pulseaudio-ctl {up,down} 10
+
 # Toggle mpd
 super + 0
     mpc -q toggle
