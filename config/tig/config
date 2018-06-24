@@ -1,2 +1,4 @@
 set log-options = --show-signature
 set diff-options = --show-signature
+
+source ~/.config/tig/vim.tigrc
