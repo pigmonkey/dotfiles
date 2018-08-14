@@ -60,6 +60,9 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 # Python
 #
 
+# Set the default environment directory for virtualenvwrapper.
+export WORKON_HOME="$HOME/.virtualenvs"
+
 # Set the default project directory for virtualenvwrapper.
 export PROJECT_HOME="$HOME/projects"
 
