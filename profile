@@ -69,6 +69,9 @@ export PROJECT_HOME="$HOME/projects"
 # Set the default virtualenvwrapper options.
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
+# Load virtualenvwrapper (lazy).
+source /usr/bin/virtualenvwrapper_lazy.sh
+
 #
 # Notes
 #

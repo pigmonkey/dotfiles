@@ -10,8 +10,6 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "chrissicool/zsh-256color"
 zplug "joel-porquet/zsh-dircolors-solarized"
 zplug "jreese/zsh-titles"
-zplug "plugins/virtualenvwrapper", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "modules/git", from:prezto
 zplug "pigmonkey/notes.sh", use:"notes.sh"
