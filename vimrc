@@ -347,3 +347,11 @@ augroup END
 nnoremap <silent> <leader>z :Goyo<cr>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+
+""""""""""""
+" Markdown "
+""""""""""""
+
+" Prefer pythonic folding
+let g:vim_markdown_folding_style_pythonic = 1
