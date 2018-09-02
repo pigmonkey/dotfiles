@@ -27,6 +27,9 @@ unclutter &
 # Notifications with dunst
 dunst &
 
+# Start geoclue
+/usr/lib/geoclue-2.0/demos/agent &
+
 # Adjust color temperature with Redshift.
 redshift-gtk &
 
