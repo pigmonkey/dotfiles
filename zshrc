@@ -4,7 +4,8 @@
 
 source /usr/share/zsh/scripts/zplug/init.zsh
 
-zplug "subnixr/minimal"
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "chrissicool/zsh-256color"
@@ -89,6 +90,8 @@ cconv() {
     wget -qO- "https://finance.google.com/finance/converter?a=$1&from=$2&to=$3" | sed '/res/!d;s/<[^>]*>//g';
 }
 
+# Prevent Pure from auto-pulling git repos.
+PURE_GIT_PULL=0
 
 ######
 # Vi #
