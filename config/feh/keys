@@ -1,0 +1,18 @@
+# unset default keys
+next_img
+prev_img
+zoom_in 
+zoom_out 
+scroll_right 
+scroll_left 
+scroll_up 
+scroll_down 
+# map custom keys
+zoom_in i
+zoom_out o
+scroll_up Up k
+scroll_down Down j
+scroll_left Left h
+scroll_right Right l
+next_img space 
+prev_img BackSpace
