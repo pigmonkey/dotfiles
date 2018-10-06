@@ -38,6 +38,10 @@ super + slash
 super + m
     play
 
+# Mute individualpulse audio streams
+super + shift + m
+    pamute
+
 
 ################
 # Applications #
