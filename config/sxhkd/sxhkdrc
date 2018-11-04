@@ -110,6 +110,10 @@ super + q
 super + XF86Explorer
     systemctl suspend
 
+# Vim anywhere
+super + v
+    $HOME/library/src/vim-anywhere/bin/run
+
 
 #########
 # Mouse #
