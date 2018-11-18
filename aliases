@@ -59,7 +59,6 @@ tn() {
 # Pacman #
 ##########
 
-alias update='sudo reflector -l 20 --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
 alias pacx="sudo pacman --remove"
 alias pacX="sudo pacman --remove --nosave --recursive"
 
