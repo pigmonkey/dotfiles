@@ -218,7 +218,7 @@ bindsym --whole-window button11 workspace prev
 
 # Show taskwarrior tasks.
 for_window [title="^taskwin$"] floating enable
-bindsym $mod+t exec termite --title taskwin --geometry=1024x768 -e ~/bin/display_tasks.sh
+bindsym $mod+t exec termite --title taskwin -e ~/bin/display_tasks.sh
 
 # Float pinit windows
 for_window [title="^pinit$"] floating enable
