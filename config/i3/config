@@ -238,6 +238,9 @@ for_window [title="^qcode$"] floating enable
 # float showme windows
 for_window [title="^showme$"] floating enable
 
+# float qalculate windows
+for_window [title="^Qalculate!$"] floating enable
+
 # Window colors         Border  BG      Text    Indicator Child Border
 client.focused          $base0D $base0D $base00 $base0D $base0D
 client.focused_inactive $base01 $base01 $base05 $base03 $base01
