@@ -1,5 +1,5 @@
 # Enable OpenGL and VA-API hardware decoding.
-vo=opengl,vx
+vo=gpu,vx
 hwdec=vaapi
 # Start in full screen.
 fs=yes
