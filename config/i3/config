@@ -249,3 +249,7 @@ client.urgent           $base02 $base08 $base07 $base02 $base02
 
 # Hide borders adjacent to screen edges
 hide_edge_borders both
+
+# Assign MPV to workspace 4 and focus
+assign [class="mpv"] 4
+for_window [class="mpv"] focus
