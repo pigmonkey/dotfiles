@@ -1,6 +1,5 @@
 media_library_primary_tag = album_artist
 progressbar_look = "─╼ "
-active_column_color = "white"
 user_interface = "alternative"
 playlist_display_mode = "columns"
 
