@@ -76,8 +76,12 @@ super + d
     termite --title pinit -e ~/bin/pinit
 
 # Launch rofi surfraw
-super + f
+super + shift + f
     surfraw-rofi
+
+# Launch rofi surfraw
+super + f
+    surfraw duckduckgo -j $(xclip -o -selection clipboard)
 
 
 ########
