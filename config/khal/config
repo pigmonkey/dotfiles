@@ -45,3 +45,6 @@ timedelta = 3d
 
 [highlight_days]
 color = light blue
+
+[keybindings]
+external_edit = E
