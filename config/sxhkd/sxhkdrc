@@ -98,7 +98,7 @@ XF86ScreenSaver
 
 # Change screen brightness
 XF86MonBrightness{Up,Down}
-    light -{A,U} 10
+    light -{A,U} 5
 
 # Take a screenshot
 Print
