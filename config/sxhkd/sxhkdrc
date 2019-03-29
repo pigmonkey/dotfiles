@@ -83,6 +83,10 @@ super + shift + f
 super + f
     surfraw duckduckgo -j $(xclip -o -selection clipboard)
 
+# Launch qalculator
+super + c
+    qalculate-gtk
+
 
 ########
 # Misc #
