@@ -101,3 +101,7 @@ alias utc='env TZ="UTC" date'
 iowaiting() {
     watch -n 1 "(ps aux | awk '\$8 ~ /D/  { print \$0 }')"
 }
+
+def() {
+    dict $1 | less
+}
