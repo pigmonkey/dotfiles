@@ -1,5 +1,5 @@
-text/html; firewarden chromium %s; test=test -n "$DISPLAY"; nametemplate=%s.html;
+text/html; firewarden -c qutebrowser %s; needsterminal; nametemplate=%s.html
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 text/plain; vim %s ; needsterminal
-image/*; firewarden feh %s
-application/pdf; firewarden zathura %s
+image/*; firewarden -c feh %s
+application/pdf; firewarden -c zathura %s
