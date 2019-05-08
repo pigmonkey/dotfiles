@@ -240,6 +240,9 @@ for_window [title="^showme$"] floating enable
 
 # float qalculate windows
 for_window [title="^Qalculate!$"] floating enable
+#
+# float edit_text windows
+for_window [title="^edit_text$"] floating enable
 
 # Window colors         Border  BG      Text    Indicator Child Border
 client.focused          $base0D $base0D $base00 $base0D $base0D
