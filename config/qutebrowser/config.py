@@ -14,6 +14,9 @@ c.editor.command = ['termite', '-t', 'edit_text', '-e', 'vim {}']
 # Load new tabs in the background.
 c.tabs.background = True
 
+# Disable autoplay
+c.content.autoplay = False
+
 
 ###################################################################
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
