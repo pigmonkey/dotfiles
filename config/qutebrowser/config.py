@@ -17,6 +17,9 @@ c.tabs.background = True
 # Disable autoplay.
 c.content.autoplay = False
 
+# Do not store cookies after the sesion is closed.
+c.content.cookies.store = False
+
 # Vim-like tab navigation.
 config.bind("gT", "tab-prev")
 config.bind("gt", "tab-next")
