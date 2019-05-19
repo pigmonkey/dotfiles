@@ -14,9 +14,16 @@ c.editor.command = ['termite', '-t', 'edit_text', '-e', 'vim {}']
 # Load new tabs in the background.
 c.tabs.background = True
 
-# Disable autoplay
+# Disable autoplay.
 c.content.autoplay = False
 
+# Vim-like tab navigation.
+config.bind("gT", "tab-prev")
+config.bind("gt", "tab-next")
+
+# Enable/disabled javascript.
+config.bind("xjn", "set content.javascript.enabled true")
+config.bind("xjf", "set content.javascript.enabled false")
 
 ###################################################################
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
