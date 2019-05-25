@@ -1,9 +1,9 @@
+application/ics; mutt-ics; copiousoutput
+application/pdf; firewarden -c zathura %s
+application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
+image/*; firewarden -c feh %s
+text/calendar; mutt-ics; copiousoutput
 text/html; firewarden -c qutebrowser %s; needsterminal; nametemplate=%s.html
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
-text/calendar; mutt-ics; copiousoutput
-application/ics; mutt-ics; copiousoutput
 text/plain; vim %s ; needsterminal
-image/*; firewarden -c feh %s
-application/pdf; firewarden -c zathura %s
-application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
-application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
