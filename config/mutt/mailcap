@@ -5,3 +5,5 @@ application/ics; mutt-ics; copiousoutput
 text/plain; vim %s ; needsterminal
 image/*; firewarden -c feh %s
 application/pdf; firewarden -c zathura %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
+application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
