@@ -1,5 +1,7 @@
 text/html; firewarden -c qutebrowser %s; needsterminal; nametemplate=%s.html
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/calendar; mutt-ics; copiousoutput
+application/ics; mutt-ics; copiousoutput
 text/plain; vim %s ; needsterminal
 image/*; firewarden -c feh %s
 application/pdf; firewarden -c zathura %s
