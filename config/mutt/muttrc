@@ -42,7 +42,7 @@ set text_flowed=yes
 
 # HTML Messages
 bind attach <return> view-mailcap
-auto_view text/html
+auto_view text/html text/calendar application/ics
 alternative_order text/plain text/enriched text/html
 
 # Printing
