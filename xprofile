@@ -8,7 +8,7 @@ xmodmap ~/.Xmodmap
 sxhkd &
 
 # Launch the screen locker.
-xautolock -time 09 -locker "/usr/local/bin/lock" -detectsleep -secure &
+xautolock -time 09 -locker "/usr/local/bin/lock" -detectsleep -secure -corners 0-00 -cornerdelay 3 -cornerredelay 20 &
 
 # Restore the desktop background.
 if [ -f ~/.fehbg ]; then
