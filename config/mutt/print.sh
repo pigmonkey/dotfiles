@@ -24,7 +24,7 @@ check
 build_dir
 
 tmpfile="`mktemp -p "$dir" mutt_XXXXXXXX.pdf`"
-enscript --font=Courier8 $INPUT -G2r -p - 2>/dev/null | ps2pdf - $tmpfile
+iconv -c -f utf-8 -t ISO-8859-1 $INPUT | enscript --font=Courier8 -G2r -p - 2>/dev/null | ps2pdf - $tmpfile
 xdg-open $tmpfile >/dev/null 2>&1 &
 sleep 1
 rm $tmpfile
