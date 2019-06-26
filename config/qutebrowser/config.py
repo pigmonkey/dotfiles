@@ -268,7 +268,7 @@ c.colors.tabs.odd.bg = base03
 c.colors.tabs.even.fg = base05
 
 # Background color of unselected even tabs.
-c.colors.tabs.even.bg = base00
+c.colors.tabs.even.bg = base03
 
 # Foreground color of selected odd tabs.
 c.colors.tabs.selected.odd.fg = base00
