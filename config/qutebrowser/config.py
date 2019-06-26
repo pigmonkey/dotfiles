@@ -24,6 +24,9 @@ c.content.cookies.store = False
 config.bind("gT", "tab-prev")
 config.bind("gt", "tab-next")
 
+# Launch inspector.
+config.bind("x", "inspector")
+
 # Enable/disabled javascript.
 config.bind("xjn", "set content.javascript.enabled true")
 config.bind("xjf", "set content.javascript.enabled false")
