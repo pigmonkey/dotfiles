@@ -129,6 +129,9 @@ color sidebar_new color116 color234
 # Accounts #
 ############
 
+# Default to havenaut.
+source ~/.config/mutt/havenaut.muttrc
+
 # Folder Hooks
 folder-hook Havenaut/* source ~/.config/mutt/havenaut.muttrc
 folder-hook TAD/*   source ~/.config/mutt/tad.muttrc
