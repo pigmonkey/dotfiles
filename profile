@@ -80,6 +80,13 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 export NOTEDIR=~/library/notes
 
 #
+# Journal
+#
+
+# Set the default journal directory.
+export JOURNALDIR=~/library/journal
+
+#
 # Passwords
 #
 
