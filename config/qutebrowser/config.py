@@ -24,6 +24,11 @@ c.content.cookies.store = False
 config.bind("gT", "tab-prev")
 config.bind("gt", "tab-next")
 
+# Zoom
+config.bind("zi", "zoom-in")
+config.bind("zo", "zoom-out")
+config.bind("z0", "zoom 100")
+
 # Launch inspector.
 config.bind("x", "inspector")
 
