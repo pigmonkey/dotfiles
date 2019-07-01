@@ -208,6 +208,9 @@ map [b :bprevious<cr>
 map ]b :bnext<cr>
 map <leader>b :buffers<cr>
 
+" Insert timestamp
+map <leader>n :r!date<cr>
+
 
 """""""""""
 " Styling "
