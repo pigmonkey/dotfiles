@@ -33,7 +33,7 @@ color attachment    white           default
 color search        brightmagenta   default         
 #color status        J_black         J_status        
 color status        brightyellow    black           
-color indicator     brightblack     yellow          
+color indicator     white           black
 color tree          yellow          default                                     # arrow in threads
 
 # basic monocolor screen
@@ -41,6 +41,10 @@ mono  bold          bold
 mono  underline     underline
 mono  indicator     reverse
 mono  error         bold
+
+# index ----------------------------------------------------------------
+
+color sidebar_new cyan default
 
 # index ----------------------------------------------------------------
 

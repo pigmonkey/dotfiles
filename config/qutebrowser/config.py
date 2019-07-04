@@ -36,28 +36,29 @@ config.bind("x", "inspector")
 config.bind("xjn", "set content.javascript.enabled true")
 config.bind("xjf", "set content.javascript.enabled false")
 
+
 ###################################################################
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
-# Tomorrow Night scheme by Chris Kempson (http://chriskempson.com)
+# Solarized Dark scheme by Ethan Schoonover (modified by aramisgithub)
 ###################################################################
 
-base00 = "#1d1f21"
-base01 = "#282a2e"
-base02 = "#373b41"
-base03 = "#969896"
-base04 = "#b4b7b4"
-base05 = "#c5c8c6"
-base06 = "#e0e0e0"
-base07 = "#ffffff"
-base08 = "#cc6666"
-base09 = "#de935f"
-base0A = "#f0c674"
-base0B = "#b5bd68"
-base0C = "#8abeb7"
-base0D = "#81a2be"
-base0E = "#b294bb"
-base0F = "#a3685a"
+base00 = "#002b36"
+base01 = "#073642"
+base02 = "#586e75"
+base03 = "#657b83"
+base04 = "#839496"
+base05 = "#93a1a1"
+base06 = "#eee8d5"
+base07 = "#fdf6e3"
+base08 = "#dc322f"
+base09 = "#cb4b16"
+base0A = "#b58900"
+base0B = "#859900"
+base0C = "#2aa198"
+base0D = "#268bd2"
+base0E = "#6c71c4"
+base0F = "#d33682"
 
 # set qutebrowser colors
 
@@ -267,13 +268,13 @@ c.colors.tabs.indicator.error = base08
 c.colors.tabs.odd.fg = base05
 
 # Background color of unselected odd tabs.
-c.colors.tabs.odd.bg = base03
+c.colors.tabs.odd.bg = base00
 
 # Foreground color of unselected even tabs.
 c.colors.tabs.even.fg = base05
 
 # Background color of unselected even tabs.
-c.colors.tabs.even.bg = base03
+c.colors.tabs.even.bg = base00
 
 # Foreground color of selected odd tabs.
 c.colors.tabs.selected.odd.fg = base00

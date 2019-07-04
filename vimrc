@@ -218,8 +218,7 @@ map <leader>n :r!date<cr>
 
 " Colorscheme
 set background=dark
-let base16colorspace=256
-colorscheme base16-tomorrow-night
+colorscheme solarized
 
 " Syntax highlighting
 syntax enable
