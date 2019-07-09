@@ -100,3 +100,15 @@ PURE_GIT_PULL=0
 bindkey -M viins 'kj' vi-cmd-mode
 bindkey -M vicmd "?" history-incremental-search-backward
 bindkey -M vicmd "/" history-incremental-search-forward
+
+
+#######
+# FZF #
+#######
+
+if [ -r /usr/share/fzf/key-bindings.zsh ]; then
+    source /usr/share/fzf/key-bindings.zsh
+fi
+if [ -r /usr/share/fzf/completion.zsh ]; then
+    source /usr/share/fzf/completion.zsh
+fi
