@@ -1,0 +1,2 @@
+options.pandas_csv_sep="[\t]+"
+options.clipboard_copy_cmd = 'xclip -selection clipboard'
