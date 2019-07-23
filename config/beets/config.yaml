@@ -6,7 +6,9 @@ ui:
     color: yes
 plugins: lyrics lastgenre mbsync fetchart scrub bpd chroma convert badfiles missing
 lastgenre:
-    canonical: ''
+    canonical: yes
+    count: 3
+    prefer_specific: yes
 chroma:
     auto: yes
 lyrics:
