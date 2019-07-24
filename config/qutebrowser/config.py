@@ -5,7 +5,8 @@ c.spellcheck.languages = ["en-US"]
 DDG = "https://duckduckgo.com/?kae=d&k1=-1&kk=-1&kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1&kau=-1&kba=-1"
 c.url.start_pages = [DDG]
 c.url.searchengines = {
-    "DEFAULT": "%s&q={}" % DDG
+    "DEFAULT": "%s&q={}" % DDG,
+    "ddg": "%s&q={}" % DDG,
 }
 
 # Launch vim in termite for editor.
