@@ -43,8 +43,8 @@ setopt hist_verify
 setopt pushd_ignore_dups
 
 # History Substring Search
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Share history across all terminals.
 setopt share_history
@@ -100,6 +100,8 @@ PURE_GIT_PULL=0
 bindkey -M viins 'kj' vi-cmd-mode
 bindkey -M vicmd "?" history-incremental-search-backward
 bindkey -M vicmd "/" history-incremental-search-forward
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 
 #######
