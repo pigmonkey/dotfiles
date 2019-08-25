@@ -116,6 +116,10 @@ macro editor ";" \Ct
 # Save message to another mailbox
 macro index s "<save-message>?<toggle-mailboxes>"
 
+# Extract URLs
+macro index,pager \cl "<pipe-message> urlscan<Enter>"
+macro attach,compose \cl "<pipe-entry> urlscan<Enter>"
+
 
 ##########
 # Colors #
