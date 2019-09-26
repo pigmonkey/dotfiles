@@ -1,6 +1,7 @@
 # Python #
 ##########
-*.py[co]
+__pycache__/
+*.py[cod]
 *.egg*
 build/
 dist/
