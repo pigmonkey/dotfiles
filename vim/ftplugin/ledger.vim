@@ -19,3 +19,11 @@ nnoremap <leader>t :call ledger#transaction_date_set(line('.'), 'unshift')<CR>
 " Autocomplete and align accounts and commodities with Tab.
 inoremap <silent> <buffer> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
 vnoremap <silent> <buffer> <Tab> :LedgerAlign<CR>
+
+
+" Add sorting function.
+function LedgerSort()
+    :%! ledger -f - print --sort d
+    :%LedgerAlign
+endfunction
+command LedgerSort call LedgerSort()
