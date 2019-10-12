@@ -48,3 +48,4 @@ color = light blue
 
 [keybindings]
 external_edit = E
+save = w
