@@ -7,8 +7,8 @@ let g:ledger_fillstring = '·'
 " Set default commodity
 let g:ledger_default_commodity = '$'
 
-" Align decimal separators at column 53
-let g:ledger_align_at = 53
+" Align decimal separators at column 50
+let g:ledger_align_at = 50
 
 " Mark a transaction as cleared
 nnoremap <leader>c :call ledger#transaction_state_toggle(line('.'))<CR>
