@@ -1,0 +1,3 @@
+$CONFIG{'owner'} = q{Peter Hogg};
+$CONFIG{'email'} = q{peter@havenaut.net};
+$CONFIG{'keyid'} = [ qw{0x70B220FF8D2ACF29} ];
