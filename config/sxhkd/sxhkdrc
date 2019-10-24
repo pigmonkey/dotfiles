@@ -106,9 +106,9 @@ XF86MonBrightness{Up,Down}
 
 # Take a screenshot
 Print
-    scrot 'screenshot_%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/tmp'
+    flameshot full -p ~/www
 super + s
-    teiler
+    flameshot gui
 
 # Generate a QR code from the clipboard
 super + q
