@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 # http://terminalmage.net/2011/10/12/printing-to-pdf-in-mutt/
-INPUT="$1"
 
 build_dir() {
     # Create the output directory.
@@ -20,11 +19,29 @@ check() {
     fi
 }
 
+while getopts "s" opt; do
+    case $opt in
+        s)
+            SAVEFILE=1
+            ;;
+    esac
+done
+
+# Remove the processed options from the arguments.
+shift "$((OPTIND - 1))"
+
+# Get the input file.
+INPUT="$1"
+
 check
 build_dir
 
-tmpfile="`mktemp -p "$dir" mutt_XXXXXXXX.pdf`"
-iconv -c -f utf-8 -t ISO-8859-1 $INPUT | enscript --font=Courier8 -G2r -p - 2>/dev/null | ps2pdf - $tmpfile
-xdg-open $tmpfile >/dev/null 2>&1 &
-sleep 1
-rm $tmpfile
+tmpfile="$(mktemp -p "$dir" mutt_XXXXXXXX.pdf)"
+iconv -c -f utf-8 -t ISO-8859-1 $INPUT | enscript --font=Courier8 -G2r -p - 2>/dev/null | ps2pdf - "$tmpfile"
+if [ -n "$SAVEFILE" ]; then
+    mv "$tmpfile" "$HOME"
+else
+    xdg-open "$tmpfile" >/dev/null 2>&1 &
+    sleep 1
+    rm "$tmpfile"
+fi
