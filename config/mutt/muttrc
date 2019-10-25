@@ -47,6 +47,7 @@ alternative_order text/plain text/enriched text/html
 
 # Printing
 set print_command="$HOME/.config/mutt/print.sh"
+macro index,pager P "<pipe-message>$HOME/.config/mutt/print.sh -s"
 
 # PGP
 set crypt_use_gpgme = yes
