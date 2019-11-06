@@ -9,7 +9,7 @@ set record = "+Havenaut/Sent Items"
 # Personal
 set from='peter@havenaut.net'
 set reverse_name=yes
-alternates pm@pig-monkey.com peter@itstactical.com
+alternates pm@pig-monkey.com peterhogg@fastmail.fm
 set signature=~/.config/mutt/sigs/havenaut
 
 # Sending
