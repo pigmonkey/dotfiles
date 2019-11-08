@@ -79,6 +79,9 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 # Set the default note directory.
 export NOTEDIR=~/library/notes
 
+# Open spreadsheet notes in visidata
+export NOTEXDGEXT="csv tsv"
+
 #
 # Journal
 #
