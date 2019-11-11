@@ -208,8 +208,11 @@ map [b :bprevious<cr>
 map ]b :bnext<cr>
 map <leader>b :buffers<cr>
 
-" Insert timestamp
-map <leader>n :r!date<cr>
+" Insert date with cdate
+:iab cdate <c-r>=strftime("%Y-%m-%d")<CR>
+
+" Insert datetime with ctime
+:iab ctime <c-r>=strftime("%Y-%m-%d %H:%M:%SZ%z")<CR>
 
 
 """""""""""
