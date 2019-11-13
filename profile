@@ -22,7 +22,7 @@ export LANG='en_US.UTF-8'
 # Path
 #
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.local/bin/:$PATH
 
 #
 # Less
