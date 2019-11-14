@@ -16,3 +16,5 @@ def_key "N"
     previous_found_item
 def_key "t"
     show_lyrics
+def_key "d"
+    delete_playlist_items
