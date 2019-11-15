@@ -1,5 +1,10 @@
 options.pandas_csv_sep="[\t]+"
 
+# Load plugins
+import vddedupe
+import vdnormcol
+import vdtabulate
+
 # Copy to clipboard via xclip
 options.clipboard_copy_cmd = 'xclip -selection clipboard'
 
