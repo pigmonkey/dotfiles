@@ -1,2 +1,13 @@
 options.pandas_csv_sep="[\t]+"
+
+# Copy to clipboard via xclip
 options.clipboard_copy_cmd = 'xclip -selection clipboard'
+
+# Add current position to status bar
+options.disp_status_fmt = '({sheet.cursorRowIndex},{sheet.cursorColIndex}) ' + options.disp_status_fmt
+
+# Set column separator
+options.disp_column_sep      =  '│'
+
+# Display full datetime
+# options.disp_date_fmt = '%Y-%m-%d %H:%M:%S'
