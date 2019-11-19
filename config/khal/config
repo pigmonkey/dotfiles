@@ -1,33 +1,33 @@
 [calendars]
     [[Work]]
-    path = ~/.calendars/91572a29-41df-4c94-b296-38e9c5494116
+    path = ~/library/calendars/91572a29-41df-4c94-b296-38e9c5494116
     color = light blue
 
     [[Work: IT]]
-    path = ~/.calendars/832472f1-cc4a-4b47-8810-0b8c1f04f6e6
+    path = ~/library/calendars/832472f1-cc4a-4b47-8810-0b8c1f04f6e6
     color = dark blue
     readonly = True
 
     [[Work: Staff]]
-    path = ~/.calendars/de342c24-2a78-43a2-b6d5-7dfb66f21afc
+    path = ~/library/calendars/de342c24-2a78-43a2-b6d5-7dfb66f21afc
     color = dark blue
     readonly = True
 
     [[Personal]]
-    path = ~/.calendars/9b403768-1a13-4c2c-a4b9-798cddf7aba7
+    path = ~/library/calendars/9b403768-1a13-4c2c-a4b9-798cddf7aba7
     color = dark red
 
     [[SF Radio]]
-    path = ~/.calendars/30b85b78-2473-406a-a736-1095623753df
+    path = ~/library/calendars/30b85b78-2473-406a-a736-1095623753df
     color = dark green
 
     [[Holidays]]
-    path = ~/.calendars/8a84af85-04f8-4cf6-a1f4-9c31765037ae
+    path = ~/library/calendars/8a84af85-04f8-4cf6-a1f4-9c31765037ae
     color = dark green
     readonly = True
 
     [[Birthdays]]
-    path = ~/.contacts/Default
+    path = ~/library/contacts/Default
     type = birthdays
     color = dark green
 
