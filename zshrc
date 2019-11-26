@@ -73,18 +73,6 @@ compdef mosh=ssh
 # Menu completion
 zstyle ':completion:*' menu select
 
-# Setup alternative pass.
-wpass() {
-    PASSWORD_STORE_DIR="$ALTPASSDIR" pass "$@"
-}
-compdef -e 'PASSWORD_STORE_DIR=$ALTPASSDIR _pass' wpass
-
-# Access pass
-access() {
-    PASSWORD_STORE_DIR="$ACCESSPASSDIR" pass "$@"
-}
-compdef -e 'PASSWORD_STORE_DIR=$ACCESSPASSDIR _pass' access
-
 # Prevent Pure from auto-pulling git repos.
 PURE_GIT_PULL=0
 
@@ -109,6 +97,23 @@ fi
 if [ -r /usr/share/fzf/completion.zsh ]; then
     source /usr/share/fzf/completion.zsh
 fi
+
+
+########
+# Pass #
+########
+
+# Setup alternative pass.
+wpass() {
+    PASSWORD_STORE_DIR="$ALTPASSDIR" pass "$@"
+}
+compdef -e 'PASSWORD_STORE_DIR=$ALTPASSDIR _pass' wpass
+
+# Access pass
+access() {
+    PASSWORD_STORE_DIR="$ACCESSPASSDIR" pass "$@"
+}
+compdef -e 'PASSWORD_STORE_DIR=$ACCESSPASSDIR _pass' access
 
 
 #########
