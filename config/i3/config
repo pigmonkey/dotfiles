@@ -169,15 +169,15 @@ bar {
     status_command  py3status
     position        top
     colors {
-        background #002b36
-        statusline #839496
-        separator #586e75
+        background #2e3440
+        statusline #d8dee9
+        separator #4c566a
 
         # State             Border  BG      Text
-        focused_workspace   #b58900 #b58900 #002b36
-        active_workspace    #586e75 #586e75 #002b36
-        inactive_workspace  #073642 #002b36 #839496
-        urgent_workspace    #cc6666 #cc6666 #fdf6e3
+        focused_workspace   #4c566a #4c566a #e5e9f0
+        active_workspace    #2e3440 #2e3440 #d8dee9
+        inactive_workspace  #2e3440 #2e3440 #d8dee9
+        urgent_workspace    #bf616a #bf616a #e5e9f0
     }
 }
 
@@ -226,10 +226,10 @@ for_window [title="^Qalculate!$"] floating enable
 for_window [title="^edit_text$"] floating enable
 
 # Window colors         Border  BG      Text    Indicator Child Border
-client.focused          #002b36 #586e75 #fdf6e3 #268bd2
-client.focused_inactive #002b36 #073642 #839496 #073642
-client.unfocused        #002b36 #073642 #839496 #073642
-client.urgent           #002b36 #cc6666 #fdf6e3 #002b36
+client.focused          #2e3440 #4c566a #e5e9f0 #268bd2
+client.focused_inactive #2e3440 #2e3440 #d8dee9 #073642
+client.unfocused        #2e3440 #2e3440 #d8dee9 #073642
+client.urgent           #2e3440 #bf616a #e5e9f0 #002b36
 
 # Hide borders adjacent to screen edges
 hide_edge_borders both

@@ -25,6 +25,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 
@@ -220,8 +221,7 @@ map <leader>b :buffers<cr>
 """""""""""
 
 " Colorscheme
-set background=dark
-colorscheme solarized
+colorscheme nord
 
 " Syntax highlighting
 syntax enable

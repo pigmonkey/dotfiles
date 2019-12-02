@@ -9,7 +9,6 @@ zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "chrissicool/zsh-256color"
-zplug "joel-porquet/zsh-dircolors-solarized"
 zplug "jreese/zsh-titles"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "modules/git", from:prezto
@@ -75,6 +74,10 @@ zstyle ':completion:*' menu select
 
 # Prevent Pure from auto-pulling git repos.
 PURE_GIT_PULL=0
+
+# Activate dircolors
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
 
 ######
 # Vi #
