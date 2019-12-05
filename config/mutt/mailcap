@@ -1,10 +1,10 @@
 application/ics; mutt-ics; copiousoutput
-application/pdf; firewarden -c zathura %s
-application/epub+zip; firewarden -c zathura %s
-application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
-application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
-image/*; firewarden -c feh %s
+application/pdf; firewarden -q -c zathura %s
+application/epub+zip; firewarden -q -c zathura %s
+application/vnd.oasis.opendocument.text; firewarden -q pandoc --from odt --to markdown %s; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; firewarden -q pandoc --from docx --to markdown %s; copiousoutput
+image/*; firewarden -q -c feh %s
 text/calendar; mutt-ics; copiousoutput
-text/html; firewarden -c qutebrowser %s; needsterminal; nametemplate=%s.html
+text/html; firewarden -q -c qutebrowser %s; needsterminal; nametemplate=%s.html
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 text/plain; vim %s ; needsterminal
