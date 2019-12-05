@@ -1,5 +1,6 @@
 application/ics; mutt-ics; copiousoutput
 application/pdf; firewarden -c zathura %s
+application/epub+zip; firewarden -c zathura %s
 application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
 image/*; firewarden -c feh %s
