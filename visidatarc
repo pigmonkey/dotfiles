@@ -12,7 +12,11 @@ options.clipboard_copy_cmd = 'xclip -selection clipboard'
 options.disp_status_fmt = '({sheet.cursorRowIndex},{sheet.cursorColIndex}) ' + options.disp_status_fmt
 
 # Set column separator
-options.disp_column_sep      =  '│'
+options.disp_column_sep = '│'
 
 # Display full datetime
 # options.disp_date_fmt = '%Y-%m-%d %H:%M:%S'
+
+# Adjust colors of current column and row.
+options.color_current_row = 'blue reverse'
+options.color_current_hdr = 'blue reverse'
