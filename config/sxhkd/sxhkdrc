@@ -109,6 +109,8 @@ Print
     flameshot full -p ~/www
 super + s
     flameshot gui
+super + shift + s
+    teiler
 
 # Generate a QR code from the clipboard
 super + q
