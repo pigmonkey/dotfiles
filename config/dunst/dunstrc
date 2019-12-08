@@ -149,7 +149,7 @@
 
     # Frame
     frame_width = 1
-    frame_color = "#81a1c1"
+    frame_color = "#5e81ac"
 
 [shortcuts]
 
