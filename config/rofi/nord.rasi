@@ -1,0 +1,105 @@
+/******************************************************************************
+ * Minimal Nord theme
+ * Based on https://github.com/devdevdevdevdeo/dotfiles/blob/master/custom-nord.rasi
+ ******************************************************************************/
+
+* {
+    nord0: #2e3440;
+    nord1: #3b4252;
+    nord2: #434c5e;
+    nord4: #d8dee9;
+    nord6: #eceff4;
+
+    paddingWidth: 10px;
+
+    font-size: 1px;
+    border-color: @nord1;
+    background-color: @nord0;
+    text-color: @nord4;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    spacing: 0;
+}
+
+#listview {
+    spacing: 0;
+    scrollbar: true;
+    margin: 0;
+    dynamic: true;
+
+}
+
+#window {
+    border: 1;
+}
+
+#mainbox {
+    border: 0;
+    padding: 0;
+}
+
+#element {
+    padding: @paddingWidth;
+    border: 0 0 1 0;
+}
+
+#element.selected.normal {
+    background-color: @nord1;
+    text-color: @nord6;
+
+    border: 0 0 1 0;
+}
+
+#element.alternate.normal {
+}
+
+#element.normal.active {
+    background-color: @nord2;
+}
+
+#element.alternate.active {
+    background-color: @nord2;
+}
+
+#element.selected.active {
+    background-color: @nord1;
+    text-color: @nord6;
+
+    border: 0 0 1 0;
+}
+
+#inputbar {
+    border: 0 solid 0 solid 1 solid 0 solid;
+    margin: 0;
+    spacing: 0;
+}
+
+#prompt {
+    padding: @paddingWidth;
+    border: 0 1 0 0;
+}
+
+#entry {
+    padding: @paddingWidth;
+}
+
+#scrollbar {
+    border: 0;
+    width: 8px;
+    handle-color: @nord1;
+    handle-width: 8px;
+}
+
+#scrollbar handle {
+    border: 1px;
+    border-color: #ff0000;
+}
+
+#message {
+    padding: @paddingWidth;
+}
+
+#textbox {
+    text-color: @nord2;
+}
