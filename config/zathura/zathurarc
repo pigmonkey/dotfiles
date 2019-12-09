@@ -47,3 +47,6 @@ set index-active-bg         "#4c566a"
 
 set render-loading-bg       "#2e3440"
 set render-loading-fg       "#d8dee9"
+
+set recolor-lightcolor      "#2e3440"
+set recolor-darkcolor       "#d8dee9"
