@@ -1,5 +1,0 @@
-[address book]
-    path = ~/contacts
-
-[alias]
-    sync = !ppl pull origin master && ppl push origin master
