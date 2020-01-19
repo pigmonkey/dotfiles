@@ -16,7 +16,6 @@ general {
 order += "msmtpq"
 order += "backlight"
 order += "volume master"
-order += "run_watch DHCP"
 order += "wireless wlp4s0"
 order += "ethernet enp0s31f6"
 order += "battery 0"
@@ -55,10 +54,6 @@ battery 1 {
         status_full = "☻ FULL"
         low_threshold = 10
         path = "/sys/class/power_supply/BAT%d/uevent"
-}
-
-run_watch DHCP {
-        pidfile = "/var/run/dhc*.pid"
 }
 
 tztime local {
