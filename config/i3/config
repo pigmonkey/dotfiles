@@ -220,7 +220,7 @@ for_window [title="^qcode$"] floating enable
 for_window [title="^showme$"] floating enable
 
 # float qalculate windows
-for_window [title="^Qalculate!$"] floating enable
+for_window [title="^qalculate-gtk$"] floating enable
 #
 # float edit_text windows
 for_window [title="^edit_text$"] floating enable
