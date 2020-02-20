@@ -214,6 +214,10 @@ map <leader>b :buffers<cr>
 " Insert datetime with ctime
 :iab ctime <c-r>=strftime("%Y-%m-%d %H:%M:%SZ%z")<CR>
 
+" Move tabs left or right
+map <c-[> :tabmove-1<CR>
+map <c-]> :tabmove+1<CR>
+
 
 """""""""""
 " Styling "
