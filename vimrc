@@ -111,7 +111,6 @@ set autoindent
 """"""""""
 
 " Turn on search highlighting
-set showmatch
 set hlsearch
 
 " Ignore case in searches -- but be smart!
