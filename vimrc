@@ -215,8 +215,8 @@ map <leader>b :buffers<cr>
 :iab ctime <c-r>=strftime("%Y-%m-%d %H:%M:%SZ%z")<CR>
 
 " Move tabs left or right
-map <c-[> :tabmove-1<CR>
-map <c-]> :tabmove+1<CR>
+map <leader>[ :tabmove-1<CR>
+map <leader>] :tabmove+1<CR>
 
 
 """""""""""
