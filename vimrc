@@ -172,8 +172,8 @@ nnoremap <leader><space> :noh<cr>
 " Open a new tab (Ctrl+t)
 nnoremap <C-t> :tabnew 
 
-" Toggle paste mode (F2)
-set pastetoggle=<F2>
+" Toggle paste mode
+set pastetoggle=<leader>p
 
 " Write a file with sudo (w!!)
 cmap w!! w !sudo tee % >/dev/null
