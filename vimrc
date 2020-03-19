@@ -121,6 +121,22 @@ set smartcase
 set incsearch
 
 
+"""""""""""
+" Folding "
+"""""""""""
+
+" Auto-fold by indentation.
+"set foldmethod=indent
+
+" Limit nested folds.
+"set foldnestmax=10
+
+" Unfold folds by default.
+"set nofoldenable
+
+"set foldlevel=2
+
+
 """""""""""""""""""""
 " Keyboard Shorcuts "
 """""""""""""""""""""
