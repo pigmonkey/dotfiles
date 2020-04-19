@@ -99,6 +99,9 @@ export ALTPASSDIR=~/projects/tad/pass
 # Set the access pass directory.
 export ACCESSPASSDIR=~/projects/tad/access
 
+# Set the finance pass directory.
+export FINPASSDIR=~/library/finance
+
 #
 # Misc
 #

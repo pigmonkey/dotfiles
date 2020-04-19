@@ -118,6 +118,12 @@ access() {
 }
 compdef -e 'PASSWORD_STORE_DIR=$ACCESSPASSDIR _pass' access
 
+# Finance pass
+fin() {
+    PASSWORD_STORE_DIR="$FINPASSDIR" pass "$@"
+}
+compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
+
 
 #########
 # pyenv #
