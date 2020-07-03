@@ -31,7 +31,7 @@ config.bind("zo", "zoom-out")
 config.bind("z0", "zoom 100")
 
 # Launch inspector.
-config.bind("x", "inspector")
+config.bind("x", "devtools bottom")
 
 # Enable/disabled javascript.
 config.bind("xjn", "set content.javascript.enabled true")
