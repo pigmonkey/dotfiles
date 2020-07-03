@@ -5,5 +5,7 @@
 	excludesfile = /home/pigmonkey/.gitignore
 [push]
 	default = simple
+[pull]
+	rebase = false
 [alias]
-    lg = !tig
+	lg = !tig
