@@ -109,3 +109,7 @@ def() {
 jul () {
     date -d "$1-01-01 +$2 days -1 day" "+%Y-%m-%d";
 }
+
+recordmywindow () {
+    recordmydesktop --no-sound --windowid $(xwininfo | grep "Window id" | awk '{print $4;}')
+}
