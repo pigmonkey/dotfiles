@@ -66,6 +66,9 @@ if which ruby >/dev/null && which gem >/dev/null; then
     path=($(ruby -e 'puts Gem.user_dir')/bin $path)
 fi
 
+# Add node packages to the path.
+test -r "$HOME/.node_modules/bin" && path=("$HOME/.node_modules/bin" $path)
+
 # Use SSH completion for Mosh.
 compdef mosh=ssh
 
