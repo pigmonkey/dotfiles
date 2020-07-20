@@ -16,6 +16,7 @@ IMAPStore havenaut-remote
 MaildirStore havenaut-local
     Path ~/mail/Havenaut/
     Inbox ~/mail/Havenaut/INBOX
+    SubFolders Verbatim
 
 Channel havenaut
     Master :havenaut-remote:
