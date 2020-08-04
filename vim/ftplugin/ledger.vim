@@ -1,3 +1,6 @@
+" Separate date components with -.
+let g:ledger_date_format = '%Y-%m-%d'
+
 " Use 80 columns to display fold text.
 let g:ledger_maxwidth = 80
 
