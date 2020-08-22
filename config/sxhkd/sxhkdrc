@@ -87,6 +87,10 @@ super + f
 super + c
     qalculate-gtk
 
+# Launch rofi zeal
+super + z
+    rofi-zeal
+
 
 ########
 # Misc #
