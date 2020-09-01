@@ -1,0 +1,9 @@
+mafredri/zsh-async
+sindresorhus/pure
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+chrissicool/zsh-256color
+robbyrussell/oh-my-zsh path:plugins/vi-mode
+sorin-ionescu/prezto
+sorin-ionescu/prezto path:modules/git
+pigmonkey/notes.sh
