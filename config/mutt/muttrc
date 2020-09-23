@@ -55,7 +55,8 @@ set crypt_replyencrypt = yes
 set crypt_replysign = yes
 set crypt_replysignencrypted = yes
 set crypt_verify_sig = yes
-set pgp_auto_decode=yes
+set pgp_auto_decode = yes
+set pgp_default_key = 52492412A1190FC087EA0F1D70B220FF8D2ACF29
 
 # Status Bar
 set status_chars=" *%A"
