@@ -34,7 +34,7 @@ setopt share_history
 HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.zhistory
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+export HISTORY_IGNORE="(ls|l|ll|lt|[bf]g|exit|reset|clear|cd|cd ..|cd ../|pwd|date|* --help)"
 
 
 ########
