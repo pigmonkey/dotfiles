@@ -1,9 +1,11 @@
 ###############################################################################
-# Sample taskwarrior 1.9 (or later) dark 256-color theme
+# Zenburn theme for TaskWarrior
+# Based on the sample taskwarrior 1.9 (or later) dark 256-color theme
 #
 # taskwarrior - a command line task list manager.
 #
 # Copyright 2006 - 2011, Paul Beckingham, Federico Hernandez.
+# Copyright 2012 - 2016 mutantmonkey.
 # All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify it under
@@ -73,4 +75,3 @@ color.blocked=color236 on color8
 color.project.none=
 color.tag.none=
 color.alternate=on color237
-
