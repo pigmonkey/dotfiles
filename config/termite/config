@@ -20,43 +20,44 @@ cursor_shape = block
 
 browser = xdg-open
 
-#[hints]
-#foreground = #839496
-#background = #002b36
-#border = #93a1a1
-#active_background = #b58900
-#active_foreground = #073642
-
-# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (c) 2016-present Sven Greb <code@svengreb.de>
-
-# Project:    Nord Termite
-# Repository: https://github.com/arcticicestudio/nord-termite
-# License:    MIT
+# Gruvbox
+# https://github.com/morhetz/gruvbox-contrib/blob/master/termite/gruvbox-dark
 
 [colors]
-cursor = #d8dee9
-cursor_foreground = #2e3440
+# hard contrast: background = #1d2021
+background = #282828
+# soft contrast: background = #32302f
+foreground = #ebdbb2
+foreground_bold = #ebdbb2
 
-foreground = #d8dee9
-foreground_bold = #d8dee9
-background = #2e3440
+# dark0 + gray
+color0 = #282828
+color8 = #928374
 
-highlight = #4c566a
+# neutral_red + bright_red
+color1 = #cc241d
+color9 = #fb4934
 
-color0  = #3b4252
-color1  = #bf616a
-color2  = #a3be8c
-color3  = #ebcb8b
-color4  = #81a1c1
-color5  = #b48ead
-color6  = #88c0d0
-color7  = #e5e9f0
-color8  = #4c566a
-color9  = #bf616a
-color10 = #a3be8c
-color11 = #ebcb8b
-color12 = #81a1c1
-color13 = #b48ead
-color14 = #8fbcbb
-color15 = #eceff4
+# neutral_green + bright_green
+color2 = #98971a
+color10 = #b8bb26
+
+# neutral_yellow + bright_yellow
+color3 = #d79921
+color11 = #fabd2f
+
+# neutral_blue + bright_blue
+color4 = #458588
+color12 = #83a598
+
+# neutral_purple + bright_purple
+color5 = #b16286
+color13 = #d3869b
+
+# neutral_aqua + faded_aqua
+color6 = #689d6a
+color14 = #8ec07c
+
+# light4 + light1
+color7 = #a89984
+color15 = #ebdbb2
