@@ -1,7 +1,8 @@
 # gruvbox dark (contrast dark):
 # source: https://www.sthu.org/code/codesnippets/mutt-gruvbox.html
 
-# bg0    = 234
+# bg     = 235
+# bg0_h  = 234
 # bg1    = 237
 # bg2    = 239
 # bg3    = 241
