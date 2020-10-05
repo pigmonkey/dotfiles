@@ -169,15 +169,19 @@ bar {
     status_command  py3status
     position        top
     colors {
-        background #2e3440
-        statusline #d8dee9
-        separator #4c566a
+        background #282828
+        statusline #ebdbb2
+        separator  #a89984
+
+        background #3c3836
+        statusline #ebdbb2
+        separator  #666666
 
         # State             Border  BG      Text
-        focused_workspace   #4c566a #4c566a #e5e9f0
-        active_workspace    #2e3440 #2e3440 #d8dee9
-        inactive_workspace  #2e3440 #2e3440 #d8dee9
-        urgent_workspace    #bf616a #bf616a #e5e9f0
+        focused_workspace  #ebddb2 #ebdbb2 #282828
+        active_workspace   #504945 #504945 #ebdbb2
+        inactive_workspace #504945 #504945 #ebdbb2
+        urgent_workspace   #fb4934 #fb4934 #504945
     }
 }
 
@@ -226,10 +230,10 @@ for_window [title="^qalculate-gtk$"] floating enable
 for_window [title="^edit_text$"] floating enable
 
 # Window colors         Border  BG      Text    Indicator Child Border
-client.focused          #2e3440 #4c566a #e5e9f0 #268bd2
-client.focused_inactive #2e3440 #2e3440 #d8dee9 #073642
-client.unfocused        #2e3440 #2e3440 #d8dee9 #073642
-client.urgent           #2e3440 #bf616a #e5e9f0 #002b36
+client.focused          #665c54 #665c54 #eddbb2 #2e9ef4
+client.focused_inactive #3c3836 #3c3836 #a89984 #292d2e
+client.unfocused        #3c3836 #3c3836 #a89984 #292d2e
+client.urgent           #fb4934 #fb4934 #ebdbb2 #fb4934
 
 # Hide borders adjacent to screen edges
 hide_edge_borders both
