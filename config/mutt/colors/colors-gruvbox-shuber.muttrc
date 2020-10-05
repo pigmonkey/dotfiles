@@ -50,12 +50,12 @@ color underline   color223 color239
 color sidebar_divider    color250 color235
 color sidebar_new        color142 color235
 
-color index color142 color235 ~N
-color index color108 color235 ~O
-color index color167 color235 ~F
-color index color167 color235 ~=
-color index color235 color223 ~T
-color index color235 color167 ~D
+color index color142 color235 ~N  # new
+color index color108 color235 ~O  # old
+color index color167 color235 ~F  # flagged
+color index color167 color235 ~=  # dupe
+color index color235 color223 ~T  # tagged
+color index color235 color167 ~D  # deleted
 
 color header color214 color235 "^(To:|From:)"
 color header color142 color235 "^Subject:"
