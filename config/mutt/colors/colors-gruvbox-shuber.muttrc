@@ -56,6 +56,7 @@ color index color167 color235 ~F  # flagged
 color index color167 color235 ~=  # dupe
 color index color235 color223 ~T  # tagged
 color index color235 color167 ~D  # deleted
+color index color109 color235 ~v  # collapsed thread
 
 color header color214 color235 "^(To:|From:)"
 color header color142 color235 "^Subject:"
