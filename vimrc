@@ -14,8 +14,6 @@ Plug 'jamessan/vim-gnupg'
 Plug 'roman/golden-ratio'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'jnurmine/Zenburn'
-Plug 'altercation/vim-colors-solarized'
 Plug 'ledger/vim-ledger'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'chriskempson/base16-vim'
@@ -25,7 +23,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 
@@ -240,7 +238,8 @@ map <leader>] :tabmove+1<CR>
 """""""""""
 
 " Colorscheme
-colorscheme nord
+colorscheme gruvbox
+set background=dark
 
 " Syntax highlighting
 syntax enable
