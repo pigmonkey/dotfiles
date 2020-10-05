@@ -42,7 +42,7 @@ color quoted4     color250 color235
 color quoted5     color108 color235
 color search      color235 color208
 color signature   color108 color235
-color status      color235 color250
+color status      color246 color239
 color tilde       color243 color235
 color tree        color142 color235
 color underline   color223 color239
