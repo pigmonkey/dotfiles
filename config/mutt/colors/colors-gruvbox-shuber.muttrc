@@ -27,57 +27,57 @@
 
 # See http://www.mutt.org/doc/manual/#color
 
-color attachment  color109 color234
-color bold        color229 color234
-color error       color167 color234
-color hdrdefault  color246 color234
+color attachment  color109 color235
+color bold        color229 color235
+color error       color167 color235
+color hdrdefault  color246 color235
 color indicator   color223 color237
-color markers     color243 color234
-color normal      color223 color234
-color quoted      color250 color234
-color quoted1     color108 color234
-color quoted2     color250 color234
-color quoted3     color108 color234
-color quoted4     color250 color234
-color quoted5     color108 color234
-color search      color234 color208
-color signature   color108 color234
-color status      color234 color250
-color tilde       color243 color234
-color tree        color142 color234
+color markers     color243 color235
+color normal      color223 color235
+color quoted      color250 color235
+color quoted1     color108 color235
+color quoted2     color250 color235
+color quoted3     color108 color235
+color quoted4     color250 color235
+color quoted5     color108 color235
+color search      color235 color208
+color signature   color108 color235
+color status      color235 color250
+color tilde       color243 color235
+color tree        color142 color235
 color underline   color223 color239
 
-color sidebar_divider    color250 color234
-color sidebar_new        color142 color234
+color sidebar_divider    color250 color235
+color sidebar_new        color142 color235
 
-color index color142 color234 ~N
-color index color108 color234 ~O
-color index color109 color234 ~P
-color index color214 color234 ~F
-color index color175 color234 ~Q
-color index color167 color234 ~=
-color index color234 color223 ~T
-color index color234 color167 ~D
+color index color142 color235 ~N
+color index color108 color235 ~O
+color index color109 color235 ~P
+color index color214 color235 ~F
+color index color175 color235 ~Q
+color index color167 color235 ~=
+color index color235 color223 ~T
+color index color235 color167 ~D
 
-color header color214 color234 "^(To:|From:)"
-color header color142 color234 "^Subject:"
-color header color108 color234 "^X-Spam-Status:"
-color header color108 color234 "^Received:"
+color header color214 color235 "^(To:|From:)"
+color header color142 color235 "^Subject:"
+color header color108 color235 "^X-Spam-Status:"
+color header color108 color235 "^Received:"
 
-color body color142 color234 "[a-z]{3,256}://[-a-zA-Z0-9@:%._\\+~#=/?&,]+"
-#color body color142 color234 "[a-zA-Z]([-a-zA-Z0-9_]+\\.){2,256}[-a-zA-Z0-9_]{2,256}"
-color body color208 color234 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
-color body color208 color234 "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
-color body color234 color214 "[;:]-*[)>(<lt;|]"
-color body color229 color234 "\\*[- A-Za-z]+\\*"
+color body color142 color235 "[a-z]{3,256}://[-a-zA-Z0-9@:%._\\+~#=/?&,]+"
+#color body color142 color235 "[a-zA-Z]([-a-zA-Z0-9_]+\\.){2,256}[-a-zA-Z0-9_]{2,256}"
+color body color208 color235 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+color body color208 color235 "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+color body color235 color214 "[;:]-*[)>(<lt;|]"
+color body color229 color235 "\\*[- A-Za-z]+\\*"
 
-color body color214 color234 "^-.*PGP.*-*"
-color body color142 color234 "^gpg: Good signature from"
-color body color167 color234 "^gpg: Can't.*$"
-color body color214 color234 "^gpg: WARNING:.*$"
-color body color167 color234 "^gpg: BAD signature from"
-color body color167 color234 "^gpg: Note: This key has expired!"
-color body color214 color234 "^gpg: There is no indication that the signature belongs to the owner."
-color body color214 color234 "^gpg: can't handle these multiple signatures"
-color body color214 color234 "^gpg: signature verification suppressed"
-color body color214 color234 "^gpg: invalid node with packet of type"
+color body color214 color235 "^-.*PGP.*-*"
+color body color142 color235 "^gpg: Good signature from"
+color body color167 color235 "^gpg: Can't.*$"
+color body color214 color235 "^gpg: WARNING:.*$"
+color body color167 color235 "^gpg: BAD signature from"
+color body color167 color235 "^gpg: Note: This key has expired!"
+color body color214 color235 "^gpg: There is no indication that the signature belongs to the owner."
+color body color214 color235 "^gpg: can't handle these multiple signatures"
+color body color214 color235 "^gpg: signature verification suppressed"
+color body color214 color235 "^gpg: invalid node with packet of type"
