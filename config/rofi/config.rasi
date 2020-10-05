@@ -1,4 +1,4 @@
 configuration {
     font: "Inconsolata Regular 12";
-    theme: "~/.config/rofi/nord.rasi";
+    theme: "/usr/share/rofi/themes/gruvbox-dark.rasi";
 }
