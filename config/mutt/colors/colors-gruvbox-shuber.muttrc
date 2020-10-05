@@ -52,7 +52,6 @@ color sidebar_new        color142 color235
 
 color index color142 color235 ~N
 color index color108 color235 ~O
-color index color109 color235 ~P
 color index color167 color235 ~F
 color index color167 color235 ~=
 color index color235 color223 ~T
