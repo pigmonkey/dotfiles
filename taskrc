@@ -11,5 +11,5 @@ weekstart=Monday
 taskd.certificate=~/.taskwarrior/peter.cert.pem
 taskd.key=~/.taskwarrior/peter.key.pem
 taskd.ca=~/.taskwarrior/ca.cert.pem
-taskd.server=task.havenaut.net:21348
-taskd.credentials=havenaut/peter/4a50a9e8-b1c3-4e77-94b1-92b720728d04
+taskd.server=task.havenaut.net:53589
+taskd.credentials=havenaut/peter/1c50d4dd-9c76-4d89-a725-8f69006b99d7
