@@ -9,3 +9,4 @@
 	rebase = false
 [alias]
 	lg = !tig
+	pushall = !git remote | xargs -L1 -P0 git push --all --follow-tags
