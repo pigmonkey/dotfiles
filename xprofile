@@ -1,9 +1,6 @@
 # Read the Xresources file if it exists.
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# Map keys with xmodmap
-xmodmap ~/.Xmodmap
-
 # Bind keys with sxhkd.
 sxhkd &
 
