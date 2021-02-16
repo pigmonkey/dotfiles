@@ -63,6 +63,9 @@ PURE_GIT_PULL=0
 # Activate dircolors
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
+# Reverse menu with shift-tab.
+bindkey '^[[Z' reverse-menu-complete
+
 
 ######
 # Vi #
