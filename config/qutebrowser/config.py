@@ -1,3 +1,5 @@
+config.load_autoconfig(False)
+
 # Enable spellcheck.
 c.spellcheck.languages = ["en-US"]
 
