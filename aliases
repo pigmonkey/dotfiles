@@ -149,3 +149,7 @@ jul () {
 recordmywindow () {
     recordmydesktop --no-sound --windowid $(xwininfo | grep "Window id" | awk '{print $4;}')
 }
+
+cheat() {
+    curl --location --silent "cheat.sh/$1?style=default" | ${PAGER:-less};
+}
