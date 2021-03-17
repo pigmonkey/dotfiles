@@ -19,8 +19,8 @@ MaildirStore havenaut-local
     SubFolders Verbatim
 
 Channel havenaut
-    Master :havenaut-remote:
-    Slave :havenaut-local:
+    Far :havenaut-remote:
+    Near :havenaut-local:
     Create Both
     SyncState *
     Patterns *
@@ -45,26 +45,26 @@ MaildirStore tad-local
     Inbox ~/mail/TAD/INBOX
 
 Channel tad-inbox
-    Master ":tad-remote:INBOX"
-    Slave ":tad-local:INBOX"
+    Far ":tad-remote:INBOX"
+    Near ":tad-local:INBOX"
     Create Both
     SyncState *
 
 Channel tad-drafts
-    Master ":tad-remote:[Gmail]/Drafts"
-    Slave ":tad-local:drafts"
+    Far ":tad-remote:[Gmail]/Drafts"
+    Near ":tad-local:drafts"
     Create Both
     SyncState *
 
 Channel tad-sent
-    Master ":tad-remote:[Gmail]/Sent Mail"
-    Slave ":tad-local:sent"
+    Far ":tad-remote:[Gmail]/Sent Mail"
+    Near ":tad-local:sent"
     Create Both
     SyncState *
 
 Channel tad-flagged
-    Master ":tad-remote:[Gmail]/Starred"
-    Slave ":tad-local:flagged"
+    Far ":tad-remote:[Gmail]/Starred"
+    Near ":tad-local:flagged"
     Create Both
     SyncState *
 
