@@ -22,10 +22,10 @@ class Py3status:
                                  and os.path.splitext(name)[-1] == '.mail'])
 
         full_text = 'msmtpq: %s' % (num)
-        color = i3s_config['color_bad']
+        color = self.py3.COLOR_BAD
 
         if num == 0:
-            color = i3s_config['color_good']
+            color = self.py3.COLOR_GOOD
             if self.hide_empty:
                 full_text = ''
 
