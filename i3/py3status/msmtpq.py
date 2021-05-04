@@ -7,7 +7,6 @@ Configuration parameters:
     hide_empty: Should a message be displayed when the queue is empty (default False)
 """
 import os
-import time
 
 
 class Py3status:
@@ -31,6 +30,6 @@ class Py3status:
 
         return {
             'full_text': full_text,
-            'cached_until': time.time() + i3s_config['interval'],
+            'cached_until': self.py3.time_in(i3s_config['interval']),
             'color': color,
         }
