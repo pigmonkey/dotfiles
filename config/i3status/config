@@ -23,6 +23,10 @@ order += "battery 1"
 order += "load"
 order += "tztime local"
 
+backlight {
+        cache_timeout = 5
+}
+
 wireless wlp4s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
