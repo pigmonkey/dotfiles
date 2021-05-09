@@ -11,8 +11,8 @@ c.url.searchengines = {
     "ddg": "%s&q={}" % DDG,
 }
 
-# Launch vim in termite for editor.
-c.editor.command = ['termite', '-t', 'edit_text', '-e', 'vim {}']
+# Launch vim in the terminal for editor.
+c.editor.command = ['alacritty', '-t', 'edit_text', '-e', 'vim {}']
 
 # Load new tabs in the background.
 c.tabs.background = True

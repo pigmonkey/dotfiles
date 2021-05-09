@@ -73,7 +73,7 @@ super + p
 
 # Bookmark via pinboard
 super + d
-    termite --title pinit -e ~/bin/pinit
+    alacritty --title pinit -e ~/bin/pinit
 
 # Launch rofi surfraw
 super + shift + f

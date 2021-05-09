@@ -2,7 +2,7 @@
 # Terminal
 #
 
-export TERMINAL='termite'
+export TERMINAL='alacritty'
 
 #
 # Editors
