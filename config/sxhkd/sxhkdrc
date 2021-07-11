@@ -116,6 +116,10 @@ super + s
 super + shift + s
     teiler
 
+# OCR a screen selection.
+super + shift + t
+    convert x: -modulate 100,0 -resize 400% -set density 300 png:- | tesseract stdin stdout | xclip -selection clipboard
+
 # Generate a QR code from the clipboard
 super + q
     qcode
