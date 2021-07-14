@@ -31,7 +31,7 @@ dunst &
 redshift-gtk &
 
 # Load the best monitor profile available
-autorandr --change --default mobile
+autorandr --change --default default
 
 # Udiskie for mounting.
 udiskie &
