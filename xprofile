@@ -33,9 +33,6 @@ redshift-gtk &
 # Load the best monitor profile available
 autorandr --change --default mobile
 
-# Monitor monitors for changes
-srandrd autorandr --change --default mobile
-
 # Udiskie for mounting.
 udiskie &
 
