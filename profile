@@ -69,6 +69,13 @@ export PROJECT_HOME="$HOME/projects"
 # Load virtualenvwrapper (lazy).
 source /usr/bin/virtualenvwrapper_lazy.sh
 
+# Pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+fi
+
 #
 # Notes
 #
