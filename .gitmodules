@@ -10,3 +10,6 @@
 [submodule "weechat/weemoji"]
 	path = weechat/weemoji
 	url = https://github.com/kattrali/weemoji
+[submodule "config/mpv/scripts/mpv-reload"]
+	path = config/mpv/scripts/mpv-reload
+	url = https://github.com/4e6/mpv-reload
