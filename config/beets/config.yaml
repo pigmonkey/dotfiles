@@ -14,7 +14,7 @@ chroma:
 lyrics:
     sources: lyricwiki musixmatch genius
 convert:
-    dest: ~/zulu/com.arachnoid.sshelper/audio/music
+    dest: ~/sync/pixel/audio/music
     format: mp3
     copy_album_art: yes
     embed: yes
