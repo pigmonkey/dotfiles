@@ -45,9 +45,10 @@ bind attach <return> view-mailcap
 auto_view text/html text/calendar application/ics application/vnd.openxmlformats-officedocument.wordprocessingml.document
 alternative_order text/plain text/enriched text/html
 
-# Printing
+# Saving
 set print_command="$HOME/.config/mutt/print.sh"
 macro index,pager P "<pipe-message>$HOME/.config/mutt/print.sh -s"
+macro index,pager S "<enter-command>set pipe_decode_weed=no<enter>| $HOME/.config/mutt/save.sh /tmp<enter><enter-command>set pipe_decode_weed=yes<enter>"
 
 # PGP
 set crypt_use_gpgme = yes
