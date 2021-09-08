@@ -11,3 +11,4 @@ text/html; html2text --reference-links %s %{charset}; copiousoutput
 #text/html; iconv -c -f %{charset} -t LATIN1//TRANSLIT | html2text --ignore-tables; copiousoutput
 #text/html; lynx -force_html -dump -assume_charset %{charset} %s; copiousoutput
 text/plain; vim %s ; needsterminal
+message/rfc822; formail -b < %s > %s.mbox && mutt -f '%s.mbox'; needsterminal
