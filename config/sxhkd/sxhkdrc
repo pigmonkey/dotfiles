@@ -4,23 +4,23 @@
 
 # Toggle mute
 XF86AudioMute
-    pulseaudio-ctl mute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Toggle mic mute
 XF86AudioMicMute
-    pulseaudio-ctl mute-input
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Change volume
 XF86Audio{Raise,Lower}Volume
-    pulseaudio-ctl {up,down} 2
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%
 
 # Change volume
 super + {k,j}
-    pulseaudio-ctl {up,down} 2
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%
 
 # Change volume, chunky
 super + shift + {k,j}
-    pulseaudio-ctl {up,down} 10
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%
 
 # Toggle mpd
 super + 0
@@ -37,10 +37,6 @@ super + slash
 # Play the video URL in the clipboard
 super + m
     play
-
-# Mute individualpulse audio streams
-super + shift + m
-    pamute
 
 
 ################
