@@ -16,7 +16,7 @@ type = "carddav"
 url = "https://carddav.fastmail.com"
 username = "peterhogg@fastmail.fm"
 password.fetch = ["command", "keyring", "get", "mail-havenaut", "carddav"]
-verify_fingerprint = "AF:01:8E:7F:FF:36:61:06:C6:F9:D4:38:D1:4E:08:98:78:C8:27:C5:E5:C0:A3:97:49:37:F2:76:90:B1:27:59"
+verify_fingerprint = "80:39:AD:37:07:26:83:02:53:B5:90:A9:6A:02:84:16:30:C7:76:1A:7C:32:F8:A4:76:8B:47:06:2A:19:22:FE"
 
 [pair calendar]
 a = "calendar_local"
@@ -33,6 +33,6 @@ type = "caldav"
 url = "https://caldav.fastmail.com"
 username = "peterhogg@fastmail.fm"
 password.fetch = ["command", "keyring", "get", "mail-havenaut", "caldav"]
-verify_fingerprint = "AF:01:8E:7F:FF:36:61:06:C6:F9:D4:38:D1:4E:08:98:78:C8:27:C5:E5:C0:A3:97:49:37:F2:76:90:B1:27:59"
+verify_fingerprint = "80:39:AD:37:07:26:83:02:53:B5:90:A9:6A:02:84:16:30:C7:76:1A:7C:32:F8:A4:76:8B:47:06:2A:19:22:FE"
 start_date = "datetime.now() - timedelta(days=365)"
 end_date = "datetime.now() + timedelta(days=365)"
