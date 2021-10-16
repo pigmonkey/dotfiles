@@ -126,3 +126,24 @@ fin() {
     PASSWORD_STORE_DIR="$FINPASSDIR" pass "$@"
 }
 compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
+
+
+#########
+# Color #
+#########
+
+BASE16_SHELL="$HOME/library/src/base16-shell"
+BASE16_I3="$HOME/library/src/base16-i3"
+
+[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+theme() {
+    i3config="$HOME/projects/dotfiles/config/i3/config"
+    theme="gruvbox-dark-soft"
+    [[ "$1" == "day" ]] && theme="gruvbox-light-soft"
+    echo "$theme"
+    _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
+    sed -i '1,/## Colors/!d' "$i3config"
+    cat "$BASE16_I3"/colors/base16-"$theme".config >> "$i3config"
+    i3-msg -q reload
+}
