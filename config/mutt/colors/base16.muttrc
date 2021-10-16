@@ -50,13 +50,13 @@ color indicator   color21  color19  # inverse, brighter
 # Message Index ----------------------------------------------------------------
 
 ## Weak
-color index  color08  color00  "~R"        # read messages
-color index  color08  color00  "~d >45d"   # older than 45 days
+color index  color07  color00  "~R"        # read messages
+color index  color07  color00  "~d >45d"   # older than 45 days
 color index  color08  color00  "~v~(!~N)"  # collapsed thread with no unread
 color index  color08  color00  "~Q"        # messages that have been replied to
 
 ## Strong
-color index  color21  color00  "(~U|~N|~O)"     # unread, new, old messages
+color index  color04  color00  "(~U|~N|~O)"     # unread, new, old messages
 color index  color21  color00  "~v~(~U|~N|~O)"  # collapsed thread with unread
 
 ## Highlight
@@ -103,7 +103,7 @@ color body  color04  color00  "^[[:space:]]{0,3}#+[[:space:]].*$"
 # `Code` span
 color body  color02  color00  "(^|[[:space:][:punct:]])\`[^\`]+\`([[:space:][:punct:]]|$)"
 # Indented code block
-color body  color02  color00  "^[[:space:]]{4,}.*$"
+#color body  color02  color00  "^[[:space:]]{4,}.*$"
 # URLs
 color body  color16 color00  "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
 # Email addresses
