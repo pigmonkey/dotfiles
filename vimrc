@@ -16,7 +16,7 @@ Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'ledger/vim-ledger'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'chriskempson/base16-vim'
+Plug 'fnune/base16-vim'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
@@ -238,8 +238,13 @@ map <leader>] :tabmove+1<CR>
 """""""""""
 
 " Colorscheme
-colorscheme gruvbox
-set background=dark
+if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+else
+    colorscheme gruvbox
+    set background=dark
+endif
 
 " Syntax highlighting
 syntax enable
