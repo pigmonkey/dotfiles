@@ -128,7 +128,7 @@ macro attach,compose \cl "<pipe-entry> urlscan<Enter>"
 # Colors #
 ##########
 
-source ~/.config/mutt/colors/gruvbox-dark.muttrc
+source ~/.config/mutt/colors/base16.muttrc
 
 
 ############
