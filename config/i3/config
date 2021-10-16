@@ -169,19 +169,16 @@ bar {
     status_command  py3status
     position        top
     colors {
-        background #282828
-        statusline #ebdbb2
-        separator  #a89984
-
-        background #3c3836
-        statusline #ebdbb2
-        separator  #666666
+        background $base00
+        separator  $base01
+        statusline $base04
 
         # State             Border  BG      Text
-        focused_workspace  #ebddb2 #ebdbb2 #282828
-        active_workspace   #504945 #504945 #ebdbb2
-        inactive_workspace #504945 #504945 #ebdbb2
-        urgent_workspace   #fb4934 #fb4934 #504945
+        focused_workspace   $base05 $base0D $base00
+        active_workspace    $base05 $base03 $base00
+        inactive_workspace  $base03 $base01 $base05
+        urgent_workspace    $base08 $base08 $base00
+        binding_mode        $base00 $base0A $base00
     }
 }
 
@@ -230,10 +227,12 @@ for_window [title="^qalculate-gtk$"] floating enable
 for_window [title="^edit_text$"] floating enable
 
 # Window colors         Border  BG      Text    Indicator Child Border
-client.focused          #665c54 #665c54 #eddbb2 #2e9ef4
-client.focused_inactive #3c3836 #3c3836 #a89984 #292d2e
-client.unfocused        #3c3836 #3c3836 #a89984 #292d2e
-client.urgent           #fb4934 #fb4934 #ebdbb2 #fb4934
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
 
 # Hide borders adjacent to screen edges
 hide_edge_borders both
@@ -241,3 +240,26 @@ hide_edge_borders both
 # Assign MPV to workspace 4 and focus
 assign [class="mpv"] 4
 for_window [class="mpv"] focus
+
+## Colors
+## Base16 Gruvbox dark, soft
+# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+#
+# You can use these variables anywhere in the i3 configuration file.
+
+set $base00 #32302f
+set $base01 #3c3836
+set $base02 #504945
+set $base03 #665c54
+set $base04 #bdae93
+set $base05 #d5c4a1
+set $base06 #ebdbb2
+set $base07 #fbf1c7
+set $base08 #fb4934
+set $base09 #fe8019
+set $base0A #fabd2f
+set $base0B #b8bb26
+set $base0C #8ec07c
+set $base0D #83a598
+set $base0E #d3869b
+set $base0F #d65d0e
