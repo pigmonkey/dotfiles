@@ -58,6 +58,7 @@ color index  color08  color00  "~Q"        # messages that have been replied to
 ## Strong
 color index  color04  color00  "(~U|~N|~O)"     # unread, new, old messages
 color index  color21  color00  "~v~(~U|~N|~O)"  # collapsed thread with unread
+color sidebar_new color04 color00
 
 ## Highlight
 ### Trusted
