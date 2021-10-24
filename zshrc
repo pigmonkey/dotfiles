@@ -142,8 +142,12 @@ theme() {
     theme="gruvbox-dark-soft"
     [[ "$1" == "day" ]] && theme="gruvbox-light-soft"
     echo "$theme"
+    # set shell
     _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
+    # set i3
     sed -i '1,/## Colors/!d' "$i3config"
     cat "$BASE16_I3"/colors/base16-"$theme".config >> "$i3config"
     i3-msg -q reload
+    # set qutebrowser
+    cp "$HOME/library/src/base16-qutebrowser/themes/minimal/base16-$theme.config.py" ~/.config/qutebrowser/theme.config.py
 }

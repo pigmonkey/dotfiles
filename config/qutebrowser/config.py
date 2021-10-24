@@ -40,4 +40,4 @@ config.bind("xjn", "set content.javascript.enabled true")
 config.bind("xjf", "set content.javascript.enabled false")
 
 # Theme
-config.source('base16-gruvbox-dark-hard.config.py')
+config.source('theme.config.py')
