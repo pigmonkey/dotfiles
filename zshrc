@@ -150,4 +150,6 @@ theme() {
     i3-msg -q reload
     # set qutebrowser
     cp "$HOME/library/src/base16-qutebrowser/themes/minimal/base16-$theme.config.py" ~/.config/qutebrowser/theme.config.py
+    # set rofi
+    cp /usr/share/rofi/themes/"$theme".rasi ~/.config/rofi/theme.rasi
 }
