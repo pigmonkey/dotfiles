@@ -41,3 +41,7 @@ config.bind("xjf", "set content.javascript.enabled false")
 
 # Theme
 config.source('theme.config.py')
+
+# Regardless of the current theme, always use white as the default web page
+# background color.
+c.colors.webpage.bg = "#ffffff"
