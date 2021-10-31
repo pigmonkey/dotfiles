@@ -7,9 +7,9 @@ off
 output HDMI-2
 off
 output eDP-1
-gamma 1.0:0.714:0.526
+crtc 0
 mode 1920x1080
 pos 0x0
 primary
-rate 60.05
+rate 60.01
 rotate right
