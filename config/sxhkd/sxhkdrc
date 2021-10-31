@@ -138,3 +138,20 @@ button9
 
 button8
     xte 'key Page_Down'
+
+
+#########
+# Dunst #
+#########
+
+# Close last message
+control + space
+    dunstctl close
+
+# Close all messages
+control + shift + space
+    dunstctl close-all
+
+# Redisplay last message
+control + grave
+    dunstctl history-pop
