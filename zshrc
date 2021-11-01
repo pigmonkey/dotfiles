@@ -134,22 +134,29 @@ compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
 
 BASE16_SHELL="$HOME/library/src/base16-shell"
 BASE16_I3="$HOME/library/src/base16-i3"
+BASE16_XRESOURCES="$HOME/library/src/base16-xresources"
+BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
 
 [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 theme() {
-    i3config="$HOME/projects/dotfiles/config/i3/config"
     theme="gruvbox-dark-soft"
     [[ "$1" == "day" ]] && theme="gruvbox-light-soft"
     echo "$theme"
     # set shell
     _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
     # set i3
+    i3config="$HOME/projects/dotfiles/config/i3/config"
     sed -i '1,/## Colors/!d' "$i3config"
     cat "$BASE16_I3"/colors/base16-"$theme".config >> "$i3config"
     i3-msg -q reload
     # set qutebrowser
-    cp "$HOME/library/src/base16-qutebrowser/themes/minimal/base16-$theme.config.py" ~/.config/qutebrowser/theme.config.py
+    cp "$BASE16_QUTEBROWSER/themes/minimal/base16-$theme.config.py" ~/.config/qutebrowser/theme.config.py
     # set rofi
     cp /usr/share/rofi/themes/"$theme".rasi ~/.config/rofi/theme.rasi
+    # set xresources
+    xresources="$HOME/projects/dotfiles/Xresources"
+    sed -i '1,/! colors/!d' "$xresources"
+    cat "$BASE16_XRESOURCES"/xresources/base16-"$theme".Xresources >> "$xresources"
+    xrdb -load ~/.Xresources
 }
