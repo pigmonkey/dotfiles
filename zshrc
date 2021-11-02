@@ -137,6 +137,7 @@ BASE16_I3="$HOME/library/src/base16-i3"
 BASE16_XRESOURCES="$HOME/library/src/base16-xresources"
 BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
 BASE16_ZATHURA="$HOME/library/src/base16-zathura"
+BASE16_ROFI="$HOME/library/src/base16-rofi.pschyska"
 
 [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
 
@@ -154,7 +155,7 @@ theme() {
     # set qutebrowser
     cp "$BASE16_QUTEBROWSER/themes/minimal/base16-$theme.config.py" ~/.config/qutebrowser/theme.config.py
     # set rofi
-    cp /usr/share/rofi/themes/"$theme".rasi ~/.config/rofi/theme.rasi
+    cp "$BASE16_ROFI/themes/base16-$theme.rasi" ~/.config/rofi/theme.rasi
     # set xresources
     xresources="$HOME/projects/dotfiles/Xresources"
     sed -i '1,/! colors/!d' "$xresources"
