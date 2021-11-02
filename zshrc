@@ -142,8 +142,13 @@ BASE16_ROFI="$HOME/library/src/base16-rofi.pschyska"
 [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 theme() {
-    theme="gruvbox-dark-soft"
-    [[ "$1" == "day" ]] && theme="gruvbox-light-soft"
+    if [ -z "$1" ]; then
+        theme="gruvbox-dark-soft"
+    elif [[ "$1" == "day" ]]; then
+        theme="gruvbox-light-soft"
+    else
+        theme="$1"
+    fi
     echo "$theme"
     # set shell
     _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
