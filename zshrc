@@ -136,6 +136,7 @@ BASE16_SHELL="$HOME/library/src/base16-shell"
 BASE16_I3="$HOME/library/src/base16-i3"
 BASE16_XRESOURCES="$HOME/library/src/base16-xresources"
 BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
+BASE16_ZATHURA="$HOME/library/src/base16-zathura"
 
 [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
 
@@ -159,4 +160,8 @@ theme() {
     sed -i '1,/! colors/!d' "$xresources"
     cat "$BASE16_XRESOURCES"/xresources/base16-"$theme".Xresources >> "$xresources"
     xrdb -load ~/.Xresources
+    # set zathura
+    zathurarc="$HOME/projects/dotfiles/config/zathura/zathurarc"
+    sed -i '1,/## Colors/!d' "$zathurarc"
+    cat "$BASE16_ZATHURA"/build_schemes/colors/base16-"$theme".config >> "$zathurarc"
 }
