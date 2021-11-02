@@ -6,47 +6,39 @@ set font "Inconsolata Regular 12"
 map <C-i> zoom in
 map <C-o> zoom out
 
+## Colors
+# Base16 Gruvbox dark, soft
+# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-# Nord Theme
+set default-bg                  "#32302f"
+set default-fg                  "#3c3836"
 
-set default-bg              "#2e3440"
-set default-fg              "#d8dee9"
+set statusbar-fg                "#bdae93"
+set statusbar-bg                "#504945"
 
-set statusbar-bg            "#4c566a"
-set statusbar-fg            "#d8dee9"
+set inputbar-bg                 "#32302f"
+set inputbar-fg                 "#fbf1c7"
 
-set inputbar-bg             "#2e3440"
-set inputbar-fg             "#d8dee9"
+set notification-bg             "#32302f"
+set notification-fg             "#fbf1c7"
 
-set notification-bg         "#2e3440"
-set notification-fg         "#d8dee9"
+set notification-error-bg       "#32302f"
+set notification-error-fg       "#fb4934"
 
-set notification-error-bg   "#2e3440"
-set notification-error-fg   "#bf616a"
+set notification-warning-bg     "#32302f"
+set notification-warning-fg     "#fb4934"
 
-set notification-warning-bg "#2e3440"
-set notification-warning-fg "#ebcb8b"
+set highlight-color             "#fabd2f"
+set highlight-active-color      "#83a598"
 
-set highlight-active-color  "#5e81ac"
-set highlight-color         "#88c0d0"
+set completion-bg               "#3c3836"
+set completion-fg               "#83a598"
 
-set completion-bg           "#2e3440"
-set completion-fg           "#d8dee9"
+set completion-highlight-fg     "#fbf1c7"
+set completion-highlight-bg     "#83a598"
 
-set completion-highlight-bg "#4c566a"
-set completion-highlight-fg "#d8dee9"
+set recolor-lightcolor          "#32302f"
+set recolor-darkcolor           "#ebdbb2"
 
-set completion-group-bg     "#2e3440"
-set completion-group-fg     "#5e81ac"
-
-set index-fg                "#d8dee9"
-set index-bg                "#2e3440"
-
-set index-active-fg         "#d8dee9"
-set index-active-bg         "#4c566a"
-
-set render-loading-bg       "#2e3440"
-set render-loading-fg       "#d8dee9"
-
-set recolor-lightcolor      "#2e3440"
-set recolor-darkcolor       "#d8dee9"
+set recolor                     "false"
+set recolor-keephue             "false"
