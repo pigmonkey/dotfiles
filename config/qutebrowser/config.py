@@ -1,3 +1,6 @@
+import qutebrowser.api.interceptor
+
+
 config.load_autoconfig(False)
 
 # Enable spellcheck.
@@ -45,3 +48,20 @@ config.source('theme.config.py')
 # Regardless of the current theme, always use white as the default web page
 # background color.
 c.colors.webpage.bg = "#ffffff"
+
+
+def rewrite(request: qutebrowser.api.interceptor.Request):
+    """
+    Rewrite domains in URLs.
+
+    Source: http://p.cmpl.cc/10093c50
+    """
+    if request.request_url.host() == 'www.reddit.com':
+        request.request_url.setHost('teddit.net')
+
+        try:
+            request.redirect(request.request_url)
+        except:
+            pass
+
+qutebrowser.api.interceptor.register(rewrite)
