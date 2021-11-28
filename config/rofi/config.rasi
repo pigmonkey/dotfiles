@@ -1,4 +1,4 @@
 configuration {
     font: "Inconsolata Regular 12";
-    theme: "theme.rasi";
 }
+@theme "theme.rasi"
