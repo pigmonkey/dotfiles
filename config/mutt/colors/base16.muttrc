@@ -62,14 +62,14 @@ color sidebar_new color04 color00
 
 ## Highlight
 ### Trusted
-color index  color06  color00  "~g"  # PGP signed messages
-color index  color06  color00  "~G"  # PGP encrypted messages
+#color index  color06  color00  "~g"  # PGP signed messages
+#color index  color06  color00  "~G"  # PGP encrypted messages
 ### Odd
 color index  color01  color00  "~E"  # past Expires: header date
 color index  color01  color00  "~="  # duplicated
 color index  color01  color00  "~S"  # marked by Supersedes: header
 ### Flagged
-color index  color05  color00  "~F"       # flagged messages
+color index  color06  color00  "~F"       # flagged messages
 color index  color02  color00  "~v~(~F)"  # collapsed thread with flagged inside
 
 # Selection
