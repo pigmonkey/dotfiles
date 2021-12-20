@@ -1,0 +1,7 @@
+--add-metadata
+--xattrs
+--xattr-set-filesize
+--prefer-free-formats
+--geo-bypass
+--downloader aria2c
+--downloader-args '-j 16 -s 16 -x 16 -k 1M'
