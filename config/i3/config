@@ -242,12 +242,12 @@ assign [class="mpv"] 4
 for_window [class="mpv"] focus
 
 ## Colors
-## Base16 Gruvbox dark, soft
+## Base16 Gruvbox dark, medium
 # Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #32302f
+set $base00 #282828
 set $base01 #3c3836
 set $base02 #504945
 set $base03 #665c54

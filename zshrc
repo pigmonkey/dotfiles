@@ -143,7 +143,7 @@ BASE16_ROFI="$HOME/library/src/base16-rofi.pschyska"
 
 theme() {
     if [ -z "$1" ]; then
-        theme="gruvbox-dark-soft"
+        theme="gruvbox-dark-medium"
     elif [[ "$1" == "day" ]]; then
         theme="gruvbox-light-soft"
     else
