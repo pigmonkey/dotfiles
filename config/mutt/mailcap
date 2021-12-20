@@ -6,8 +6,8 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document; firewar
 image/*; firewarden -q -c feh %s
 text/calendar; mutt-ics; copiousoutput
 text/html; firewarden -q -c qutebrowser %s; needsterminal; nametemplate=%s.html
-text/html; html2text --reference-links %s %{charset}; copiousoutput
-#text/html; w3m -I %{charset} -T text/html; copiousoutput;
+#text/html; html2text --pad-tables --reference-links %s %{charset}; copiousoutput
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
 #text/html; iconv -c -f %{charset} -t LATIN1//TRANSLIT | html2text --ignore-tables; copiousoutput
 #text/html; lynx -force_html -dump -assume_charset %{charset} %s; copiousoutput
 text/plain; vim %s ; needsterminal
