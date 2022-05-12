@@ -10,5 +10,11 @@ c.TerminalInteractiveShell.editing_mode = 'vi'
 #  in addition to the F2 binding, which is always enabled.
 c.TerminalInteractiveShell.extra_open_editor_shortcuts = True
 
+# Keep your stinking paws off my cursor.
+c.TerminalInteractiveShell.modal_cursor = False
+
 # I don't know what Jedi is supposed to do, but it is ridiculously slow.
 c.IPCompleter.use_jedi = False
+
+# Don't try to reformat my slop.
+c.TerminalInteractiveShell.autoformatter = None
