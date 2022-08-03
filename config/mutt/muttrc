@@ -29,10 +29,14 @@ set delete
 set pipe_decode
 set mailcap_path=~/.config/mutt/mailcap
 set query_command="khard email --parsable '%s'"
-set forward_format="Fwd: %s"
 set use_domain=no
 set user_agent=no
 set sleep_time=0
+
+# Forwarding
+set forward_format="Fwd: %s"
+set forward_attachments=yes
+set mime_forward=ask-yes
 
 # Composing
 set edit_headers=yes
