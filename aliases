@@ -15,9 +15,9 @@ alias lt='l -tr'         # Lists sorted by date, most recent last.
 # Udiskie #
 ###########
 
-alias um='udiskie-mount -r'
+alias um='udiskie-mount --recursive --options noatime'
 alias uu='udiskie-umount'
-alias up='um -p "builtin:tty"'
+alias up='um --password-prompt "builtin:tty" --options noatime'
 
 
 #######
