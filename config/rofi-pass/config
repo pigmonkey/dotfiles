@@ -4,6 +4,7 @@ clip=clipboard
 notify='true'
 default_do='autopass'
 help_header='false'
+help_color="#ff0000"
 
 _rofi () {
     rofi -i -no-auto-select -no-levenshtein-sort "$@"
