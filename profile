@@ -124,5 +124,11 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 # Set GPG TTY
 export GPG_TTY=$(tty)
 
+# Use GPG for SSH Agent
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+
 # Contain the toxic JavaScript ecosystem.
 export npm_config_prefix=~/.node_modules
