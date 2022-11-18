@@ -133,6 +133,7 @@ compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
 #########
 
 BASE16_SHELL="$HOME/library/src/base16-shell"
+BASE16_ALACRITTY="$HOME/library/src/base16-alacritty"
 BASE16_I3="$HOME/library/src/base16-i3"
 BASE16_XRESOURCES="$HOME/library/src/base16-xresources"
 BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
@@ -152,6 +153,8 @@ theme() {
     echo "$theme"
     # set shell
     _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
+    # set alacritty
+    cp "$BASE16_ALACRITTY/colors/base16-$theme.yml" ~/.config/alacritty/colors.yml
     # set i3
     i3config="$HOME/projects/dotfiles/config/i3/config"
     sed -i '1,/## Colors/!d' "$i3config"
