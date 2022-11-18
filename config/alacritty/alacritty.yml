@@ -1,9 +1,9 @@
 # Font configuration
 font:
   normal:
-    family: Inconsolata
+    family: Berkeley Mono
   bold:
-    family: Inconsolata
+    style: Bold
   italic:
-    family: Inconsolata
-  size: 14.0
+    style: Italic
+  size: 12.0

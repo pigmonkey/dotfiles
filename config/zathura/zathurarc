@@ -1,7 +1,7 @@
 set statusbar-h-padding     10
 set statusbar-v-padding     10
 
-set font "Inconsolata Regular 12"
+set font "Berkeley Mono 10"
 
 map <C-i> zoom in
 map <C-o> zoom out
