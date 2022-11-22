@@ -1,5 +1,5 @@
 [global]
-    font = Berkeley Mono 10
+    font = Iosevka Term 10
     
     # Allow a small subset of html markup:
     #   <b>bold</b>

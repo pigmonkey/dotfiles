@@ -1,7 +1,7 @@
 # Font configuration
 font:
   normal:
-    family: Berkeley Mono
+    family: Iosevka Term
   bold:
     style: Bold
   italic:

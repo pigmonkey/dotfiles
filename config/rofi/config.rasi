@@ -1,4 +1,4 @@
 configuration {
-    font: "Berkeley Mono 10";
+    font: "Iosevka Term 10";
 }
 @theme "theme.rasi"
