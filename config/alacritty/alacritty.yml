@@ -2,10 +2,6 @@
 font:
   normal:
     family: Iosevka Term
-  bold:
-    style: Bold
-  italic:
-    style: Italic
   size: 12.0
 
 # Include colors
