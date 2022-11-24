@@ -71,6 +71,7 @@ bindkey '^[[Z' reverse-menu-complete
 # Vi #
 ######
 
+bindkey -v
 bindkey -M viins 'kj' vi-cmd-mode
 bindkey -M vicmd "?" history-incremental-search-backward
 bindkey -M vicmd "/" history-incremental-search-forward
