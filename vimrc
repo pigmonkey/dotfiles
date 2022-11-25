@@ -262,7 +262,7 @@ highlight SpellLocal ctermfg=44 term=underline cterm=underline
 " Default gVim window size and font.
 if has("gui_running")
     set lines=50 columns=100
-    set guifont=Iosevka\ Term\ 12
+    set guifont=PragmataPro\ Mono\ Liga\ 12
 endif
 
 

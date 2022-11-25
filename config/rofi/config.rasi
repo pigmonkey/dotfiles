@@ -1,4 +1,4 @@
 configuration {
-    font: "Iosevka Term 10";
+    font: "PragmataPro Mono Liga 10";
 }
 @theme "theme.rasi"

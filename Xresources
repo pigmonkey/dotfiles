@@ -12,7 +12,7 @@ URxvt.iso14755: false
 URxvt.scrollBar: none
 
 ! font
-URxvt.font: xft:IosevkaTerm:size=12
+URxvt.font: xft:PragmataProMonoLiga:size=12
 
 ! enabled clipboard and selectable URLs
 URxvt.perl-ext-common:  default,clipboard,url-select

@@ -1,7 +1,7 @@
 # Font configuration
 font:
   normal:
-    family: Iosevka Term
+    family: PragmataPro Mono Liga
   size: 12.0
 
 # Include colors
