@@ -45,6 +45,12 @@ config.bind("x", "devtools bottom")
 config.bind("xjn", "set content.javascript.enabled true")
 config.bind("xjf", "set content.javascript.enabled false")
 
+# Toggle tab pinning.
+config.bind("!", "tab-pin")
+
+# Use ctrl-p to print.
+config.bind("<ctrl+p>", "print")
+
 # Theme
 config.source('theme.config.py')
 
