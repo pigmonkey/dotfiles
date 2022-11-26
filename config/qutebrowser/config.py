@@ -35,6 +35,9 @@ config.bind("zi", "zoom-in")
 config.bind("zo", "zoom-out")
 config.bind("z0", "zoom 100")
 
+# Set default font.
+c.fonts.default_family = "PragmataPro Mono Liga"
+
 # Launch inspector.
 config.bind("x", "devtools bottom")
 
