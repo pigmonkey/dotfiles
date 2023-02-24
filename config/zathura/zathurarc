@@ -1,6 +1,8 @@
 set statusbar-h-padding     10
 set statusbar-v-padding     10
 
+set selection-clipboard clipboard
+
 set font "PragmataPro Mono Liga 10"
 
 map <C-i> zoom in
