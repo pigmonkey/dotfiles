@@ -101,8 +101,11 @@ XF86ScreenSaver
     /usr/local/bin/lock
 
 # Change screen brightness
-XF86MonBrightness{Up,Down}
-    light -{A,U} 5
+XF86MonBrightnessUp
+    brightnessctl set +5%
+
+XF86MonBrightnessDown
+    brightnessctl set 5%-
 
 # Take a screenshot
 Print
