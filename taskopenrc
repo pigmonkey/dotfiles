@@ -1,6 +1,8 @@
-TASKBIN='task'
-NOTES_FOLDER="$HOME/.tasks/notes/"
-NOTES_EXT=".txt"
-PATH_EXT=/usr/share/taskopen/scripts
-NOTES_REGEX=notes
-DEFAULT_FILTER=
+[General]
+path_ext = /usr/share/taskopen/scripts
+taskbin = task
+--active-tasks = ""
+
+[Actions]
+notes.regex = "notes"
+notes.command = "$EDITOR $HOME/.tasks/notes/$UUID.txt"
