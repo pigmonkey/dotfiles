@@ -1,3 +1,4 @@
 
 [Default Applications]
 text/plain=vim.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
