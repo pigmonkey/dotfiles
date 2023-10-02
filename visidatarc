@@ -1,5 +1,3 @@
-options.pandas_csv_sep="[\t]+"
-
 # Load plugins
 import vddedupe
 import vdnormcol
