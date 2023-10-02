@@ -66,7 +66,7 @@ def rewrite(request: qutebrowser.api.interceptor.Request):
     Source: http://p.cmpl.cc/10093c50
     """
     if request.request_url.host() == 'www.reddit.com':
-        request.request_url.setHost('teddit.net')
+        request.request_url.setHost('old.reddit.com')
 
         try:
             request.redirect(request.request_url)
