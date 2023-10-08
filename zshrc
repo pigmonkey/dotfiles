@@ -60,8 +60,8 @@ zstyle ':completion:*' menu select
 # Prevent Pure from auto-pulling git repos.
 PURE_GIT_PULL=0
 
-# Activate dircolors
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+# Set LS_COLORS
+export LS_COLORS="$(vivid generate gruvbox-dark)"
 
 # Reverse menu with shift-tab.
 bindkey '^[[Z' reverse-menu-complete
@@ -177,4 +177,10 @@ theme() {
     zathurarc="$HOME/projects/dotfiles/config/zathura/zathurarc"
     sed -i '1,/## Colors/!d' "$zathurarc"
     cat "$BASE16_ZATHURA"/build_schemes/colors/base16-"$theme".config >> "$zathurarc"
+    # set LS_COLORS
+    if [[ "$theme" == "gruvbox-dark-medium" ]]; then
+        export LS_COLORS="$(vivid generate gruvbox-dark)"
+    else
+        export LS_COLORS="$(vivid generate $theme)"
+    fi
 }
