@@ -18,3 +18,6 @@ c.IPCompleter.use_jedi = False
 
 # Don't try to reformat my slop.
 c.TerminalInteractiveShell.autoformatter = None
+
+# Use gruvbox dark colors.
+c.TerminalInteractiveShell.highlighting_style = 'gruvbox-dark'
