@@ -147,10 +147,13 @@ BASE16_ROFI="$HOME/library/src/base16-rofi.pschyska"
 theme() {
     if [ -z "$1" ]; then
         theme="gruvbox-dark-medium"
+        theme_simple="gruvbox-dark"
     elif [[ "$1" == "day" ]]; then
         theme="gruvbox-light-soft"
+        theme_simple="gruvbox-light"
     else
         theme="$1"
+        theme_simple="$1"
     fi
     echo "$theme"
     # set shell
@@ -178,9 +181,7 @@ theme() {
     sed -i '1,/## Colors/!d' "$zathurarc"
     cat "$BASE16_ZATHURA"/build_schemes/colors/base16-"$theme".config >> "$zathurarc"
     # set LS_COLORS
-    if [[ "$theme" == "gruvbox-dark-medium" ]]; then
-        export LS_COLORS="$(vivid generate gruvbox-dark)"
-    else
-        export LS_COLORS="$(vivid generate $theme)"
-    fi
+    export LS_COLORS="$(vivid generate $theme_simple)"
+    # set bat
+    sed -i '/--theme/ s/="[^"][^"]*"/="'"$theme_simple"'"/' $HOME/projects/dotfiles/config/bat/config
 }
