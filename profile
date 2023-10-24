@@ -29,9 +29,7 @@ export PATH=~/bin:~/.local/bin/:$PATH
 #
 
 # Set the default Less options.
-# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
-# Remove -X and -F (exit if the content fits on one screen) to enable it.
-export LESS='-F -g -i -M -R -w -X -z-4 -#3 -N'
+export LESS='-F -g -i -M -R -w -z-4 -#3'
 
 # Find lesspipe
 if command -v lesspipe.sh >/dev/null 2>&1; then
