@@ -5,7 +5,8 @@
 autoload -Uz compinit
 compinit
 
-source ~/.zsh_plugins.sh
+source '/usr/share/zsh-antidote/antidote.zsh'
+antidote load
 
 
 ###########
