@@ -1,4 +1,3 @@
-mafredri/zsh-async
 sindresorhus/pure
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
