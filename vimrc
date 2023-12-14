@@ -24,6 +24,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
@@ -216,6 +217,9 @@ vmap <leader>y "+y
 
 " Spell check
 map <leader>s :setlocal spell! spelllang=en_us<cr>
+
+" Open fzf file finder
+map <leader>o :Files<cr>
 
 " Buffer navigation
 map [b :bprevious<cr>
