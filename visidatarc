@@ -18,3 +18,6 @@ options.disp_column_sep = '│'
 # Adjust colors of current column and row.
 options.color_current_row = 'blue reverse'
 options.color_current_hdr = 'blue reverse'
+
+# Force column names to be useful in expressions.
+options.clean_names = True
