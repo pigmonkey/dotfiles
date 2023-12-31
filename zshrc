@@ -160,7 +160,7 @@ theme() {
     # set shell
     _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
     # set alacritty
-    cp "$BASE16_ALACRITTY/colors/base16-$theme.yml" ~/.config/alacritty/colors.yml
+    cp "$BASE16_ALACRITTY/colors/base16-$theme.toml" ~/.config/alacritty/colors.toml
     # set kitty
     cp "$BASE16_KITTY/colors/base16-$theme.conf" ~/.config/kitty/colors.conf
     # set i3
