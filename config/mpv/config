@@ -13,6 +13,11 @@ term-osd-bar=yes
 screenshot-directory=~/tmp/
 # Limit streaming to 1080p.
 ytdl-format="bestvideo[height<=?1080]+bestaudio/best"
+# Fonts.
+sub-font="PragmataPro Regular"
+sub-font-size=42
+osd-font="PragmataPro Regular"
+osd-font-size=18
 # Use yt-dlp.
 script-opts=ytdl_hook-ytdl_path=/usr/bin/yt-dlp
 # Loop all the gifs.
