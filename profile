@@ -13,12 +13,6 @@ export VISUAL='vim'
 export PAGER='less'
 
 #
-# Language
-#
-
-export LANG='en_US.UTF-8'
-
-#
 # Path
 #
 
