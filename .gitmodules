@@ -1,6 +1,3 @@
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
 [submodule "weechat/urlview"]
 	path = weechat/urlview
 	url = https://github.com/keith/urlview-weechat
