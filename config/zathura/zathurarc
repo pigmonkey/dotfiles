@@ -1,6 +1,9 @@
 set statusbar-h-padding     10
 set statusbar-v-padding     10
 
+set window-title-home-tilde true
+set statusbar-home-tilde true
+
 set selection-clipboard clipboard
 
 set font "PragmataPro Mono Liga 10"
