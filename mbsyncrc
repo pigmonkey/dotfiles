@@ -6,7 +6,7 @@ IMAPAccount havenaut
     Host mail.messagingengine.com
     Port 992
     User peterhogg@fastmail.fm
-    SSLType IMAPS
+    TLSType IMAPS
     CertificateFile /etc/ssl/certs/ca-certificates.crt
     PassCmd "keyring get mail-havenaut imap"
 
@@ -33,7 +33,7 @@ Channel havenaut
 IMAPAccount tad
     Host imap.gmail.com
     User phogg@tripleaughtdesign.com
-    SSLType IMAPS
+    TLSType IMAPS
     CertificateFile /etc/ssl/certs/ca-certificates.crt
     PassCmd "keyring get mail-tad imap"
 
