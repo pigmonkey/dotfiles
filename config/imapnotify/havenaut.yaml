@@ -1,0 +1,15 @@
+configurations:
+    -
+        host: mail.messagingengine.com
+        port: 992
+        tls: true
+        tlsOptions:
+            rejectUnauthorized: true
+        username: peterhogg@fastmail.fm
+        password: ''
+        passwordCMD: 'keyring get mail-havenaut imap'
+        boxes:
+            -
+                mailbox: INBOX
+                onNewMail: 'mbsync havenaut'
+                onNewMailPost: SKIP
