@@ -11,8 +11,6 @@ lastgenre:
     prefer_specific: yes
 chroma:
     auto: yes
-lyrics:
-    sources: lyricwiki musixmatch genius
 convert:
     dest: ~/sync/pixel/audio/music
     format: mp3
