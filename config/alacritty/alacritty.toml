@@ -1,3 +1,4 @@
+[general]
 import = ["/home/pigmonkey/.config/alacritty/colors.toml"]
 
 [font]
