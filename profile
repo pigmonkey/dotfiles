@@ -16,7 +16,7 @@ export PAGER='less'
 # Path
 #
 
-export PATH=~/bin:~/.local/bin/:$PATH
+export PATH=~/bin:~/.local/bin/:~/.cargo/bin:$PATH
 
 #
 # Less
