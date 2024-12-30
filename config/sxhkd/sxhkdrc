@@ -71,21 +71,9 @@ super + p
 super + d
     alacritty --title pinit -e ~/bin/pinit
 
-# Launch rofi surfraw
-super + shift + f
-    surfraw-rofi
-
-# Launch rofi surfraw
-super + f
-    surfraw duckduckgo -j $(xclip -o -selection clipboard)
-
 # Launch qalculator
 super + c
     qalculate-gtk
-
-# Launch rofi zeal
-super + z
-    rofi-zeal
 
 
 ########
@@ -114,10 +102,6 @@ super + s
     flameshot gui
 super + shift + s
     teiler
-
-# OCR a screen selection.
-super + shift + t
-    convert x: -modulate 100,0 -resize 400% -set density 300 png:- | tesseract stdin stdout | xclip -selection clipboard
 
 # Generate a QR code from the clipboard
 super + q
