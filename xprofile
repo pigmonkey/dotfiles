@@ -38,6 +38,3 @@ udiskie &
 
 # Blueman for bluetooth
 blueman-applet &
-
-# poweralertd for power monitoring
-systemctl start poweralertd.service --user
