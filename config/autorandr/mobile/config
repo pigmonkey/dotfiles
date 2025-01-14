@@ -1,14 +1,31 @@
 output DP-1
 off
-output HDMI-1
-off
 output DP-2
 off
-output HDMI-2
+output DP-4
+off
+output DP-5
+off
+output DP-6
+off
+output DP-7
+off
+output DP-8
+off
+output DP-3
 off
 output eDP-1
 crtc 0
-mode 1920x1080
+filter bilinear
+mode 2880x1920
 pos 0x0
 primary
-rate 60.01
+rate 120.00
+transform 0.750000,0.000000,0.000000,0.000000,0.750000,0.000000,0.000000,0.000000,1.000000
+x-prop-colorspace Default
+x-prop-max_bpc 16
+x-prop-non_desktop 0
+x-prop-scaling_mode None
+x-prop-underscan off
+x-prop-underscan_hborder 0
+x-prop-underscan_vborder 0
