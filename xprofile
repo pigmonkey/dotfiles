@@ -24,6 +24,9 @@ unclutter &
 # Notifications with dunst
 dunst &
 
+# Load ICC color profile for Framework 13 2.8k display.
+xcalib -d :0 /usr/share/color/icc/colord/BOE0CB4.icm
+
 # Adjust color temperature with Redshift.
 redswitch -g
 
