@@ -168,6 +168,7 @@ bindsym $mod+r mode "resize"
 bar {
     status_command  py3status
     position        top
+    padding         0 12px
     colors {
         background $base00
         separator  $base01
