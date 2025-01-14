@@ -16,9 +16,8 @@ general {
 order += "msmtpq"
 order += "backlight"
 order += "volume master"
-order += "wireless wlp3s0"
-order += "ethernet enp0s31f6"
-order += "battery 0"
+order += "wireless wlp1s0"
+order += "ethernet enp195s0f4u1u3"
 order += "battery 1"
 order += "load"
 order += "tztime local"
@@ -27,26 +26,15 @@ backlight {
         cache_timeout = 5
 }
 
-wireless wlp3s0 {
+wireless wlp1s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }
 
-ethernet enp0s31f6 {
+ethernet enp195s0f4u1u3 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
-}
-
-battery 0 {
-        format = "%status %percentage %remaining"
-        format_down = "No battery"
-        integer_battery_capacity = true
-        status_chr = "⚇  CHR"
-        status_bat = "⚡ BAT"
-        status_full = "☻ FULL"
-        low_threshold = 10
-        path = "/sys/class/power_supply/BAT%d/uevent"
 }
 
 battery 1 {
