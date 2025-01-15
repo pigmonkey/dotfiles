@@ -1,6 +1,5 @@
-# Enable OpenGL and VA-API hardware decoding.
-vo=gpu,vx
-hwdec=vaapi
+# Enable hardware decoding.
+hwdec=auto-safe
 # Stop screensaver (xautolock).
 stop-screensaver=yes
 # Do not display audio file images.
