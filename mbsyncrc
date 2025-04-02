@@ -4,7 +4,7 @@
 
 IMAPAccount havenaut
     Host mail.messagingengine.com
-    Port 992
+    Port 993
     User peterhogg@fastmail.fm
     TLSType IMAPS
     CertificateFile /etc/ssl/certs/ca-certificates.crt
