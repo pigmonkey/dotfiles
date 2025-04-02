@@ -38,3 +38,6 @@ udiskie &
 
 # Blueman for bluetooth
 blueman-applet &
+
+# KDE Connect tray incon
+kdeconnect-indicator &
