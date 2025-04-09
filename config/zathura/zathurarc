@@ -1,3 +1,5 @@
+set database sqlite
+
 set statusbar-h-padding     10
 set statusbar-v-padding     10
 
