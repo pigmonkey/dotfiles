@@ -4,5 +4,4 @@ taskbin = task
 --active-tasks = ""
 
 [Actions]
-notes.regex = "notes"
 notes.command = "$EDITOR $HOME/.tasks/notes/$UUID.txt"
