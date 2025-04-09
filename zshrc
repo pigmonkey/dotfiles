@@ -186,4 +186,6 @@ theme() {
     export LS_COLORS="$(vivid generate $theme_simple)"
     # set bat
     sed -i '/--theme/ s/="[^"][^"]*"/="'"$theme_simple"'"/' $HOME/projects/dotfiles/config/bat/config
+    # set zulip-term
+    sed -i "s/theme=.*/theme=$(echo $theme_simple | tr '-' '_')/" ~/.config/zuliprc
 }
