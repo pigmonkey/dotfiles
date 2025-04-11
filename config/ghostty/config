@@ -1,0 +1,14 @@
+window-decoration = none
+theme = GruvboxDark
+
+font-family  = PragmataPro Liga
+font-feature = calt
+font-feature = ss13
+font-feature = ss18
+
+bold-is-bright = true
+link-url = true
+mouse-hide-while-typing = true
+clipboard-paste-protection = true
+
+keybind = super+shift+r=reload_config
