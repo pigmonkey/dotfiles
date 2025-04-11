@@ -1,4 +1,4 @@
 configuration {
-    font: "PragmataPro Mono Liga 10";
+    font: "PragmataPro Liga 12";
 }
 @theme "theme.rasi"

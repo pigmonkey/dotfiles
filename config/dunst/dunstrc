@@ -1,5 +1,5 @@
 [global]
-    font = PragmataPro Mono Liga 10
+    font = PragmataPro Liga 12
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
