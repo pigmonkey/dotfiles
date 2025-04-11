@@ -25,6 +25,9 @@ export PATH=~/bin:~/.local/bin/:~/.cargo/bin:$PATH
 # Set the default Less options.
 export LESS='-F -g -i -M -R -w -z-4 -#3'
 
+# Make all Private Use Area characters be treated as printable.
+export LESSUTFCHARDEF=E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p
+
 # Find lesspipe
 if command -v lesspipe.sh >/dev/null 2>&1; then
     lesspipe="lesspipe.sh"
