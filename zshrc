@@ -165,6 +165,7 @@ theme() {
     cp "$BASE16_ALACRITTY/colors/base16-$theme.toml" ~/.config/alacritty/colors.toml
     # set kitty
     cp "$BASE16_KITTY/colors/base16-$theme.conf" ~/.config/kitty/colors.conf
+    pkill -USR1 -f /usr/bin/kitty
     # set i3
     i3config="$HOME/projects/dotfiles/config/i3/config"
     sed -i '1,/## Colors/!d' "$i3config"
