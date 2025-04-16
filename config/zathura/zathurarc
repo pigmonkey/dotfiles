@@ -8,7 +8,7 @@ set statusbar-home-tilde true
 
 set selection-clipboard clipboard
 
-set font "PragmataPro Mono Liga 10"
+set font "PragmataPro Liga 12"
 
 map <C-i> zoom in
 map <C-o> zoom out
