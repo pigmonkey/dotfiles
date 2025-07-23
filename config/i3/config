@@ -95,10 +95,13 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+x move workspace to output right
 
 # mark windows
-mode "focused" {
-    # keybindings for marking and jumping to clients
+# https://gist.github.com/kLabz/23d793d517f18b15c8d77b51b232e6ce
+set $mode_focus Focus: (Shift+1~0) Mark ⋅ (1~0) Focus ⋅ (Ctrl+1~0) Clear ⋅ (a) Create custom ⋅ (g) Focus custom ⋅ (c) Clear custom
+mode "$mode_focus" {
+    # Keybindings for custom marks
     bindsym a exec i3-input -F 'mark %s' -P 'Mark name: '
     bindsym g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
+    bindsym c exec i3-input -F 'unmark %s' -P 'Clear mark: '
 
     # Assign marks to keys 1-10
     bindsym Shift+1 mark mark1
@@ -124,11 +127,24 @@ mode "focused" {
     bindsym 9 [con_mark="mark9"] focus
     bindsym 0 [con_mark="mark0"] focus
 
+    # Clear marks 1-10
+    bindsym Control+1 unmark mark1
+    bindsym Control+2 unmark mark2
+    bindsym Control+3 unmark mark3
+    bindsym Control+4 unmark mark4
+    bindsym Control+5 unmark mark5
+    bindsym Control+6 unmark mark6
+    bindsym Control+7 unmark mark7
+    bindsym Control+8 unmark mark8
+    bindsym Control+9 unmark mark9
+    bindsym Control+0 unmark mark0
+
+    # Exit to the default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
 }
-
-bindsym $mod+m mode "focused"
+bindsym $mod+m mode "$mode_focus"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
