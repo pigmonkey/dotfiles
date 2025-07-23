@@ -111,6 +111,10 @@ super + XF86Explorer
 super + v
     $HOME/library/src/vim-anywhere/bin/run
 
+# Visual window focus
+super + f
+    wmfocus --font PragmataPro:72 --bgcolorcurrent "#83a598" --textcolorcurrent "#282828" --bgcolor "#282828" --textcolor "#d5c4a1" --halign center --valign center
+
 
 #########
 # Mouse #
