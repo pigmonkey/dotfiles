@@ -94,6 +94,8 @@ XF86MonBrightnessDown
 # Take a screenshot
 Print
     flameshot full -p ~/www
+super + control + s
+    flameshot full -p ~/www
 super + s
     flameshot gui
 super + shift + s
