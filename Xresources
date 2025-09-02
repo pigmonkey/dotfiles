@@ -1,5 +1,5 @@
 ! font settings
-Xft.dpi:        96
+Xft.dpi:        120
 Xft.antialias:  true
 Xft.hinting:    true
 Xft.rgba:       rgb

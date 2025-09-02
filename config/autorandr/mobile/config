@@ -16,12 +16,10 @@ output DP-8
 off
 output eDP-1
 crtc 0
-filter bilinear
 mode 2880x1920
 pos 0x0
 primary
 rate 120.00
-transform 0.750000,0.000000,0.000000,0.000000,0.750000,0.000000,0.000000,0.000000,1.000000
 x-prop-colorspace Default
 x-prop-max_bpc 16
 x-prop-non_desktop 0

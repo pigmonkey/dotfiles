@@ -13,13 +13,10 @@ off
 output DP-8
 off
 output eDP-1
-crtc 0
-filter bilinear
+crtc 1
 mode 2880x1920
 pos 0x0
-primary
 rate 120.00
-transform 0.750000,0.000000,0.000000,0.000000,0.750000,0.000000,0.000000,0.000000,1.000000
 x-prop-colorspace Default
 x-prop-max_bpc 16
 x-prop-non_desktop 0
@@ -28,10 +25,12 @@ x-prop-underscan off
 x-prop-underscan_hborder 0
 x-prop-underscan_vborder 0
 output DP-7
-crtc 1
-mode 2560x1440
+crtc 0
+mode 3840x2160
 pos 2880x0
-rate 143.97
+primary
+rate 60.00
+x-prop-broadcast_rgb Automatic
 x-prop-colorspace Default
 x-prop-max_bpc 16
 x-prop-non_desktop 0
