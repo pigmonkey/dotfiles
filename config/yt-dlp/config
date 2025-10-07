@@ -1,6 +1,5 @@
 --add-metadata
 --xattrs
---xattr-set-filesize
 --prefer-free-formats
 --geo-bypass
 --downloader aria2c
