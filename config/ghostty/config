@@ -4,6 +4,7 @@ theme = GruvboxDark
 font-family  = PragmataPro Liga
 font-feature = calt
 font-feature = ss13
+font-feature = ss15
 font-feature = ss18
 
 bold-is-bright = true
