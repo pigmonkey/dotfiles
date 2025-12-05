@@ -16,3 +16,5 @@ convert:
     format: mp3
     copy_album_art: yes
     embed: yes
+lyrics:
+    sources: [lrclib, genius, tekstowo]
