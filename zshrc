@@ -137,8 +137,7 @@ compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
 #########
 
 BASE16_SHELL="$HOME/library/src/base16-shell"
-BASE16_ALACRITTY="$HOME/library/src/base16-alacritty"
-BASE16_KITTY="$HOME/library/src/base16-kitty"
+BASE16_TERMINAL="$HOME/library/src/tinted-terminal"
 BASE16_I3="$HOME/library/src/base16-i3"
 BASE16_XRESOURCES="$HOME/library/src/base16-xresources"
 BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
@@ -162,9 +161,9 @@ theme() {
     # set shell
     _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
     # set alacritty
-    cp "$BASE16_ALACRITTY/colors/base16-$theme.toml" ~/.config/alacritty/colors.toml
+    cp "$BASE16_TERMINAL/themes/alacritty/base16-$theme.toml" ~/.config/alacritty/colors.toml
     # set kitty
-    cp "$BASE16_KITTY/colors/base16-$theme.conf" ~/.config/kitty/colors.conf
+    cp "$BASE16_TERMINAL/themes/kitty/base16-$theme.conf" ~/.config/kitty/colors.conf
     pkill -USR1 -f /usr/bin/kitty
     # set i3
     i3config="$HOME/projects/dotfiles/config/i3/config"
