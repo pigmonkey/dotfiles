@@ -30,8 +30,9 @@ URxvt.url-select.launcher:  xdg-open
 URxvt.url-select.underline: true
 
 ! colors
-! Base16 Gruvbox dark, medium
-! Scheme: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+! base16 Gruvbox dark, medium
+! Scheme author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+! Template author: Tinted Theming (https://github.com/tinted-theming)
 
 #define base00 #282828
 #define base01 #3c3836
@@ -68,10 +69,19 @@ URxvt.url-select.underline: true
 *color7:       base05
 
 *color8:       base03
-*color9:       base09
-*color10:      base01
-*color11:      base02
-*color12:      base04
-*color13:      base06
-*color14:      base0F
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
 *color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
