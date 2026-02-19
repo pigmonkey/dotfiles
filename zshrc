@@ -136,10 +136,10 @@ compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
 # Color #
 #########
 
-BASE16_SHELL="$HOME/library/src/base16-shell"
+BASE16_SHELL="$HOME/library/src/tinted-shell"
 BASE16_TERMINAL="$HOME/library/src/tinted-terminal"
 BASE16_I3="$HOME/library/src/base16-i3"
-BASE16_XRESOURCES="$HOME/library/src/base16-xresources"
+BASE16_XRESOURCES="$HOME/library/src/tinted-xresources"
 BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
 BASE16_ZATHURA="$HOME/library/src/base16-zathura"
 BASE16_ROFI="$HOME/library/src/base16-rofi.pschyska"
@@ -159,7 +159,7 @@ theme() {
     fi
     echo "$theme"
     # set shell
-    _base16 "$BASE16_SHELL"/scripts/base16-"$theme".sh "$theme"
+    sh "$BASE16_SHELL"/scripts/base16-"$theme".sh
     # set alacritty
     cp "$BASE16_TERMINAL/themes/alacritty/base16-$theme.toml" ~/.config/alacritty/colors.toml
     # set kitty
