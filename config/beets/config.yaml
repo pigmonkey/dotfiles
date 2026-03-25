@@ -9,6 +9,8 @@ lastgenre:
     canonical: yes
     count: 3
     prefer_specific: yes
+    force: yes
+    cleanup_existing: yes
 chroma:
     auto: yes
 convert:
