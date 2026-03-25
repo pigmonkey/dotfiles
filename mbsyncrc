@@ -56,12 +56,6 @@ Channel tad-drafts
     Create Both
     SyncState *
 
-Channel tad-sent
-    Far ":tad-remote:[Gmail]/Sent Mail"
-    Near ":tad-local:sent"
-    Create Both
-    SyncState *
-
 Channel tad-flagged
     Far ":tad-remote:[Gmail]/Starred"
     Near ":tad-local:flagged"
