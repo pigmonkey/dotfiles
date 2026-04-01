@@ -156,3 +156,7 @@ recordmywindow () {
 cheat() {
     curl --location --silent "cheat.sh/$1?style=default" | ${PAGER:-less};
 }
+
+atree() {
+  tree -C "$@" | sed 's/ ->.*$//'
+}
