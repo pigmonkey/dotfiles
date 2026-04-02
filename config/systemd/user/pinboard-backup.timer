@@ -1,9 +1,0 @@
-[Unit]
-Description=Dump Pinboard bookmarks timer
-
-[Timer]
-Unit=pinboard-backup.service
-OnCalendar=hourly
-
-[Install]
-WantedBy=timers.target
