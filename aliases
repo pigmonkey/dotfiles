@@ -128,6 +128,10 @@ alias ccc='claude --continue'
 alias ccd='claude --dangerously-skip-permissions'
 alias ccr='claude --resume'
 
+alias mig-a="MIGRANT_DIR=$HOME/projects/migrant/arch migrant.sh"
+alias mig-d="MIGRANT_DIR=$HOME/projects/migrant/debian migrant.sh"
+alias mig-u="MIGRANT_DIR=$HOME/projects/migrant/ubuntu migrant.sh"
+
 
 ########
 # Misc #
@@ -140,7 +144,6 @@ alias bc='bc -lq'
 alias utc='env TZ="UTC" date'
 alias zt='zulip-term -c ~/.config/zuliprc'
 alias ledger-balance='ledger balance assets and not assets:invest liabilities'
-alias cm="MIGRANT_DIR=$HOME/projects/migrant/claude migrant.sh"
 
 iowaiting() {
     watch -n 1 "(ps aux | awk '\$8 ~ /D/  { print \$0 }')"
