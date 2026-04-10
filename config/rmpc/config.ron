@@ -64,7 +64,7 @@
             "5":          SwitchToTab("Directories"),
             "6":          SwitchToTab("Playlists"),
             "7":          SwitchToTab("Search"),
-            "<C-u>":      Update,
+            "u":          Update,
             "<C-U>":      Rescan,
             "R":          AddRandom,
         },
