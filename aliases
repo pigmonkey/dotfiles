@@ -84,6 +84,7 @@ alias tm='task modify'
 alias to='taskopen'
 alias ti='task add due:tomorrow tag:inbox'
 alias tn='taskopen -a'
+alias tt='taskwarrior-tui'
 
 
 ##########
