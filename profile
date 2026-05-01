@@ -61,9 +61,6 @@ export WORKON_HOME="$HOME/.virtualenvs"
 # Set the default project directory for virtualenvwrapper.
 export PROJECT_HOME="$HOME/projects"
 
-# Load virtualenvwrapper (lazy).
-source /usr/bin/virtualenvwrapper_lazy.sh
-
 # Pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
     export PYENV_ROOT="$HOME/.pyenv"
