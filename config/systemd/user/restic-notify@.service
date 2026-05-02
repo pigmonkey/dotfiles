@@ -1,0 +1,6 @@
+[Unit]
+Description=Restic failure notification (%i)
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'notify-send -u critical "Restic failed" "${TRIGGER_UNIT}\nSee: journalctl --user -u \"${TRIGGER_UNIT}\""'

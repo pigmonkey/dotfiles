@@ -1,0 +1,12 @@
+[Unit]
+Description=Restic Maintenance Timer (sftp)
+PartOf=restic.target
+
+[Timer]
+Unit=restic-maintenance@sftp.service
+OnCalendar=daily
+RandomizedDelaySec=15min
+Persistent=True
+
+[Install]
+WantedBy=restic.target

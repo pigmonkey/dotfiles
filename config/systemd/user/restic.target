@@ -1,0 +1,5 @@
+[Unit]
+Description=Restic Backup, Maintenance and Check
+
+[Install]
+WantedBy=timers.target

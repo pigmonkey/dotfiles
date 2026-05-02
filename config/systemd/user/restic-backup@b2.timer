@@ -1,0 +1,12 @@
+[Unit]
+Description=Restic Backup Timer (b2)
+PartOf=restic.target
+
+[Timer]
+Unit=restic-backup@b2.service
+OnCalendar=daily
+RandomizedDelaySec=15min
+Persistent=True
+
+[Install]
+WantedBy=restic.target

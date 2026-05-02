@@ -99,6 +99,13 @@ export ACCESSPASSDIR=~/projects/tad/access
 export FINPASSDIR=~/library/finance
 
 #
+# Restic
+#
+
+export RESTIC_REPOSITORY='sftp:restic:private/restic/nous'
+export RESTIC_PASSWORD_FILE="$HOME/.keys/restic"
+
+#
 # Misc
 #
 

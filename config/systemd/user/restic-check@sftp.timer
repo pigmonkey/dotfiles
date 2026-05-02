@@ -1,0 +1,12 @@
+[Unit]
+Description=Restic Repository Check Timer (sftp)
+PartOf=restic.target
+
+[Timer]
+Unit=restic-check@sftp.service
+OnCalendar=*-*-1/3
+RandomizedDelaySec=15min
+Persistent=True
+
+[Install]
+WantedBy=restic.target

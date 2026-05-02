@@ -1,0 +1,12 @@
+[Unit]
+Description=Restic Backup Timer (sftp)
+PartOf=restic.target
+
+[Timer]
+Unit=restic-backup@sftp.service
+OnCalendar=hourly
+RandomizedDelaySec=5min
+Persistent=True
+
+[Install]
+WantedBy=restic.target

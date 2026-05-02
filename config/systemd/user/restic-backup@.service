@@ -1,0 +1,16 @@
+[Unit]
+Description=Restic Backup (%i)
+OnFailure=restic-notify@%p-%i.service
+StartLimitBurst=5
+StartLimitIntervalSec=1h
+PartOf=restic.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/resticwrapper.sh %i backup --no-scan
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+Restart=no
+RestartForceExitStatus=11
+RestartSec=10min

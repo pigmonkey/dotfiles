@@ -1,0 +1,16 @@
+[Unit]
+Description=Restic Repository Check (%i)
+OnFailure=restic-notify@%p-%i.service
+StartLimitBurst=3
+StartLimitIntervalSec=6h
+PartOf=restic.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/resticwrapper.sh %i check
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+Restart=no
+RestartForceExitStatus=11
+RestartSec=30min

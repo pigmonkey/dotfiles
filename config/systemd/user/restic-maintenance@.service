@@ -1,0 +1,16 @@
+[Unit]
+Description=Restic Maintenance (%i)
+OnFailure=restic-notify@%p-%i.service
+StartLimitBurst=3
+StartLimitIntervalSec=3h
+PartOf=restic.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/resticwrapper.sh %i maintain
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+Restart=no
+RestartForceExitStatus=11
+RestartSec=15min
