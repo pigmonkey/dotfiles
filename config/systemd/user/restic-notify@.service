@@ -3,4 +3,5 @@ Description=Restic failure notification (%i)
 
 [Service]
 Type=oneshot
+ExecCondition=/bin/sh -c 'test "$(systemctl --user show -p ActiveState --value %i)" = failed'
 ExecStart=notify-send -u critical "Restic failed" "%i\nSee: journalctl --user -u %i"
