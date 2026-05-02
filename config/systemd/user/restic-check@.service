@@ -1,6 +1,6 @@
 [Unit]
 Description=Restic Repository Check (%i)
-OnFailure=restic-notify@%p-%i.service
+OnFailure=restic-notify@%p@%i.service
 StartLimitBurst=3
 StartLimitIntervalSec=6h
 PartOf=restic.target

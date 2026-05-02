@@ -1,6 +1,6 @@
 [Unit]
 Description=Restic Backup (%i)
-OnFailure=restic-notify@%p-%i.service
+OnFailure=restic-notify@%p@%i.service
 StartLimitBurst=5
 StartLimitIntervalSec=1h
 PartOf=restic.target
