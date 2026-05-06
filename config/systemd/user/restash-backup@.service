@@ -1,0 +1,16 @@
+[Unit]
+Description=Restash Backup (%i)
+OnFailure=restash-notify@%p@%i.service
+StartLimitBurst=5
+StartLimitIntervalSec=1h
+PartOf=restash.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -l -c 'exec restash %i backup --no-scan'
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+Restart=no
+RestartForceExitStatus=11 75
+RestartSec=10min

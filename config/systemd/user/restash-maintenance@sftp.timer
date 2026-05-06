@@ -1,0 +1,12 @@
+[Unit]
+Description=Restash Maintenance Timer (sftp)
+PartOf=restash.target
+
+[Timer]
+Unit=restash-maintenance@sftp.service
+OnCalendar=daily
+RandomizedDelaySec=15min
+Persistent=True
+
+[Install]
+WantedBy=restash.target

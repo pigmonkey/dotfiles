@@ -1,0 +1,5 @@
+[Unit]
+Description=Restash Backup, Maintenance and Check
+
+[Install]
+WantedBy=timers.target

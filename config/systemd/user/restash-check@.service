@@ -1,0 +1,16 @@
+[Unit]
+Description=Restash Repository Check (%i)
+OnFailure=restash-notify@%p@%i.service
+StartLimitBurst=3
+StartLimitIntervalSec=6h
+PartOf=restash.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -l -c 'exec restash %i check'
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+Restart=no
+RestartForceExitStatus=11 75
+RestartSec=30min

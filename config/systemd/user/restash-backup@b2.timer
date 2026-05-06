@@ -1,0 +1,12 @@
+[Unit]
+Description=Restash Backup Timer (b2)
+PartOf=restash.target
+
+[Timer]
+Unit=restash-backup@b2.service
+OnCalendar=daily
+RandomizedDelaySec=15min
+Persistent=True
+
+[Install]
+WantedBy=restash.target

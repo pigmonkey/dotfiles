@@ -1,0 +1,16 @@
+[Unit]
+Description=Restash Maintenance (%i)
+OnFailure=restash-notify@%p@%i.service
+StartLimitBurst=3
+StartLimitIntervalSec=3h
+PartOf=restash.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -l -c 'exec restash %i maintain'
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
+Restart=no
+RestartForceExitStatus=11 75
+RestartSec=15min
