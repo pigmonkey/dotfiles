@@ -5,7 +5,7 @@ PartOf=restash.target
 [Timer]
 Unit=restash-maintenance@b2.service
 OnCalendar=daily
-RandomizedDelaySec=15min
+RandomizedDelaySec=1h
 Persistent=True
 
 [Install]
