@@ -3,5 +3,4 @@ Description=Restash failure notification (%i)
 
 [Service]
 Type=oneshot
-ExecCondition=/bin/sh -c 'test "$(systemctl --user show -p ActiveState --value %i)" = failed'
 ExecStart=/bin/sh -l -c 'exec restash-notify %i'
