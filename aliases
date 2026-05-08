@@ -129,9 +129,9 @@ alias ccc='claude --continue'
 alias ccd='claude --dangerously-skip-permissions'
 alias ccr='claude --resume'
 
-alias mig-a="MIGRANT_DIR=$HOME/projects/migrant/arch migrant.sh"
-alias mig-d="MIGRANT_DIR=$HOME/projects/migrant/debian migrant.sh"
-alias mig-u="MIGRANT_DIR=$HOME/projects/migrant/ubuntu migrant.sh"
+alias mig-a="MIGRANT_DIR=$HOME/projects/migrant/arch migrant"
+alias mig-d="MIGRANT_DIR=$HOME/projects/migrant/debian migrant"
+alias mig-u="MIGRANT_DIR=$HOME/projects/migrant/ubuntu migrant"
 
 
 ########
