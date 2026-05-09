@@ -2,6 +2,7 @@
 Description=Restash Maintenance (%i)
 OnFailure=restash-notify@%p@%i.service
 PartOf=restash.target
+ConditionPathExists=%E/restash/restash.conf
 
 [Service]
 Type=oneshot
