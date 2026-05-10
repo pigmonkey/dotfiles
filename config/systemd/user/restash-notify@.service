@@ -1,6 +1,0 @@
-[Unit]
-Description=Restash failure notification (%i)
-
-[Service]
-Type=oneshot
-ExecStart=/bin/sh -l -c 'exec restash-notify %i'
