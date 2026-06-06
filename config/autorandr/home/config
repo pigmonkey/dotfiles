@@ -29,7 +29,7 @@ crtc 0
 mode 3840x2160
 pos 2880x0
 primary
-rate 60.00
+rate 144.00
 x-prop-broadcast_rgb Automatic
 x-prop-colorspace Default
 x-prop-max_bpc 16
