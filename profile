@@ -52,23 +52,6 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 #
-# Python
-#
-
-# Set the default environment directory for virtualenvwrapper.
-export WORKON_HOME="$HOME/.virtualenvs"
-
-# Set the default project directory for virtualenvwrapper.
-export PROJECT_HOME="$HOME/projects"
-
-# Pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
-
-#
 # Notes
 #
 
