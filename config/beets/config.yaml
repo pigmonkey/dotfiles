@@ -15,3 +15,5 @@ convert:
     format: mp3
     copy_album_art: yes
     embed: yes
+lyrics:
+    auto: no
