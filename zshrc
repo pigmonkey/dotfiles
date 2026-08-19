@@ -69,6 +69,9 @@ export LS_COLORS="$(vivid generate gruvbox-dark)"
 # Reverse menu with shift-tab.
 bindkey '^[[Z' reverse-menu-complete
 
+# Enable direnv
+eval "$(direnv hook zsh)"
+
 
 ######
 # Vi #
