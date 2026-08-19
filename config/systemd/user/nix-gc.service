@@ -1,0 +1,6 @@
+[Unit]
+Description=Nix garbage collection
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nix-collect-garbage -d
