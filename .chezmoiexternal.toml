@@ -1,0 +1,7 @@
+[".tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm.git"
+
+[".config/mpv/scripts/mpv-reload"]
+    type = "git-repo"
+    url = "https://github.com/4e6/mpv-reload.git"

@@ -1,6 +1,0 @@
-[submodule "config/mpv/scripts/mpv-reload"]
-	path = dot_config/mpv/scripts/mpv-reload
-	url = https://github.com/4e6/mpv-reload
-[submodule "tmux/plugins/tpm"]
-	path = dot_tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
