@@ -1,6 +1,0 @@
-#!/bin/sh
-# zsh_plugins.txt hash: {{ include "dot_zsh_plugins.txt" | sha256sum }}
-
-if hash antibody 2> /dev/null; then
-    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-fi
