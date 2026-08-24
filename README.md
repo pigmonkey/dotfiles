@@ -1,12 +1,26 @@
-dotfiles
-========
+# dotfiles
 
 User preference and configuration files that I use to build my working environment.
 
-This repository includes [git](http://git-scm.com/) submodules. When cloning to a new machine, the submodules need to be initialized.
+This repository is managed with [chezmoi](https://www.chezmoi.io/).
 
-    $ git submodule update --init
+## Setup
 
-Every submodule can be updated to the latest available version at once:
+Install chezmoi, then point it at a checkout of this repository (e.g. by
+setting `sourceDir` in `~/.config/chezmoi/chezmoi.toml`) and apply it:
 
-    $ git submodule foreach git pull origin master
+```
+$ chezmoi apply
+```
+
+External dependencies are fetched automatically by chezmoi via `.chezmoiexternal.toml`.
+
+## tmux plugins
+
+chezmoi cannot reliably run tpm's plugin installer automatically as part of
+`apply` (tpm may not be fetched yet when the script would run), so install
+tmux plugins manually once after the first apply on a new machine:
+
+```
+$ ~/.tmux/plugins/tpm/bin/install_plugins
+```
