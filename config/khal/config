@@ -1,25 +1,25 @@
 [calendars]
-    [[Work]]
+    [[T]]
     path = ~/library/calendars/91572a29-41df-4c94-b296-38e9c5494116
     color = light blue
 
-    [[Work: IT]]
-    path = ~/library/calendars/832472f1-cc4a-4b47-8810-0b8c1f04f6e6
-    color = dark blue
-    readonly = True
-
-    [[Work: Staff]]
+    [[T:S]]
     path = ~/library/calendars/de342c24-2a78-43a2-b6d5-7dfb66f21afc
     color = dark blue
     readonly = True
 
+    [[W]]
+    path = ~/library/calendars/c66496bb-1ea3-4fc2-80c6-e89b8d55c792
+    color = light magenta
+    readonly = True
+
+    [[C]]
+    path = ~/library/calendars/a674f451-bfc2-4035-87fd-4338caa2c68d
+    color = yellow
+
     [[Personal]]
     path = ~/library/calendars/9b403768-1a13-4c2c-a4b9-798cddf7aba7
     color = dark red
-
-    [[SF Radio]]
-    path = ~/library/calendars/30b85b78-2473-406a-a736-1095623753df
-    color = dark green
 
     [[Holidays]]
     path = ~/library/calendars/e5ce1815-2841-4a9f-a9c1-3c2026548ebf
