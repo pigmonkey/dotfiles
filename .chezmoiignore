@@ -1,0 +1,13 @@
+{{- if eq .chezmoi.hostname "auspex" }}
+*
+!.vimrc
+!.vim/**
+!.zshrc
+!.zprofile
+!.profile
+!.aliases
+!.zsh_plugins.txt
+!.config
+.config/*
+!.config/tig
+{{- end }}
