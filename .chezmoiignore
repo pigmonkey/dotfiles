@@ -1,3 +1,5 @@
+README.md
+
 {{- if eq .chezmoi.hostname "auspex" }}
 *
 !.vimrc
