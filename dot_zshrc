@@ -64,7 +64,9 @@ zstyle ':completion:*' menu select
 PURE_GIT_PULL=0
 
 # Set LS_COLORS
-export LS_COLORS="$(vivid generate gruvbox-dark)"
+if hash vivid 2> /dev/null; then
+    export LS_COLORS="$(vivid generate gruvbox-dark)"
+fi
 
 # Reverse menu with shift-tab.
 bindkey '^[[Z' reverse-menu-complete
