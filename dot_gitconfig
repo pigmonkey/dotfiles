@@ -2,7 +2,7 @@
 	email = pm@pig-monkey.com
 	name = Pig Monkey
 [core]
-	excludesfile = /home/pigmonkey/.gitignore
+	excludesfile = ~/.gitignore
 [push]
 	default = simple
 [pull]
