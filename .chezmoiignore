@@ -11,4 +11,5 @@
 !.config
 .config/*
 !.config/tig
+!.config/starship.toml
 {{- end }}
