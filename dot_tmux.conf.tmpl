@@ -36,11 +36,17 @@ bind-key ESCAPE copy-mode
 bind-key -T copy-mode-vi 'v' send -X begin-selection
 bind-key -T copy-mode-vi 'y' send -X copy-selection
 
+{{- if eq .chezmoi.hostname "auspex" }}
+# Clipboard over Mosh
+set -g set-clipboard on
+set -ag terminal-overrides ',*:Ms=\E]52;c%p1%.0s;%p2%s\007'
+{{- else }}
 # Copy to system clipboard
 bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel "xclip -selection clipboard"
 
 # Allow nested tmux to add a paste buffer.
 set -s set-clipboard on
+{{- end }}
 
 # Set titles
 set -g set-titles on
@@ -69,6 +75,8 @@ set -g @plugin 'Morantron/tmux-fingers'
 
 # Initialize TPM
 run '~/.tmux/plugins/tpm/tpm'
+{{- if ne .chezmoi.hostname "auspex" }}
 
 # Colors
 source-file $HOME/library/src/base16-tmux/colors/base16-gruvbox-dark-medium.conf
+{{- end }}

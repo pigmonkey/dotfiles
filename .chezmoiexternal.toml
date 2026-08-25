@@ -1,8 +1,8 @@
-{{- if ne .chezmoi.hostname "auspex" }}
 [".tmux/plugins/tpm"]
     type = "git-repo"
     url = "https://github.com/tmux-plugins/tpm.git"
 
+{{- if ne .chezmoi.hostname "auspex" }}
 [".config/mpv/scripts/mpv-reload"]
     type = "git-repo"
     url = "https://github.com/4e6/mpv-reload.git"
