@@ -169,7 +169,7 @@ theme() {
     cp "$BASE16_TERMINAL/themes/kitty/base16-$theme.conf" ~/.config/kitty/colors.conf
     pkill -USR1 -f /usr/bin/kitty
     # set i3
-    i3config="$HOME/projects/dotfiles/config/i3/config"
+    i3config="$HOME/.config/i3/config"
     sed -i '1,/## Colors/!d' "$i3config"
     cat "$BASE16_I3"/colors/base16-"$theme".config >> "$i3config"
     i3-msg -q reload
