@@ -2,4 +2,5 @@ set log-options = --show-signature
 set diff-options = --show-signature
 set main-view-date-local = yes
 
+source ~/.config/tig/gruvbox.tigrc
 source ~/.config/tig/vim.tigrc
