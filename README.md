@@ -15,6 +15,12 @@ $ chezmoi apply
 
 External dependencies are fetched automatically by chezmoi via `.chezmoiexternal.toml`.
 
+## Updating externals
+
+```
+$ chezmoi apply --refresh-externals=always
+```
+
 ## tmux plugins
 
 chezmoi cannot reliably run tpm's plugin installer automatically as part of
