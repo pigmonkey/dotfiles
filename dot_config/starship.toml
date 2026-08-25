@@ -11,6 +11,9 @@ $line_break\
 $python\
 $character"""
 
+[hostname]
+ssh_symbol = " "
+
 [directory]
 style = "blue"
 truncate_to_repo = false
