@@ -84,8 +84,8 @@ color diff-oldmode                default default
 color diff-newmode                default default
 color diff-newfmode               default default
 color diff-delfmode               default default
-color diff-rename-from            214     default
-color diff-rename-to              214     default
+color "rename from "              214     default
+color "rename to "                214     default
 color diff-similarity             214     default
 color diff-no-newline             241     default
 
