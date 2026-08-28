@@ -91,11 +91,8 @@ bindkey -M vicmd 'j' history-substring-search-down
 # FZF #
 #######
 
-if [ -r /usr/share/fzf/key-bindings.zsh ]; then
-    source /usr/share/fzf/key-bindings.zsh
-fi
-if [ -r /usr/share/fzf/completion.zsh ]; then
-    source /usr/share/fzf/completion.zsh
+if command -v fzf >/dev/null 2>&1; then
+    source <(fzf --zsh)
 fi
 
 rga-fzf() {
