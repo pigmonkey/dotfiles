@@ -1,0 +1,11 @@
+.config/tig/gruvbox.tigrc
+.config/timewarrior/gruvbox_dark.theme
+.taskwarrior/zenburn-256.theme
+.config/rofi/nord.rasi
+.config/qutebrowser/base16-gruvbox-dark-hard.config.py
+.config/qutebrowser/solarized.py
+
+{{- if eq .chezmoi.hostname "auspex" }}
+.config/tig/theme.tigrc
+.config/tig/themes
+{{- end }}

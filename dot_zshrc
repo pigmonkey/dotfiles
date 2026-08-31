@@ -63,11 +63,6 @@ zstyle ':completion:*' menu select
 # Prevent Pure from auto-pulling git repos.
 PURE_GIT_PULL=0
 
-# Set LS_COLORS
-if hash vivid 2> /dev/null; then
-    export LS_COLORS="$(vivid generate gruvbox-dark)"
-fi
-
 # Reverse menu with shift-tab.
 bindkey '^[[Z' reverse-menu-complete
 
@@ -138,57 +133,63 @@ compdef -e 'PASSWORD_STORE_DIR=$FINPASSDIR _pass' fin
 # Color #
 #########
 
-BASE16_SHELL="$HOME/library/src/tinted-shell"
-BASE16_TERMINAL="$HOME/library/src/tinted-terminal"
-BASE16_I3="$HOME/library/src/base16-i3"
-BASE16_XRESOURCES="$HOME/library/src/tinted-xresources"
-BASE16_QUTEBROWSER="$HOME/library/src/base16-qutebrowser"
-BASE16_ZATHURA="$HOME/library/src/base16-zathura"
-BASE16_ROFI="$HOME/library/src/base16-rofi.pschyska"
+# Use ansi for bat on auspex for a simple 16-color set, rendered in the local
+# terminal's palette.
+if [[ "$HOST" == auspex ]]; then
+    export BAT_THEME="ansi"
+else
+    export BAT_THEME_DARK="gruvbox-dark"
+    export BAT_THEME_LIGHT="gruvbox-light"
+fi
 
-[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && source "$BASE16_SHELL/profile_helper.sh"
+if command -v tinty > /dev/null 2>&1; then
+    # tinty's hooks run in a subprocess, so they cannot set variables here.
+    # Everything else it writes is a file; only BASE16_THEME, FZF_DEFAULT_OPTS
+    # and LS_COLORS need pulling in.
+    #
+    # Done from precmd rather than a wrapper around tinty, so a shell that was
+    # already open when the theme changed picks it up at its next prompt. A
+    # wrapper only ever fixes the shell it was run from.
+    _tinty_sync_shell() {
+        local data_dir="${XDG_DATA_HOME:-$HOME/.local/share}/tinted-theming/tinty"
+        local marker="$data_dir/current_scheme"
+        [[ -f "$marker" ]] || return 0
 
-theme() {
-    if [ -z "$1" ]; then
-        theme="gruvbox-dark-medium"
-        theme_simple="gruvbox-dark"
-    elif [[ "$1" == "day" ]]; then
-        theme="gruvbox-light-soft"
-        theme_simple="gruvbox-light"
-    else
-        theme="$1"
-        theme_simple="$1"
-    fi
-    echo "$theme"
-    # set shell
-    sh "$BASE16_SHELL"/scripts/base16-"$theme".sh
-    # set alacritty
-    cp "$BASE16_TERMINAL/themes/alacritty/base16-$theme.toml" ~/.config/alacritty/colors.toml
-    # set kitty
-    cp "$BASE16_TERMINAL/themes/kitty/base16-$theme.conf" ~/.config/kitty/colors.conf
-    pkill -USR1 -f /usr/bin/kitty
-    # set i3
-    i3config="$HOME/.config/i3/config"
-    sed -i '1,/## Colors/!d' "$i3config"
-    cat "$BASE16_I3"/colors/base16-"$theme".config >> "$i3config"
-    i3-msg -q reload
-    # set qutebrowser
-    cp "$BASE16_QUTEBROWSER/themes/minimal/base16-$theme.config.py" ~/.config/qutebrowser/theme.config.py
-    # set rofi
-    cp "$BASE16_ROFI/themes/base16-$theme.rasi" ~/.config/rofi/theme.rasi
-    # set xresources
-    xresources="$HOME/projects/dotfiles/Xresources"
-    sed -i '1,/! colors/!d' "$xresources"
-    cat "$BASE16_XRESOURCES"/xresources/base16-"$theme".Xresources >> "$xresources"
-    xrdb -load ~/.Xresources
-    # set zathura
-    zathurarc="$HOME/projects/dotfiles/config/zathura/zathurarc"
-    sed -i '1,/## Colors/!d' "$zathurarc"
-    cat "$BASE16_ZATHURA"/build_schemes/colors/base16-"$theme".config >> "$zathurarc"
-    # set LS_COLORS
-    export LS_COLORS="$(vivid generate $theme_simple)"
-    # set bat
-    sed -i '/--theme/ s/="[^"][^"]*"/="'"$theme_simple"'"/' $HOME/projects/dotfiles/config/bat/config
-    # set zulip-term
-    sed -i "s/theme=.*/theme=$(echo $theme_simple | tr '-' '_')/" ~/.config/zuliprc
-}
+        local scheme="$(<"$marker")"
+        [[ "$scheme" == "$_TINTY_ACTIVE_SCHEME" ]] && return 0
+        _TINTY_ACTIVE_SCHEME="$scheme"
+
+        # Derived here rather than imported, so no third-party code has to run
+        # in this shell just to set it.
+        export BASE16_THEME="${scheme#*-}"
+
+        # Repaint the terminal's palette. Executed, not sourced: the script
+        # writes its escape sequences straight to $TTY, so only the side effect
+        # is wanted, and running it keeps its helper functions out of this
+        # shell.
+        local palette="$data_dir/shell-scripts-file.sh"
+        if [[ -r "$palette" ]]; then
+            TTY="${TTY:-/dev/tty}" command sh "$palette" > /dev/null 2>&1
+        fi
+
+        # fzf's value does have to land in this shell. Run its file in a
+        # subshell and capture the result rather than sourcing it. That keeps
+        # the same no-foreign-code property, and starting from an empty value
+        # avoids unbounded growth: the generated file appends to whatever
+        # FZF_DEFAULT_OPTS already holds.
+        local fzf_theme="$data_dir/fzf-sh-file.sh"
+        if [[ -r "$fzf_theme" ]]; then
+            export FZF_DEFAULT_OPTS="$(
+                FZF_DEFAULT_OPTS= command sh -c '. "$1"; printf %s "$FZF_DEFAULT_OPTS"' _ "$fzf_theme"
+            )"
+        fi
+
+        if command -v vivid > /dev/null 2>&1 \
+           && [[ -f "$HOME/.config/vivid/themes/tinty.yml" ]]; then
+            export LS_COLORS="$(vivid generate tinty)"
+        fi
+    }
+
+    autoload -Uz add-zsh-hook
+    add-zsh-hook precmd _tinty_sync_shell
+fi

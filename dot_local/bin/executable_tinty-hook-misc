@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Rewrite single colour lines in applications that have no base16 template, no
+# include mechanism, and no environment variable to drive them.
+#
+# btop and i3status are handled here for *live* switching, but their configs
+# are also chezmoi templates that derive the same values from tinty's
+# current_scheme file. Both writers must agree, or chezmoi apply will prompt.
+# bat is deliberately absent: BAT_THEME is exported by the shell instead.
+set -u
+
+hex() {
+    eval "r=\${TINTY_SCHEME_PALETTE_${1}_HEX_R}"
+    eval "g=\${TINTY_SCHEME_PALETTE_${1}_HEX_G}"
+    eval "b=\${TINTY_SCHEME_PALETTE_${1}_HEX_B}"
+    printf '#%s%s%s' "$r" "$g" "$b"
+}
+
+variant="${TINTY_SCHEME_VARIANT}"   # "light" or "dark"
+
+# btop ships stock gruvbox themes for both variants.
+btop_conf="$HOME/.config/btop/btop.conf"
+if [ -f "$btop_conf" ]; then
+    sed -i "s|^color_theme = .*|color_theme = \"/usr/share/btop/themes/gruvbox_${variant}.theme\"|" \
+        "$btop_conf"
+fi
+
+# i3status exposes only these two colours.
+i3status_conf="$HOME/.config/i3status/config"
+if [ -f "$i3status_conf" ]; then
+    sed -i "s|^\( *color_good *= *\).*|\1\"$(hex BASE0B)\"|" "$i3status_conf"
+    sed -i "s|^\( *color_bad *= *\).*|\1\"$(hex BASE08)\"|" "$i3status_conf"
+fi
+
+# vim reads ~/.vimrc_background if it exists (.vimrc:245) and falls back to a
+# hardcoded dark gruvbox otherwise. tinted-shell used to write this file but no
+# longer does, so vim had been pinned to dark in both modes. The colourscheme
+# name matches what fnune/base16-vim ships.
+printf 'colorscheme base16-%s\n' "$TINTY_SCHEME_SLUG" > "$HOME/.vimrc_background"
+
+# zulip-term expects an underscored theme name.
+zuliprc="$HOME/.config/zuliprc"
+if [ -f "$zuliprc" ]; then
+    sed -i "s|^theme=.*|theme=gruvbox_${variant}|" "$zuliprc"
+fi

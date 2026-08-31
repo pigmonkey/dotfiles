@@ -2,5 +2,8 @@ set log-options = --show-signature
 set diff-options = --show-signature
 set main-view-date-local = yes
 
-source ~/.config/tig/gruvbox.tigrc
+{{- if ne .chezmoi.hostname "auspex" }}
+source ~/.config/tig/theme.tigrc
+{{- end }}
+
 source ~/.config/tig/vim.tigrc

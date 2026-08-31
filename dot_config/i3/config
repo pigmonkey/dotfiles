@@ -4,6 +4,24 @@
 #
 set $mod Mod1
 
+# Colors from X resource database, with gruvbox-dark fallback.
+set_from_resource $base00 i3wm.color0  #282828
+set_from_resource $base01 i3wm.color18 #3c3836
+set_from_resource $base02 i3wm.color19 #504945
+set_from_resource $base03 i3wm.color8  #665c54
+set_from_resource $base04 i3wm.color20 #bdae93
+set_from_resource $base05 i3wm.color7  #d5c4a1
+set_from_resource $base06 i3wm.color21 #ebdbb2
+set_from_resource $base07 i3wm.color15 #fbf1c7
+set_from_resource $base08 i3wm.color1  #fb4934
+set_from_resource $base09 i3wm.color16 #fe8019
+set_from_resource $base0A i3wm.color3  #fabd2f
+set_from_resource $base0B i3wm.color2  #b8bb26
+set_from_resource $base0C i3wm.color6  #8ec07c
+set_from_resource $base0D i3wm.color4  #83a598
+set_from_resource $base0E i3wm.color5  #d3869b
+set_from_resource $base0F i3wm.color17 #d65d0e
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 font pango:PragmataPro Liga 12
@@ -257,27 +275,3 @@ hide_edge_borders both
 # Assign MPV to workspace 4 and focus
 assign [class="mpv"] 4
 for_window [class="mpv"] focus
-
-## Colors
-## Base16 Gruvbox dark, medium
-# Scheme author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-# Template author: Tinted Theming (https://github.com/tinted-theming)
-#
-# You can use these variables anywhere in the i3 configuration file.
-
-set $base00 #282828
-set $base01 #3c3836
-set $base02 #504945
-set $base03 #665c54
-set $base04 #bdae93
-set $base05 #d5c4a1
-set $base06 #ebdbb2
-set $base07 #fbf1c7
-set $base08 #fb4934
-set $base09 #fe8019
-set $base0A #fabd2f
-set $base0B #b8bb26
-set $base0C #8ec07c
-set $base0D #83a598
-set $base0E #d3869b
-set $base0F #d65d0e

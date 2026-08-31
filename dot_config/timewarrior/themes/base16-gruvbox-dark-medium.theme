@@ -1,0 +1,43 @@
+###############################################################################
+#
+# Gruvbox Dark theme for Timewarrior.
+#
+# Colors approximate the retro, warm-toned "Gruvbox Dark" palette
+# (https://github.com/morhetz/gruvbox) using the same xterm-256 color
+# indices its terminal color schemes use, so it looks right even in
+# terminals that don't remap the base 16 ANSI colors.
+#
+# https://opensource.org/license/mit
+#
+###############################################################################
+
+define theme:
+  description = "gruvbox_dark.theme: A theme matching Gruvbox Dark."
+  colors:
+    # General UI color.
+    exclusion = "color245 on color237"
+    today     = "color214"
+    holiday   = "color243"
+    label     = "color243"
+    ids       = "color175"
+    debug     = "color109"
+
+  # Rotating Color Palette for tags. The leading zeroes allow the order to be
+  # preserved.
+  palette:
+    color01 = "color235 on color167"
+    color02 = "color235 on color142"
+    color03 = "color235 on color214"
+    color04 = "color235 on color109"
+    color05 = "color235 on color175"
+    color06 = "color235 on color108"
+    color07 = "color235 on color208"
+    color08 = "color223 on color124"
+    color09 = "color223 on color106"
+    color10 = "color223 on color172"
+    color11 = "color223 on color66"
+    color12 = "color223 on color132"
+    color13 = "color223 on color72"
+    color14 = "color223 on color166"
+    color15 = "color214 on color239"
+    color16 = "color109 on color241"

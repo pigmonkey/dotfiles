@@ -2,7 +2,10 @@
 
 #* Name of a btop++/bpytop/bashtop formatted ".theme" file, "Default" and "TTY" for builtin themes.
 #* Themes should be placed in "../share/btop/themes" relative to binary or "$HOME/.config/btop/themes"
-color_theme = "/usr/share/btop/themes/gruvbox_dark.theme"
+{{- $variant := includeTemplate "tinty-variant" . }}
+#* Derived from the scheme tinty currently has applied, so that chezmoi
+#* apply renders whatever is active instead of reverting it to dark.
+color_theme = "/usr/share/btop/themes/gruvbox_{{ $variant }}.theme"
 
 #* If the theme set background should be shown, set to False if you want terminal background transparency.
 theme_background = true

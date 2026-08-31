@@ -1,0 +1,79 @@
+###############################################################################
+#
+# Gruvbox Light theme for Taskwarrior.
+#
+# Colors use the xterm-256 indices of the Gruvbox light palette
+# (https://github.com/morhetz/gruvbox) rather than the terminal's ANSI slots,
+# so the theme looks right even in terminals that don't remap the base 16
+# colors. Selected by tinty; see ~/.config/tinted-theming/tinty/config.toml.
+#
+# https://opensource.org/license/mit
+#
+###############################################################################
+
+# General UI
+color.label=color172
+color.label.sort=color172
+color.alternate=on color228
+color.header=color66
+color.footnote=color106
+color.warning=color237 on color214
+color.error=color237 on color167
+color.debug=color132
+
+# Task state
+color.completed=color72
+color.deleted=color248
+color.active=color237 on color109
+color.recurring=color132
+color.scheduled=color106
+color.until=color72
+color.blocked=color244
+color.blocking=color237 on color250
+
+# Projects, priorities, tags
+color.project.none=color244
+color.uda.priority.H=color124
+color.uda.priority.M=color172
+color.uda.priority.L=color66
+color.tag.next=color166
+color.tag.none=color244
+color.tagged=color106
+
+# Due dates
+color.due.today=color124
+color.due=color166
+color.overdue=color237 on color167
+
+# Burndown
+color.burndown.done=on color106
+color.burndown.pending=on color124
+color.burndown.started=on color172
+
+# History
+color.history.add=color229 on color124
+color.history.delete=color229 on color166
+color.history.done=color229 on color106
+
+# Summary
+color.summary.background=on color250
+color.summary.bar=on color106
+
+# Calendar
+color.calendar.due.today=color229 on color124
+color.calendar.due=color237 on color167
+color.calendar.holiday=color229 on color172
+color.calendar.scheduled=color229 on color106
+color.calendar.overdue=color229 on color166
+color.calendar.today=color229 on color66
+color.calendar.weekend=on color223
+color.calendar.weeknumber=color244
+
+# Sync
+color.sync.added=color106
+color.sync.changed=color172
+color.sync.rejected=color124
+
+# Undo
+color.undo.after=color106
+color.undo.before=color124

@@ -1,1 +1,2 @@
---theme="gruvbox-dark"
+--theme-dark="gruvbox-dark"
+--theme-light="gruvbox-light"

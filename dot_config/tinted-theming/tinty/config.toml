@@ -1,0 +1,92 @@
+# Colour scheme management.
+#
+# Hooks MUST use single-quoted TOML literal strings. A basic string containing
+# \$ is rejected by the parser as an invalid escape sequence.
+
+shell = "bash -c '{}'"
+default-scheme = "base16-gruvbox-dark-medium"
+default-cycle-ring = "gruvbox"
+
+hooks = [
+  '"$HOME/.local/bin/tinty-hook-static"',
+  '"$HOME/.local/bin/tinty-hook-ghostty"',
+  '"$HOME/.local/bin/tinty-hook-misc"',
+]
+
+[[rings]]
+name = "gruvbox"
+schemes = ["base16-gruvbox-dark-medium", "base16-gruvbox-light-soft"]
+
+# tinted-shell is tinty's default item, but declaring any [[items]] replaces
+# that default rather than adding to it -- so it has to be listed explicitly.
+# It repaints the terminal's ANSI palette and, importantly, writes
+# ~/.vimrc_background, which .vimrc sources to follow the active scheme.
+[[items]]
+name = "shell"
+path = "https://github.com/tinted-theming/tinted-shell"
+themes-dir = "scripts"
+theme-file-extension = ".sh"
+
+[[items]]
+name = "alacritty"
+path = "https://github.com/tinted-theming/tinted-alacritty"
+themes-dir = "colors"
+hook = 'cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/alacritty/colors.toml"; "$HOME/.local/bin/tinty-hook-alacritty"'
+
+[[items]]
+name = "kitty"
+path = "https://github.com/tinted-theming/tinted-kitty"
+themes-dir = "colors"
+hook = 'cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/kitty/colors.conf"; pkill -USR1 -f /usr/bin/kitty || true'
+
+[[items]]
+name = "xresources"
+path = "https://github.com/tinted-theming/tinted-xresources"
+themes-dir = "xresources"
+hook = 'mkdir -p "$HOME/.config/x"; cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/x/colors.Xresources"; xrdb -merge "$HOME/.Xresources" 2>/dev/null && i3-msg -q reload 2>/dev/null || true'
+
+[[items]]
+name = "rofi"
+path = "https://github.com/tinted-theming/base16-rofi"
+themes-dir = "themes"
+theme-file-extension = ".rasi"
+hook = 'cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/rofi/theme.rasi"'
+
+[[items]]
+name = "qutebrowser"
+path = "https://github.com/tinted-theming/base16-qutebrowser"
+themes-dir = "themes/minimal"
+# Files here are base16-<scheme>.config.py -- a double extension that tinty
+# cannot infer, so it has to be stated.
+theme-file-extension = ".config.py"
+hook = 'cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/qutebrowser/theme.config.py"'
+
+[[items]]
+name = "zathura"
+path = "https://github.com/HaoZeke/base16-zathura"
+themes-dir = "build_schemes/colors"
+hook = 'cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/zathura/colors"'
+
+[[items]]
+name = "dunst"
+path = "https://github.com/tinted-theming/base16-dunst"
+themes-dir = "themes"
+hook = 'mkdir -p "$HOME/.config/dunst/dunstrc.d"; cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/dunst/dunstrc.d/90-colors.conf"; dunstctl reload 2>/dev/null || true'
+
+[[items]]
+name = "tmux"
+path = "https://github.com/tinted-theming/tinted-tmux"
+themes-dir = "colors"
+hook = 'mkdir -p "$HOME/.config/tmux"; cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/tmux/colors.conf"; tmux source-file "$HOME/.tmux.conf" 2>/dev/null || true'
+
+[[items]]
+name = "vivid"
+path = "https://github.com/tinted-theming/base16-vivid"
+themes-dir = "themes"
+hook = 'mkdir -p "$HOME/.config/vivid/themes"; cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/vivid/themes/tinty.yml"'
+
+[[items]]
+name = "fzf"
+path = "https://github.com/tinted-theming/tinted-fzf"
+themes-dir = "sh"
+theme-file-extension = ".sh"

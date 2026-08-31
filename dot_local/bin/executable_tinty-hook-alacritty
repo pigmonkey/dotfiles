@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Append base16's extended palette (indices 16-21) to alacritty's colour file.
+#
+# tinted-alacritty only emits colours 0-15. Anything written against the base16
+# ANSI mapping needs 16-21 as well -- mutt's base16.muttrc uses them for status
+# bars and selections, and i3 reads them out of Xresources. tinted-shell's
+# escape sequences set them at the first shell prompt, but a terminal started
+# without an interactive shell (alacritty -e neomutt) never gets them, so
+# alacritty is made self-sufficient here. kitty's template already does this.
+set -u
+
+hex() {
+    eval "r=\${TINTY_SCHEME_PALETTE_${1}_HEX_R}"
+    eval "g=\${TINTY_SCHEME_PALETTE_${1}_HEX_G}"
+    eval "b=\${TINTY_SCHEME_PALETTE_${1}_HEX_B}"
+    printf '#%s%s%s' "$r" "$g" "$b"
+}
+
+out="$HOME/.config/alacritty/colors.toml"
+[ -f "$out" ] || exit 0
+
+# tinty rewrites this file on every apply, so appending cannot accumulate.
+{
+    printf '\n# Extended base16 palette, appended by tinty-hook-alacritty.\n'
+    for pair in "16 BASE09" "17 BASE0F" "18 BASE01" \
+                "19 BASE02" "20 BASE04" "21 BASE06"; do
+        set -- $pair
+        printf '[[colors.indexed_colors]]\nindex = %s\ncolor = %s\n\n' \
+            "$1" "'$(hex "$2")'"
+    done
+} >> "$out"

@@ -1,5 +1,4 @@
 window-decoration = none
-theme = GruvboxDark
 
 font-family  = PragmataPro Liga
 font-feature = calt
@@ -13,3 +12,5 @@ mouse-hide-while-typing = true
 clipboard-paste-protection = true
 
 keybind = super+shift+r=reload_config
+
+config-file = colors

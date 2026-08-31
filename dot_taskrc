@@ -2,7 +2,7 @@
 data.location=~/.tasks
 
 # Colors
-include ~/.taskwarrior/zenburn-256.theme
+include ~/.taskwarrior/theme.theme
 
 # Weeks start on Monday
 weekstart=Monday

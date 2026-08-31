@@ -1,35 +1,3 @@
-! font settings
-Xft.dpi:        144
-Xft.antialias:  true
-Xft.hinting:    true
-Xft.rgba:       rgb
-Xft.hintstyle:  hintslight
-
-! reclaim ctrl+shift
-URxvt.iso14755: false
-
-! disable the scrollbar
-URxvt.scrollBar: none
-
-! font
-URxvt.font: xft:PragmataProMonoLiga:size=12
-
-! enabled clipboard and selectable URLs
-URxvt.perl-ext-common:  default,clipboard,url-select
-
-! set copy/paste shortcuts
-URxvt.keysym.Control-Shift-C: perl:clipboard:copy
-URxvt.keysym.Control-Shift-V: perl:clipboard:paste
-
-! set a taskbar icon
-URxvt.iconFile:         /usr/share/icons/oxygen/16x16/apps/utilities-terminal.png
-
-! configure selectable URLs
-URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.url-select.launcher:  xdg-open
-URxvt.url-select.underline: true
-
-! colors
 ! base16 Gruvbox dark, medium
 ! Scheme author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 ! Template author: Tinted Theming (https://github.com/tinted-theming)

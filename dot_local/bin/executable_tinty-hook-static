@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Select a hand-written static theme matching the applied tinty scheme.
+#
+# tig, taskwarrior and timewarrior all use absolute xterm-256 colour indices.
+# None of them supports 24-bit colour, and their palettes are richer than the
+# sixteen colours base16 offers, so their themes are written by hand rather
+# than generated. This picks the file matching the applied scheme.
+#
+# A scheme with no matching file leaves the previous theme in place, quietly
+# and deliberately -- only gruvbox dark and light are hand-written.
+set -u
+
+select_theme() {
+    src="$1"
+    dest="$2"
+    [ -f "$src" ] || return 0
+    mkdir -p "$(dirname "$dest")"
+    cp -f "$src" "$dest"
+}
+
+select_theme "$HOME/.config/tig/themes/${TINTY_SCHEME_ID}.tigrc" \
+             "$HOME/.config/tig/theme.tigrc"
+
+select_theme "$HOME/.config/timewarrior/themes/${TINTY_SCHEME_ID}.theme" \
+             "$HOME/.config/timewarrior/theme.theme"
+
+select_theme "$HOME/.taskwarrior/themes/${TINTY_SCHEME_ID}.theme" \
+             "$HOME/.taskwarrior/theme.theme"

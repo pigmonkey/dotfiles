@@ -13,5 +13,7 @@ README.md
 !.config
 .config/*
 !.config/tig
+.config/tig/themes
+.config/tig/theme.tigrc
 !.config/starship.toml
 {{- end }}

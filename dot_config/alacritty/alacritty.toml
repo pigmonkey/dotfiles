@@ -1,5 +1,5 @@
 [general]
-import = ["/home/pigmonkey/.config/alacritty/colors.toml"]
+import = ["colors.toml"]
 
 [font]
 size = 12.0

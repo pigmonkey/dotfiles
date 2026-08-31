@@ -1,0 +1,123 @@
+# Gruvbox light theme for tig
+# Inspired by https://github.com/ninjabreakbot/tig-gruvbox
+
+# Use tig's own diff-add/diff-del color rules below instead of passing
+# through git's native diff colors.
+set git-colors = no
+
+# General colors
+color default                     239     229
+color cursor                      237     228
+color cursor-blur                 237     223
+color status                      default default
+color title-focus                 default default
+color title-blur                  default default
+color delimiter                   244     default
+color header                      66     default bold
+color section                     172     default
+color line-number                 248     default
+color id                          124     default
+color date                        172     default
+color author                      66     default
+color mode                        166     default
+color overflow                    248     default
+color directory                   106     default bold
+color file                        237     default
+color file-size                   default default
+color search-result               229     172
+
+# Main view colors
+color main.cursor                 237     228
+color main.cursor-blur            237     223
+color graph-commit                166     default
+color main-head                   166     default bold
+color main-remote                 172     default
+color main-tracked                132     default
+color main-tag                    237     default
+color main-local-tag              106     default
+color main-ref                    72     default
+color main-annotated              237     default
+color main-stash                  132     default
+color main-note                   172     default
+color main-prefetch               248     default
+color main-other                  66     default
+color main-replace                124     default
+
+# Status view colors
+color status.header               172     228     bold
+color status.section              172     default
+color stat-staged                 106     default
+color stat-unstaged               124     default
+color stat-untracked              166     default
+color stat-none                   default default
+
+# Help view colors
+color help.header                 248     default bold
+color help.section                166     default
+color help.cursor                 72     228
+color help-group                  166     default
+color help-action                 166     default
+color help-toggle                 166     default
+
+# Diff view colors
+color "commit "                   default default
+color "Refs: "                    default default
+color "Author: "                  default default
+color "AuthorDate: "              default default
+color "Commit: "                  106     default
+color "CommitDate: "              66     default
+color "Merge: "                   default default
+color "---"                       124     default
+color "+++ "                      106     default
+color "--- "                      124     default
+color diff-index                  default default
+color diff-stat                   237     default
+color diff-add                    106     default
+color diff-add-highlight          142     default
+color diff-del                    124     default
+color diff-del-highlight          237     default
+color diff-header                 132     default
+color diff-chunk                  66     default
+color "diff-tree "                172     default
+color "TaggerDate: "              default default
+color diff-oldmode                default default
+color diff-newmode                default default
+color diff-newfmode               default default
+color diff-delfmode               default default
+color "rename from "              172     default
+color "rename to "                172     default
+color diff-similarity             172     default
+color diff-no-newline             248     default
+
+# Log view colors
+color "Date: "                    72     default
+
+# Reflog view colors
+color "Reflog: "                  default default
+color "Reflog message: "          default default
+
+# Signature colors
+color "gpg: "                     72     default
+color "Primary key fingerprint: " 72     default
+
+# Grep view colors
+color grep.file                   166     default bold
+color grep.line-number            248     default bold
+color grep.delimiter              248     default bold
+
+# Lines in digraph
+color palette-0                   166     default bold
+color palette-1                   66     default bold
+color palette-2                   172     default bold
+color palette-3                   132     default bold
+color palette-4                   72     default bold
+color palette-5                   106     default bold
+color palette-6                   167     default bold
+color palette-7                   239     default bold
+# repeat
+color palette-8                   166     default
+color palette-9                   66     default
+color palette-10                  172     default
+color palette-11                  132     default
+color palette-12                  72     default
+color palette-13                  106     default

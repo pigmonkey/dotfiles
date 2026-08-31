@@ -1,0 +1,8 @@
+{{- /* Emits "light" or "dark" for the scheme tinty currently has applied.
+       Falls back to dark when tinty has never run, which is what the create_
+       seeds contain. Kept in one place so the files that derive colours from
+       it cannot drift apart. */ -}}
+{{- $f := joinPath .chezmoi.homeDir ".local/share/tinted-theming/tinty/current_scheme" -}}
+{{- $scheme := "base16-gruvbox-dark-medium" -}}
+{{- if stat $f }}{{ $scheme = trim (include $f) }}{{ end -}}
+{{- if contains "light" $scheme }}light{{ else }}dark{{ end -}}

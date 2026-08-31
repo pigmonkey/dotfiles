@@ -8,8 +8,11 @@
 
 general {
         colors = true
-        color_good = "#a3be8c"
-        color_bad = "#bf616a"
+{{- $variant := includeTemplate "tinty-variant" . }}
+        # Derived from the scheme tinty currently has applied. These must
+        # match what tinty-hook-misc writes, or chezmoi apply will prompt.
+        color_good = "{{ if eq $variant "light" }}#79740e{{ else }}#b8bb26{{ end }}"
+        color_bad = "{{ if eq $variant "light" }}#9d0006{{ else }}#fb4934{{ end }}"
         interval = 5
 }
 
