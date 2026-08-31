@@ -49,11 +49,23 @@ if [ -f "$i3status_conf" ]; then
     ' "$i3status_conf" > "$i3status_conf.tmp" && mv "$i3status_conf.tmp" "$i3status_conf"
 fi
 
-# vim reads ~/.vimrc_background if it exists (.vimrc:245) and falls back to a
-# hardcoded dark gruvbox otherwise. tinted-shell used to write this file but no
-# longer does, so vim had been pinned to dark in both modes. The colourscheme
-# name matches what fnune/base16-vim ships.
-printf 'colorscheme base16-%s\n' "$TINTY_SCHEME_SLUG" > "$HOME/.vimrc_background"
+# vim reads ~/.vimrc_background if it exists and otherwise falls back to a
+# hardcoded dark gruvbox, so without this file vim never follows the theme.
+vimbg="$HOME/.vimrc_background"
+contrast="${TINTY_SCHEME_SLUG##*-}"
+case "$TINTY_SCHEME_SLUG:$contrast" in
+    gruvbox-*:soft|gruvbox-*:medium|gruvbox-*:hard)
+        {
+            printf "let g:gruvbox_contrast_%s = '%s'\n" "$variant" "$contrast"
+            printf 'set background=%s\n' "$variant"
+            printf 'colorscheme gruvbox\n'
+        } > "$vimbg"
+        ;;
+    *)
+        # Any other scheme falls back to base16-vim, which covers all 250+.
+        printf 'colorscheme base16-%s\n' "$TINTY_SCHEME_SLUG" > "$vimbg"
+        ;;
+esac
 
 # zulip-term expects an underscored theme name.
 zuliprc="$HOME/.config/zuliprc"
