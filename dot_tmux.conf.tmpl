@@ -80,3 +80,7 @@ run '~/.tmux/plugins/tpm/tpm'
 # Colors
 source-file $HOME/.config/tmux/colors.conf
 {{- end }}
+
+# Overwrite pane number coloring for more contrast.
+set-option -g display-panes-colour colour15
+set-option -g display-panes-active-colour colour1
