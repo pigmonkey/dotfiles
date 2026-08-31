@@ -241,6 +241,11 @@ map <leader>] :tabmove+1<CR>
 " Styling "
 """""""""""
 
+" Use 24-bit color when the terminal supports it.
+if has("termguicolors") && ($COLORTERM ==# "truecolor" || $COLORTERM ==# "24bit")
+    set termguicolors
+endif
+
 " Colorscheme
 if filereadable(expand("~/.vimrc_background"))
     let base16colorspace=256
@@ -249,6 +254,25 @@ else
     colorscheme gruvbox
     set background=dark
 endif
+
+" Reload ~/.vimrc_background upon modification for live theme switching.
+function! s:ReloadColorscheme() abort
+    let l:f = expand("~/.vimrc_background")
+    if !filereadable(l:f)
+        return
+    endif
+    let l:mtime = getftime(l:f)
+    if get(s:, "colors_mtime", -1) ==# l:mtime
+        return
+    endif
+    let s:colors_mtime = l:mtime
+    execute "source" l:f
+endfunction
+
+augroup ReloadColorscheme
+    autocmd!
+    autocmd FocusGained,CursorHold,CursorHoldI * call s:ReloadColorscheme()
+augroup END
 
 " Syntax highlighting
 syntax enable
