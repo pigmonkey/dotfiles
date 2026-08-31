@@ -11,7 +11,7 @@ general {
 {{- $variant := includeTemplate "tinty-variant" . }}
         # Derived from the scheme tinty currently has applied. These must
         # match what tinty-hook-misc writes, or chezmoi apply will prompt.
-        color_good = "{{ if eq $variant "light" }}#79740e{{ else }}#b8bb26{{ end }}"
+        color_good = "{{ if eq $variant "light" }}#79740e{{ else }}#98971a{{ end }}"
         color_bad = "{{ if eq $variant "light" }}#9d0006{{ else }}#fb4934{{ end }}"
         interval = 5
 }
@@ -32,12 +32,14 @@ backlight {
 wireless wlp1s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
+        color_bad = "{{ if eq $variant "light" }}#665c54{{ else }}#bdae93{{ end }}"
 }
 
-ethernet enp195s0f4u1u3 {
+ethernet eth0 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
+        color_bad = "{{ if eq $variant "light" }}#665c54{{ else }}#bdae93{{ end }}"
 }
 
 battery 1 {

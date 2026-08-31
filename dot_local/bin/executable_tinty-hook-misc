@@ -24,11 +24,29 @@ if [ -f "$btop_conf" ]; then
         "$btop_conf"
 fi
 
-# i3status exposes only these two colours.
+# i3status. These literals must stay in step with
+# dot_config/i3status/config.tmpl, which renders the same values. They are
+# gruvbox-specific rather than derived from $TINTY_SCHEME_PALETTE, because
+# base16 maps base0B to gruvbox's bright green, which is louder than everything
+# else in the bar.
 i3status_conf="$HOME/.config/i3status/config"
 if [ -f "$i3status_conf" ]; then
-    sed -i "s|^\( *color_good *= *\).*|\1\"$(hex BASE0B)\"|" "$i3status_conf"
-    sed -i "s|^\( *color_bad *= *\).*|\1\"$(hex BASE08)\"|" "$i3status_conf"
+    if [ "$variant" = "light" ]; then
+        good="#79740e"; bad="#9d0006"; quiet="#665c54"
+    else
+        good="#98971a"; bad="#fb4934"; quiet="#bdae93"
+    fi
+    awk -v good="$good" -v bad="$bad" -v quiet="$quiet" '
+        /^[a-z].*\{/            { section = $1 }
+        /^\}/                   { section = "" }
+        section == "general" && /^[[:space:]]*color_good[[:space:]]*=/ {
+            sub(/=.*/, "= \"" good "\""); print; next }
+        section == "general" && /^[[:space:]]*color_bad[[:space:]]*=/ {
+            sub(/=.*/, "= \"" bad "\""); print; next }
+        (section == "wireless" || section == "ethernet") && /^[[:space:]]*color_bad[[:space:]]*=/ {
+            sub(/=.*/, "= \"" quiet "\""); print; next }
+        { print }
+    ' "$i3status_conf" > "$i3status_conf.tmp" && mv "$i3status_conf.tmp" "$i3status_conf"
 fi
 
 # vim reads ~/.vimrc_background if it exists (.vimrc:245) and falls back to a
