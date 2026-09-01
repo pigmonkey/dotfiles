@@ -6,3 +6,5 @@ include ~/.taskwarrior/theme.theme
 
 # Weeks start on Monday
 weekstart=Monday
+
+news.version=3.5.0
