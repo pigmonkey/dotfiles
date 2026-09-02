@@ -121,14 +121,9 @@ alias pw:a='_pw "[:alnum:]"'
 alias pw:d='_pw "[:digit:]"'
 
 
-#######
-# LLM #
-#######
-
-alias cc=claude
-alias ccc='claude --continue'
-alias ccd='claude --dangerously-skip-permissions'
-alias ccr='claude --resume'
+###########
+# Migrant #
+###########
 
 alias mig-a="MIGRANT_DIR=$HOME/projects/migrant/examples/arch migrant"
 alias mig-d="MIGRANT_DIR=$HOME/projects/migrant/examples/debian migrant"
