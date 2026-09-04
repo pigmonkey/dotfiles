@@ -1,0 +1,42 @@
+{{- /* Seeds the colours tinty-hook-misc rewrites live on every theme switch.
+       Only created if absent (create_), so the hook stays the sole writer
+       afterwards -- but the two must agree, or chezmoi apply will prompt.
+
+       base16-dunst is deliberately not used: it puts base03 on base01 for low
+       urgency (1.8:1) and base06 on base08 for critical (1.3:1 in gruvbox
+       light). Here every level sits on base00 with a foreground chosen for
+       contrast, and the frame tracks the foreground. */ -}}
+{{- $variant := includeTemplate "tinty-variant" . -}}
+{{- $base00 := "#282828" -}}
+{{- $base04 := "#bdae93" -}}
+{{- $base05 := "#d5c4a1" -}}
+{{- $base08 := "#fb4934" -}}
+{{- if eq $variant "light" -}}
+{{-   $base00 = "#f2e5bc" -}}
+{{-   $base04 = "#665c54" -}}
+{{-   $base05 = "#504945" -}}
+{{-   $base08 = "#9d0006" -}}
+{{- end -}}
+# Written by tinty-hook-misc. Overwritten on every theme switch.
+
+[global]
+    frame_color = "{{ $base05 }}"
+    separator_color = frame
+
+[base16_low]
+    msg_urgency = "low"
+    background = "{{ $base00 }}"
+    foreground = "{{ $base04 }}"
+    frame_color = "{{ $base04 }}"
+
+[base16_normal]
+    msg_urgency = "normal"
+    background = "{{ $base00 }}"
+    foreground = "{{ $base05 }}"
+    frame_color = "{{ $base05 }}"
+
+[base16_critical]
+    msg_urgency = "critical"
+    background = "{{ $base08 }}"
+    foreground = "{{ $base00 }}"
+    frame_color = "{{ $base00 }}"

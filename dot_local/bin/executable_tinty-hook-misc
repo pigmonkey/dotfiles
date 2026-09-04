@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# Rewrite single colour lines in applications that have no base16 template, no
-# include mechanism, and no environment variable to drive them.
+# Recolour applications that base16 templates do not serve.
 #
-# btop and i3status are handled here for *live* switching, but their configs
-# are also chezmoi templates that derive the same values from tinty's
+# btop, i3status and dunst are handled here for *live* switching, but their
+# configs are also chezmoi templates that derive the same values from tinty's
 # current_scheme file. Both writers must agree, or chezmoi apply will prompt.
 # bat is deliberately absent: BAT_THEME is exported by the shell instead.
 set -u
@@ -66,6 +65,39 @@ case "$TINTY_SCHEME_SLUG:$contrast" in
         printf 'colorscheme base16-%s\n' "$TINTY_SCHEME_SLUG" > "$vimbg"
         ;;
 esac
+
+# dunst. These values must stay in step with
+# dot_config/dunst/dunstrc.d/create_90-colors.conf.tmpl, which seeds the
+# identical file on a fresh chezmoi apply.
+if [ -d "$HOME/.config/dunst" ]; then
+    mkdir -p "$HOME/.config/dunst/dunstrc.d"
+    cat > "$HOME/.config/dunst/dunstrc.d/90-colors.conf" <<EOF
+# Written by tinty-hook-misc. Overwritten on every theme switch.
+
+[global]
+    frame_color = "$(hex BASE05)"
+    separator_color = frame
+
+[base16_low]
+    msg_urgency = "low"
+    background = "$(hex BASE00)"
+    foreground = "$(hex BASE04)"
+    frame_color = "$(hex BASE04)"
+
+[base16_normal]
+    msg_urgency = "normal"
+    background = "$(hex BASE00)"
+    foreground = "$(hex BASE05)"
+    frame_color = "$(hex BASE05)"
+
+[base16_critical]
+    msg_urgency = "critical"
+    background = "$(hex BASE08)"
+    foreground = "$(hex BASE00)"
+    frame_color = "$(hex BASE00)"
+EOF
+    dunstctl reload 2>/dev/null || true
+fi
 
 # zulip-term expects an underscored theme name.
 zuliprc="$HOME/.config/zuliprc"

@@ -149,21 +149,23 @@
 
     # Frame
     frame_width = 1
-    frame_color = "#a89984"
+    frame_color = "#d5c4a1"
+
+# Fallback colors
 
 [urgency_low]
     background = "#282828"
-    foreground = "#a89984"
+    foreground = "#bdae93"
     timeout = 10
 
 [urgency_normal]
     background = "#282828"
-    foreground = "#ebdbb2"
+    foreground = "#d5c4a1"
     timeout = 10
 
 [urgency_critical]
-    background = "#282828"
-    foreground = "#fb4934"
+    background = "#fb4934"
+    foreground = "#282828"
     timeout = 0
 
 # vim: ft=cfg

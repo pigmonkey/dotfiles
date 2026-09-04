@@ -68,12 +68,6 @@ themes-dir = "build_schemes/colors"
 hook = 'cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/zathura/colors"'
 
 [[items]]
-name = "dunst"
-path = "https://github.com/tinted-theming/base16-dunst"
-themes-dir = "themes"
-hook = 'mkdir -p "$HOME/.config/dunst/dunstrc.d"; cp -f "$TINTY_THEME_FILE_PATH" "$HOME/.config/dunst/dunstrc.d/90-colors.conf"; dunstctl reload 2>/dev/null || true'
-
-[[items]]
 name = "tmux"
 path = "https://github.com/tinted-theming/tinted-tmux"
 themes-dir = "colors"
