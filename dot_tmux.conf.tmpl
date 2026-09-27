@@ -2,9 +2,14 @@
 # Base #
 ########
 
-# Set the prefix key to Ctrl-a.
 unbind C-b
+{{- if eq .chezmoi.hostname "auspex" }}
+# Set the prefix key to Ctrl-g, so it does not collide with the outer tmux.
+set -g prefix C-g
+{{- else }}
+# Set the prefix key to Ctrl-a.
 set -g prefix C-a
+{{- end }}
 
 ########
 # Misc #
