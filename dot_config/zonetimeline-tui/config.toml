@@ -1,0 +1,24 @@
+[general]
+zones = []
+zone = [
+    "America/Chicago",
+    "America/Los_Angeles",
+    "Asia/Calcutta",
+    "America/New_York",
+]
+ordered_zones = [
+    "America/Chicago",
+    "America/Los_Angeles",
+    "Asia/Calcutta",
+    "America/New_York",
+]
+nhours = 24
+plain = false
+sort_mode = "utc_offset_asc"
+default_view = "timeline"
+
+[overlap]
+default_window = "09:00-17:00"
+shoulder_hours = 1
+
+[overlap.work_hours]
