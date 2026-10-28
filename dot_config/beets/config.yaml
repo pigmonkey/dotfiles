@@ -4,7 +4,7 @@ import:
     move: yes
 ui:
     color: yes
-plugins: musicbrainz lyrics lastgenre mbsync fetchart scrub bpd chroma convert badfiles missing
+plugins: musicbrainz lyrics lastgenre mbsync fetchart embedart scrub bpd chroma convert badfiles missing
 lastgenre:
     count: 3
     force: yes
@@ -17,3 +17,5 @@ convert:
     embed: yes
 lyrics:
     auto: no
+embedart:
+    maxwidth: 1200
