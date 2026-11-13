@@ -3,14 +3,14 @@ zones = []
 zone = [
     "America/Chicago",
     "America/Los_Angeles",
-    "Asia/Calcutta",
     "America/New_York",
+    "Europe/Amsterdam",
 ]
 ordered_zones = [
     "America/Chicago",
     "America/Los_Angeles",
-    "Asia/Calcutta",
     "America/New_York",
+    "Europe/Amsterdam",
 ]
 nhours = 24
 plain = false
