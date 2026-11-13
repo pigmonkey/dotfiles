@@ -9,7 +9,7 @@ host            smtp.fastmail.com
 port            587
 user            peterhogg@fastmail.fm
 passwordeval    keyring get mail-havenaut smtp
-tls_fingerprint D1:76:4B:B6:D5:35:16:18:99:1B:42:5A:8F:37:B5:72:F4:4C:6D:FC:1E:6E:AD:40:36:90:B8:D8:4D:CF:89:6F
+tls_fingerprint 94:1F:1A:ED:88:9B:30:B5:91:71:83:47:D3:CD:AD:4F:F1:33:01:6A:62:79:24:F2:58:4A:5A:3B:A4:2D:42:CF
 from            peter@havenaut.net
 proxy_host      127.0.0.1
 proxy_port      9050
@@ -20,7 +20,7 @@ host            localhost
 port            1090
 user            peterhogg@fastmail.fm
 passwordeval    keyring get mail-havenaut smtp
-tls_fingerprint D1:76:4B:B6:D5:35:16:18:99:1B:42:5A:8F:37:B5:72:F4:4C:6D:FC:1E:6E:AD:40:36:90:B8:D8:4D:CF:89:6F
+tls_fingerprint 94:1F:1A:ED:88:9B:30:B5:91:71:83:47:D3:CD:AD:4F:F1:33:01:6A:62:79:24:F2:58:4A:5A:3B:A4:2D:42:CF
 from            peter@havenaut.net
 
 # Havenaut
